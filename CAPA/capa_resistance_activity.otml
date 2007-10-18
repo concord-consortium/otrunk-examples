@@ -289,7 +289,8 @@
 				</OTScriptObject>
 				<OTCCKModel name="CCK Model" local_id="cck_model"
 					authoredDataURL="" useDCandAC="true" showElectrons="false" 
-					showMultimeter="true" grabBagEnabled="false"/>
+					showMultimeter="true" grabBagEnabled="false"
+					loadSavedCircuitAtStartup="false"/>
 				<OTCompoundDoc name="Calculator"
 					local_id="calculator_page">
 					<bodyText>

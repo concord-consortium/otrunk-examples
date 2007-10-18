@@ -291,20 +291,20 @@ function setupActivityInitial()
  */
 function setupActivityLoaded()
 {
-	//Find the target resistor in the saved circuit
-	targetResistor = findBranch("#Ringless Resistor");
-	if (targetResistor == null){	
-		System.err.println("Error, target resistor not found!");
-		System.err.println("Error: initialSetupDone was set, but activity could not be loaded. It will be recreatd from scratch");
-		return false;
-	}
-	
 	//Load state variables
 	var val = getStateVariable("shortCircuitCounter");
 	shortCircuitCounter = val.intValue();
 	System.out.println("Number of short circuits: "+shortCircuitCounter);
 	//
 	
+	//Find the target resistor in the saved circuit
+	targetResistor = findBranch("#Ringless Resistor");
+	if (targetResistor == null){	
+		System.err.println("Error, target resistor not found!");
+		System.err.println("Error: initialSetupDone was set, but circuit could not be loaded. It will be recreated from scratch");
+		return false;
+	}
+		
 	return true;
 }
 
@@ -419,7 +419,7 @@ function setupMultimeter()
 			
 			//Checks that the value measured it not the same as the previous value captured
 			//if the measurement was the same kind of measurement
-			if(Double.isNaN(value) || 
+			if(Double.isNaN(value) || Double.isInfinite(value) || 
 				(MathUtil.isApproxEqual(previousMultimeterValue, value, 0.001) &&
 				previousMultimeterState == state)) {
 				
@@ -472,8 +472,8 @@ function setupMultimeter()
 				var targetResistorCurrentString = rangeValue(targetResistorCurrent) + "A";
 				//
 				
-				System.out.println("Target resistor voltage drop: " + targetResistorVoltage + " -> " + targetResistorVoltageString);	
-				System.out.println("Target resistor current: " + targetResistorCurrent + " -> " + targetResistorCurrentString);	
+				//System.out.println("Target resistor voltage drop: " + targetResistorVoltage + " -> " + targetResistorVoltageString);	
+				//System.out.println("Target resistor current: " + targetResistorCurrent + " -> " + targetResistorCurrentString);	
 							
 				showFirstMeasurementMessage();
 
@@ -486,7 +486,7 @@ function setupMultimeter()
 				//
 				
 				//more debug info
-				System.out.println(m.toSource());
+				//System.out.println(m.toSource());
 				//printMeasurements();
 				//
 			}
