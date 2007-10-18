@@ -197,15 +197,11 @@
                     <td width="880">
                       <object editable="true" refid="${challengeMeiosisView}" />
                       <object refid="${chromo_button}" />
+                      <object refid="${exit_button}" />
+                      <object refid="${challenge_button}" />
                     </td>
                     <td width="300">
                       <object refid="${challenge_two_cards}" />
-                    </td>
-                  </tr>
-                  <tr height="40">
-                    <td align="right">
-                      <object refid="${challenge_button}" />
-                      <object refid="${exit_button}" />
                     </td>
                   </tr>
                 </table>
@@ -222,16 +218,11 @@
                     <td width="880">
                       <object editable="true" refid="${challengeMeiosisView}" />
                       <object refid="${chromo_button}" />
+                      <object refid="${exit_button}" />
                     </td>
                     <td width="300">
                       <object refid="${challenge_three_cards}" />
                     </td>
-                  </tr>
-                  <tr height="40">
-                    <td align="right">
-                      <object refid="${exit_button}" />
-                    </td>
-                    <td align="center" />
                   </tr>
                 </table>
                 <object refid="${challenge_three_script_object}" />
@@ -482,7 +473,7 @@
                   the meiosis view.
                   </p>
                 </font>
-                <font color="red">
+                <font size="5" color="red">
                   <p>(If you've forgotten which gene combination makes
                     wings, go back to the chromosome view and figure it
                     out.)</p>
