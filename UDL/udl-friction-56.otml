@@ -149,6 +149,7 @@
             <OTViewEntry viewClass="org.concord.datagraph.state.OTMultiDataGraphView" objectClass="org.concord.datagraph.state.OTMultiDataGraph" />
             <OTViewEntry objectClass="org.concord.otrunk.udl.OTZoom" viewClass="org.concord.otrunk.udl.OTZoomView" />
             <OTViewEntry objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
+            <OTViewEntry viewClass="org.concord.datagraph.state.OTDataCollectorView" objectClass="org.concord.datagraph.state.OTDataCollector"/>                        
             <OTUDLDocumentViewConfig local_id="compound_doc_view" objectClass="org.concord.otrunk.view.document.OTCompoundDoc" viewClass="org.concord.otrunk.udl.document.OTUDLDocumentView">
               <definitionManager>
                 <object refid="${definition-manager}" />
@@ -1045,8 +1046,8 @@ Name two surfaces (besides ice) that are very, very slippery!
                                   4. Put the penny on a block of wood. Hold the cardboard by the edges so that your fingers don't affect the temperature of the penny.
                                   <p />
                                   5. Start the sensor. Note the temperature of the penny before you start touching, rubbing or pushing the penny.
-                                  <br />
-                                  TEMPERATURE DATA COLLECTOR
+                                  <p />
+                                  <object refid="${dc_id_1}"/>
                                   <p />
                                   6. Hold the penny down by pressing on the edges of the cardboard. Have one student rub with the penny and another student count out seconds. Rub the penny slowly for 10 seconds, then stop for 5 seconds, and then faster for 10 seconds on the wood block. Try to push down with the same amount of force! Look at the graph.
                                   <p />
@@ -1062,6 +1063,49 @@ Name two surfaces (besides ice) that are very, very slippery!
                           </bodyText>
                           <documentRefs>
                             <OTText id="b1374f39-78e8-11dc-8275-3da1b6a57fd9" name="Text field" />
+                            <OTDataCollector name="datacollector"
+                            	multipleGraphableEnabled="false"
+                            	title="Temperature Sensor Graph"
+                            	local_id="dc_id_1"
+                            	autoScaleEnabled="true">
+                            	<source>
+                            		<OTDataGraphable name="Sensor"
+                            			connectPoints="true" yColumn="1"
+                            			drawMarks="false" color="0x0000ff"
+                            			xColumn="0">
+                            			<dataProducer>
+                            				<OTSensorDataProxy
+                            					name="dataproducer"
+                            					local_id="dp_dc_id_1">
+                            					<request>
+                            						<OTExperimentRequest
+                            							period="0.1">
+                            							<sensorRequests>
+                            								<OTSensorRequest
+                            									stepSize="0.1" type="0" unit="degC"
+                            									port="0" requiredMax="40.0"
+                            									displayPrecision="-1"
+                            									requiredMin="0.0" />
+                            							</sensorRequests>
+                            						</OTExperimentRequest>
+                            					</request>
+                            				</OTSensorDataProxy>
+                            			</dataProducer>
+                            			<dataStore>
+                            				<OTDataStore
+                            					local_id="ds_dc_id_1" />
+                            			</dataStore>
+                            		</OTDataGraphable>
+                            	</source>
+                            	<xDataAxis>
+                            		<OTDataAxis max="60" units="s"
+                            			min="0" label="Time" />
+                            	</xDataAxis>
+                            	<yDataAxis>
+                            		<OTDataAxis max="40.0" units="degC"
+                            			min="0.0" label="Temperature" />
+                            	</yDataAxis>
+                            </OTDataCollector>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[7]" name="%fa12d958-78e7-11dc-8275-3da1b6a57fd9">
@@ -1071,8 +1115,8 @@ Name two surfaces (besides ice) that are very, very slippery!
                                 <div class="body">
                                   <div class="subtitle-continue">Explore-4</div>
                                   8. Move the sensor and cardboard to another penny and make a new sandwich. Start the sensor and note the starting temperature of the penny.
-                                  <br />
-                                  TEMPERATURE DATA COLLECTOR
+                                  <p />
+                                  <object refid="${dc_id_1}"/>
                                   <p />
                                   9. Push down lightly with the cardboard and rub the penny for 10 seconds, then stop for 5 seconds, then push down hard and rub it for 10 seconds, then stop. Look at the graph.
                                   <p />
@@ -1128,7 +1172,7 @@ Where did the heat come from?
                                   <p />
                                   <img src="http://udl.concord.org/share/Friction/waxpenny-web.png" />
                                   <p />
-                                  TEMPERATURE DATA COLLECTOR
+                                  <object refid="${dc_id_1}"/>
                                   <p />
                                   2. Rub the penny for 10 seconds on the wood, then move it to the waxed paper and rub it for 10 seconds on the waxed paper, then stop. Look at the graph.
                                   <p />
