@@ -20,9 +20,9 @@
  * answerBox			(JTextArea)					// Swing text component where the user writes the answer
  * solutionText			(OTTextPane)				// OT Text Pane that holds the text with the solution
  * otCalculatorObject	(OTProgrammableCalculatorNotebook)			// OT Calculator-notebook object
- * answerChooser		(OTProgrammableCalculatorResultChooser)
- * calculatorButton		(JButton)
- * calculatorHelpAction (OTAction)
+ * answerChooser		(OTProgrammableCalculatorResultChooser)		//Allows the user to choose the answer 
+ * calculatorButton		(JButton)					//Button that pops up the calculator
+ * calculatorHelpAction (OTAction)					//Action to show the calculator help 
  */
 
 importPackage(Packages.java.lang);
@@ -171,9 +171,6 @@ function setupCalculatorListener()
 	
 	calculatorEventHandler.addCalculatorListener(calculatorListener);
 	
-	//otCalculatorView.addCalculatorListener(calculatorListener);
-	System.out.println("my listener is "+calculatorListener);
-
 	var otHandler =
 	{
 		//Called when the user selects a value in the calculator window
@@ -207,7 +204,6 @@ function setupCalculatorListener()
 	}
 	var calculatorButtonListener = new ActionListener(calculatorButtonHandler);
 	calculatorButton.addActionListener(calculatorButtonListener);
-	System.out.println("aading action listener from script");
 }
 
 /**
