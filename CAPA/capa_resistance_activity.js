@@ -288,6 +288,8 @@ function setupActivityInitial()
 	
 	answerBox.setText("");
 	answerObj = null;
+	
+	deleteNotebookMeasurements();
 }
 
 /** 
@@ -784,6 +786,12 @@ function logNotebook(value, unit)
 	measurement.setUnitValue(uv);
 			
 	list.add(measurement);
+}
+
+function deleteNotebookMeasurements()
+{
+	var list = otNotebookObject.getEntries(); //OTObjectList
+	list.removeAll();
 }
 
 /**
