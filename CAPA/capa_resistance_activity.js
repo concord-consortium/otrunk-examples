@@ -282,6 +282,9 @@ function setupActivityInitial()
 {
 	//Create the resistor that the user has to solve
 	targetResistor = createResistor();
+
+	//Show initial text
+	OTCardContainerView.setCurrentCard(otInfoAreaCards, "introText");
 }
 
 /** 
