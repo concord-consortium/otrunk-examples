@@ -409,6 +409,14 @@ function setupMultimeter()
 			var value = cckMultimeter.getCurrentValue();
 			var state = cckMultimeter.getState();
 			
+			//If the multimeter is not connected to anything then it ignores the measurement 
+			if (!cckMultimeter.isConnected()){
+				//Forget last measurement
+				previousMultimeterState = -1;
+				previousMultimeterValue = Double.NaN;
+				return;
+			}
+			
 			//Checks that the value measured it not the same as the previous value captured
 			//if the measurement was the same kind of measurement
 			if(Double.isNaN(value) || 
