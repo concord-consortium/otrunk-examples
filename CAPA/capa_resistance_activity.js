@@ -285,6 +285,9 @@ function setupActivityInitial()
 
 	//Show initial text
 	OTCardContainerView.setCurrentCard(otInfoAreaCards, "introText");
+	
+	answerBox.setText("");
+	answerObj = null;
 }
 
 /** 
