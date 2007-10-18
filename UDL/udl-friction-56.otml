@@ -154,9 +154,9 @@
                 <object refid="${definition-manager}" />
               </definitionManager>
               <cssBlocks>
-                <OTCssText local_id="css-font" src="css/otrunk-normal-font.css" />
-                <OTCssText local_id="css-color" src="css/otrunk-normal-color.css" />
-                <OTCssText local_id="css-layout" src="css/otrunk-normal-layout.css" />
+                <OTCssText local_id="css-font" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-font.css" />
+                <OTCssText local_id="css-color" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-color.css" />
+                <OTCssText local_id="css-layout" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-layout.css" />
               </cssBlocks>
             </OTUDLDocumentViewConfig>
             <OTPrototypeViewEntry local_id="textsize-choice-view" objectClass="org.concord.otrunk.OTSystem" viewClass="org.concord.otrunk.view.prototype.OTPrototypeView" copyPrototype="false">
@@ -396,14 +396,14 @@
                                 <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="100.0" />
                               </transforms>
                               <images>
-                                <OTImage imageBytes="imagessmooth/slidezoom1_smooth_sm.png" />
-                                <OTImage imageBytes="imagessmooth/slidezoom2_smooth_sm.png" />
-                                <OTImage imageBytes="imagessmooth/slidezoom3_smooth_sm.png" />
-                                <OTImage imageBytes="imagessmooth/slidezoom4_smooth_sm.png" />
-                                <OTImage imageBytes="imagessmooth/slidezoom5_smooth_sm.png" />
-                                <OTImage imageBytes="imagessmooth/slidezoom6b_smooth_sm.png" />
-                                <OTImage imageBytes="imagessmooth/slidezoom7_smooth_sm.png" />
-                                <OTImage imageBytes="imagessmooth/slidezoom8_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom1_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom2_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom3_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom4_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom5_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom6b_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom7_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom8_smooth_sm.png" />
                               </images>
                             </OTZoom>
                             <OTModelerPage local_id="mw-fric-model" authoredDataURL="http://mw2.concord.org/public/student/motionandforce/frictionheat.cml" />
@@ -637,7 +637,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                     <object refid="0be2278e-78d5-11dc-82f7-4bde662316f0" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Penny heat" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[3]" name="Penny heat" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="364b1692-78d5-11dc-82f7-4bde662316f0" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -657,7 +657,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%7b73dc06-78e0-11dc-8275-3da1b6a57fd9">
+                        <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[1]" name="%7b73dc06-78e0-11dc-8275-3da1b6a57fd9">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -934,7 +934,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             </OTUDLQuestions>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%5a2f987d-78e3-11dc-8275-3da1b6a57fd9">
+                        <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[2]" name="%5a2f987d-78e3-11dc-8275-3da1b6a57fd9">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -983,7 +983,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             </OTChoice>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%f18293d4-78e6-11dc-8275-3da1b6a57fd9">
+                        <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[3]" name="%f18293d4-78e6-11dc-8275-3da1b6a57fd9">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1003,7 +1003,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%6ddd4b55-78e7-11dc-8275-3da1b6a57fd9">
+                        <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[4]" name="%6ddd4b55-78e7-11dc-8275-3da1b6a57fd9">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1019,7 +1019,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%aa7c17d6-78e7-11dc-8275-3da1b6a57fd9">
+                        <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[5]" name="%aa7c17d6-78e7-11dc-8275-3da1b6a57fd9">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1033,7 +1033,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%f9cd6be7-78e7-11dc-8275-3da1b6a57fd9">
+                        <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[6]" name="%f9cd6be7-78e7-11dc-8275-3da1b6a57fd9">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1061,18 +1061,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             <OTText id="b1374f39-78e8-11dc-8275-3da1b6a57fd9" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%fa12d958-78e7-11dc-8275-3da1b6a57fd9">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">Explore</div>
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%fa12d958-78e7-11dc-8275-3da1b6a57fd9">
+                        <OTUDLCompoundDoc id="364b1692-78d5-11dc-82f7-4bde662316f0/cards[7]" name="%fa12d958-78e7-11dc-8275-3da1b6a57fd9">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1350,8 +1339,18 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="364b1691-78d5-11dc-82f7-4bde662316f0" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[7]" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="364b1691-78d5-11dc-82f7-4bde662316f0" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[1]" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[2]" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[3]" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[4]" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[5]" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[6]" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[7]" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -1397,7 +1396,7 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                     <object refid="364b3da4-78d5-11dc-82f7-4bde662316f0" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Hot stuff" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[4]" name="Hot stuff" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1406,47 +1405,86 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Engage</div>
+                                  <div class="subtitle">Discovery question</div>
                                   Why does a surface heat up when you rub it against another surface?
                                   <p />
                                   <img src="http://udl.concord.org/share/Friction/firebow2-web.png" />
                                   <p />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[1]" name="%c4a036e9-78ff-11dc-b03e-ed6d4a0c2086">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">Engage</div>
                                   <div class="story-border">
-                                    <div class="story">Johnny and Susie were recounting their experience in Sticky World and Slippery World to their Uncle Hubert, who was also a middle school science teacher. They weren't sure he believed that those two worlds existed, but he went along with them anyway and asked many questions. Finally Johnny was fed up with so many questions and decided to ask one of his own. "So, what makes something have more or less friction?" he asked, figuring that Uncle Hubert wouldn't be able to explain it.</div>
+                                    <div class="story">Eduard and Maria were recounting their experience in Sticky World and Slippery World to their Uncle Hubert, who was also a middle school science teacher. They weren't sure he believed that those two worlds existed, but he went along with them anyway and asked many questions. Finally Eduarda was fed up with so many questions and decided to ask one of his own. "So, what makes something have more or less friction?" he asked, figuring that Uncle Hubert wouldn't be able to explain it."That's a hard question!" answered Uncle Hubert. "To answer that, we need to see what the molecules are doing. Molecules are too small to see, so I have a computer model that will help us picture what's going on."</div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%c4a036e9-78ff-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="9b6009f9-7d8f-11dc-a8ee-836ca0cfbdd7" name="%9b6009f9-7d8f-11dc-a8ee-836ca0cfbdd7">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Explore</div>
-                                  Here is a box on a slide. Now zoom in on the surface by pushing the ZOOM button.
+                                  Here is a box on a slide. Zoom in on the surface by pushing the ZOOM button.
                                   <p />
                                   <object refid="${zoom}" />
                                   <p />
-                                  Here is the model of two surfaces that Uncle Hubert showed Susie and Johnny. Things are so enlarged that you can see individual atoms. The red ones are part of the top object that is moving. The white black? ones are part of the surface. Gravity is pushing the red object down on the surface.
+                                  What do you notice about the surfaces when you zoom in on them?
+                                  <br />
+                                  <object refid="66c35d1c-7d7f-11dc-b809-ad838b75abee" />
+                                  <p />
+                                  What do you think will happen to the surfaces when the box is sliding?
+                                  <br />
+                                  <object refid="ec27d16a-7d8f-11dc-a8ee-836ca0cfbdd7" />
+                                  <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
                             <object refid="${zoom}" />
+                            <OTText id="66c35d1c-7d7f-11dc-b809-ad838b75abee" name="Text field" />
+                            <OTText id="ec27d16a-7d8f-11dc-a8ee-836ca0cfbdd7" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%ac4bda6d-7902-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="b8864d6d-7d7f-11dc-b809-ad838b75abee" name="%b8864d6d-7d7f-11dc-b809-ad838b75abee">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explore</div>
-                                  Predict what you think will happen to the atoms if the green object is dragged to the right.
-The molecules will ___________  when the green object is dragged, because __________.
+                                  <div class="subtitle-continued">Explore-2</div>
+                                  Here is a picture of the model of two surfaces that Uncle Hubert showed Susie and Johnny. Things are so enlarged that you can see individual atoms. The red ones are part of the top object that is moving. The black ones are part of the surface. Gravity is pushing the red object down on the surface.
+                                  <br />
+                                  <img src="http://udl.concord.org/share/Friction/MW-friction-model.jpg" />
+                                  Predict what you think will happen to the atoms if the red object is dragged to the right.
+The molecules will ___________  when the red object is dragged, because __________.
+                                  <br />
+                                  <object refid="1da54bbe-7d80-11dc-b809-ad838b75abee" />
                                   <p />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTText id="1da54bbe-7d80-11dc-b809-ad838b75abee" name="Text field" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[2]" name="%ac4bda6d-7902-11dc-b03e-ed6d4a0c2086">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle-continued">Explore-3</div>
                                   <object refid="${mw-fric-model}" />
                                   <p />
                                   Run the model. Observe and describe what happens to the atoms.  Look very carefully at the ones where the two surfaces meet.
@@ -1476,62 +1514,34 @@ The molecules will ___________  when the green object is dragged, because ______
                             </OTChoice>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%8d535105-7904-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[3]" name="%8d535105-7904-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explore</div>
+                                  <div class="subtitle-continued">Explore-4</div>
                                   Reset the model and check the "KE shading" box. This feature colors the atoms according to how fast they are moving. Red is faster, and white is slower.
                                   <p />
-                                  <img src="http://udl.concord.org/share/Friction/Friction_model_KE.png" />
+	                              <object refid="${mw-fric-model}" />
                                   <p />
                                   What happens to the color of the atoms in the object as it moves across the surface?
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%d80bbc06-7904-11dc-b03e-ed6d4a0c2086">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">Explore</div>
-                                  Run it again. This time, watch the color of the atoms and the temperature graph.
-                                  <p />
-                                  <img src="http://udl.concord.org/share/Friction/Friction_model_graph.png" />
-                                  <p />
-                                  What does the temerature do?
-                                  <p />
-                                  <object refid="328bc3b7-7905-11dc-b03e-ed6d4a0c2086" />
+                                  <br />
+                                  <object refid="296b990f-7da7-11dc-af3e-d9f9131c04e4" />
                                   <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTChoice id="328bc3b7-7905-11dc-b03e-ed6d4a0c2086" name="Choices">
-                              <choices>
-                                <OTCompoundDoc name="a. It goes up.">
-                                  <bodyText>a. It goes up.</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="b. It goes down.">
-                                  <bodyText>b. It goes down.</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="c. It stays the same.">
-                                  <bodyText>c. It stays the same.</bodyText>
-                                </OTCompoundDoc>
-                              </choices>
-                            </OTChoice>
+                            <OTText id="296b990f-7da7-11dc-af3e-d9f9131c04e4" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%7888f09e-7905-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[5]" name="%7888f09e-7905-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explore</div>
+                                  <div class="subtitle">Explain</div>
                                   <div class="story-border">
                                     <div class="story">
                                       Johnny wasn't satisfied. "Now I can see why rubbing warms things up," he said, "but why does more friction mean harder work to move, like in Sticky World?"
@@ -1547,22 +1557,30 @@ The molecules will ___________  when the green object is dragged, because ______
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%bfec161f-7905-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[6]" name="%bfec161f-7905-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explain</div>
+                                  <div class="subtitle-continued">Explain-2</div>
                                   In your own words, explain why rough surfaces with lots of friction heat up when you rub them. Use the words atoms, temperature, and surface.
                                   <p />
+                                  <object refid="6c46c570-7da7-11dc-af3e-d9f9131c04e4" />
+                                  <p />
                                   In your own words, explain why smooth surfaces with very little friction don't heat up when you rub them. Use the words atoms, temperature, and surface.
+                                  <p />
+                                  <object refid="75616611-7da7-11dc-af3e-d9f9131c04e4" />
                                   <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTText id="6c46c570-7da7-11dc-af3e-d9f9131c04e4" name="Text field" />
+                            <OTText id="75616611-7da7-11dc-af3e-d9f9131c04e4" name="Text field" />
+                          </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%e5288ea0-7905-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[7]" name="%e5288ea0-7905-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1573,7 +1591,7 @@ The molecules will ___________  when the green object is dragged, because ______
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%f169c3a1-7905-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[8]" name="%f169c3a1-7905-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1604,10 +1622,19 @@ The molecules will ___________  when the green object is dragged, because ______
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="5fc8c8e4-78ff-11dc-b03e-ed6d4a0c2086" />
+                        <object refid="b8864d6d-7d7f-11dc-b809-ad838b75abee" />
                       </currentCard>
                       <viewedCards>
                         <object refid="5fc8c8e4-78ff-11dc-b03e-ed6d4a0c2086" />
+                        <object refid="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[1]" />
+                        <object refid="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[2]" />
+                        <object refid="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[3]" />
+                        <object refid="b8864d6d-7d7f-11dc-b809-ad838b75abee" />
+                        <object refid="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[5]" />
+                        <object refid="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[6]" />
+                        <object refid="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[7]" />
+                        <object refid="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[8]" />
+                        <object refid="9b6009f9-7d8f-11dc-a8ee-836ca0cfbdd7" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
@@ -1654,7 +1681,7 @@ The molecules will ___________  when the green object is dragged, because ______
                     <object refid="5fc8eff7-78ff-11dc-b03e-ed6d4a0c2086" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Get moving" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[5]" name="Get moving" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1895,6 +1922,9 @@ The molecules will ___________  when the green object is dragged, because ______
                       <currentCard>
                         <object refid="b18091a4-7906-11dc-b03e-ed6d4a0c2086" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="b18091a4-7906-11dc-b03e-ed6d4a0c2086" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -1942,10 +1972,12 @@ The molecules will ___________  when the green object is dragged, because ______
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_1}" />
+                <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[1]" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
+                <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[3]" />
+                <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[5]" />
               </viewedCards>
             </OTCardContainer>
           </content>
