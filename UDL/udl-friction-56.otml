@@ -443,7 +443,7 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[1]" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="78f125da-78d1-11dc-82f7-4bde662316f0" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -527,6 +527,9 @@ Name two surfaces (besides ice) that are very, very slippery!
                       <currentCard>
                         <object refid="78f0fec9-78d1-11dc-82f7-4bde662316f0" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="78f0fec9-78d1-11dc-82f7-4bde662316f0" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -1339,7 +1342,7 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[7]" />
+                        <object refid="364b1692-78d5-11dc-82f7-4bde662316f0/cards[6]" />
                       </currentCard>
                       <viewedCards>
                         <object refid="364b1691-78d5-11dc-82f7-4bde662316f0" />
@@ -1462,21 +1465,26 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continued">Explore-2</div>
+                                  <div class="subtitle-continue">Explore-2</div>
                                   Here is a picture of the model of two surfaces that Uncle Hubert showed Susie and Johnny. Things are so enlarged that you can see individual atoms. The red ones are part of the top object that is moving. The black ones are part of the surface. Gravity is pushing the red object down on the surface.
                                   <br />
                                   <img src="http://udl.concord.org/share/Friction/MW-friction-model.jpg" />
                                   Predict what you think will happen to the atoms if the red object is dragged to the right.
-The molecules will ___________  when the red object is dragged, because __________.
-                                  <br />
+The molecules will
                                   <object refid="1da54bbe-7d80-11dc-b809-ad838b75abee" />
+                                  <br />
+                                  when the red object is dragged, because
+                                  <object refid="24958375-7dab-11dc-8e17-cd1de991f5de" />
+                                  <p />
+                                  <br />
                                   <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText id="1da54bbe-7d80-11dc-b809-ad838b75abee" name="Text field" />
+                            <OTText id="1da54bbe-7d80-11dc-b809-ad838b75abee" name="Text field" text="" />
+                            <OTText id="24958375-7dab-11dc-8e17-cd1de991f5de" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[2]" name="%ac4bda6d-7902-11dc-b03e-ed6d4a0c2086">
@@ -1484,7 +1492,8 @@ The molecules will ___________  when the red object is dragged, because ________
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continued">Explore-3</div>
+                                  <div class="subtitle-continue">Explore-3</div>
+                                  Here is the model. If you can, make the window wider until the temperature graph appears to the right of the model.
                                   <object refid="${mw-fric-model}" />
                                   <p />
                                   Run the model. Observe and describe what happens to the atoms.  Look very carefully at the ones where the two surfaces meet.
@@ -1519,10 +1528,10 @@ The molecules will ___________  when the red object is dragged, because ________
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continued">Explore-4</div>
+                                  <div class="subtitle-continue">Explore-4</div>
                                   Reset the model and check the "KE shading" box. This feature colors the atoms according to how fast they are moving. Red is faster, and white is slower.
                                   <p />
-	                              <object refid="${mw-fric-model}" />
+                                  <object refid="${mw-fric-model}" />
                                   <p />
                                   What happens to the color of the atoms in the object as it moves across the surface?
                                   <br />
@@ -1562,7 +1571,7 @@ The molecules will ___________  when the red object is dragged, because ________
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continued">Explain-2</div>
+                                  <div class="subtitle-continue">Explain-2</div>
                                   In your own words, explain why rough surfaces with lots of friction heat up when you rub them. Use the words atoms, temperature, and surface.
                                   <p />
                                   <object refid="6c46c570-7da7-11dc-af3e-d9f9131c04e4" />
@@ -1586,10 +1595,24 @@ The molecules will ___________  when the red object is dragged, because ________
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Elaborate</div>
+                                  Heat energy is wiggling of molecules. The faster they wiggle, the hotter the material. When two surfaces have a lot of friction, the molecules on the surfaces get bumped around a lot when they are rubbed together. So when you rub your hands together, you are jostling the molecules so much that they heat up!
+                                  <p />
+                                  Think of a situation where friction creates heat that is useful for some purpose.
+                                  <br />
+                                  <object refid="a94393f6-7dab-11dc-8e17-cd1de991f5de" />
+                                  <p />
+                                  Think of a situation where friction creates heat, but the heat makes problems.
+                                  <br />
+                                  <object refid="c3c8abc7-7dab-11dc-8e17-cd1de991f5de" />
+                                  <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTText id="a94393f6-7dab-11dc-8e17-cd1de991f5de" name="Text field" />
+                            <OTText id="c3c8abc7-7dab-11dc-8e17-cd1de991f5de" name="Text field" />
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086/cards[8]" name="%f169c3a1-7905-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
@@ -1597,27 +1620,23 @@ The molecules will ___________  when the red object is dragged, because ________
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Evaluate</div>
-                                  Heat energy is wiggling of molecules. The faster they wiggle, the hotter the material. When two surfaces have a lot of friction, the molecules on the surfaces get bumped around a lot when they are rubbed together.
-                                  <p />
                                   Explain how you think the rubbing of two surfaces with a lot of friction could could create heat energy in the two materials.
                                   <p />
                                   <object refid="12716c12-7906-11dc-b03e-ed6d4a0c2086" />
                                   <p />
-                                  <div class="story-border">
-                                    <div class="story">When the two surfaces are forced to scrape each other by the rubbing motion, the molecules get pumped around and wiggle faster, which is the same as increasing their heat energy. So they get hotter. If your rub faster or push harder, they get bumped around more and also heat up faster.</div>
-                                  </div>
                                   <p />
                                   If there is very little friction between surfaces, the molecules slide by each other without interacting very much. Explain why they do not heat up when rubbed.
+                                  <br />
+                                  <object refid="ec413c78-7dab-11dc-8e17-cd1de991f5de" />
                                   <p />
-                                  <div class="story-border">
-                                    <div class="story">If they don't interact very much, the rubbing doesn't make them wiggle more, so the materials don't heat up.</div>
-                                  </div>
+                                  <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
                             <OTText id="12716c12-7906-11dc-b03e-ed6d4a0c2086" name="Text field" />
+                            <OTText id="ec413c78-7dab-11dc-8e17-cd1de991f5de" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
@@ -1970,14 +1989,87 @@ The molecules will ___________  when the red object is dragged, because ________
                     <object refid="b180b8b7-7906-11dc-b03e-ed6d4a0c2086" />
                   </south>
                 </OTUDLSection>
+                <OTUDLSection id="fb397b29-7dab-11dc-8e17-cd1de991f5de" name="Measurement challenge" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                  <content>
+                    <OTCardContainer id="fb397b2b-7dab-11dc-8e17-cd1de991f5de" contentsMayScroll="true" loadViewOnlyOnDemand="true">
+                      <cards>
+                        <OTUDLCompoundDoc id="fb397b2a-7dab-11dc-8e17-cd1de991f5de">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">Discovery question</div>
+                                  If a series of measurements vary, how do you decide on the best value?
+                                  <p />
+                                  In this activity you will analyze data from a friction experiment.
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+                      </cards>
+                      <currentCard>
+                        <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
+                      </currentCard>
+                      <viewedCards>
+                        <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
+                      </viewedCards>
+                    </OTCardContainer>
+                  </content>
+                  <header>
+                    <OTUDLCompoundDoc id="fb397b2c-7dab-11dc-8e17-cd1de991f5de" name="%fb397b2c-7dab-11dc-8e17-cd1de991f5de">
+                      <bodyText>
+                        <div class="title">Measurement challenge</div>
+                      </bodyText>
+                    </OTUDLCompoundDoc>
+                  </header>
+                  <footer>
+                    <OTUDLCompoundDoc id="fb397b2d-7dab-11dc-8e17-cd1de991f5de" name="%fb397b2d-7dab-11dc-8e17-cd1de991f5de">
+                      <bodyText>
+                        <div align="center">
+                          <table>
+                            <tr>
+                              <td>
+                                <object refid="fb3cd68e-7dab-11dc-8e17-cd1de991f5de" viewid="${menu-horizontal-circle}" />
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTUDLMenu id="fb3cd68e-7dab-11dc-8e17-cd1de991f5de">
+                          <cardContainer>
+                            <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de" />
+                          </cardContainer>
+                          <menuRule>
+                            <object refid="${page-rule}" />
+                          </menuRule>
+                        </OTUDLMenu>
+                        <object refid="${menu-horizontal-circle}" />
+                      </documentRefs>
+                    </OTUDLCompoundDoc>
+                  </footer>
+                  <north>
+                    <object refid="fb397b2c-7dab-11dc-8e17-cd1de991f5de" />
+                  </north>
+                  <center>
+                    <object refid="fb397b2b-7dab-11dc-8e17-cd1de991f5de" />
+                  </center>
+                  <south>
+                    <object refid="fb397b2d-7dab-11dc-8e17-cd1de991f5de" />
+                  </south>
+                </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[1]" />
+                <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[4]" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
                 <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[3]" />
                 <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[5]" />
+                <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[1]" />
+                <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section-card-container/cards[4]" />
+                <object refid="fb397b29-7dab-11dc-8e17-cd1de991f5de" />
               </viewedCards>
             </OTCardContainer>
           </content>
@@ -2284,6 +2376,7 @@ The molecules will ___________  when the red object is dragged, because ________
         <object refid="364b64b5-78d5-11dc-82f7-4bde662316f0" />
         <object refid="5fc98c38-78ff-11dc-b03e-ed6d4a0c2086" />
         <object refid="b18106d8-7906-11dc-b03e-ed6d4a0c2086" />
+        <object refid="fb3cd68e-7dab-11dc-8e17-cd1de991f5de" />
       </library>
     </OTSystem>
   </objects>
