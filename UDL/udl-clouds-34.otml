@@ -572,9 +572,6 @@
                       <currentCard>
                         <object refid="${page-1}" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="${page-1}" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -999,9 +996,6 @@
                       <currentCard>
                         <object refid="6cebf869-71c2-11dc-9410-0f9c34fad6c2" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="6cebf869-71c2-11dc-9410-0f9c34fad6c2" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -1476,20 +1470,6 @@ The plastic wrap never touched the water in the bowl.
                                   <object refid="abecd683-71ca-11dc-9410-0f9c34fad6c2" />
                                   <p />
                                   <object refid="ce50e407-7e60-11dc-8959-1beb8deaa6ce" />
-                                  <p />
-                                  Where did the water droplets go?
-                                  <br />
-                                  <object refid="d6cbdfe4-71ca-11dc-9410-0f9c34fad6c2" />
-                                  <p />
-                                  L5: Write your response in the box below.
-                                  <br />
-                                  L4: If the water droplets came from the air to the plastic wrap, where do you think they might go?
-                                  <br />
-                                  L3: The water changes into...and enters the...
-                                  <br />
-                                  L2: The water changes into a gas and enters the air. The water is absorbed by the plastic wrap. [Select one.]
-                                  <br />
-                                  L1: The water changes into a gas and enters the air. Explain.
                                 </div>
                               </div>
                             </div>
@@ -1640,7 +1620,6 @@ The plastic wrap never touched the water in the bowl.
                                 </OTQuestion>
                               </questions>
                             </OTUDLQuestions>
-                            <OTText id="d6cbdfe4-71ca-11dc-9410-0f9c34fad6c2" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="e231d015-71ca-11dc-9410-0f9c34fad6c2">
@@ -2066,9 +2045,6 @@ The plastic wrap never touched the water in the bowl.
                       <currentCard>
                         <object refid="cb5292a7-71c3-11dc-9410-0f9c34fad6c2" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="cb5292a7-71c3-11dc-9410-0f9c34fad6c2" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -2405,9 +2381,6 @@ The plastic wrap never touched the water in the bowl.
                       <currentCard>
                         <object refid="e9943d4e-71c3-11dc-9410-0f9c34fad6c2" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="e9943d4e-71c3-11dc-9410-0f9c34fad6c2" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
