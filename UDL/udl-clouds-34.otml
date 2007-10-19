@@ -2110,7 +2110,7 @@ The plastic wrap never touched the water in the bowl. Where do you think the wat
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText local_id="password-field" isPassword="true" name="PasswordField" text="clouds" />
+                            <OTText local_id="password-field" isPassword="true" name="PasswordField" />
                             <OTText local_id="password" text="clouds" name="Password" />
                             <OTButton local_id="wrapup-submit-button" name="Button" text="Submit" />
                             <OTScriptObject local_id="wrapup-button-script">
