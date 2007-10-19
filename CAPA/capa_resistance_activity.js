@@ -285,7 +285,7 @@ function setupActivityInitial()
 	answerBox.setText("");
 	answerObj = null;
 	
-	deleteNotebookMeasurements();
+	deleteCalculatorAndNotebookData();
 }
 
 /** 
@@ -784,10 +784,35 @@ function logNotebook(value, unit)
 	list.add(measurement);
 }
 
-function deleteNotebookMeasurements()
+function deleteCalculatorAndNotebookData()
 {
+	//Notebook
+	otNotebookObject.setCurrentMeasurement(null);
 	var list = otNotebookObject.getEntries(); //OTObjectList
 	list.removeAll();
+	
+	//Calculator
+	var calc = otCalculatorObject.getCalculator();
+	list = calc.getFormulas();
+	if (list != null){
+		list.setCurrentExpression(null);
+		list.getExpressions().removeAll();
+	}
+	list = calc.getConstants();
+	if (list != null){
+		list.setCurrentSymbol(null);
+		list.getSymbols().removeAll();
+	}
+	list = calc.getVariables();
+	if (list != null){
+		list.setCurrentSymbol(null);
+		list.getSymbols().removeAll();
+	}
+	list = calc.getResultValues();
+	if (list != null){
+		list.setCurrentSymbol(null);
+		list.getSymbols().removeAll();
+	}
 }
 
 /**
