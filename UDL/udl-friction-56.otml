@@ -87,95 +87,7 @@
                       <OTText name="Text field" />
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Choices" />
-                      <OTUDLQuestions name="Scaffolded questions">
-                        <questions>
-                          <OTQuestion name="L5">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L4">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L3">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L2">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L1">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                        </questions>
-                      </OTUDLQuestions>
+                      <OTUDLQuestions name="Scaffolded questions" />
                     </objectsToInsert>
                   </OTObjectEditViewConfig>
                 </entry>
@@ -402,6 +314,10 @@
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
+                                Answer the following questions. When you have finished, press the
+                                  <b>Submit</b>
+                                  button. Warning: after you hit the Submit button, you will not be able to go back and change your answers.
+                                  <p />
                                   1) A hockey puck slides along an icy surface. What makes it slow down?
                                   <p />
                                   <object refid="db088c6a-7841-11dc-8a70-bf74c85eca3f" />
@@ -418,11 +334,48 @@
                                   <p />
                                   <object refid="9cb6f1a2-78de-11dc-8275-3da1b6a57fd9" />
                                   <p />
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        Press the
+                                        <b>Submit</b>
+                                        button when you are done.
+                                      </td>
+                                      <td>
+                                        <object refid="${pretest-submit-button}" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="${pretest-button-script}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
+                          	<OTButton local_id="pretest-submit-button" name="Button" text="Submit" />
+                            <OTScriptObject local_id="pretest-button-script">
+                              <variables>
+                                <OTScriptVariable name="cardContainer">
+                                  <reference>
+                                    <object refid="${section-card-container}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableComponent name="button">
+                                  <reference>
+                                    <object refid="${pretest-submit-button}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="card">
+                                  <reference>
+                                    <object refid="${section_2}" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </variables>
+                              <script>
+                                <object refid="${change_page.js}" />
+                              </script>
+                              <scriptState />
+                            </OTScriptObject>
                             <OTChoice id="db088c6a-7841-11dc-8a70-bf74c85eca3f" name="Choices">
                               <choices>
                                 <OTCompoundDoc name="It runs out of push.">
@@ -530,7 +483,7 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="78f125da-78d1-11dc-82f7-4bde662316f0" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -659,7 +612,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                     <object refid="78f125dc-78d1-11dc-82f7-4bde662316f0" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Strange worlds" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false">
+                <OTUDLSection local_id="section_3" name="Strange worlds" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false">
                   <content>
                     <OTCardContainer id="0be2278c-78d5-11dc-82f7-4bde662316f0" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -724,7 +677,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                     <object refid="0be2278e-78d5-11dc-82f7-4bde662316f0" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Penny heat" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_4" name="Penny heat" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="364b1692-78d5-11dc-82f7-4bde662316f0" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1499,7 +1452,7 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                     <object refid="364b3da4-78d5-11dc-82f7-4bde662316f0" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Hot stuff" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_5" name="Hot stuff" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="5fc8c8e5-78ff-11dc-b03e-ed6d4a0c2086" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1788,7 +1741,7 @@ The molecules will
                     <object refid="5fc8eff7-78ff-11dc-b03e-ed6d4a0c2086" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Get moving" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_6" name="Get moving" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -2074,7 +2027,7 @@ The molecules will
                     <object refid="b180b8b7-7906-11dc-b03e-ed6d4a0c2086" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Halt!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_7" name="Halt!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="fb397b2b-7dab-11dc-8e17-cd1de991f5de" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -2169,7 +2122,7 @@ The molecules will
                     <object refid="fb397b2d-7dab-11dc-8e17-cd1de991f5de" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Measurement Challenge" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_8" name="Measurement Challenge" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="e5837c4b-7e82-11dc-a02a-2fa3fd422b5e" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -2236,7 +2189,7 @@ The molecules will
                     <object refid="e5837c4d-7e82-11dc-a02a-2fa3fd422b5e" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Wrapup" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true">
+                <OTUDLSection local_id="section_9" name="Wrapup" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true">
                   <content>
                     <OTCardContainer id="3c3da311-7e83-11dc-a02a-2fa3fd422b5e" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -2246,11 +2199,66 @@ The molecules will
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Wrapping up</div>
-                                  [Wrapping up]
+                                  [Wrapping up]<p/>
+                                  Let your teacher know when you have completed the friction unit. Your
+									teacher will then unlock the posttest for you.
+                                  <p />
+                                  <table>
+                                    <tr>
+                                      <td>Teacher password</td>
+                                      <td>
+                                        <object refid="${password-field}" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <object refid="${wrapup-submit-button}" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="${wrapup-button-script}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                          	<OTText local_id="password-field" isPassword="true" name="PasswordField" />
+                            <OTText local_id="password" text="friction" name="Password" />
+                            <OTButton local_id="wrapup-submit-button" name="Button" text="Submit" />
+                            <OTScriptObject local_id="wrapup-button-script">
+                              <variables>
+                                <OTScriptVariable name="cardContainer">
+                                  <reference>
+                                    <object refid="${section-card-container}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableComponent name="button">
+                                  <reference>
+                                    <object refid="${wrapup-submit-button}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="card">
+                                  <reference>
+                                    <object refid="${section_10}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableComponent name="passwordfield">
+                                  <reference>
+                                    <object refid="${password-field}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="password">
+                                  <reference>
+                                    <object refid="${password}" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </variables>
+                              <script>
+                                <object refid="${change_page.js}" />
+                              </script>
+                              <scriptState />
+                            </OTScriptObject>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
@@ -2301,7 +2309,7 @@ The molecules will
                     <object refid="3c3da313-7e83-11dc-a02a-2fa3fd422b5e" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Posttest" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_10" name="Posttest" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="46163bd7-7e83-11dc-a02a-2fa3fd422b5e" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -2509,7 +2517,32 @@ The molecules will
           </frame>
         </OTDefinitionManager>
         <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
-        <OTUDLMenuRule local_id="section-rule" jumpToAnyCard="true" />
+        <OTUDLMenuRule local_id="section-rule">
+          <rules>
+            <OTUDLMenuRule remainInScope="true">
+              <scope>
+                <object refid="${section_1}" />
+              </scope>
+            </OTUDLMenuRule>
+            <OTUDLMenuRule remainInScope="true" jumpToAnyCard="true">
+              <scope>
+                <object refid="${section_2}" />
+                <object refid="${section_3}" />
+                <object refid="${section_4}" />
+                <object refid="${section_5}" />
+                <object refid="${section_6}" />
+                <object refid="${section_7}" />
+                <object refid="${section_8}" />
+                <object refid="${section_9}" />
+              </scope>
+            </OTUDLMenuRule>
+            <OTUDLMenuRule remainInScope="true">
+              <scope>
+                <object refid="${section_10}" />
+              </scope>
+            </OTUDLMenuRule>
+          </rules>
+        </OTUDLMenuRule>
         <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
         <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
         <OTJavascript local_id="authoring_script.js" src="scripts/authoring_script.js" />
