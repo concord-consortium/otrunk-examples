@@ -76,7 +76,7 @@
   <objects>
     <OTSystem local_id="system">
       <bundles>
-        <OTViewBundle showLeftPanel="false" currentMode="authoring">
+        <OTViewBundle showLeftPanel="false" currentMode="default">
           <modes>
             <OTViewMode name="default" />
             <OTViewMode name="authoring">
@@ -87,7 +87,95 @@
                       <OTText name="Text field" />
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Choices" />
-                      <OTUDLQuestions name="Scaffolded questions" />
+                      <OTUDLQuestions name="Scaffolded questions">
+                        <questions>
+                          <OTQuestion name="L5">
+                            <prompt>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert prompt here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </prompt>
+                            <input>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert input here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </input>
+                            <scaffolding>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert scaffolding here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </scaffolding>
+                          </OTQuestion>
+                          <OTQuestion name="L4">
+                            <prompt>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert prompt here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </prompt>
+                            <input>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert input here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </input>
+                            <scaffolding>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert scaffolding here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </scaffolding>
+                          </OTQuestion>
+                          <OTQuestion name="L3">
+                            <prompt>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert prompt here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </prompt>
+                            <input>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert input here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </input>
+                            <scaffolding>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert scaffolding here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </scaffolding>
+                          </OTQuestion>
+                          <OTQuestion name="L2">
+                            <prompt>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert prompt here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </prompt>
+                            <input>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert input here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </input>
+                            <scaffolding>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert scaffolding here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </scaffolding>
+                          </OTQuestion>
+                          <OTQuestion name="L1">
+                            <prompt>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert prompt here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </prompt>
+                            <input>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert input here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </input>
+                            <scaffolding>
+                              <OTUDLCompoundDoc>
+                                <bodyText>Insert scaffolding here</bodyText>
+                              </OTUDLCompoundDoc>
+                            </scaffolding>
+                          </OTQuestion>
+                        </questions>
+                      </OTUDLQuestions>
                     </objectsToInsert>
                   </OTObjectEditViewConfig>
                 </entry>
@@ -415,9 +503,6 @@
                       <currentCard>
                         <object refid="${page-1}" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="${page-1}" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -1658,9 +1743,6 @@ The molecules will
                       <currentCard>
                         <object refid="5fc8c8e4-78ff-11dc-b03e-ed6d4a0c2086" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="5fc8c8e4-78ff-11dc-b03e-ed6d4a0c2086" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -2012,10 +2094,36 @@ The molecules will
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%68387c6b-7e83-11dc-8b9b-8745c450911e">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">Engage</div>
+                                  In the picture of the airplane coming to a stop on the runway, smoke is pouring off the front wheel. Why? Where is all the heat coming from?
+                                  <br />
+                                  <object refid="7761dd4c-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
+                                  Cars, trucks, and railroad trains all use brakes to slow down. In order to stop, they must give up all of their energy of motion - the same energy it took to get them moving! How do brakes use up that energy?
+                                  <br />
+                                  <object refid="8876e18d-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTText id="7761dd4c-7e83-11dc-8b9b-8745c450911e" name="Text field" />
+                            <OTText id="8876e18d-7e83-11dc-8b9b-8745c450911e" name="Text field" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
                         <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -2137,8 +2245,8 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
+                                  <div class="subtitle">Wrapping up</div>
+                                  [Wrapping up]
                                 </div>
                               </div>
                             </div>
@@ -2202,12 +2310,81 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
+                                  1) A hockey puck slides along an icy surface. What makes it slow down?
+                                  <br />
+                                  <object refid="c9013fff-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
+                                  2) The rougher the surface, ...
+                                  <br />
+                                  <br />
+                                  <object refid="ccf53690-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
+                                  3) Which of the following is an example of trying to increase friction?
+                                  <br />
+                                  <object refid="c3714cae-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
+                                  4) Which of the following statements is not true?
+                                  <br />
+                                  <object refid="d148d955-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTChoice id="c9013fff-7e83-11dc-8b9b-8745c450911e" name="Choices">
+                              <choices>
+                                <OTCompoundDoc name="In runs out of push">
+                                  <bodyText>In runs out of push</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="It rubs against the ice">
+                                  <bodyText>It rubs against the ice</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="It runs out of electricity">
+                                  <bodyText>It runs out of electricity</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <OTChoice id="ccf53690-7e83-11dc-8b9b-8745c450911e" name="Choices">
+                              <choices>
+                                <OTCompoundDoc name="the greater the friction">
+                                  <bodyText>the greater the friction</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="the less the friction">
+                                  <bodyText>the less the friction</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="the same level of friction">
+                                  <bodyText>the same level of friction</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <OTChoice id="c3714cae-7e83-11dc-8b9b-8745c450911e" name="Choices">
+                              <choices>
+                                <OTCompoundDoc name="Squirting oil into door hinges">
+                                  <bodyText>Squirting oil into door hinges</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="Spreading grit onto sandy roads">
+                                  <bodyText>Spreading grit onto sandy roads</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="Waxing the underneath of skis">
+                                  <bodyText>Waxing the underneath of skis</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <OTChoice id="d148d955-7e83-11dc-8b9b-8745c450911e" name="Choices">
+                              <choices>
+                                <OTCompoundDoc name="Friction can only slow things down">
+                                  <bodyText>Friction can only slow things down</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="Friction is never useful">
+                                  <bodyText>Friction is never useful</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="Friction can stop things moving">
+                                  <bodyText>Friction can stop things moving</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
