@@ -404,14 +404,48 @@
                                   <p />
                                   <object refid="2593cee8-7768-11dc-bcdb-d9cc05265d45" />
                                   <p />
-                                  Press the
-                                  <b>Submit</b>
-                                  button when you are done.
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        Press the
+                                        <b>Submit</b>
+                                        button when you are done.
+                                      </td>
+                                      <td>
+                                        <object refid="${pretest-submit-button}" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="${pretest-button-script}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
+                          	<OTButton local_id="pretest-submit-button" name="Button" text="Submit" />
+                            <OTScriptObject local_id="pretest-button-script">
+                              <variables>
+                                <OTScriptVariable name="cardContainer">
+                                  <reference>
+                                    <object refid="${section-card-container}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableComponent name="button">
+                                  <reference>
+                                    <object refid="${pretest-submit-button}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="card">
+                                  <reference>
+                                    <object refid="${section_2}" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </variables>
+                              <script>
+                                <object refid="${change_page.js}" />
+                              </script>
+                              <scriptState />
+                            </OTScriptObject>
                             <OTChoice id="f49cdd90-7767-11dc-bcdb-d9cc05265d45" name="Choices">
                               <choices>
                                 <OTCompoundDoc name="more than the amount of electrical energy.">
@@ -478,7 +512,7 @@
                     <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/footer" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_2" name="Introduction" isComputerBased="false" isIntroduction="true" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="40ad81fa-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -543,7 +577,7 @@
                     <object refid="40ada90c-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Electrical adventure" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false">
+                <OTUDLSection local_id="section_3" name="Electrical adventure" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="true" isWrapup="false">
                   <content>
                     <OTCardContainer id="540fd1a8-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -610,7 +644,7 @@
                     <object refid="540fd1aa-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Light it up!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_4" name="Light it up!" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="446a8a00-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -901,7 +935,7 @@
                     <object refid="446a8a02-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Activity 2" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_5" name="Activity 2" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="49c2f286-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -966,7 +1000,7 @@
                     <object refid="49c31998-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Activity 3" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_6" name="Activity 3" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="4cb57e9c-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1031,7 +1065,7 @@
                     <object refid="4cb57e9e-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Activity 4" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_7" name="Activity 4" isComputerBased="true" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="4f7f9b22-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1096,7 +1130,7 @@
                     <object refid="4f7f9b24-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Math" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_8" name="Math" isComputerBased="false" isIntroduction="false" isMath="true" isPosttest="false" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="5a27e0ae-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1161,7 +1195,7 @@
                     <object refid="5a27e0b0-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true">
+                <OTUDLSection local_id="section_9" name="Wrapping up" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="false" isReading="false" isWrapup="true">
                   <content>
                     <OTCardContainer id="5f2753c4-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1170,12 +1204,66 @@
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
+                                  Wrapping up.<p/>
+                                  Let your teacher know when you have completed the electricity unit. Your
+									teacher will then unlock the posttest for you.
+                                  <p />
+                                  <table>
+                                    <tr>
+                                      <td>Teacher password</td>
+                                      <td>
+                                        <object refid="${password-field}" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <object refid="${wrapup-submit-button}" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="${wrapup-button-script}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                          	<OTText local_id="password-field" isPassword="true" name="PasswordField" />
+                            <OTText local_id="password" text="electricity" name="Password" />
+                            <OTButton local_id="wrapup-submit-button" name="Button" text="Submit" />
+                            <OTScriptObject local_id="wrapup-button-script">
+                              <variables>
+                                <OTScriptVariable name="cardContainer">
+                                  <reference>
+                                    <object refid="${section-card-container}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableComponent name="button">
+                                  <reference>
+                                    <object refid="${wrapup-submit-button}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="card">
+                                  <reference>
+                                    <object refid="${section_10}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableComponent name="passwordfield">
+                                  <reference>
+                                    <object refid="${password-field}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="password">
+                                  <reference>
+                                    <object refid="${password}" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </variables>
+                              <script>
+                                <object refid="${change_page.js}" />
+                              </script>
+                              <scriptState />
+                            </OTScriptObject>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
@@ -1226,7 +1314,7 @@
                     <object refid="5f2753c6-7764-11dc-bcdb-d9cc05265d45" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="6d60af4a-7764-11dc-bcdb-d9cc05265d45" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -1784,7 +1872,32 @@
         </OTUDLMenu>
         <OTSnapshotAlbum local_id="album" />
         <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
-        <OTUDLMenuRule local_id="section-rule" jumpToAnyCard="true" />
+        <OTUDLMenuRule local_id="section-rule">
+          <rules>
+            <OTUDLMenuRule remainInScope="true">
+              <scope>
+                <object refid="${section_1}" />
+              </scope>
+            </OTUDLMenuRule>
+            <OTUDLMenuRule remainInScope="true" jumpToAnyCard="true">
+              <scope>
+                <object refid="${section_2}" />
+                <object refid="${section_3}" />
+                <object refid="${section_4}" />
+                <object refid="${section_5}" />
+                <object refid="${section_6}" />
+                <object refid="${section_7}" />
+                <object refid="${section_8}" />
+                <object refid="${section_9}" />
+              </scope>
+            </OTUDLMenuRule>
+            <OTUDLMenuRule remainInScope="true">
+              <scope>
+                <object refid="${section_10}" />
+              </scope>
+            </OTUDLMenuRule>
+          </rules>
+        </OTUDLMenuRule>
         <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
         <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
         <OTJavascript local_id="authoring_script.js" src="scripts/authoring_script.js" />
