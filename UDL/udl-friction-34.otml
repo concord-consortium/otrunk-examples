@@ -215,31 +215,31 @@
                 <OTChoice>
                   <choices>
                     <OTOverlay local_id="english-overlay" name="English" />
-                    <OTOverlay local_id="spanish-overlay" name="Espa√±ol">
+                    <OTOverlay local_id="spanish-overlay" name="Español">
                       <deltaObjectMap>
                         <entry key="${section_exploration5}">
-                          <OTUDLSection name="Ilustrar la fricci√≥n">
+                          <OTUDLSection name="Ilustrar la fricción">
                             <header>
                               <OTCompoundDoc>
                                 <bodyText>
-                                  <div class="title">Ilustrar la fricci√≥n</div>
+                                  <div class="title">Ilustrar la fricción</div>
                                 </bodyText>
                               </OTCompoundDoc>
                             </header>
                           </OTUDLSection>
                         </entry>
                         <entry key="${introduction-1}">
-                          <OTUDLCompoundDoc name="Cuesti√≥n Central">
+                          <OTUDLCompoundDoc name="Cuestión Central">
                             <bodyText>
                               <div class="buffer">
                                 <div class="border">
                                   <div class="body">
-                                    <div class="subtitle">Cuesti√≥n Central</div>
-                                    ¬øQu√© pasarr√≠a si no fuera la fricci√≥n?
+                                    <div class="subtitle">Cuestión Central</div>
+                                    ¿Qué pasarría si no fuera la fricción?
                                     <p />
                                     <img src="http://udl.concord.org/share/Friction/Winter%20Activities%20155.png" border="1" />
                                     <p />
-                                    Este tema explora el papel de la fricci√≥n en la vida cotidiana.
+                                    Este tema explora el papel de la fricción en la vida cotidiana.
                                   </div>
                                 </div>
                               </div>
@@ -247,11 +247,11 @@
                           </OTUDLCompoundDoc>
                         </entry>
                         <entry key="${section_exploration1}">
-                          <OTUDLSection name="Deliz√°ndose">
+                          <OTUDLSection name="Delizándose">
                             <header>
                               <OTCompoundDoc>
                                 <bodyText>
-                                  <div class="title">Deliz√°ndose</div>
+                                  <div class="title">Delizándose</div>
                                 </bodyText>
                               </OTCompoundDoc>
                             </header>
@@ -263,7 +263,7 @@
                               <div class="leftpanel">
                                 <img src="http://udl.concord.org/share/udl-tree-only.png" width="70" height="73" />
                                 <br />
-                                <div class="activity-title">Fricci√≥n UDL</div>
+                                <div class="activity-title">Fricción UDL</div>
                               </div>
                             </bodyText>
                           </OTCompoundDoc>
@@ -285,25 +285,25 @@
                               <div class="buffer">
                                 <div class="border">
                                   <div class="body">
-                                    Responde a las preguntas siguientes. Cuando has terminado, empuja el bot√≥n de
+                                    Responde a las preguntas siguientes. Cuando has terminado, empuja el botón de
                                     <b>someter</b>
-                                    . Atenci√≥n: despu√©s de empuja el bot√≥n, no podr√°s regresar a cambriar las respuestas.
+                                    . Atención: después de empuja el botón, no podrás regresar a cambriar las respuestas.
                                     <ol>
                                       <li>
-                                        ¬øEn qu√© superficie se delizar√° mejor un trineo?
+                                        ¿En qué superficie se delizará mejor un trineo?
                                         <br />
                                         <object refid="${question1-56-sp}" />
                                         <p />
                                       </li>
                                       <li>
-                                        ¬øEn qu√© superficie se delizar√° peor un trineo?
+                                        ¿En qué superficie se delizará peor un trineo?
                                         <br />
                                         <object refid="${question2-56-sp}" />
                                         <p />
                                       </li>
                                     </ol>
                                     <p />
-                                    Para ir a la p√°gina siguiente, empuje la
+                                    Para ir a la página siguiente, empuje la
                                     <b>flecha derecha</b>
                                     .
                                   </div>
@@ -353,11 +353,11 @@
                           </OTUDLCompoundDoc>
                         </entry>
                         <entry key="${section_wrapup}">
-                          <OTUDLSection name="Conclusi√≥n">
+                          <OTUDLSection name="Conclusión">
                             <header>
                               <OTCompoundDoc>
                                 <bodyText>
-                                  <div class="title">Conclusi√≥n</div>
+                                  <div class="title">Conclusión</div>
                                 </bodyText>
                               </OTCompoundDoc>
                             </header>
@@ -382,13 +382,13 @@
                                   <div class="body">
                                     <ol start="3">
                                       <li>
-                                        Lo m√°s pegajoso la superficie...
+                                        Lo más pegajoso la superficie...
                                         <br />
                                         <object refid="${question3-56-sp}" />
                                         <p />
                                       </li>
                                       <li>
-                                        ¬øCu√°l de las opciones siguientes es un ejemplo de intentar a augmentar la fricci√≥n?
+                                        ¿Cuál de las opciones siguientes es un ejemplo de intentar a augmentar la fricción?
                                         <br />
                                         <object refid="${question4-56-sp}" />
                                         <p />
@@ -398,7 +398,7 @@
                                     <table>
                                       <tr>
                                         <td>
-                                          Cuando has terminado, empuja el bot√≥n de
+                                          Cuando has terminado, empuja el botón de
                                           <b>someter</b>
                                           .
                                         </td>
@@ -440,17 +440,17 @@
                                 <choices>
                                   <OTCompoundDoc>
                                     <bodyText>
-                                      <div class="body-no-border">Lo m√°s la fricci√≥n</div>
+                                      <div class="body-no-border">Lo más la fricción</div>
                                     </bodyText>
                                   </OTCompoundDoc>
                                   <OTCompoundDoc>
                                     <bodyText>
-                                      <div class="body-no-border">Lo menos la fricci√≥n</div>
+                                      <div class="body-no-border">Lo menos la fricción</div>
                                     </bodyText>
                                   </OTCompoundDoc>
                                   <OTCompoundDoc>
                                     <bodyText>
-                                      <div class="body-no-border">Un nivel egual de fricci√≥n</div>
+                                      <div class="body-no-border">Un nivel egual de fricción</div>
                                     </bodyText>
                                   </OTCompoundDoc>
                                 </choices>
@@ -469,7 +469,7 @@
                                   </OTCompoundDoc>
                                   <OTCompoundDoc>
                                     <bodyText>
-                                      <div class="body-no-border">Poner la cera debajo de los esqu√≠s</div>
+                                      <div class="body-no-border">Poner la cera debajo de los esquís</div>
                                     </bodyText>
                                   </OTCompoundDoc>
                                 </choices>
@@ -478,11 +478,11 @@
                           </OTUDLCompoundDoc>
                         </entry>
                         <entry key="${section_exploration3}">
-                          <OTUDLSection name="Zapatos de fricci√≥n">
+                          <OTUDLSection name="Zapatos de fricción">
                             <header>
                               <OTCompoundDoc>
                                 <bodyText>
-                                  <div class="title">Zapatos de fricci√≥n</div>
+                                  <div class="title">Zapatos de fricción</div>
                                 </bodyText>
                               </OTCompoundDoc>
                             </header>
@@ -506,17 +506,17 @@
                                 <div class="border">
                                   <div class="body">
                                     <div class="subtitle">Interesar</div>
-                                    ¬øC√≥mo puedes medir la capacidad de delizaci√≥n?
+                                    ¿Cómo puedes medir la capacidad de delización?
                                     <p />
                                     <img src="http://udl.concord.org/share/Friction/slide-Children-1348.jpg" width="222" height="250" />
                                     <p />
-                                    En esta actividad, vas a medir la cantidad de la fricci√≥n de superficies diferentes.
+                                    En esta actividad, vas a medir la cantidad de la fricción de superficies diferentes.
                                     <p />
                                     <div class="story-border">
-                                      <div class="story">Eduardo y Mar√≠a decidieron inventar una manera de medir la fricci√≥n de los ojectos. Quer√≠an un m√©todo  sencillo para que pudieran transportar su equipo de prueba desde un lugar a otro, incluyendo Mundo Resbaladizo, Mundo Pegajoso, y su propio mundo. T√∫ puedes probar su m√©todo, que fue crear un tobog√°n y ver que nivel de inclinaci√≥n se necesita para mover el ojecto.</div>
+                                      <div class="story">Eduardo y María decidieron inventar una manera de medir la fricción de los ojectos. Querían un método  sencillo para que pudieran transportar su equipo de prueba desde un lugar a otro, incluyendo Mundo Resbaladizo, Mundo Pegajoso, y su propio mundo. Tú puedes probar su método, que fue crear un tobogán y ver que nivel de inclinación se necesita para mover el ojecto.</div>
                                     </div>
                                     <p />
-                                    Dibuje un tobog√°n de un patio de recreo con una persona lista a bajar. Patios de recreo diferentes tienen ‚Äúslides‚Äù creados de materiales diferentes. Asegurate de describir el tipo de material de la superficie de tu tobog√°n.
+                                    Dibuje un tobogán de un patio de recreo con una persona lista a bajar. Patios de recreo diferentes tienen “slides” creados de materiales diferentes. Asegurate de describir el tipo de material de la superficie de tu tobogán.
                                     <p />
                                     <object refid="${act1-eng-ques1-es}" />
                                   </div>
@@ -533,7 +533,7 @@
                                     <bodyText>
                                       <div class="buffer">
                                         <div class="border">
-                                          <div class="body">Recuerdete la √∫ltima vez que bajaste de un tobog√°n. ¬øFuiste r√°pido o lentamente? ¬øRecuerdas el material del tobog√°n? ¬øC√≥mo piensas podr√≠as medir la fricci√≥n de las superficies diferentes?</div>
+                                          <div class="body">Recuerdete la última vez que bajaste de un tobogán. ¿Fuiste rápido o lentamente? ¿Recuerdas el material del tobogán? ¿Cómo piensas podrías medir la fricción de las superficies diferentes?</div>
                                         </div>
                                       </div>
                                     </bodyText>
@@ -565,7 +565,7 @@
                                     <bodyText>
                                       <div class="buffer">
                                         <div class="border">
-                                          <div class="body">Veo a una chica desliz√°ndose por el tobog√°n.   Me pregunto si su velocidad relaciona a la fricci√≥n.</div>
+                                          <div class="body">Veo a una chica deslizándose por el tobogán.   Me pregunto si su velocidad relaciona a la fricción.</div>
                                         </div>
                                       </div>
                                     </bodyText>
@@ -625,11 +625,11 @@
                           </OTUDLCompoundDoc>
                         </entry>
                         <entry key="${section_intro}">
-                          <OTUDLSection name="Introduci√≥n">
+                          <OTUDLSection name="Introdución">
                             <header>
                               <OTCompoundDoc>
                                 <bodyText>
-                                  <div class="title">Introduci√≥n</div>
+                                  <div class="title">Introdución</div>
                                 </bodyText>
                               </OTCompoundDoc>
                             </header>
@@ -647,11 +647,11 @@
                           </OTUDLSection>
                         </entry>
                         <entry key="${section_explorationx}">
-                          <OTUDLSection name="Emp√∫jelo">
+                          <OTUDLSection name="Empújelo">
                             <header>
                               <OTCompoundDoc>
                                 <bodyText>
-                                  <div class="title">Emp√∫jelo</div>
+                                  <div class="title">Empújelo</div>
                                 </bodyText>
                               </OTCompoundDoc>
                             </header>
