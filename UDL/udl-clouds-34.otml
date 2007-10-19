@@ -2957,15 +2957,6 @@ The plastic wrap never touched the water in the bowl.
         <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
         <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
         <OTJavascript local_id="authoring_script.js" src="scripts/authoring_script.js" />
-        <object refid="668183a7-71c2-11dc-9410-0f9c34fad6c2" />
-        <object refid="6ceeb78e-71c2-11dc-9410-0f9c34fad6c2" />
-        <object refid="b72d5db5-71c2-11dc-9410-0f9c34fad6c2" />
-        <object refid="cb54dc9c-71c3-11dc-9410-0f9c34fad6c2" />
-        <object refid="e9968743-71c3-11dc-9410-0f9c34fad6c2" />
-        <object refid="f26c2faa-71c3-11dc-9410-0f9c34fad6c2" />
-        <object refid="f6356cb1-71c3-11dc-9410-0f9c34fad6c2" />
-        <object refid="08284dc8-71c4-11dc-9410-0f9c34fad6c2" />
-        <object refid="0e60b60f-71c4-11dc-9410-0f9c34fad6c2" />
       </library>
     </OTSystem>
   </objects>
