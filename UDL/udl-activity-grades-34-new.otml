@@ -25,9 +25,9 @@
 		<import class="org.concord.otrunk.script.js.OTJavascript"/>
 		<import class="org.concord.otrunk.script.OTScriptEngineBundle"/>
 		<import class="org.concord.otrunk.script.OTScriptEngineEntry"/>
-		<import class="org.concord.otrunk.udl.OTUDLCharacter"/>
-		<import class="org.concord.otrunk.udl.OTUDLCharacterGroup"/>
-		<import class="org.concord.otrunk.udl.OTUDLCoachStatement"/>
+		<import class="org.concord.otrunk.udl.coach.OTUDLCoach"/>
+		<import class="org.concord.otrunk.udl.coach.OTUDLCoachGroup"/>
+		<import class="org.concord.otrunk.udl.coach.OTUDLCoachStatement"/>
 		<import class="org.concord.otrunk.udl.OTUDLMenuRule"/>
 		<import class="org.concord.otrunk.udl.document.OTDefinition"/>
 		<import class="org.concord.otrunk.udl.document.OTDefinitionManager"/>
@@ -86,7 +86,7 @@
 						<OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView"/>
 						<OTViewEntry objectClass="org.concord.otrunk.ui.OTButton" viewClass="org.concord.otrunk.ui.swing.OTButtonView"/>
 						<OTViewEntry objectClass="org.concord.otrunk.udl3.OTQuestion" viewClass="org.concord.otrunk.udl3.OTQuestionView"/>
-						<OTViewEntry objectClass="org.concord.otrunk.udl.OTUDLCharacterGroup" viewClass="org.concord.otrunk.udl.OTUDLCharacterGroupView"/>
+						<OTViewEntry objectClass="org.concord.otrunk.udl.coach.OTUDLCoachGroup" viewClass="org.concord.otrunk.udl.coach.OTUDLCoachGroupView"/>
 						<OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLSection" viewClass="org.concord.otrunk.udl3.OTUDLSectionView"/>
 						<OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLContainer" viewClass="org.concord.otrunk.udl3.OTUDLContainerView"/>
 						<OTViewEntry objectClass="org.concord.otrunk.udl.document.OTUDLCSSModifier" viewClass="org.concord.otrunk.udl.document.OTUDLCSSModifierView"/>
@@ -867,16 +867,16 @@
 						</OTCompoundDoc>
 					</topBar>
 					<characters>
-						<OTUDLCharacterGroup local_id="character-group" topLevelCardContainer="${section-card-container}">
+						<OTUDLCoachGroup local_id="character-group" topLevelCardContainer="${section-card-container}">
 							<characters>
-								<OTUDLCharacter local_id="character_affective" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/blah-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/blah-head.png"/>
-								<OTUDLCharacter local_id="character_strategic" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head.png"/>
-								<OTUDLCharacter local_id="character_recognition" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/roxy-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/11818/roxy-large.gif"/>
+								<OTUDLCoach local_id="character_affective" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/blah-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/blah-head.png"/>
+								<OTUDLCoach local_id="character_strategic" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head.png"/>
+								<OTUDLCoach local_id="character_recognition" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/roxy-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/11818/roxy-large.gif"/>
 							</characters>
 							<speechFrame>
 								<OTFrame local_id="speech_frame" width="380" height="340" borderlessPopup="false"/>
 							</speechFrame>
-						</OTUDLCharacterGroup>
+						</OTUDLCoachGroup>
 					</characters>
 					<content>
 						<OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true">
