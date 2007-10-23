@@ -981,7 +981,6 @@
                               <script>
                                 <OTJavascript>
                                   <script>importClass(Packages.java.awt.event.ActionListener);
-                          					importClass(Packages.java.lang.System);
                           					
                           					function init()
                           					{
@@ -1009,7 +1008,6 @@
                           					var stemButtonListener = new ActionListener()
                           					{
                           						actionPerformed: function(evt) {
-                          							System.out.println(evt.getSource());
                           							scriptView.getViewContainer().getUpdateableContainer().setCurrentObject(stemsSection);
                           							stemsSection.getContent().setCurrentCard(stemsFirstPage);
                           						}
@@ -1018,7 +1016,6 @@
                           					var rootButtonListener = new ActionListener()
                           					{
                           						actionPerformed: function(evt) {
-                          							System.out.println(evt.getSource());
                           							scriptView.getViewContainer().getUpdateableContainer().setCurrentObject(rootsSection);
                           							rootsSection.getContent().setCurrentCard(rootsFirstPage);
                           						}
