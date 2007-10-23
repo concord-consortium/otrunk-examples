@@ -102,95 +102,7 @@
                       <OTText name="Text field" />
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Choices" />
-                      <OTUDLQuestions name="Scaffolded questions">
-                        <questions>
-                          <OTQuestion name="L5">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L4">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L3">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L2">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                          <OTQuestion name="L1">
-                            <prompt>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert prompt here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </prompt>
-                            <input>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert input here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </input>
-                            <scaffolding>
-                              <OTUDLCompoundDoc>
-                                <bodyText>Insert scaffolding here</bodyText>
-                              </OTUDLCompoundDoc>
-                            </scaffolding>
-                          </OTQuestion>
-                        </questions>
-                      </OTUDLQuestions>
+                      <OTUDLQuestions name="Scaffolded questions" />
                       <OTDataTable name="Data table" showLastRowForAddingNew="true">
                         <dataStore>
                           <OTDataStore numberChannels="2" />
@@ -251,9 +163,9 @@
                 <object refid="${definition-manager}" />
               </definitionManager>
               <cssBlocks>
-                <OTCssText local_id="css-font" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-font.css" />
-                <OTCssText local_id="css-color" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-color.css" />
-                <OTCssText local_id="css-layout" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-layout.css" />
+                <OTCssText local_id="css-font" src="css/otrunk-normal-font.css" />
+                <OTCssText local_id="css-color" src="css/otrunk-normal-color.css" />
+                <OTCssText local_id="css-layout" src="css/otrunk-normal-layout.css" />
               </cssBlocks>
             </OTUDLDocumentViewConfig>
             <OTPrototypeViewEntry local_id="textsize-choice-view" objectClass="org.concord.otrunk.OTSystem" viewClass="org.concord.otrunk.view.prototype.OTPrototypeView" copyPrototype="false">
@@ -569,6 +481,9 @@
                       <currentCard>
                         <object refid="${page-1}" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="${page-1}" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -927,7 +842,7 @@
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">An example answer might be: "The cloud is light and if you tried to touch it, your hand would go right through it."</div>
+                                        <div class="hint">An example answer might be: "The cloud is light and if you tried to touch it, your hand would go right through it." Try placing this into your own words.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1168,7 +1083,7 @@
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Write your answer in the box above</div>
+                                        <div class="hint">Write your answer in the box above.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1176,7 +1091,7 @@
                                 <OTQuestion name="L4">
                                   <prompt>
                                     <OTUDLCompoundDoc>
-                                      <bodyText>Observe the changes to the plastic wrap. How are the hot and the cold water different?</bodyText>
+                                      <bodyText>Observe the plastic wrap carefully to see if there are any changes.</bodyText>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
@@ -1239,25 +1154,21 @@
                                       <documentRefs>
                                         <OTChoice id="3c397d5c-7694-11dc-8925-31e85bbc495c" name="Choices">
                                           <choices>
-                                            <OTCompoundDoc name="The plastic wrap over the &lt;b&gt;hot&lt;/b&gt; water gets cloudy.">
-                                              <bodyText>
-                                                The plastic wrap over the
-                                                <b>hot</b>
-                                                water gets cloudy.
-                                              </bodyText>
+                                            <OTCompoundDoc name="hot">
+                                              <bodyText>hot</bodyText>
                                             </OTCompoundDoc>
-                                            <OTCompoundDoc name="The plastic wrap over the &lt;b&gt;cold&lt;/b&gt; water gets cloudy.">
-                                              <bodyText>
-                                                The plastic wrap over the
-                                                <b>cold</b>
-                                                water gets cloudy.
-                                              </bodyText>
+                                            <OTCompoundDoc name="cold">
+                                              <bodyText>cold</bodyText>
                                             </OTCompoundDoc>
                                           </choices>
                                         </OTChoice>
                                       </documentRefs>
                                       <bodyText>
+                                        The plasic wrap over the
+                                        <br />
                                         <object refid="3c397d5c-7694-11dc-8925-31e85bbc495c" />
+                                        <br />
+                                        water gets cloudy.
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </input>
@@ -1288,7 +1199,7 @@
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Does the plastic wrap over the hot water look cloudy? Describe.</div>
+                                        <div class="hint">Does the plastic wrap over the hot water look misty? Compare a cloud to the mist on the plastic wrap.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1338,7 +1249,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Write your response in the box above</div>
+                                        <div class="hint">Write your response in the box above.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1376,7 +1287,7 @@ The plastic wrap never touched the water in the bowl.
                                   <input>
                                     <OTUDLCompoundDoc>
                                       <documentRefs>
-                                        <OTText id="20df7e31-7e60-11dc-8959-1beb8deaa6ce" name="Text field" text="The water that got on the plastic wrap came from the..." />
+                                        <OTText id="20df7e31-7e60-11dc-8959-1beb8deaa6ce" name="Text field" text="The water that got on the plastic wrap came from the" />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="20df7e31-7e60-11dc-8959-1beb8deaa6ce" />
@@ -1386,7 +1297,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Complete the sentence above</div>
+                                        <div class="hint">Complete the sentence above.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1402,17 +1313,17 @@ The plastic wrap never touched the water in the bowl.
                                       <documentRefs>
                                         <OTChoice id="37995d32-7e60-11dc-8959-1beb8deaa6ce" name="Choices">
                                           <choices>
-                                            <OTCompoundDoc name="the air near the plastic wrap">
-                                              <bodyText>the air near the plastic wrap</bodyText>
+                                            <OTCompoundDoc name="the air near the plastic wrap.">
+                                              <bodyText>the air near the plastic wrap.</bodyText>
                                             </OTCompoundDoc>
-                                            <OTCompoundDoc name="the plastic wrap itself">
-                                              <bodyText>the plastic wrap itself</bodyText>
+                                            <OTCompoundDoc name="the plastic wrap itself.">
+                                              <bodyText>the plastic wrap itself.</bodyText>
                                             </OTCompoundDoc>
                                           </choices>
                                         </OTChoice>
                                       </documentRefs>
                                       <bodyText>
-                                        The water on the plastic wrap came from...
+                                        The water on the plastic wrap came from
                                         <br />
                                         <object refid="37995d32-7e60-11dc-8959-1beb8deaa6ce" />
                                       </bodyText>
@@ -1445,7 +1356,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">The water got from the bowl to the plastic wrap as a gas in the air. Describe how this happens.</div>
+                                        <div class="hint">The water moved from the bowl to the plastic wrap as a gas in the air. In your own words, describe how this happens.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1495,7 +1406,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Write your response in the box above</div>
+                                        <div class="hint">Write your response in the box above.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1520,7 +1431,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">If the water droplets came from the air to the plastic wrap, where do you think they might go?</div>
+                                        <div class="hint">If the water droplets move from the air to the plastic wrap, where do you think they might go?</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1542,7 +1453,7 @@ The plastic wrap never touched the water in the bowl.
                                         <br />
                                         <object refid="020b894e-7e61-11dc-8959-1beb8deaa6ce" />
                                         <br />
-                                        and enters the
+                                        and entered into the
                                         <br />
                                         <object refid="0d821b4f-7e61-11dc-8959-1beb8deaa6ce" />
                                       </bodyText>
@@ -1551,7 +1462,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Fill in the blanks above to complete the sentence</div>
+                                        <div class="hint">Fill in the blanks above to complete the sentence.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1567,11 +1478,11 @@ The plastic wrap never touched the water in the bowl.
                                       <documentRefs>
                                         <OTChoice id="1bcded60-7e61-11dc-8959-1beb8deaa6ce" name="Choices">
                                           <choices>
-                                            <OTCompoundDoc name="The water changes into a gas and enters the air.">
-                                              <bodyText>The water changes into a gas and enters the air.</bodyText>
+                                            <OTCompoundDoc name="The water changed into a gas and entered the air.">
+                                              <bodyText>The water changed into a gas and entered the air.</bodyText>
                                             </OTCompoundDoc>
-                                            <OTCompoundDoc name="The water is absorbed by the plastic wrap.">
-                                              <bodyText>The water is absorbed by the plastic wrap.</bodyText>
+                                            <OTCompoundDoc name="The water was absorbed by the plastic wrap.">
+                                              <bodyText>The water was absorbed by the plastic wrap.</bodyText>
                                             </OTCompoundDoc>
                                           </choices>
                                         </OTChoice>
@@ -1610,7 +1521,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">The water changes into a gas and enters the air. Explain.</div>
+                                        <div class="hint">The water changed into a gas and entered the air. Explain in your own words.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1654,7 +1565,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Write your response in the box above</div>
+                                        <div class="hint">Write your response in the box above.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1678,7 +1589,7 @@ The plastic wrap never touched the water in the bowl.
                                   <scaffolding>
                                     <OTUDLCompoundDoc>
                                       <bodyText>
-                                        <div class="hint">Which bowl has more energy?</div>
+                                        <div class="hint">Think about which bowl has more energy.</div>
                                       </bodyText>
                                     </OTUDLCompoundDoc>
                                   </scaffolding>
@@ -1701,7 +1612,7 @@ The plastic wrap never touched the water in the bowl.
                                             <td>
                                               <object refid="b66100cc-7e61-11dc-8959-1beb8deaa6ce" />
                                             </td>
-                                            <td>bowl</td>
+                                            <td>bowl.</td>
                                           </tr>
                                         </table>
                                       </bodyText>
