@@ -936,11 +936,10 @@
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="${pretest-2}" />
+                        <object refid="${pretest-1}" />
                       </currentCard>
                       <viewedCards>
                         <object refid="${pretest-1}" />
-                        <object refid="${pretest-2}" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
@@ -996,7 +995,7 @@
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/introduction-card-container/cards[1]" name="Exploring the question">
+                        <OTUDLCompoundDoc name="Exploring the question">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1044,7 +1043,7 @@ e</text>
                             <OTDrawingTool2 local_id="introdrawing1" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/introduction-card-container/cards[2]" name="Exploring the question 2">
+                        <OTUDLCompoundDoc name="Exploring the question 2">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1086,13 +1085,8 @@ e</text>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/introduction-card-container/cards[2]" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="${introduction-1}" />
-                        <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/introduction-card-container/cards[1]" />
-                        <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/introduction-card-container/cards[2]" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -1231,7 +1225,7 @@ e</text>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="3e7bdc76-7c1e-11dc-98f7-298451e9d565" name="%3e7bdc76-7c1e-11dc-98f7-298451e9d565">
+                        <OTUDLCompoundDoc name="%3e7bdc76-7c1e-11dc-98f7-298451e9d565">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1303,7 +1297,7 @@ e</text>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="5428da6d-7c55-11dc-be7c-3d676782c86f" name="%5428da6d-7c55-11dc-be7c-3d676782c86f">
+                        <OTUDLCompoundDoc name="%5428da6d-7c55-11dc-be7c-3d676782c86f">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1375,7 +1369,7 @@ e</text>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="90d6c224-7c55-11dc-be7c-3d676782c86f" name="%90d6c224-7c55-11dc-be7c-3d676782c86f">
+                        <OTUDLCompoundDoc name="%90d6c224-7c55-11dc-be7c-3d676782c86f">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1401,7 +1395,7 @@ e</text>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="bb53ae55-7c55-11dc-be7c-3d676782c86f" name="%bb53ae55-7c55-11dc-be7c-3d676782c86f">
+                        <OTUDLCompoundDoc name="%bb53ae55-7c55-11dc-be7c-3d676782c86f">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1477,7 +1471,7 @@ e</text>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="e32e9f7c-7c55-11dc-be7c-3d676782c86f" name="%e32e9f7c-7c55-11dc-be7c-3d676782c86f">
+                        <OTUDLCompoundDoc name="%e32e9f7c-7c55-11dc-be7c-3d676782c86f">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1551,7 +1545,7 @@ e</text>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="2129c7b3-7c56-11dc-be7c-3d676782c86f" name="%2129c7b3-7c56-11dc-be7c-3d676782c86f">
+                        <OTUDLCompoundDoc name="%2129c7b3-7c56-11dc-be7c-3d676782c86f">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1623,7 +1617,7 @@ e</text>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="5539dfea-7c56-11dc-be7c-3d676782c86f" name="%5539dfea-7c56-11dc-be7c-3d676782c86f">
+                        <OTUDLCompoundDoc name="%5539dfea-7c56-11dc-be7c-3d676782c86f">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1695,7 +1689,7 @@ e</text>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="94099631-7c56-11dc-be7c-3d676782c86f" name="%94099631-7c56-11dc-be7c-3d676782c86f">
+                        <OTUDLCompoundDoc name="%94099631-7c56-11dc-be7c-3d676782c86f">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -1769,20 +1763,8 @@ e</text>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="90d6c224-7c55-11dc-be7c-3d676782c86f" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="${exploration4-1}" />
-                        <object refid="${page-1}" />
-                        <object refid="3e7bdc76-7c1e-11dc-98f7-298451e9d565" />
-                        <object refid="5428da6d-7c55-11dc-be7c-3d676782c86f" />
-                        <object refid="90d6c224-7c55-11dc-be7c-3d676782c86f" />
-                        <object refid="bb53ae55-7c55-11dc-be7c-3d676782c86f" />
-                        <object refid="e32e9f7c-7c55-11dc-be7c-3d676782c86f" />
-                        <object refid="2129c7b3-7c56-11dc-be7c-3d676782c86f" />
-                        <object refid="5539dfea-7c56-11dc-be7c-3d676782c86f" />
-                        <object refid="94099631-7c56-11dc-be7c-3d676782c86f" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -2349,9 +2331,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-explain-ques3-5/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-explain-ques3-5/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-explain-ques3-5/input" />
@@ -2499,9 +2481,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-explain-ques4-5/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-explain-ques4-5/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-explain-ques4-5/input" />
@@ -2766,9 +2748,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-5/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-5/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-5/input" />
@@ -2790,9 +2772,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-4/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-4/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-4/input" />
@@ -2816,9 +2798,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-3/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-3/input" text="I would sit on a slippery piece of...." />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-3/input" />
@@ -2842,22 +2824,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-2/input">
                                       <documentRefs>
-                                        <OTChoice id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-2/input">
-                                          <choices>
-                                            <OTCompoundDoc>
-                                              <bodyText>
-                                                <div class="body-no-border">I would sit on a piece of notebook paper</div>
-                                              </bodyText>
-                                            </OTCompoundDoc>
-                                            <OTCompoundDoc>
-                                              <bodyText>
-                                                <div class="body-no-border">I would sit on a piece of wax paper</div>
-                                              </bodyText>
-                                            </OTCompoundDoc>
-                                          </choices>
-                                        </OTChoice>
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-2/input" />
@@ -2881,9 +2850,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-1/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-1/input" text="" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques1-1/input" />
@@ -2909,9 +2878,9 @@ e</text>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
-                                <OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques2/input">
                                   <documentRefs>
-                                    <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques2/input" />
+                                    <null />
                                   </documentRefs>
                                   <bodyText>
                                     <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques2/input" />
@@ -3006,9 +2975,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-5/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-5/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-5/input" />
@@ -3030,9 +2999,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-4/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-4/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-4/input" />
@@ -3056,9 +3025,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-3/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-3/input" text="I would sit on a sticky piece of...." />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-3/input" />
@@ -3082,22 +3051,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-2/input">
                                       <documentRefs>
-                                        <OTChoice id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-2/input">
-                                          <choices>
-                                            <OTCompoundDoc>
-                                              <bodyText>
-                                                <div class="body-no-border">I would sit on a piece of notebook paper</div>
-                                              </bodyText>
-                                            </OTCompoundDoc>
-                                            <OTCompoundDoc>
-                                              <bodyText>
-                                                <div class="body-no-border">I would sit on a piece of sand paper</div>
-                                              </bodyText>
-                                            </OTCompoundDoc>
-                                          </choices>
-                                        </OTChoice>
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-2/input" />
@@ -3121,9 +3077,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-1/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-1/input" text="" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques3-1/input" />
@@ -3149,9 +3105,9 @@ e</text>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
-                                <OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques4/input">
                                   <documentRefs>
-                                    <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques4/input" />
+                                    <null />
                                   </documentRefs>
                                   <bodyText>
                                     <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act1-ext-ques4/input" />
@@ -3168,20 +3124,8 @@ e</text>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="${exploration1-5}" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="${exploration1-1}" />
-                        <object refid="${slipsliding_engage}" />
-                        <object refid="${exploration1-2}" />
-                        <object refid="${exploration1-3}" />
-                        <object refid="${exploration1-5}" />
-                        <object refid="${slipsliding_explore3}" />
-                        <object refid="${exploration1-4}" />
-                        <object refid="${slipsliding_explain_2}" />
-                        <object refid="${exploration1-6}" />
-                        <object refid="${slipsliding_elaborate_2}" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -3731,9 +3675,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-5/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-5/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-5/input" />
@@ -3755,9 +3699,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-4/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-4/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-4/input" />
@@ -3779,9 +3723,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-3/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-3/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-3/input" />
@@ -3841,9 +3785,9 @@ e</text>
                                     </OTUDLCompoundDoc>
                                   </prompt>
                                   <input>
-                                    <OTUDLCompoundDoc>
+                                    <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-1/input">
                                       <documentRefs>
-                                        <OTText id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-1/input" />
+                                        <null />
                                       </documentRefs>
                                       <bodyText>
                                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-explain-ques1-1/input" />
@@ -3940,22 +3884,9 @@ e</text>
                                 </OTUDLCompoundDoc>
                               </prompt>
                               <input>
-                                <OTUDLCompoundDoc>
+                                <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-elab-ques1/input">
                                   <documentRefs>
-                                    <OTChoice id="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-elab-ques1/input">
-                                      <choices>
-                                        <OTCompoundDoc>
-                                          <bodyText>
-                                            <div class="body-no-border">Yes</div>
-                                          </bodyText>
-                                        </OTCompoundDoc>
-                                        <OTCompoundDoc>
-                                          <bodyText>
-                                            <div class="body-no-border">No</div>
-                                          </bodyText>
-                                        </OTCompoundDoc>
-                                      </choices>
-                                    </OTChoice>
+                                    <null />
                                   </documentRefs>
                                   <bodyText>
                                     <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/act2-elab-ques1/input" />
@@ -4132,18 +4063,6 @@ The more slippery the material on the slide, _______.</bodyText>
                       <currentCard>
                         <object refid="${exploration3-1}" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="${exploration3-1}" />
-                        <object refid="${exploration3-2}" />
-                        <object refid="${pgsurfaces_engage_2}" />
-                        <object refid="${exploration3-3}" />
-                        <object refid="${pgsurface_explore_2}" />
-                        <object refid="${exploration3-5}" />
-                        <object refid="${exploration3-6}" />
-                        <object refid="${exploration3-7}" />
-                        <object refid="${exploration3-8}" />
-                        <object refid="${pgsurface_evaluate}" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -4217,7 +4136,7 @@ The more slippery the material on the slide, _______.</bodyText>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="977711ba-81a2-11dc-8ec9-9576d3963eeb" name="%977711ba-81a2-11dc-8ec9-9576d3963eeb">
+                        <OTUDLCompoundDoc name="%977711ba-81a2-11dc-8ec9-9576d3963eeb">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4585,12 +4504,6 @@ The more slippery the material on the slide, _______.</bodyText>
                       <currentCard>
                         <object refid="${exploration2-1}" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="${exploration2-1}" />
-                        <object refid="${exploration2-2}" />
-                        <object refid="${exploration2-3}" />
-                        <object refid="977711ba-81a2-11dc-8ec9-9576d3963eeb" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -4684,7 +4597,7 @@ The more slippery the material on the slide, _______.</bodyText>
                             <OTText id="5c2f7b18-712b-11dc-9b20-d1d4cdafc530" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="678b5190-0bcf-012a-b542-0017f2cc694e!/explorationx-card-container/cards[2]" name="98200306-7127-11dc-9b20-d1d4cdafc530">
+                        <OTUDLCompoundDoc name="98200306-7127-11dc-9b20-d1d4cdafc530">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4742,7 +4655,7 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                             <OTText id="b3832c6f-81a4-11dc-8ec9-9576d3963eeb" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="f1e0e730-81a4-11dc-8ec9-9576d3963eeb" name="%f1e0e730-81a4-11dc-8ec9-9576d3963eeb">
+                        <OTUDLCompoundDoc name="%f1e0e730-81a4-11dc-8ec9-9576d3963eeb">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4765,7 +4678,7 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                             <OTText id="066ff712-81a5-11dc-8ec9-9576d3963eeb" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="1535b333-81a5-11dc-8ec9-9576d3963eeb" name="%1535b333-81a5-11dc-8ec9-9576d3963eeb">
+                        <OTUDLCompoundDoc name="%1535b333-81a5-11dc-8ec9-9576d3963eeb">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4789,7 +4702,7 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                             </OTDrawingTool2>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="8960c67a-81a5-11dc-8ec9-9576d3963eeb" name="%8960c67a-81a5-11dc-8ec9-9576d3963eeb">
+                        <OTUDLCompoundDoc name="%8960c67a-81a5-11dc-8ec9-9576d3963eeb">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -4805,16 +4718,8 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="${explorationx-2}" />
-                      </currentCard>
-                      <viewedCards>
                         <object refid="${explorationx-1}" />
-                        <object refid="${explorationx-2}" />
-                        <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/explorationx-card-container/cards[2]" />
-                        <object refid="f1e0e730-81a4-11dc-8ec9-9576d3963eeb" />
-                        <object refid="1535b333-81a5-11dc-8ec9-9576d3963eeb" />
-                        <object refid="8960c67a-81a5-11dc-8ec9-9576d3963eeb" />
-                      </viewedCards>
+                      </currentCard>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -4864,9 +4769,6 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                       <currentCard>
                         <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/exploration5-card-container/cards[0]" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="678b5190-0bcf-012a-b542-0017f2cc694e!/exploration5-card-container/cards[0]" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -5241,9 +5143,6 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                       <currentCard>
                         <object refid="${posttest-1}" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="${posttest-1}" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -5273,18 +5172,10 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_posttest}" />
+                <object refid="${section_pretest}" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_pretest}" />
-                <object refid="${section_intro}" />
-                <object refid="${section_exploration4}" />
-                <object refid="${section_explorationx}" />
-                <object refid="${section_exploration1}" />
-                <object refid="${section_exploration2}" />
-                <object refid="${section_exploration3}" />
-                <object refid="${section_exploration5}" />
-                <object refid="${section_posttest}" />
               </viewedCards>
             </OTCardContainer>
           </content>
