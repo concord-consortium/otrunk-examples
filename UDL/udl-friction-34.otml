@@ -1048,7 +1048,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Exploring the question 2</div>
+                                  <div class="subtitle-continued">Exploring the question 2</div>
                                   Albert lives in a world that is just the opposite. Everything is very sticky. All of the surfaces have a large amount of friction.
                                   <p />
                                   <table>
@@ -2106,7 +2106,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore  2</div>
+                                  <div class="subtitle-continued">Explore  2</div>
                                   <ol>
                                     <li>
                                       Collect several materials that you can attach to your block of wood to test how slippery they are when they are placed on your slide.
@@ -2162,7 +2162,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore  3</div>
+                                  <div class="subtitle-continued">Explore  3</div>
                                   <ol start="3">
                                     <li>
                                       Now test out each material on your cardboard slide. Attach each material below the block and again measure the height needed to make the block slide as shown.
@@ -2306,7 +2306,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explain 2</div>
+                                  <div class="subtitle-continued">Explain 2</div>
                                   <ol start="3">
                                     <li>
                                       <object refid="${act1-explain-ques3}" viewid="${questions-on-off-view}" />
@@ -2900,7 +2900,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Elaborate 2</div>
+                                  <div class="subtitle-continued">Elaborate 2</div>
                                   <ol start="3">
                                     <li>
                                       <object refid="${act1-ext-ques3}" />
@@ -3247,7 +3247,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Engage 2</div>
+                                  <div class="subtitle-continued">Engage 2</div>
                                   Write in the boxes below the surface materials
 (steel, wood, ice, carpet) in order from the most sticky to the most slippery.
                                   <table>
@@ -3360,7 +3360,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore 2</div>
+                                  <div class="subtitle-continued">Explore 2</div>
                                   <table>
                                     <tr>
                                       <td colspan="2">
@@ -3435,7 +3435,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore 3</div>
+                                  <div class="subtitle-continued">Explore 3</div>
                                   <table>
                                     <tr>
                                       <td colspan="2">
@@ -3518,7 +3518,7 @@ e</text>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore 4</div>
+                                  <div class="subtitle-continued">Explore 4</div>
                                   <table>
                                     <tr>
                                       <td colspan="2">
