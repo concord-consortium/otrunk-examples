@@ -86,6 +86,7 @@
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Choices" />
                       <OTUDLQuestions name="Scaffolded questions" />
+                      <null />
                     </objectsToInsert>
                   </OTObjectEditViewConfig>
                 </entry>
@@ -295,11 +296,11 @@
           <content>
             <OTCardContainer local_id="section-card-container" loadViewOnlyOnDemand="true">
               <cards>
-                <OTUDLSection local_id="section_1" name="Pretest" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_1" name="Pre-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
                   <header>
                     <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/section_1/header">
                       <bodyText>
-                        <div class="title">Pretest</div>
+                        <div class="title">Pre-test</div>
                       </bodyText>
                     </OTCompoundDoc>
                   </header>
@@ -311,7 +312,7 @@
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                Answer the following questions. When you have finished, press the
+                                  Answer the following questions. When you have finished, press the
                                   <b>Submit</b>
                                   button. Warning: after you hit the Submit button, you will not be able to go back and change your answers.
                                   <p />
@@ -323,56 +324,14 @@
                                   <p />
                                   <object refid="889374f0-78de-11dc-8275-3da1b6a57fd9" />
                                   <p />
-                                  3) Which of the following is an example of trying to increase friction?
-                                  <p />
-                                  <object refid="90d9d5a1-78de-11dc-8275-3da1b6a57fd9" />
-                                  <p />
-                                  4) Which of the following statements is not true?
-                                  <p />
-                                  <object refid="9cb6f1a2-78de-11dc-8275-3da1b6a57fd9" />
-                                  <p />
-                                  <table>
-                                    <tr>
-                                      <td>
-                                        Press the
-                                        <b>Submit</b>
-                                        button when you are done.
-                                      </td>
-                                      <td>
-                                        <object refid="${pretest-submit-button}" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                  <object refid="${pretest-button-script}" />
+                                  Press the
+                                  <b>Right Arrow</b>
+                                  below to go to the next page.
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                          	<OTButton local_id="pretest-submit-button" name="Button" text="Submit" />
-                            <OTScriptObject local_id="pretest-button-script">
-                              <variables>
-                                <OTScriptVariable name="cardContainer">
-                                  <reference>
-                                    <object refid="${section-card-container}" />
-                                  </reference>
-                                </OTScriptVariable>
-                                <OTScriptVariableComponent name="button">
-                                  <reference>
-                                    <object refid="${pretest-submit-button}" />
-                                  </reference>
-                                </OTScriptVariableComponent>
-                                <OTScriptVariable name="card">
-                                  <reference>
-                                    <object refid="${section_2}" />
-                                  </reference>
-                                </OTScriptVariable>
-                              </variables>
-                              <script>
-                                <object refid="${change_page.js}" />
-                              </script>
-                              <scriptState />
-                            </OTScriptObject>
                             <OTChoice id="db088c6a-7841-11dc-8a70-bf74c85eca3f" name="Choices">
                               <choices>
                                 <OTCompoundDoc name="It runs out of push.">
@@ -399,6 +358,39 @@
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%d16f5545-81aa-11dc-9320-53c7a668b8c2">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  3) Which of the following is an example of trying to increase friction?
+                                  <p />
+                                  <object refid="90d9d5a1-78de-11dc-8275-3da1b6a57fd9" />
+                                  <p />
+                                  4) Which of the following statements is not true?
+                                  <p />
+                                  <object refid="9cb6f1a2-78de-11dc-8275-3da1b6a57fd9" />
+                                  <p />
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        Press the
+                                        <b>Submit</b>
+                                        button when you are done.
+                                      </td>
+                                      <td>
+                                        <object refid="${pretest-submit-button}" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <object refid="${pretest-button-script}" />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
                             <OTChoice id="90d9d5a1-78de-11dc-8275-3da1b6a57fd9" name="Choices">
                               <choices>
                                 <OTCompoundDoc name="Squirting oil into door hinges">
@@ -425,34 +417,39 @@
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
-                            <OTZoom local_id="zoom" name="Zoom Tool">
-                              <transforms>
-                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="92.0" />
-                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="92.0" />
-                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="93.0" />
-                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="94.0" />
-                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="82.0" />
-                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="120.0" />
-                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="100.0" />
-                              </transforms>
-                              <images>
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom1_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom2_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom3_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom4_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom5_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom6b_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom7_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom8_smooth_sm.png" />
-                              </images>
-                            </OTZoom>
-                            <OTModelerPage local_id="mw-fric-model" authoredDataURL="http://mw2.concord.org/public/student/motionandforce/frictionheat.cml" />
+                            <OTButton local_id="pretest-submit-button" name="Button" text="Submit" />
+                            <OTScriptObject local_id="pretest-button-script">
+                              <variables>
+                                <OTScriptVariable name="cardContainer">
+                                  <reference>
+                                    <object refid="${section-card-container}" />
+                                  </reference>
+                                </OTScriptVariable>
+                                <OTScriptVariableComponent name="button">
+                                  <reference>
+                                    <object refid="${pretest-submit-button}" />
+                                  </reference>
+                                </OTScriptVariableComponent>
+                                <OTScriptVariable name="card">
+                                  <reference>
+                                    <object refid="${section_2}" />
+                                  </reference>
+                                </OTScriptVariable>
+                              </variables>
+                              <script>
+                                <object refid="${change_page.js}" />
+                              </script>
+                              <scriptState />
+                            </OTScriptObject>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
                         <object refid="${page-1}" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="${page-1}" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -976,7 +973,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Engage 2</div>
+                                  <div class="subtitle-continued">Engage 2</div>
                                   3. Is it your finger that makes it hot, or the rubbing?
                                   <p />
                                   Select one:
@@ -1061,7 +1058,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore-2</div>
+                                  <div class="subtitle-continued">Explore-2</div>
                                   3. Make a sandwich with the sensor between the penny and the cardboard.  The sides coated with rubber cement should face each other (inside the sandwich). The rubber cement will provide friction between the penny and the cardboard.
                                   <p />
                                   <img src="http://udl.concord.org/share/Friction/sandwich-web.png" />
@@ -1075,7 +1072,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore-3</div>
+                                  <div class="subtitle-continued">Explore-3</div>
                                   4. Put the penny on a block of wood. Hold the cardboard by the edges so that your fingers don't affect the temperature of the penny.
                                   <p />
                                   5. Start the sensor. Note the temperature of the penny before you start touching, rubbing or pushing the penny.
@@ -1098,7 +1095,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             <OTText id="b1374f39-78e8-11dc-8275-3da1b6a57fd9" name="Text field" />
                             <OTDataCollector local_id="dc_id_1" name="datacollector" multipleGraphableEnabled="false" title="Temperature Sensor Graph" autoScaleEnabled="true">
                               <source>
-                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0">
+                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
                                   <dataProducer>
                                     <OTSensorDataProxy local_id="dp_dc_id_1" name="dataproducer">
                                       <request>
@@ -1111,7 +1108,12 @@ Name two surfaces (besides ice) that are very, very slippery!
                                     </OTSensorDataProxy>
                                   </dataProducer>
                                   <dataStore>
-                                    <OTDataStore local_id="ds_dc_id_1" />
+                                    <OTDataStore local_id="ds_dc_id_1" dt="0.1" numberChannels="1">
+                                      <channelDescriptions>
+                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                        <OTDataChannelDescription name="" unit="degC" precision="-1" numericData="true" />
+                                      </channelDescriptions>
+                                    </OTDataStore>
                                   </dataStore>
                                 </OTDataGraphable>
                               </source>
@@ -1119,7 +1121,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                                 <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
                               </xDataAxis>
                               <yDataAxis>
-                                <OTDataAxis max="40.0" units="degC" min="0.0" label="Temperature" />
+                                <OTDataAxis max="40.0" units="degC" min="-0.0" label="Temperature" />
                               </yDataAxis>
                             </OTDataCollector>
                           </documentRefs>
@@ -1129,7 +1131,7 @@ Name two surfaces (besides ice) that are very, very slippery!
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore-4</div>
+                                  <div class="subtitle-continued">Explore-4</div>
                                   8. Move the sensor and cardboard to another penny and make a new sandwich. Start the sensor and note the starting temperature of the penny.
                                   <p />
                                   <object refid="${dc_id_1}" />
@@ -1202,7 +1204,7 @@ Where did the heat come from?
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Elaborate-2</div>
+                                  <div class="subtitle-continued">Elaborate-2</div>
                                   3. Describe the graph. Which caused more heating, rubbing on the wood or rubbing on the waxed paper?
                                   <p />
                                   <object refid="c737ec3f-78ef-11dc-8275-3da1b6a57fd9" />
@@ -1505,7 +1507,27 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <object refid="${zoom}" />
+                            <OTZoom local_id="zoom" name="Zoom Tool">
+                              <transforms>
+                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="92.0" />
+                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="92.0" />
+                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="93.0" />
+                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="94.0" />
+                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="82.0" />
+                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="120.0" />
+                                <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="100.0" />
+                              </transforms>
+                              <images>
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom1_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom2_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom3_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom4_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom5_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom6b_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom7_smooth_sm.png" />
+                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom8_smooth_sm.png" />
+                              </images>
+                            </OTZoom>
                             <OTText id="66c35d1c-7d7f-11dc-b809-ad838b75abee" name="Text field" />
                             <OTText id="ec27d16a-7d8f-11dc-a8ee-836ca0cfbdd7" name="Text field" />
                           </documentRefs>
@@ -1515,7 +1537,7 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore-2</div>
+                                  <div class="subtitle-continued">Explore-2</div>
                                   Here is a picture of the model of two surfaces that Uncle Hubert showed Susie and Johnny. Things are so enlarged that you can see individual atoms. The red ones are part of the top object that is moving. The black ones are part of the surface. Gravity is pushing the red object down on the surface.
                                   <br />
                                   <img src="http://udl.concord.org/share/Friction/MW-friction-model.jpg" />
@@ -1542,8 +1564,8 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore-3</div>
-                                  Here is the model. If you can, make the window wider until the temperature graph appears to the right of the model.
+                                  <div class="subtitle-continued">Explore-3</div>
+                                  Here is the model. If you can, make the window wider until you can see the whole model and  the temperature graph appears to the right of the model.
                                   <object refid="${mw-fric-model}" />
                                   <p />
                                   Run the model. Observe and describe what happens to the atoms.  Look very carefully at the ones where the two surfaces meet.
@@ -1560,7 +1582,7 @@ The molecules will
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <object refid="${mw-fric-model}" />
+                            <OTModelerPage local_id="mw-fric-model" authoredDataURL="http://mw2.concord.org/public/student/motionandforce/frictionheat.cml" />
                             <OTChoice id="4e9749d1-7904-11dc-b03e-ed6d4a0c2086" name="Choices">
                               <choices>
                                 <OTCompoundDoc name="slippery">
@@ -1578,7 +1600,7 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explore-4</div>
+                                  <div class="subtitle-continued">Explore-4</div>
                                   Reset the model and check the "KE shading" box. This feature colors the atoms according to how fast they are moving. Red is faster, and white is slower.
                                   <p />
                                   <object refid="${mw-fric-model}" />
@@ -1621,7 +1643,7 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continue">Explain-2</div>
+                                  <div class="subtitle-continued">Explain-2</div>
                                   In your own words, explain why rough surfaces with lots of friction heat up when you rub them. Use the words atoms, temperature, and surface.
                                   <p />
                                   <object refid="6c46c570-7da7-11dc-af3e-d9f9131c04e4" />
@@ -1747,16 +1769,13 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Engage</div>
+                                  <div class="subtitle">Discovery question</div>
                                   How strong is the force of friction?
                                   <p />
                                   <img src="http://udl.concord.org/share/Friction/push-rock-clipart.png" />
                                   <p />
                                   Measure the amount of force needed to make different surface materials start to move and continue to move.
                                   <p />
-                                  <div class="story-border">
-                                    <div class="story">Eduardo was annoyed. When he described Slippery World and Sticky World to his friends, he would say "it's like being on ice", or "it's like having glue on your shoes." But they clearly didn't believe him. They thought he was exaggerating. So he decided to take real measurements in both worlds so that he could prove just what they were like, compared to this world.</div>
-                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1824,34 +1843,21 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explore</div>
+                                  <div class="subtitle-continued">Explore 2</div>
                                   Start recording with the force sensor. Gradually pull harder and harder until the shoe starts to slide. Keep pulling so that the shoe slides at a constant speed.
                                   <p />
-                                  [[ FORCE SENSOR GRAPH + PREDICTION FROM ABOVE ]]
+                                  FORCE SENSOR GRAPH + PREDICTION FROM ABOVE
                                   <p />
-                                  Label your graph. Mark where you first started pulling. Mark where the sneaker first started to move. Mark the greatest force value.
-                                  <p />
-                                  [[ GRAPH LABELING SCAFFOLDS ]]
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">Explore</div>
                                   Describe your graph. What did it look like before the sneaker started moving? What happened just when the sneaker started moving? What happened after that?
                                   <p />
                                   <object refid="e0f2b400-790d-11dc-aaef-f7a1df3f6032" />
                                   <p />
-                                  What would you say was the average (add to glossary) value of the friction force needed to keep the shoe moving?
+                                  Label your graph. Mark where you first started pulling. Mark where the sneaker first started to move. Mark the greatest force value.
+                                  <p />
+                                  What would you say was the average value of the friction force needed to keep the shoe moving?
                                   <p />
                                   <object refid="f3fa8781-790d-11dc-aaef-f7a1df3f6032" />
                                   <p />
-                                  Now explore ways to increase or decrease the friction force. You can save several experiments on the same graph. Use the new button on the left to add a new dataset.
                                 </div>
                               </div>
                             </div>
@@ -1861,25 +1867,71 @@ The molecules will
                             <OTText id="f3fa8781-790d-11dc-aaef-f7a1df3f6032" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle-continued">Explain</div>
+                                  Try your experiment several times again. Study your results each time and answer the following questions.
+                                  <p />
+                                  INSERT GRAPH WITH DATA FROM EXPLORE SECTION
+                                  <P />
+                                  How similar are the shape of the graph and the maximum friction force each time?
+                                  <br />
+                                  <object refid="00e6687f-8240-11dc-a020-3582bc26fc16" />
+                                  <p />
+                                  Does the maximum friction force change if the shoe is moving faster?
+                                  <br />
+                                  <object refid="22f017b0-8240-11dc-a020-3582bc26fc16" />
+                                  <p />
+                                  Do you think Eduardo's experiment is a good way to measure how slippery or sticky a shoe is?
+                                  <br />
+                                  <object refid="84c7da51-8240-11dc-a020-3582bc26fc16" />
+                                  <p />
+                                  Explain.
+                                  <br />
+                                  <object refid="a0751e88-8240-11dc-a020-3582bc26fc16" />
+                                  <p />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTText id="00e6687f-8240-11dc-a020-3582bc26fc16" name="Text field" />
+                            <OTText id="22f017b0-8240-11dc-a020-3582bc26fc16" name="Text field" />
+                            <OTChoice id="84c7da51-8240-11dc-a020-3582bc26fc16" name="Choices">
+                              <choices>
+                                <OTCompoundDoc name="Yes">
+                                  <bodyText>Yes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="No">
+                                  <bodyText>No</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="Sort of">
+                                  <bodyText>Sort of</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <OTText id="a0751e88-8240-11dc-a020-3582bc26fc16" name="Text field" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%e49bace2-790f-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explore</div>
+                                  <div class="subtitle">Elaborate</div>
+                                  Now explore ways to increase or decrease the friction force. You can save several experiments on the same graph. Use the new button on the left to add a new dataset.
+                                  <p />
+                                  INSERT FORCE SENSOR
+                                  <p />
                                   Try putting waxed paper under the shoe. Repeat your pulling experiment. Be sure to label the new line you have made on your graph.
                                   <p />
-                                  [[ FORCE SENSOR GRAPH ]]
-                                  <p />
                                   Does waxed paper increase or decrease the friction force? Record the averarge value of the fricton force.
-                                  <p />
+                                  <br />
                                   <object refid="5ffa2a13-7910-11dc-aaef-f7a1df3f6032" />
                                   <p />
-                                  Try another material, such as newspaper, cloth or plastic, under the shoe. Repeat your pulling experiment. Be sure to label the new line you have made on your graph.
-                                  <p />
-                                  If you have sandpaper, glue it to the bottom of the shoe with rubber cement. Repeat your pulling experiment. Be sure to label the new line you have made on your graph
-                                  <p />
-                                  [[ IMAGE: SHOE WITH SANDPAPER ]]
                                 </div>
                               </div>
                             </div>
@@ -1893,25 +1945,49 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explore</div>
-                                  Start with a new graph (below). Try putting various fluids on the surface, such as water, oil, or peanut butter. Do the messiest one last! Repeat your pulling experiment. Be sure to label each new line you have made on your graph.
+                                  <div class="subtitle-continued">Elaborate 3</div>
+                                  1) Start with a new graph. Compare three situations:
+                                  <br />
+                                  A) Plain shoe
+                                  <br />
+                                  B) Wet shoe
+                                  <br />
+                                  C) Oily shoe
+                                  <br />
+                                  Create a new line for each situation and repeat your pulling experiment. Be sure to label each new line you have made on your graph.
+                                  <b>Test the oil last – it's the messiest!</b>
                                   <p />
-                                  [[ IMAGE: shoe with peanut butter ]]
+                                  INSERT FORCE SENSOR GRAPH,  multiple dataset
                                   <p />
-                                  [[ FORCE SENSOR GRAPH ]]
+                                  Fill in the average sliding friction force for each in the table below.
                                   <p />
+                                  TABLE
+                                  <p />
+                                  Which had the most friction? Which had the least friction?
+                                  <br />
+                                  <object refid="00ac9749-8244-11dc-a020-3582bc26fc16" />
+                                  <p />
+                                  Was the result surprising, or was it what you expected?
+                                  <br />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTText id="00ac9749-8244-11dc-a020-3582bc26fc16" name="Text field" />
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%b3ec3295-7914-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">New page</div>
-                                  New page content
+                                  <div class="subtitle-continued">Elaborate 2</div>
+                                  Try another material, such as newspaper, cloth or plastic, under the shoe. Repeat your pulling experiment. Be sure to label the new line you have made on your graph.
+                                  <p />
+                                  REPEAT FORCE SENSOR GRAPH FROM PREVIOUS PAGE
+                                  <p />
+                                  If you have sandpaper, glue it to the bottom of the shoe with rubber cement. Repeat your pulling experiment. Be sure to label each new line you have made on your graph.
                                 </div>
                               </div>
                             </div>
@@ -1922,16 +1998,13 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Explore</div>
-                                  List each material you tried and the average sliding friction force for each in the table below.
+                                  <div class="subtitle">Evaluate</div>
+                                  Summarize your results.  List each material you tried and the average sliding friction force for each in the table below.
+Go back to previous pages to collect your data.
                                   <p />
-                                  [[ TABLE ]]
+                                  INSERT TABLE
                                   <p />
-                                  In the table below, put the materials in order, from most slippery to most sticky.
-                                  <p />
-                                  [[ TABLE ]]
-                                  <p />
-                                  Is this the order you expected? Which materials behaved as you expected? Which materials behaved differently?
+                                  Which materials had the effect on friction that you expected? Which materials behaved differently?
                                   <p />
                                   <object refid="fbf13d67-7914-11dc-aaef-f7a1df3f6032" />
                                 </div>
@@ -2071,9 +2144,6 @@ The molecules will
                       <currentCard>
                         <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="fb397b2a-7dab-11dc-8e17-cd1de991f5de" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -2196,7 +2266,8 @@ The molecules will
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Wrapping up</div>
-                                  [Wrapping up]<p/>
+                                  [Wrapping up]
+                                  <p />
                                   Let your teacher know when you have completed the friction unit. Your
 									teacher will then unlock the posttest for you.
                                   <p />
@@ -2219,7 +2290,7 @@ The molecules will
                             </div>
                           </bodyText>
                           <documentRefs>
-                          	<OTText local_id="password-field" isPassword="true" name="PasswordField" />
+                            <OTText local_id="password-field" isPassword="true" name="PasswordField" />
                             <OTText local_id="password" text="friction" name="Password" />
                             <OTButton local_id="wrapup-submit-button" name="Button" text="Submit" />
                             <OTScriptObject local_id="wrapup-button-script">
@@ -2306,7 +2377,7 @@ The molecules will
                     <object refid="3c3da313-7e83-11dc-a02a-2fa3fd422b5e" />
                   </south>
                 </OTUDLSection>
-                <OTUDLSection local_id="section_10" name="Posttest" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="true" isPretest="false" isReading="false" isWrapup="false">
+                <OTUDLSection local_id="section_10" name="Post-test" isComputerBased="false" isIntroduction="false" isMath="false" isPosttest="false" isPretest="true" isReading="false" isWrapup="false">
                   <content>
                     <OTCardContainer id="46163bd7-7e83-11dc-a02a-2fa3fd422b5e" contentsMayScroll="true" loadViewOnlyOnDemand="true">
                       <cards>
@@ -2324,14 +2395,9 @@ The molecules will
                                   <br />
                                   <object refid="ccf53690-7e83-11dc-8b9b-8745c450911e" />
                                   <p />
-                                  3) Which of the following is an example of trying to increase friction?
-                                  <br />
-                                  <object refid="c3714cae-7e83-11dc-8b9b-8745c450911e" />
-                                  <p />
-                                  4) Which of the following statements is not true?
-                                  <br />
-                                  <object refid="d148d955-7e83-11dc-8b9b-8745c450911e" />
-                                  <p />
+                                  Press the
+                                  <b>Right Arrow</b>
+                                  below to go to the next page.
                                 </div>
                               </div>
                             </div>
@@ -2363,6 +2429,37 @@ The molecules will
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%ec7fee86-81ab-11dc-9320-53c7a668b8c2">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle" />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%ed2d93b7-81ab-11dc-9320-53c7a668b8c2">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  3) Which of the following is an example of trying to increase friction?
+                                  <br />
+                                  <object refid="c3714cae-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
+                                  4) Which of the following statements is not true?
+                                  <br />
+                                  <object refid="d148d955-7e83-11dc-8b9b-8745c450911e" />
+                                  <p />
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
                             <OTChoice id="c3714cae-7e83-11dc-8b9b-8745c450911e" name="Choices">
                               <choices>
                                 <OTCompoundDoc name="Squirting oil into door hinges">
@@ -2400,7 +2497,7 @@ The molecules will
                   <header>
                     <OTUDLCompoundDoc id="461662e8-7e83-11dc-a02a-2fa3fd422b5e" name="%461662e8-7e83-11dc-a02a-2fa3fd422b5e">
                       <bodyText>
-                        <div class="title">Posttest</div>
+                        <div class="title">Post-test</div>
                       </bodyText>
                     </OTUDLCompoundDoc>
                   </header>
@@ -2506,8 +2603,8 @@ The molecules will
         <OTSnapshotAlbum local_id="album" />
         <OTDefinitionManager local_id="definition-manager">
           <definitions>
-            <OTDefinitionList src="glossary/common-glossary.txt" />
-            <OTDefinitionList src="glossary/friction-glossary.txt" />
+            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/common-glossary.txt" />
+            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/friction-glossary.txt" />
           </definitions>
           <frame>
             <OTFrame local_id="definition_frame" width="280" height="150" borderlessPopup="true" />
@@ -2540,9 +2637,9 @@ The molecules will
             </OTUDLMenuRule>
           </rules>
         </OTUDLMenuRule>
-        <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
-        <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
-        <OTJavascript local_id="authoring_script.js" src="scripts/authoring_script.js" />
+        <OTJavascript local_id="change_page.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/change_page.js" />
+        <OTJavascript local_id="show_message.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/show_message.js" />
+        <OTJavascript local_id="authoring_script.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/authoring_script.js" />
       </library>
     </OTSystem>
   </objects>
