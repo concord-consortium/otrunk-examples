@@ -4217,6 +4217,20 @@ The more slippery the material on the slide, _______.</bodyText>
                             </OTUDLCoachStatement>
                           </coachStatements>
                         </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc id="977711ba-81a2-11dc-8ec9-9576d3963eeb" name="%977711ba-81a2-11dc-8ec9-9576d3963eeb">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle">Engage</div>
+                                  <div class="story-border">
+                                    <div class="story">Maria and Eduardo wondered how they could show their friends what it was like in Sticky World and Slippery World. "If we had sticky shoes and slippery shoes, they could wear the shoes and then they would know what it feels like!" Maria proposed. "That's a great idea," said Eduardo, "but which shoes should we pick?"</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                        </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc local_id="exploration2-2" name="materials">
                           <bodyText>
                             <div class="buffer">
@@ -4567,20 +4581,6 @@ The more slippery the material on the slide, _______.</bodyText>
                             </OTButton>
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="977711ba-81a2-11dc-8ec9-9576d3963eeb" name="%977711ba-81a2-11dc-8ec9-9576d3963eeb">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle">Engage</div>
-                                  <div class="story-border">
-                                    <div class="story">Maria and Eduardo wondered how they could show their friends what it was like in Sticky World and Slippery World. "If we had sticky shoes and slippery shoes, they could wear the shoes and then they would know what it feels like!" Maria proposed. "That's a great idea," said Eduardo, "but which shoes should we pick?"</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                        </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
                         <object refid="${exploration2-1}" />
@@ -4782,7 +4782,7 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTDrawingTool2 id="25a1f454-81a5-11dc-8ec9-9576d3963eeb" name="Draw tool">
+                            <OTDrawingTool2 id="25a1f454-81a5-11dc-8ec9-9576d3963eeb" name="Draw tool" backgroundImage="http://udl.concord.org/share/Friction/udl_time_length_graph.png">
                               <graphables>
                                 <OTDrawingShape type="" fillType="clear" x="0.0" y="0.0" width="0.0" height="0.0" color="0x000000" />
                               </graphables>
