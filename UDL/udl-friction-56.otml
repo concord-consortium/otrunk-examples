@@ -87,7 +87,11 @@
                       <OTDrawingTool2 name="Draw tool" />
                       <OTChoice name="Choices" />
                       <OTUDLQuestions name="Scaffolded questions" />
-                      <null />
+                      <OTDataTable name="Data table" showLastRowForAddingNew="true">
+                        <dataStore>
+                          <OTDataStore numberChannels="2" />
+                        </dataStore>
+                      </OTDataTable>
                     </objectsToInsert>
                   </OTObjectEditViewConfig>
                 </entry>
