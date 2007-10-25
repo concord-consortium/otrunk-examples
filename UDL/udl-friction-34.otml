@@ -118,6 +118,9 @@
                 <entry key="${questions-on-off-view}">
                   <OTUDLQuestionViewConfig objectClass="org.concord.otrunk.udl.question.OTUDLQuestions" viewClass="org.concord.otrunk.udl.question.OTUDLQuestionsEditView" />
                 </entry>
+                <entry key="${data-collector-view}">
+                	<OTViewEntry viewClass="org.concord.datagraph.state.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector" />
+                </entry>
               </map>
             </OTViewMode>
           </modes>
@@ -153,7 +156,7 @@
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTPlacementContainer" viewClass="org.concord.otrunk.ui.swing.OTPlacementContainerView" />
             <OTViewEntry local_id="text-edit" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextEditView" />
             <OTViewEntry local_id="text-label" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextView" />
-            <OTViewEntry viewClass="org.concord.datagraph.state.OTDataCollectorView" objectClass="org.concord.datagraph.state.OTDataCollector" />
+            <OTViewEntry local_id="data-collector-view" viewClass="org.concord.datagraph.state.OTDataCollectorView" objectClass="org.concord.datagraph.state.OTDataCollector" />
             <OTViewEntry viewClass="org.concord.datagraph.state.OTDataGraphView" objectClass="org.concord.datagraph.state.OTDataGraph" />
             <OTViewEntry viewClass="org.concord.data.state.OTDataFieldView" objectClass="org.concord.data.state.OTDataField" />
             <OTViewEntry viewClass="org.concord.datagraph.state.OTDataDrawingToolView" objectClass="org.concord.graph.util.state.OTDrawingTool" />
@@ -2300,6 +2303,336 @@ e</text>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                          	<OTUDLQuestions local_id="act1-explain-ques1">
+                              <questions>
+                                <OTQuestion local_id="act1-explain-ques1-5" name="L5">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What was the most sticky surface and what is your evidence?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTText />
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText />
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques1-4" name="L4">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What was the most sticky surface and what is your evidence?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          <object refid="${act1-explain-ques1-4-text}" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTText local_id="act1-explain-ques1-4-text" rows="2" />
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">Compare the heights needed to slide the block with different materials.</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques1-3" name="L3">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What was the most sticky surface and what is your evidence?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          <object refid="${act1-explain-ques1-3-text}" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTText local_id="act1-explain-ques1-3-text" rows="2" text="I think that the most sticky surface needed the slide to be lifted ..." />
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">Complete the answer above</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques1-2" name="L2">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What was the most sticky surface and what is your evidence?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          <object refid="${act1-explain-ques1-2-text}" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTChoice local_id="act1-explain-ques1-2-text">
+                                          <choices>
+                                            <OTCompoundDoc name="I needed to lift the slide higher for the most sticky surface.">
+                                              <bodyText>I needed to lift the slide higher for the most sticky surface.</bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc name="I needed to lift the slide to a lower height for the most sticky surface.">
+                                              <bodyText>I needed to lift the slide to a lower height for the most sticky surface.</bodyText>
+                                            </OTCompoundDoc>
+                                          </choices>
+                                        </OTChoice>
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">Pick the correct answer from the choices above.</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques1-1" name="L1">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What was the most sticky surface and what is your evidence?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          <object refid="${act1-explain-ques1-1-text}" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTText local_id="act1-explain-ques1-1-text" rows="2" />
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">A possible answer might be: "The more slippery the surface, the less the slide needed to be lifted."</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                              </questions>
+                            </OTUDLQuestions>
+                            <OTUDLQuestions local_id="act1-explain-ques2">
+                              <questions>
+                                <OTQuestion local_id="act1-explain-ques2-5" name="L5">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What do you think makes surfaces sticky?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTText />
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText />
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques2-4" name="L4">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What do you think makes surfaces sticky?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          <object refid="${act1-explain-ques2-4-text}" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTText local_id="act1-explain-ques2-4-text" rows="2" text="I think surfaces are sticky because..." />
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">Complete the answer above</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques2-3" name="L3">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What do you think makes surfaces sticky?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          Examples of sticky surfaces are
+                                          <table>
+                                            <tr>
+                                              <td>
+                                                <object refid="c511b17c-7c49-11dc-b137-17d965fd46db" />
+                                              </td>
+                                              <td>and</td>
+                                              <td>
+                                                <object refid="cf9b727d-7c49-11dc-b137-17d965fd46db" />
+                                              </td>
+                                            </tr>
+                                          </table>
+                                          They are similar because they are all
+                                          <br />
+                                          <object refid="d9394cde-7c49-11dc-b137-17d965fd46db" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTText id="c511b17c-7c49-11dc-b137-17d965fd46db" name="Text field" />
+                                        <OTText id="cf9b727d-7c49-11dc-b137-17d965fd46db" name="Text field" />
+                                        <OTText id="d9394cde-7c49-11dc-b137-17d965fd46db" name="Text field" />
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">Fill in the blanks above</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques2-2" name="L2">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">
+                                          What do you think makes surfaces sticky?
+                                          <br />
+                                          Sticky surfaces tend to be
+                                        </div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          <object refid="${act1-explain-ques2-2-text}" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTChoice local_id="act1-explain-ques2-2-text">
+                                          <choices>
+                                            <OTCompoundDoc>
+                                              <bodyText>
+                                                <div class="body-no-border">Smooth</div>
+                                              </bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc>
+                                              <bodyText>
+                                                <div class="body-no-border">Shiny</div>
+                                              </bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc>
+                                              <bodyText>
+                                                <div class="body-no-border">Rough</div>
+                                              </bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc>
+                                              <bodyText>
+                                                <div class="body-no-border">Soft</div>
+                                              </bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc>
+                                              <bodyText>
+                                                <div class="body-no-border">Bumpy</div>
+                                              </bodyText>
+                                            </OTCompoundDoc>
+                                            <OTCompoundDoc>
+                                              <bodyText>
+                                                <div class="body-no-border">Slimy</div>
+                                              </bodyText>
+                                            </OTCompoundDoc>
+                                          </choices>
+                                        </OTChoice>
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">Pick the correct answer from the choices above.</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                                <OTQuestion local_id="act1-explain-ques2-1" name="L1">
+                                  <prompt>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body-no-border">What do you think makes surfaces sticky?</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </prompt>
+                                  <input>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="body">
+                                          <object refid="7df9becc-7bf7-11dc-9209-0b2f5566a9d8" />
+                                        </div>
+                                      </bodyText>
+                                      <documentRefs>
+                                        <OTText id="7df9becc-7bf7-11dc-9209-0b2f5566a9d8" name="Text field" text="Besides not being shiny, sticky surfaces are also ....." />
+                                      </documentRefs>
+                                    </OTUDLCompoundDoc>
+                                  </input>
+                                  <scaffolding>
+                                    <OTUDLCompoundDoc>
+                                      <bodyText>
+                                        <div class="hint">Complete the answer above</div>
+                                      </bodyText>
+                                    </OTUDLCompoundDoc>
+                                  </scaffolding>
+                                </OTQuestion>
+                              </questions>
+                            </OTUDLQuestions>
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc local_id="slipsliding_explain_2" name="Explain-2">
                           <bodyText>
