@@ -119,7 +119,7 @@
                   <OTUDLQuestionViewConfig objectClass="org.concord.otrunk.udl.question.OTUDLQuestions" viewClass="org.concord.otrunk.udl.question.OTUDLQuestionsEditView" />
                 </entry>
                 <entry key="${data-collector-view}">
-                	<OTViewEntry viewClass="org.concord.datagraph.state.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector" />
+                  <OTViewEntry viewClass="org.concord.otrunk.udl.ui.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector" />
                 </entry>
               </map>
             </OTViewMode>
@@ -2304,7 +2304,7 @@ e</text>
                             </div>
                           </bodyText>
                           <documentRefs>
-                          	<OTUDLQuestions local_id="act1-explain-ques1">
+                            <OTUDLQuestions local_id="act1-explain-ques1">
                               <questions>
                                 <OTQuestion local_id="act1-explain-ques1-5" name="L5">
                                   <prompt>
@@ -4638,7 +4638,7 @@ The more slippery the material on the slide, _______.</bodyText>
                           <documentRefs>
                             <OTDataCollector local_id="dc_id_1" name="datacollector" multipleGraphableEnabled="false" title="Force (5N) Sensor Graph" autoScaleEnabled="true">
                               <source>
-                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0">
+                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" controllable="false" lineWidth="2.0">
                                   <dataProducer>
                                     <OTSensorDataProxy local_id="dp_dc_id_1" name="dataproducer">
                                       <request>
@@ -4654,7 +4654,12 @@ The more slippery the material on the slide, _______.</bodyText>
                                     </OTSensorDataProxy>
                                   </dataProducer>
                                   <dataStore>
-                                    <OTDataStore local_id="ds_dc_id_1" />
+                                    <OTDataStore local_id="ds_dc_id_1" dt="0.01" numberChannels="1">
+                                      <channelDescriptions>
+                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                        <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
+                                      </channelDescriptions>
+                                    </OTDataStore>
                                   </dataStore>
                                 </OTDataGraphable>
                               </source>
@@ -4665,11 +4670,7 @@ The more slippery the material on the slide, _______.</bodyText>
                                 <OTDataAxis max="4.0" units="N" min="-4.0" label="Forc-e (5N)" />
                               </yDataAxis>
                             </OTDataCollector>
-                            <OTButton local_id="forc_zero_button_dc_id_1" text="Zero Force">
-                              <action>
-                                <object refid="${forc_zero_dc_id_1}" />
-                              </action>
-                            </OTButton>
+                            <OTButton local_id="forc_zero_button_dc_id_1" text="Zero Force" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc local_id="exploration2-5" name="explore3">
@@ -4837,6 +4838,9 @@ The more slippery the material on the slide, _______.</bodyText>
                       <currentCard>
                         <object refid="${exploration2-1}" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="${exploration2-1}" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -5043,11 +5047,14 @@ Switch to the "ice" graph. Run the model again. What did the box do this time?
                                   <div class="subtitle">Evaluate</div>
                                   Now the model has a slider to change the amount of friction. Adjust the friction until the model goes exactly 10 m and then stops. Run the model as many times as you like. When you get the right amount of friction, take a snapshot of your graph.
                                   <BR />
-                                  INSERT MODEL HERE
+                                  <object refid="${pushit-model-2}" />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTFrictionModel local_id="pushit-model-2" isSlideSimulation="false" showMoveRampButtons="false" showGraph="true" showPushButtons="false" showSlider="true" showMaterialButtons="false" rampAngle="0" />
+                          </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
