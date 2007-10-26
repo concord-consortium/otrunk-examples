@@ -228,7 +228,7 @@
                 <OTChoice>
                   <choices>
                     <OTOverlay local_id="english-overlay" name="English" />
-                    <OTOverlay local_id="spanish-overlay" name="Espa챙짹째ol" />
+                    <OTOverlay local_id="spanish-overlay" name="Español" />
                   </choices>
                   <currentChoice>
                     <object refid="${english-overlay}" />
