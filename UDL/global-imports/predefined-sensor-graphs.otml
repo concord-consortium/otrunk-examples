@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <otrunk id="142a3d3c-7d24-11dc-8314-0800200c9a66" >
   <imports>
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.datagraph.state.OTDataGraph" />
+    <import class="org.concord.datagraph.state.OTDataAxis" />
+    <import class="org.concord.datagraph.state.OTDataCollector" />
+    <import class="org.concord.datagraph.state.OTDataGraphable" />
     <import class="org.concord.otrunk.OTSystem"/>
     <import class="org.concord.otrunk.view.OTViewEntry"/>
     <import class="org.concord.otrunk.view.OTViewBundle"/>
     <import class="org.concord.otrunk.view.OTFolderObject"/>
+    <import class="org.concord.sensor.state.OTDeviceConfig" />
+    <import class="org.concord.sensor.state.OTExperimentRequest" />
+    <import class="org.concord.sensor.state.OTInterfaceManager" />
+    <import class="org.concord.sensor.state.OTSensorDataProxy" />
+    <import class="org.concord.sensor.state.OTSensorRequest" />
+    <import class="org.concord.sensor.state.OTZeroSensor" />
   </imports>
   <objects>
     <OTSystem>
       <root>
         <OTFolderObject name="Basic graphs" id="088786c2-8719-11dc-8314-0800200c9a66">
         	<children>
-        		<OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Temperature Sensor Graph"  autoScaleEnabled="true">
+        		<OTDataCollector name="Temperature" multipleGraphableEnabled="false" title="Temperature Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -37,7 +48,7 @@
 	                <OTDataAxis max="40.0" units="degC" min="0.0" label="Temperature"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Light Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Light" multipleGraphableEnabled="false" title="Light Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -64,7 +75,7 @@
 	                <OTDataAxis max="4000.0" units="lux" min="0.0" label="Light"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Pressure Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Pressure" multipleGraphableEnabled="false" title="Pressure Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -90,7 +101,7 @@
 	                <OTDataAxis max="104.0" units="kPa" min="96.0" label="Pressure"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="false" title="Voltage Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Voltage" multipleGraphableEnabled="false" title="Voltage Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -116,7 +127,36 @@
 	                <OTDataAxis max="10.0" units="V" min="-10.0" label="Voltage"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Force (50N) Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Force (5N)" multipleGraphableEnabled="false" title="Force Sensor Graph" autoScaleEnabled="true">
+	              <source>
+	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
+	                  <dataProducer>
+	                    <OTSensorDataProxy name="dataproducer">
+	                      <request>
+	                        <OTExperimentRequest period="0.01">
+	                          <sensorRequests>
+	                            <OTSensorRequest stepSize="0.01" type="5" unit="N" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0"/>
+	                          </sensorRequests>
+	                        </OTExperimentRequest>
+	                      </request>
+	                      <zeroSensor>
+	                        <OTZeroSensor sensorIndex="0" />
+	                      </zeroSensor>
+	                    </OTSensorDataProxy>
+	                  </dataProducer>
+	                  <dataStore>
+	                    <OTDataStore/>
+	                  </dataStore>
+	                </OTDataGraphable>
+	              </source>
+	              <xDataAxis>
+	                <OTDataAxis max="60" units="s" min="0" label="Time"/>
+	              </xDataAxis>
+	              <yDataAxis>
+	                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force"/>
+	              </yDataAxis>
+	            </OTDataCollector>
+	            <OTDataCollector name="Force (50N)" multipleGraphableEnabled="false" title="Force Sensor Graph"  autoScaleEnabled="true">
 	             <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -142,15 +182,10 @@
 	                <OTDataAxis max="60" units="s" min="0" label="Time"/>
 	              </xDataAxis>
 	              <yDataAxis>
-	                <OTDataAxis max="40.0" units="N" min="-40.0" label="Force (50N)"/>
+	                <OTDataAxis max="40.0" units="N" min="-40.0" label="Force"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTButton text="Zero Force" >
-	              <action>
-	                <object refid="${force_zero_dc_id_2}"/>
-	              </action>
-	            </OTButton>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Motion Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Motion" multipleGraphableEnabled="false" title="Motion Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -176,7 +211,7 @@
 	                <OTDataAxis max="4.0" units="m" min="-4.0" label="Motion"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="false" title="Relative Humidity Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Relative Humidity" multipleGraphableEnabled="false" title="Relative Humidity Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -202,7 +237,7 @@
 	                <OTDataAxis max="90.0" units="percentage" min="10.0" label="Relative Humidity"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="CO2 Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="C02" multipleGraphableEnabled="false" title="CO2 Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -228,7 +263,7 @@
 	                <OTDataAxis max="500.0" units="ppm" min="0.0" label="CO2"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Oxygen Gas Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Oxygen" multipleGraphableEnabled="false" title="Oxygen Gas Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -254,7 +289,7 @@
 	                <OTDataAxis max="300.0" units="ppt" min="0.0" label="Oxygen Gas"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="pH Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="pH" multipleGraphableEnabled="false" title="pH Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -280,7 +315,7 @@
 	                <OTDataAxis max="14.0" units="pH" min="0.0" label="pH"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="false" title="Salinity Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Salinity" multipleGraphableEnabled="false" title="Salinity Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -306,7 +341,7 @@
 	                <OTDataAxis max="50.0" units="ppt" min="0.0" label="Salinity"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Raw Data Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Raw Data" multipleGraphableEnabled="false" title="Raw Data Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
@@ -332,7 +367,7 @@
 	                <OTDataAxis max="10000.0" units="raw" min="-10000.0" label="Raw Data"/>
 	              </yDataAxis>
 	            </OTDataCollector>
-	            <OTDataCollector name="datacollector" multipleGraphableEnabled="true" title="Raw Voltage Sensor Graph"  autoScaleEnabled="true">
+	            <OTDataCollector name="Raw Voltage" multipleGraphableEnabled="false" title="Raw Voltage Sensor Graph"  autoScaleEnabled="true">
 	              <source>
 	                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="0x0000ff" xColumn="0">
 	                  <dataProducer>
