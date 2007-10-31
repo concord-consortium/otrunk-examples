@@ -13,7 +13,7 @@
  * var scriptView - The view of this script, to get the updateable container
  * var button1-4 - buttons to control the objects
  * var replacementObject1-4 - the objects to be replaced
- * var firstPane1-4 - if the objects are OTUDL 
+ * var firstPane1-4 - if the objects are OTUDLSections, this is the next page shown
  */
 
 importClass(Packages.java.awt.event.ActionListener);
@@ -34,6 +34,14 @@ function init()
 
 function save()
 {
+	try {
+		button1.removeActionListener(button1Listener);
+		button2.removeActionListener(button2Listener);
+		button3.removeActionListener(button3Listener);
+		button4.removeActionListener(button4Listener);
+	} catch (e){
+		
+	}
 	return true;
 }
 
