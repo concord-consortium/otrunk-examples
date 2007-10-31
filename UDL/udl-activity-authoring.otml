@@ -37,11 +37,11 @@
 		<import class="org.concord.otrunk.udl.document.OTUDLCompoundDoc"/>
 		<import class="org.concord.otrunk.udl.document.OTUDLDocumentViewConfig"/>
 		<import class="org.concord.otrunk.udl.friction.OTFrictionModel" />
-		<import class="org.concord.otrunk.udl3.OTQuestion"/>
+		<import class="org.concord.otrunk.udl.question.OTQuestion"/>
 		<import class="org.concord.otrunk.udl3.OTUDLMenu"/>
 		<import class="org.concord.otrunk.udl3.OTUDLContainer"/>
-		<import class="org.concord.otrunk.udl3.OTUDLQuestions" />
-		<import class="org.concord.otrunk.udl3.OTUDLQuestionViewConfig" />
+		<import class="org.concord.otrunk.udl.question.OTUDLQuestions" />
+		<import class="org.concord.otrunk.udl.question.OTUDLQuestionViewConfig" />
 		<import class="org.concord.otrunk.udl3.OTUDLSection"/>
 		<import class="org.concord.otrunk.ui.OTButton"/>
 		<import class="org.concord.otrunk.ui.OTCardContainer"/>
@@ -145,7 +145,7 @@
 						<OTViewEntry local_id="container_view" objectClass="org.concord.otrunk.udl3.OTUDLContainer" viewClass="org.concord.otrunk.udl3.OTUDLContainerView"/>
 						<OTViewEntry local_id="menu-vertical" objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuSectionView"/>
 						<OTViewEntry local_id="menu-horizontal-circle" objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageView"/>
-						<OTViewEntry objectClass="org.concord.otrunk.udl3.OTQuestion" viewClass="org.concord.otrunk.udl3.OTQuestionView"/>
+						<OTViewEntry objectClass="org.concord.otrunk.udl.question.OTQuestion" viewClass="org.concord.otrunk.udl3.OTQuestionView"/>
 						<OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceRadioButtonView" useViewsAsChoices="true" local_id="choice-radio-view"/>
 						<OTViewEntry objectClass="org.concord.otrunk.ui.OTChoice"  viewClass="org.concord.otrunk.ui.swing.OTChoiceComboBoxView" local_id="choice-combo-view" />
 						<OTViewEntry objectClass="org.concord.otrunk.script.ui.OTScriptObject" viewClass="org.concord.otrunk.script.ui.OTScriptObjectView"/>
