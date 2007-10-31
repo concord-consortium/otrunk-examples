@@ -19,6 +19,7 @@
     <import class="org.concord.graph.util.state.OTDrawingShape" />
     <import class="org.concord.graph.util.state.OTDrawingTool2" />
     <import class="org.concord.graph.util.state.OTPointTextLabel" />
+    <import class="org.concord.otrunk.OTInclude"/>
     <import class="org.concord.otrunk.OTSystem" />
     <import class="org.concord.otrunk.overlay.OTOverlay" />
     <import class="org.concord.otrunk.script.ui.OTScriptObject" />
@@ -33,10 +34,11 @@
     <import class="org.concord.otrunk.udl.coach.OTUDLCoachStatement" />
     <import class="org.concord.otrunk.udl.OTUDLMenuRule" />
     <import class="org.concord.otrunk.udl.document.OTDefinition" />
+    <import class="org.concord.otrunk.udl.document.OTDefinitionList" />
     <import class="org.concord.otrunk.udl.document.OTDefinitionManager" />
     <import class="org.concord.otrunk.udl.document.OTUDLCompoundDoc" />
     <import class="org.concord.otrunk.udl.document.OTUDLDocumentViewConfig" />
-    <import class="org.concord.otrunk.udl.friction.OTFrictionModel" />
+    <import class="org.concord.otrunk.udl.ui.OTDataCollectorViewConfig" />
     <import class="org.concord.otrunk.udl.question.OTQuestion" />
     <import class="org.concord.otrunk.udl.question.OTUDLQuestions" />
     <import class="org.concord.otrunk.udl.question.OTUDLQuestionViewConfig" />
@@ -68,10 +70,12 @@
     <import class="org.concord.sensor.state.OTSensorDataProxy" />
     <import class="org.concord.sensor.state.OTSensorRequest" />
     <import class="org.concord.sensor.state.OTZeroSensor" />
-    <import class="org.concord.otrunk.udl.question.OTQuestion" />
   </imports>
   <objects>
     <OTSystem local_id="system">
+      <includes>
+        <OTInclude href="global-imports/predefined-sensor-graphs.otml"/>
+      </includes>
       <bundles>
         <OTViewBundle showLeftPanel="false" currentMode="default">
           <modes>
@@ -108,6 +112,21 @@
                           <OTDataStore numberChannels="2" />
                         </dataStore>
                       </OTDataTable>
+                      <OTDataCollector name="Data graph" title="Data graph">
+                      	<source>
+							<OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="0xff0000" xColumn="0">
+								<dataStore>
+									<OTDataStore/>
+								</dataStore>
+							</OTDataGraphable>
+						</source>
+						<xDataAxis>
+							<OTDataAxis max="60" units="s" min="0" label="Time"/>
+						</xDataAxis>
+						<yDataAxis>
+							<OTDataAxis max="40.0" units="" min="0.0" label=""/>
+						</yDataAxis>
+					  </OTDataCollector>
                     </objectsToInsert>
                   </OTObjectEditViewConfig>
                 </entry>
@@ -116,6 +135,13 @@
                 </entry>
                 <entry key="${questions-on-off-view}">
                   <OTUDLQuestionViewConfig objectClass="org.concord.otrunk.udl.question.OTUDLQuestions" viewClass="org.concord.otrunk.udl.question.OTUDLQuestionsEditView" />
+                </entry>
+                <entry key="${data-collector-view}">
+                  <OTDataCollectorViewConfig viewClass="org.concord.otrunk.udl.ui.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector">
+                  	<predefinedGraphs>
+                  		<object refid="088786c2-8719-11dc-8314-0800200c9a66"/>
+                  	</predefinedGraphs>
+                  </OTDataCollectorViewConfig>
                 </entry>
               </map>
             </OTViewMode>
@@ -139,7 +165,7 @@
             <OTViewEntry local_id="question-view" objectClass="org.concord.otrunk.udl.question.OTQuestion" viewClass="org.concord.otrunk.udl.question.OTQuestionView" />
             <OTViewEntry local_id="character-group-view" objectClass="org.concord.otrunk.udl.coach.OTUDLCoachGroup" viewClass="org.concord.otrunk.udl.coach.OTUDLCoachGroupView" />
             <OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLSection" viewClass="org.concord.otrunk.udl3.OTUDLSectionView" />
-            <OTViewEntry objectClass="org.concord.otrunk.udl3.OTUDLContainer" viewClass="org.concord.otrunk.udl3.OTUDLContainerView" />
+            <OTViewEntry local_id="container_view" objectClass="org.concord.otrunk.udl3.OTUDLContainer" viewClass="org.concord.otrunk.udl3.OTUDLContainerView" />
             <OTViewEntry local_id="menu-vertical" objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuSectionView" />
             <OTViewEntry local_id="menu-horizontal-circle" objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageView" />
             <OTViewEntry local_id="menu-horizontal-book" objectClass="org.concord.otrunk.udl3.OTUDLMenu" viewClass="org.concord.otrunk.udl.ui.OTUDLMenuPageBookView" />
@@ -152,7 +178,7 @@
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTPlacementContainer" viewClass="org.concord.otrunk.ui.swing.OTPlacementContainerView" />
             <OTViewEntry local_id="text-edit" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextEditView" />
             <OTViewEntry local_id="text-label" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextView" />
-            <OTViewEntry viewClass="org.concord.datagraph.state.OTDataCollectorView" objectClass="org.concord.datagraph.state.OTDataCollector" />
+            <OTViewEntry local_id="data-collector-view" viewClass="org.concord.datagraph.state.OTDataCollectorView" objectClass="org.concord.datagraph.state.OTDataCollector" />
             <OTViewEntry viewClass="org.concord.datagraph.state.OTDataGraphView" objectClass="org.concord.datagraph.state.OTDataGraph" />
             <OTViewEntry viewClass="org.concord.data.state.OTDataFieldView" objectClass="org.concord.data.state.OTDataField" />
             <OTViewEntry viewClass="org.concord.datagraph.state.OTDataDrawingToolView" objectClass="org.concord.graph.util.state.OTDrawingTool" />
@@ -178,7 +204,7 @@
                     <OTOverlay local_id="small-text-overlay" name="Small text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText cssText="                body {                   font-size: 14;          FONT-STYLE: normal;               FONT-FAMILY: Verdana, Arial;               FONT-VARIANT: normal;              TEXT-DECORATION: none              }                a {                    text-decoration: none;                  }                DIV.body {                     FONT-WEIGHT: bolder;                   FONT-STYLE: normal;                    FONT-FAMILY: Verdana, Arial;                    FONT-VARIANT: normal;                   TEXT-DECORATION: none                  }                DIV.story {                 FONT-WEIGHT: bolder;                }                DIV.activity-title {                    font-size: 28;                    FONT-WEIGHT: bold;                }                  DIV.title {                   font-size: 25;                   FONT-WEIGHT: bold;                }                DIV.subtitle {                    font-size: 20;                    FONT-WEIGHT: bold;                }                DIV.subtitle-continue {                    FONT-WEIGHT: bold;                }" />
+                          <OTCssText src="css/otrunk-small-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -186,7 +212,7 @@
                     <OTOverlay local_id="large-text-overlay" name="Large text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText cssText="                body {                   font-size: 24;       FONT-STYLE: normal;               FONT-FAMILY: Verdana, Arial;               FONT-VARIANT: normal;              TEXT-DECORATION: none                 }                a {                    text-decoration: none;                  }                DIV.body {                     FONT-WEIGHT: bolder;                   FONT-STYLE: normal;                    FONT-FAMILY: Verdana, Arial;                    FONT-VARIANT: normal;                   TEXT-DECORATION: none                  }                DIV.story {                 FONT-WEIGHT: bolder;                }                DIV.activity-title {                    font-size: 37;                    FONT-WEIGHT: bold;                }                  DIV.title {                   font-size: 34;                   FONT-WEIGHT: bold;                }                DIV.subtitle {                    font-size: 28;                    FONT-WEIGHT: bold;                }                DIV.subtitle-continue {                    FONT-WEIGHT: bold;                }" />
+                          <OTCssText src="css/otrunk-large-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -246,7 +272,7 @@
         <object refid="${english-overlay}" />
       </overlays>
       <root>
-        <OTUDLContainer name="UDL Activity">
+        <OTUDLContainer name="UDL Clouds">
           <cssColor>
             <object refid="${css-color}" />
           </cssColor>
@@ -292,9 +318,9 @@
                 <object refid="${section-card-container}" />
               </topLevelCardContainer>
               <characters>
-                <OTUDLCoach local_id="character_affective" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/blah-head-small.png" />
-                <OTUDLCoach local_id="character_strategic" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head-small.png" />
-                <OTUDLCoach local_id="character_recognition" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/roxy-head-small.png" />
+                <OTUDLCoach local_id="character_affective" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/blah-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/blah-head.png" />
+                <OTUDLCoach local_id="character_strategic" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head.png" />
+                <OTUDLCoach local_id="character_recognition" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/roxy-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/11818/roxy-large.gif" />
               </characters>
               <speechFrame>
                 <OTFrame local_id="speech_frame" width="380" height="340" borderlessPopup="false" />
@@ -2786,6 +2812,15 @@ The plastic wrap never touched the water in the bowl.
         </OTUDLContainer>
       </root>
       <library>
+        <OTDefinitionManager local_id="definition-manager">
+          <definitions>
+          	<OTDefinitionList src="glossary/common-glossary.txt"/>
+            <OTDefinitionList src="glossary/electricity-glossary.txt"/>
+          </definitions>
+          <frame>
+            <OTFrame local_id="definition_frame" width="280" height="150" borderlessPopup="true" />
+          </frame>
+        </OTDefinitionManager>
         <OTUDLMenu local_id="menu">
           <cardContainer>
             <object refid="${section-card-container}" />
@@ -2803,11 +2838,6 @@ The plastic wrap never touched the water in the bowl.
           </menuRule>
         </OTUDLMenu>
         <OTSnapshotAlbum local_id="album" />
-        <OTDefinitionManager local_id="definition-manager">
-          <frame>
-            <OTFrame local_id="definition_frame" width="280" height="150" borderlessPopup="true" />
-          </frame>
-        </OTDefinitionManager>
         <OTUDLMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
         <OTUDLMenuRule local_id="section-rule">
           <rules>

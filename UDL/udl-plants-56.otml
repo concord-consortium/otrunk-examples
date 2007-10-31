@@ -38,7 +38,6 @@
     <import class="org.concord.otrunk.udl.document.OTDefinitionManager" />
     <import class="org.concord.otrunk.udl.document.OTUDLCompoundDoc" />
     <import class="org.concord.otrunk.udl.document.OTUDLDocumentViewConfig" />
-    <import class="org.concord.otrunk.udl.friction.OTFrictionModel" />
     <import class="org.concord.otrunk.udl.ui.OTDataCollectorViewConfig" />
     <import class="org.concord.otrunk.udl.question.OTQuestion" />
     <import class="org.concord.otrunk.udl.question.OTUDLQuestions" />
@@ -71,7 +70,6 @@
     <import class="org.concord.sensor.state.OTSensorDataProxy" />
     <import class="org.concord.sensor.state.OTSensorRequest" />
     <import class="org.concord.sensor.state.OTZeroSensor" />
-    <import class="org.concord.otrunk.udl.question.OTQuestion" />
   </imports>
   <objects>
     <OTSystem local_id="system">
