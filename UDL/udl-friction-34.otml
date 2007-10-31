@@ -19,6 +19,7 @@
     <import class="org.concord.graph.util.state.OTDrawingShape" />
     <import class="org.concord.graph.util.state.OTDrawingTool2" />
     <import class="org.concord.graph.util.state.OTPointTextLabel" />
+    <import class="org.concord.otrunk.OTInclude"/>
     <import class="org.concord.otrunk.OTSystem" />
     <import class="org.concord.otrunk.overlay.OTOverlay" />
     <import class="org.concord.otrunk.script.ui.OTScriptObject" />
@@ -38,6 +39,7 @@
     <import class="org.concord.otrunk.udl.document.OTUDLCompoundDoc" />
     <import class="org.concord.otrunk.udl.document.OTUDLDocumentViewConfig" />
     <import class="org.concord.otrunk.udl.friction.OTFrictionModel" />
+    <import class="org.concord.otrunk.udl.ui.OTDataCollectorViewConfig" />
     <import class="org.concord.otrunk.udl3.OTQuestion" />
     <import class="org.concord.otrunk.udl3.OTUDLMenu" />
     <import class="org.concord.otrunk.udl3.OTUDLContainer" />
@@ -73,6 +75,9 @@
   </imports>
   <objects>
     <OTSystem local_id="system">
+      <includes>
+        <OTInclude href="global-imports/predefined-sensor-graphs.otml"/>
+      </includes>
       <bundles>
         <OTViewBundle showLeftPanel="false" currentMode="default">
           <modes>
@@ -109,6 +114,21 @@
                           <OTDataStore numberChannels="2" />
                         </dataStore>
                       </OTDataTable>
+                      <OTDataCollector name="Data graph" title="Data graph">
+                      	<source>
+							<OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="0xff0000" xColumn="0">
+								<dataStore>
+									<OTDataStore/>
+								</dataStore>
+							</OTDataGraphable>
+						</source>
+						<xDataAxis>
+							<OTDataAxis max="60" units="s" min="0" label="Time"/>
+						</xDataAxis>
+						<yDataAxis>
+							<OTDataAxis max="40.0" units="" min="0.0" label=""/>
+						</yDataAxis>
+					  </OTDataCollector>
                     </objectsToInsert>
                   </OTObjectEditViewConfig>
                 </entry>
@@ -119,7 +139,11 @@
                   <OTUDLQuestionViewConfig objectClass="org.concord.otrunk.udl.question.OTUDLQuestions" viewClass="org.concord.otrunk.udl.question.OTUDLQuestionsEditView" />
                 </entry>
                 <entry key="${data-collector-view}">
-                  <OTViewEntry viewClass="org.concord.otrunk.udl.ui.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector" />
+                  <OTDataCollectorViewConfig viewClass="org.concord.otrunk.udl.ui.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector">
+                  	<predefinedGraphs>
+                  		<object refid="088786c2-8719-11dc-8314-0800200c9a66"/>
+                  	</predefinedGraphs>
+                  </OTDataCollectorViewConfig>
                 </entry>
               </map>
             </OTViewMode>
@@ -167,9 +191,9 @@
                 <object refid="${definition-manager}" />
               </definitionManager>
               <cssBlocks>
-                <OTCssText local_id="css-font" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-font.css" />
-                <OTCssText local_id="css-color" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-color.css" />
-                <OTCssText local_id="css-layout" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-layout.css" />
+                <OTCssText local_id="css-font" src="css/otrunk-normal-font.css" />
+                <OTCssText local_id="css-color" src="css/otrunk-normal-color.css" />
+                <OTCssText local_id="css-layout" src="css/otrunk-normal-layout.css" />
               </cssBlocks>
             </OTUDLDocumentViewConfig>
             <OTPrototypeViewEntry local_id="textsize-choice-view" objectClass="org.concord.otrunk.OTSystem" viewClass="org.concord.otrunk.view.prototype.OTPrototypeView" copyPrototype="false">
@@ -4667,7 +4691,7 @@ The more slippery the material on the slide, _______.</bodyText>
                                 <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
                               </xDataAxis>
                               <yDataAxis>
-                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Forc-e (5N)" />
+                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force (5N)" />
                               </yDataAxis>
                             </OTDataCollector>
                             <OTButton local_id="forc_zero_button_dc_id_1" text="Zero Force" />
