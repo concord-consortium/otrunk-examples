@@ -34,6 +34,7 @@ function init()
 
 function save()
 {
+	/* // removing listeners breaks ability to change page a second time
 	try {
 		button1.removeActionListener(button1Listener);
 		button2.removeActionListener(button2Listener);
@@ -42,6 +43,7 @@ function save()
 	} catch (e){
 		
 	}
+	*/
 	return true;
 }
 
