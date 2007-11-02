@@ -490,9 +490,6 @@
                       <currentCard>
                         <object refid="${page-1}" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="${page-1}" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <footer>
@@ -2433,7 +2430,8 @@ The molecules will
                                   <div class="subtitle-continued">Explore 2</div>
                                   Label your graph. Mark where you first started pushing. Mark where the box first started to move. Mark the greatest force value.
                                   <p />
-                                  <object refid="71ac9ad8-8948-11dc-8cc4-df44ebcd54b4" />
+                                  <object refid="4832a5d1-8950-11dc-90f5-bb6b0f71d4d6" />
+                                  <p />
                                   <p />
                                   <font color="red">GRAPH LABELING technical hints</font>
                                   <p />
@@ -2454,6 +2452,63 @@ The molecules will
                                   three
                                   <p />
                                   GRAPH READING SCAFFOLDS
+                                </div>
+                              </div>
+                            </div>
+                          </bodyText>
+                          <documentRefs>
+                            <OTDataCollector id="4832a5d1-8950-11dc-90f5-bb6b0f71d4d6" multipleGraphableEnabled="false" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true">
+                              <graphables>
+                                <OTDataGraphable name="One bottle" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
+                                  <dataStore>
+                                    <object refid="${force-one-ds}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </graphables>
+                              <source>
+                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" controllable="true">
+                                  <dataStore>
+                                    <OTDataStore />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force" />
+                              </yDataAxis>
+                            </OTDataCollector>
+                            <OTText id="5c44e8ab-88b5-11dc-ace3-c72d315b29fd" name="Text field" />
+                          </documentRefs>
+                        </OTUDLCompoundDoc>
+                        <OTUDLCompoundDoc name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
+                          <bodyText>
+                            <div class="buffer">
+                              <div class="border">
+                                <div class="body">
+                                  <div class="subtitle-continued">Explore 3</div>
+                                  Now put two water bottles in the box.
+                                  <p />
+                                  <img src="http://udl.concord.org/share/Friction/push-two-bottles.JPG" />
+                                  <p />
+                                  Select dataset "two" and repeat your experiment. Be sure to label the new line you have made on your graph.
+                                  <p />
+                                  <object refid="71ac9ad8-8948-11dc-8cc4-df44ebcd54b4" />
+                                  <p />
+                                  <font color="red">FORCE SENSOR GRAPH - repeat of above, multiple datasets</font>
+                                  <p />
+                                  Record the average value of the moving friction force.
+                                  <p />
+                                  TABLE (repeat from above)
+                                  <br />
+                                  bottles Friction force
+                                  <br />
+                                  one
+                                  <br />
+                                  two
+                                  <br />
+                                  three
                                 </div>
                               </div>
                             </div>
@@ -2485,87 +2540,6 @@ The molecules will
                                   </dataProducer>
                                   <dataStore>
                                     <OTDataStore local_id="force-two-ds" dt="0.01" numberChannels="1">
-                                      <channelDescriptions>
-                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
-                                        <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
-                                      </channelDescriptions>
-                                    </OTDataStore>
-                                  </dataStore>
-                                </OTDataGraphable>
-                              </source>
-                              <xDataAxis>
-                                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
-                              </xDataAxis>
-                              <yDataAxis>
-                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force" />
-                              </yDataAxis>
-                            </OTDataCollector>
-                            <OTText id="5c44e8ab-88b5-11dc-ace3-c72d315b29fd" name="Text field" />
-                          </documentRefs>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
-                                  <div class="subtitle-continued">Explore 3</div>
-                                  Now put two water bottles in the box.
-                                  <p />
-                                  <img src="http://udl.concord.org/share/Friction/push-two-bottles.JPG" />
-                                  <p />
-                                  Select dataset "two" and repeat your experiment. Be sure to label the new line you have made on your graph.
-                                  <p />
-                                  <object refid="987be8a0-8948-11dc-8cc4-df44ebcd54b4" />
-                                  <p />
-                                  <font color="red">FORCE SENSOR GRAPH - repeat of above, multiple datasets</font>
-                                  <p />
-                                  Record the average value of the moving friction force.
-                                  <p />
-                                  TABLE (repeat from above)
-                                  <br />
-                                  bottles Friction force
-                                  <br />
-                                  one
-                                  <br />
-                                  two
-                                  <br />
-                                  three
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                          <documentRefs>
-                            <OTDataCollector id="987be8a0-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
-                              <graphables>
-                                <OTDataGraphable name="One bottle" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
-                                  <dataStore>
-                                    <object refid="${force-one-ds}" />
-                                  </dataStore>
-                                </OTDataGraphable>
-                                <OTDataGraphable name="Two bottles" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="65280" xColumn="0" lineWidth="2.0">
-                                  <dataStore>
-                                    <object refid="${force-two-ds}" />
-                                  </dataStore>
-                                </OTDataGraphable>
-                              </graphables>
-                              <source>
-                                <OTDataGraphable name="Three bottles" connectPoints="true" yColumn="1" drawMarks="false" color="-16724788" xColumn="0" lineWidth="2.0">
-                                  <dataProducer>
-                                    <OTSensorDataProxy name="dataproducer">
-                                      <request>
-                                        <OTExperimentRequest period="0.01">
-                                          <sensorRequests>
-                                            <OTSensorRequest stepSize="0.01" type="5" unit="N" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
-                                          </sensorRequests>
-                                        </OTExperimentRequest>
-                                      </request>
-                                      <zeroSensor>
-                                        <OTZeroSensor sensorIndex="0" />
-                                      </zeroSensor>
-                                    </OTSensorDataProxy>
-                                  </dataProducer>
-                                  <dataStore>
-                                    <OTDataStore dt="0.01" numberChannels="1">
                                       <channelDescriptions>
                                         <OTDataChannelDescription name="dt" precision="2" numericData="true" />
                                         <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
@@ -2667,7 +2641,7 @@ The molecules will
                                   <p />
                                   Now put three water bottles in the box. Select dataset "three" and repeat your experiment. Be sure to label the new line you have made on your graph.
                                   <p />
-                                  <object refid="b8626902-8948-11dc-8cc4-df44ebcd54b4" />
+                                  <object refid="987be8a0-8948-11dc-8cc4-df44ebcd54b4" />
                                   <p />
                                   <font color="red">FORCE SENSOR GRAPH - repeat of above, multiple datasets</font>
                                   <p />
@@ -2702,9 +2676,21 @@ The molecules will
                           </bodyText>
                           <documentRefs>
                             <OTText id="cb580565-88ba-11dc-ace3-c72d315b29fd" name="Text field" />
-                            <OTDataCollector id="b8626902-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true">
+                            <OTDataCollector id="987be8a0-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
+                              <graphables>
+                                <OTDataGraphable name="One bottle" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
+                                  <dataStore>
+                                    <object refid="${force-one-ds}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                                <OTDataGraphable name="Two bottles" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="65280" xColumn="0" lineWidth="2.0">
+                                  <dataStore>
+                                    <object refid="${force-two-ds}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </graphables>
                               <source>
-                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="Three bottles" connectPoints="true" yColumn="1" drawMarks="false" color="-16724788" xColumn="0" lineWidth="2.0">
                                   <dataProducer>
                                     <OTSensorDataProxy name="dataproducer">
                                       <request>
