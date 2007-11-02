@@ -79,7 +79,7 @@
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="http://continuum.concord.org/otrunk/examples/UDL/global-imports/predefined-sensor-graphs.otml" />
+        <OTInclude href="global-imports/predefined-sensor-graphs.otml" />
       </includes>
       <bundles>
         <OTViewBundle showLeftPanel="false" currentMode="default">
@@ -197,9 +197,9 @@
                 <object refid="${definition-manager}" />
               </definitionManager>
               <cssBlocks>
-                <OTCssText local_id="css-font" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-font.css" />
-                <OTCssText local_id="css-color" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-color.css" />
-                <OTCssText local_id="css-layout" src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-normal-layout.css" />
+                <OTCssText local_id="css-font" src="css/otrunk-normal-font.css" />
+                <OTCssText local_id="css-color" src="css/otrunk-normal-color.css" />
+                <OTCssText local_id="css-layout" src="css/otrunk-normal-layout.css" />
               </cssBlocks>
             </OTUDLDocumentViewConfig>
             <OTPrototypeViewEntry local_id="textsize-choice-view" objectClass="org.concord.otrunk.OTSystem" viewClass="org.concord.otrunk.view.prototype.OTPrototypeView" copyPrototype="false">
@@ -212,7 +212,7 @@
                     <OTOverlay local_id="small-text-overlay" name="Small text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-small-font.css" />
+                          <OTCssText src="css/otrunk-small-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -220,7 +220,7 @@
                     <OTOverlay local_id="large-text-overlay" name="Large text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText src="http://continuum.concord.org/otrunk/examples/UDL/css/otrunk-large-font.css" />
+                          <OTCssText src="css/otrunk-large-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -2026,14 +2026,14 @@ Stepping harder on the brakes makes the car stop faster. Would this cause more h
                                 <OTZoomTransform scale="0.5" topLeftX="30.0" topLeftY="100.0" />
                               </transforms>
                               <images>
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom1_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom2_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom3_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom4_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom5_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom6b_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom7_smooth_sm.png" />
-                                <OTImage imageBytes="http://continuum.concord.org/otrunk/examples/UDL/imagessmooth/slidezoom8_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom1_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom2_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom3_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom4_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom5_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom6b_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom7_smooth_sm.png" />
+                                <OTImage imageBytes="imagessmooth/slidezoom8_smooth_sm.png" />
                               </images>
                             </OTZoom>
                             <OTText id="66c35d1c-7d7f-11dc-b809-ad838b75abee" name="Text field" />
@@ -2295,9 +2295,6 @@ The molecules will
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Engage</div>
-                                  <div class="story-border">
-                                    <div class="story" />
-                                  </div>
                                   Here's a simple way to measure the force of friction. Put a weight in a box and push it with a force sensor.
                                   <br />
                                   <img src="http://udl.concord.org/share/Friction/push-one-bottle.JPG" />
@@ -2408,8 +2405,8 @@ The molecules will
                                   <dataStore>
                                     <OTDataStore local_id="force-one-ds" dt="0.01" numberChannels="1">
                                       <channelDescriptions>
-                                        <OTDataChannelDescription name="time" unit="s" precision="-2" numericData="true" />
-                                        <OTDataChannelDescription name="DUAL R FORCE 10" unit="N" precision="-2" numericData="true" />
+                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                        <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
                                       </channelDescriptions>
                                     </OTDataStore>
                                   </dataStore>
@@ -2515,14 +2512,6 @@ The molecules will
                                   <p />
                                   <object refid="15894d54-8954-11dc-b5ab-63fc32fee219" />
                                   <p />
-                                  <br />
-                                  bottles Friction force
-                                  <br />
-                                  one
-                                  <br />
-                                  two
-                                  <br />
-                                  three
                                 </div>
                               </div>
                             </div>
@@ -4471,8 +4460,8 @@ The molecules will
         <OTSnapshotAlbum local_id="album" />
         <OTDefinitionManager local_id="definition-manager">
           <definitions>
-            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/common-glossary.txt" />
-            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/friction-glossary.txt" />
+            <OTDefinitionList src="glossary/common-glossary.txt" />
+            <OTDefinitionList src="glossary/friction-glossary.txt" />
           </definitions>
           <frame>
             <OTFrame local_id="definition_frame" width="280" height="150" borderlessPopup="true" />
@@ -4505,9 +4494,9 @@ The molecules will
             </OTUDLMenuRule>
           </rules>
         </OTUDLMenuRule>
-        <OTJavascript local_id="change_page.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/change_page.js" />
-        <OTJavascript local_id="show_message.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/show_message.js" />
-        <OTJavascript local_id="authoring_script.js" src="http://continuum.concord.org/otrunk/examples/UDL/scripts/authoring_script.js" />
+        <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
+        <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
+        <OTJavascript local_id="authoring_script.js" src="scripts/authoring_script.js" />
       </library>
     </OTSystem>
   </objects>
