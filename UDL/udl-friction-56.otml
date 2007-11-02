@@ -19,7 +19,7 @@
     <import class="org.concord.graph.util.state.OTDrawingShape" />
     <import class="org.concord.graph.util.state.OTDrawingTool2" />
     <import class="org.concord.graph.util.state.OTPointTextLabel" />
-    <import class="org.concord.otrunk.OTInclude"/>
+    <import class="org.concord.otrunk.OTInclude" />
     <import class="org.concord.otrunk.OTSystem" />
     <import class="org.concord.otrunk.overlay.OTOverlay" />
     <import class="org.concord.otrunk.script.ui.OTScriptObject" />
@@ -79,7 +79,7 @@
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="global-imports/predefined-sensor-graphs.otml"/>
+        <OTInclude href="global-imports/predefined-sensor-graphs.otml" />
       </includes>
       <bundles>
         <OTViewBundle showLeftPanel="false" currentMode="default">
@@ -118,20 +118,20 @@
                         </dataStore>
                       </OTDataTable>
                       <OTDataCollector name="Data graph" title="Data graph">
-                      	<source>
-							<OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="0xff0000" xColumn="0">
-								<dataStore>
-									<OTDataStore/>
-								</dataStore>
-							</OTDataGraphable>
-						</source>
-						<xDataAxis>
-							<OTDataAxis max="60" units="s" min="0" label="Time"/>
-						</xDataAxis>
-						<yDataAxis>
-							<OTDataAxis max="40.0" units="" min="0.0" label=""/>
-						</yDataAxis>
-					  </OTDataCollector>
+                        <source>
+                          <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
+                            <dataStore>
+                              <OTDataStore />
+                            </dataStore>
+                          </OTDataGraphable>
+                        </source>
+                        <xDataAxis>
+                          <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                        </xDataAxis>
+                        <yDataAxis>
+                          <OTDataAxis max="40.0" units="" min="-0.0" label="" />
+                        </yDataAxis>
+                      </OTDataCollector>
                     </objectsToInsert>
                   </OTObjectEditViewConfig>
                 </entry>
@@ -143,9 +143,9 @@
                 </entry>
                 <entry key="${data-collector-view}">
                   <OTDataCollectorViewConfig viewClass="org.concord.otrunk.udl.ui.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector">
-                  	<predefinedGraphs>
-                  		<object refid="088786c2-8719-11dc-8314-0800200c9a66"/>
-                  	</predefinedGraphs>
+                    <predefinedGraphs>
+                      <object refid="088786c2-8719-11dc-8314-0800200c9a66" />
+                    </predefinedGraphs>
                   </OTDataCollectorViewConfig>
                 </entry>
               </map>
@@ -212,7 +212,7 @@
                     <OTOverlay local_id="small-text-overlay" name="Small text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText cssText=" body { font-size: 14; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial; FONT-VARIANT: normal; TEXT-DECORATION: none } a { text-decoration: none; } DIV.body { FONT-WEIGHT: bolder; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial; FONT-VARIANT: normal; TEXT-DECORATION: none } DIV.story { FONT-WEIGHT: bolder; } DIV.activity-title { font-size: 28; FONT-WEIGHT: bold; } DIV.title { font-size: 25; FONT-WEIGHT: bold; } DIV.subtitle { font-size: 20; FONT-WEIGHT: bold; }  DIV.subtitle-continue { padding-left: 20px; padding-top: 8px; padding-bottom: 8px; FONT-WEIGHT: bold; } DIV.todo { padding-top: 10px; padding-bottom: 10px; color: red; font-size: 22; } " />
+                          <OTCssText src="css/otrunk-small-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -220,7 +220,7 @@
                     <OTOverlay local_id="large-text-overlay" name="Large text">
                       <deltaObjectMap>
                         <entry key="${css-font}">
-                          <OTCssText cssText="    body { font-size: 24; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial; FONT-VARIANT: normal; TEXT-DECORATION: none } a { text-decoration: none; }  DIV.body { FONT-WEIGHT: bolder; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial; FONT-VARIANT: normal; TEXT-DECORATION: none } DIV.story { FONT-WEIGHT: bolder; } DIV.activity-title { font-size: 37; FONT-WEIGHT: bold; } DIV.title {font-size: 34; FONT-WEIGHT: bold; } DIV.subtitle { font-size: 28; FONT-WEIGHT: bold; }  DIV.subtitle-continue { FONT-WEIGHT: bold; }  DIV.todo { padding-top: 10px; padding-top: 10px; color: red; font-size: 22; } " />
+                          <OTCssText src="css/otrunk-large-font.css" />
                         </entry>
                       </deltaObjectMap>
                     </OTOverlay>
@@ -327,9 +327,9 @@
                 <object refid="${section-card-container}" />
               </topLevelCardContainer>
               <characters>
-                <OTUDLCoach local_id="character_affective" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/blah-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/blah-head.png" />
-                <OTUDLCoach local_id="character_strategic" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/12353/clunk-head.png" />
-                <OTUDLCoach local_id="character_recognition" inactiveImageURL="http://confluence.concord.org/download/attachments/12353/roxy-head-small.png" activeImageURL="http://confluence.concord.org/download/attachments/11818/roxy-large.gif" />
+                <OTUDLCoach local_id="character_affective" inactiveImageURL="http://udl.concord.org/share/shared-images/blah-head.png" activeImageURL="http://udl.concord.org/share/shared-images/blah-anim.gif" />
+                <OTUDLCoach local_id="character_strategic" inactiveImageURL="http://udl.concord.org/share/shared-images/clunk-head.png" activeImageURL="http://udl.concord.org/share/shared-images/clunk-anim.gif" />
+                <OTUDLCoach local_id="character_recognition" inactiveImageURL="http://udl.concord.org/share/shared-images/roxy-head.png" activeImageURL="http://udl.concord.org/share/shared-images/roxy-anim.gif" />
               </characters>
               <speechFrame>
                 <OTFrame local_id="speech_frame" width="380" height="340" borderlessPopup="false" />
@@ -1134,9 +1134,6 @@ Name two surfaces (besides ice) that are very, very slippery!
                       <currentCard>
                         <object refid="0be2278b-78d5-11dc-82f7-4bde662316f0" />
                       </currentCard>
-                      <viewedCards>
-                        <object refid="0be2278b-78d5-11dc-82f7-4bde662316f0" />
-                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -2285,146 +2282,305 @@ The molecules will
                                   <p />
                                   <img src="http://udl.concord.org/share/Friction/push-rock-clipart.png" />
                                   <p />
-                                  Measure the amount of force needed to make different surface materials start to move and continue to move.
+                                  Measure the amount of force needed to make a box start to move and continue to move.
                                   <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%aec55759-7908-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[1]" name="%aec55759-7908-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Engage</div>
                                   <div class="story-border">
-                                    <div class="story">Eduardo was annoyed. When he described Slippery World and Sticky World to his friends, he would say "it's like being on ice", or "it's like having glue on your shoes." But they clearly didn't believe him. They thought he was exaggerating. So he decided to take real measurements in both worlds so that he could prove just what they were like, compared to this world.</div>
+                                    <div class="story">Eduardo was annoyed. When he described Slippery World and Sticky World to his friends, he would say "it's like being on ice," or "it's like having glue on your shoes." But they clearly didn't believe him. They thought he was exaggerating. So he decided to take real measurements in both worlds so that he could prove just what they were like, compared to this world.</div>
                                   </div>
+                                  <p />
                                   He decided his experiment would look like this:
                                   <p />
-                                  <img src="http://udl.concord.org/share/Friction/pullsneaker-web.png" />
+                                  <img src="http://udl.concord.org/share/Friction/push-one-bottle.JPG" />
                                   <p />
-                                  Here is a graph of force against time. Suppose you pulled very lightly on the force sensor, then harder and harder until the shoe started sliding. Predict what your graph would look like.
+                                  Here is a graph of force against time. Suppose you pushed very lightly on the force sensor, then harder and harder until the box started sliding. Predict what your graph would look like.
                                   <p />
-                                  [[ PREDICTION GRAPH ]]
+                                  <object refid="d92b2983-8947-11dc-8cc4-df44ebcd54b4" />
+                                  <p />
+                                  <p />
+                                  Suppose the box was twice as heavy. How would the graph be different?
+                                  <p />
+                                  <object refid="dd8b767e-8947-11dc-8cc4-df44ebcd54b4" />
+                                  <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTDataCollector id="d92b2983-8947-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Prediction Graph" autoScaleEnabled="true">
+                              <source>
+                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" controllable="true">
+                                  <dataStore>
+                                    <OTDataStore local_id="force-prediction-ds" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force" />
+                              </yDataAxis>
+                            </OTDataCollector>
+                            <OTText id="dd8b767e-8947-11dc-8cc4-df44ebcd54b4" name="Text field" />
+                          </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%ce75a648-790b-11dc-ab2b-cb448e5223d3">
+                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[2]" name="%ce75a648-790b-11dc-ab2b-cb448e5223d3">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Materials</div>
-                                  <li>Force sensor</li>
-                                  <li>Sneaker</li>
-                                  <li>500 ml (16 oz) soda bottle that fits into the sneaker</li>
-                                  <li>String</li>
-                                  <li>Waxed paper</li>
-                                  <li>Rubber cement</li>
-                                  <li>Optional: other materials such as cloth, sandpaper, oil</li>
+                                  <ul>
+                                    <li>Force sensor</li>
+                                    <li>Cardboard box just large enough to hold three water bottles</li>
+                                    <li>Three water bottles</li>
+                                    <li>Sandpaper</li>
+                                  </ul>
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%7dcff04d-790c-11dc-aaef-f7a1df3f6032">
+                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[3]" name="%7dcff04d-790c-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle">Explore</div>
-                                  Find an old sneaker that no one wants anymore. Find a water bottle that fits in the shoe and fill it with water.
+                                  Find a small cardboard box. Find water bottles such that three can fit into the box. Fill them with water. Put one bottle into the box.
                                   <p />
                                   Attach the force sensor to the computer.
                                   <p />
-                                  Use the shoelaces to pull the shoe. Make sure it slides and doesn't lift up or tip over.
+                                  Start recording with the force sensor. Push the box with the force sensor. Gradually push harder and harder until the box starts to slide. Keep pushing so that the box slides at a constant speed.
                                   <p />
-                                  <img src="http://udl.concord.org/share/Friction/pullsneaker-web.png" />
+                                  <object refid="fe1bcc64-8947-11dc-8cc4-df44ebcd54b4" />
+                                  <p />
+                                  <p />
+                                  Stop recording. Describe your graph. What did it look like before the box started moving? What happened just when the box started moving? What happened after that?
+                                  <br />
+                                  <object refid="399ada6b-88b5-11dc-ace3-c72d315b29fd" />
+                                  <p />
+                                  How good was your prediction?
+                                  <br />
+                                  <object refid="3cffd772-88b5-11dc-ace3-c72d315b29fd" />
+                                  <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
+                          <documentRefs>
+                            <OTDataCollector id="fe1bcc64-8947-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" multipleGraphableEnabled="true" autoScaleEnabled="true">
+                              <graphables>
+                                <OTDataGraphable name="Prediction" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataStore>
+                                    <object refid="${force-prediction-ds}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </graphables>
+                              <source>
+                                <OTDataGraphable name="One bottle" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataProducer>
+                                    <OTSensorDataProxy name="dataproducer">
+                                      <request>
+                                        <OTExperimentRequest period="0.01">
+                                          <sensorRequests>
+                                            <OTSensorRequest stepSize="0.01" type="5" unit="N" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                          </sensorRequests>
+                                        </OTExperimentRequest>
+                                      </request>
+                                      <zeroSensor>
+                                        <OTZeroSensor sensorIndex="0" />
+                                      </zeroSensor>
+                                    </OTSensorDataProxy>
+                                  </dataProducer>
+                                  <dataStore>
+                                    <OTDataStore dt="0.01" numberChannels="1" local_id="force-one-ds">
+                                      <channelDescriptions>
+                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                        <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
+                                      </channelDescriptions>
+                                    </OTDataStore>
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force" />
+                              </yDataAxis>
+                            </OTDataCollector>
+                            <OTText id="399ada6b-88b5-11dc-ace3-c72d315b29fd" name="Text field" />
+                            <OTText id="3cffd772-88b5-11dc-ace3-c72d315b29fd" name="Text field" />
+                          </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%0c88cdce-790d-11dc-aaef-f7a1df3f6032">
+                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[4]" name="%0c88cdce-790d-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
                                   <div class="subtitle-continued">Explore 2</div>
-                                  Start recording with the force sensor. Gradually pull harder and harder until the shoe starts to slide. Keep pulling so that the shoe slides at a constant speed.
+                                  Label your graph. Mark where you first started pushing. Mark where the box first started to move. Mark the greatest force value.
                                   <p />
-                                  FORCE SENSOR GRAPH + PREDICTION FROM ABOVE
+                                  <object refid="71ac9ad8-8948-11dc-8cc4-df44ebcd54b4" />
                                   <p />
-                                  Describe your graph. What did it look like before the sneaker started moving? What happened just when the sneaker started moving? What happened after that?
+                                  <font color="red">GRAPH LABELING technical hints</font>
                                   <p />
-                                  <object refid="e0f2b400-790d-11dc-aaef-f7a1df3f6032" />
+                                  What was the greatest force value and when did it happen?
+                                  <br />
+                                  <object refid="5c44e8ab-88b5-11dc-ace3-c72d315b29fd" />
                                   <p />
-                                  Label your graph. Mark where you first started pulling. Mark where the sneaker first started to move. Mark the greatest force value.
+                                  Record the average value of the moving friction force.
                                   <p />
-                                  What would you say was the average value of the friction force needed to keep the shoe moving?
+                                  TABLE
+                                  <br />
+                                  bottles Friction force
+                                  <br />
+                                  one
+                                  <br />
+                                  two
+                                  <br />
+                                  three
                                   <p />
-                                  <object refid="f3fa8781-790d-11dc-aaef-f7a1df3f6032" />
-                                  <p />
+                                  GRAPH READING SCAFFOLDS
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText id="e0f2b400-790d-11dc-aaef-f7a1df3f6032" name="Text field" />
-                            <OTText id="f3fa8781-790d-11dc-aaef-f7a1df3f6032" name="Text field" />
+                            <OTDataCollector id="71ac9ad8-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
+                              <graphables>
+                                <OTDataGraphable name="One bottle" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataStore>
+                                    <object refid="${force-one-ds}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </graphables>
+                              <source>
+                                <OTDataGraphable name="Two bottles" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataProducer>
+                                    <OTSensorDataProxy name="dataproducer">
+                                      <request>
+                                        <OTExperimentRequest period="0.01">
+                                          <sensorRequests>
+                                            <OTSensorRequest stepSize="0.01" type="5" unit="N" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                          </sensorRequests>
+                                        </OTExperimentRequest>
+                                      </request>
+                                      <zeroSensor>
+                                        <OTZeroSensor sensorIndex="0" />
+                                      </zeroSensor>
+                                    </OTSensorDataProxy>
+                                  </dataProducer>
+                                  <dataStore>
+                                    <OTDataStore dt="0.01" numberChannels="1" local_id="force-two-ds">
+                                      <channelDescriptions>
+                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                        <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
+                                      </channelDescriptions>
+                                    </OTDataStore>
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force" />
+                              </yDataAxis>
+                            </OTDataCollector>
+                            <OTText id="5c44e8ab-88b5-11dc-ace3-c72d315b29fd" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
+                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[5]" name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continued">Explain</div>
-                                  Try your experiment several times again. Study your results each time and answer the following questions.
+                                  <div class="subtitle-continued">Explore 3</div>
+                                  Now put two water bottles in the box.
                                   <p />
-                                  INSERT GRAPH WITH DATA FROM EXPLORE SECTION
-                                  <P />
-                                  How similar are the shape of the graph and the maximum friction force each time?
+                                  <img src="http://udl.concord.org/share/Friction/push-two-bottles.JPG" />
+                                  <p />
+                                  Select dataset "two" and repeat your experiment. Be sure to label the new line you have made on your graph.
+                                  <p />
+                                  <object refid="987be8a0-8948-11dc-8cc4-df44ebcd54b4" />
+                                  <p />
+                                  <font color="red">FORCE SENSOR GRAPH - repeat of above, multiple datasets</font>
+                                  <p />
+                                  Record the average value of the moving friction force.
+                                  <p />
+                                  TABLE (repeat from above)
                                   <br />
-                                  <object refid="00e6687f-8240-11dc-a020-3582bc26fc16" />
-                                  <p />
-                                  Does the maximum friction force change if the shoe is moving faster?
+                                  bottles Friction force
                                   <br />
-                                  <object refid="22f017b0-8240-11dc-a020-3582bc26fc16" />
-                                  <p />
-                                  Do you think Eduardo's experiment is a good way to measure how slippery or sticky a shoe is?
+                                  one
                                   <br />
-                                  <object refid="84c7da51-8240-11dc-a020-3582bc26fc16" />
-                                  <p />
-                                  Explain.
+                                  two
                                   <br />
-                                  <object refid="a0751e88-8240-11dc-a020-3582bc26fc16" />
-                                  <p />
+                                  three
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText id="00e6687f-8240-11dc-a020-3582bc26fc16" name="Text field" />
-                            <OTText id="22f017b0-8240-11dc-a020-3582bc26fc16" name="Text field" />
-                            <OTChoice id="84c7da51-8240-11dc-a020-3582bc26fc16" name="Choices">
-                              <choices>
-                                <OTCompoundDoc name="Yes">
-                                  <bodyText>Yes</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="No">
-                                  <bodyText>No</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="Sort of">
-                                  <bodyText>Sort of</bodyText>
-                                </OTCompoundDoc>
-                              </choices>
-                            </OTChoice>
-                            <OTText id="a0751e88-8240-11dc-a020-3582bc26fc16" name="Text field" />
+                            <OTDataCollector id="987be8a0-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
+                              <graphables>
+                                <OTDataGraphable name="One bottle" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataStore>
+                                    <object refid="${force-one-ds}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                                <OTDataGraphable name="Two bottles" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataStore>
+                                    <object refid="${force-two-ds}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </graphables>
+                              <source>
+                                <OTDataGraphable name="Three bottles" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataProducer>
+                                    <OTSensorDataProxy name="dataproducer">
+                                      <request>
+                                        <OTExperimentRequest period="0.01">
+                                          <sensorRequests>
+                                            <OTSensorRequest stepSize="0.01" type="5" unit="N" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                          </sensorRequests>
+                                        </OTExperimentRequest>
+                                      </request>
+                                      <zeroSensor>
+                                        <OTZeroSensor sensorIndex="0" />
+                                      </zeroSensor>
+                                    </OTSensorDataProxy>
+                                  </dataProducer>
+                                  <dataStore>
+                                    <OTDataStore dt="0.01" numberChannels="1">
+                                      <channelDescriptions>
+                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                        <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
+                                      </channelDescriptions>
+                                    </OTDataStore>
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force" />
+                              </yDataAxis>
+                            </OTDataCollector>
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%e49bace2-790f-11dc-aaef-f7a1df3f6032">
@@ -2432,23 +2588,58 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle">Elaborate</div>
-                                  Now explore ways to increase or decrease the friction force. You can save several experiments on the same graph. Use the new button on the left to add a new dataset.
-                                  <p />
-                                  INSERT FORCE SENSOR
-                                  <p />
-                                  Try putting waxed paper under the shoe. Repeat your pulling experiment. Be sure to label the new line you have made on your graph.
-                                  <p />
-                                  Does waxed paper increase or decrease the friction force? Record the averarge value of the fricton force.
+                                  <div class="subtitle">Explain</div>
+                                  Why do you think the friction force increased when the weight increased?
                                   <br />
-                                  <object refid="5ffa2a13-7910-11dc-aaef-f7a1df3f6032" />
+                                  <object refid="7e84d02a-88ba-11dc-ace3-c72d315b29fd" />
+                                  <p />
+                                  Here are your data.
+                                  <p />
+                                  TABLE (repeat from above)
+                                  <br />
+                                  bottles Friction force
+                                  <br />
+                                  one
+                                  <br />
+                                  two
+                                  <br />
+                                  three
+                                  <br />
+                                  <p />
+                                  Is the friction force with two bottles about twice the friction force with one bottle?
+                                  <br />
+                                  <object refid="93f195d1-88ba-11dc-ace3-c72d315b29fd" />
+                                  <p />
+                                  How can you tell?
+                                  <br />
+                                  <object refid="9cbf761b-88ba-11dc-ace3-c72d315b29fd" />
+                                  <p />
+                                  (scaffold: want them to explain their math, such as, when I multiply the first number by two, it is close to (or not close to) the second number. Is this too elementary?)
+                                  <p />
+                                  Divide the larger by the smaller. What is the exact ratio?
+                                  <p />
+                                  force with two bottles / force with one bottle =
+                                  <br />
+                                  <object refid="a582a802-88ba-11dc-ace3-c72d315b29fd" />
                                   <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTText id="5ffa2a13-7910-11dc-aaef-f7a1df3f6032" name="Text field" />
+                            <OTText id="7e84d02a-88ba-11dc-ace3-c72d315b29fd" name="Text field" />
+                            <OTChoice id="93f195d1-88ba-11dc-ace3-c72d315b29fd" name="Choices">
+                              <choices>
+                                <OTCompoundDoc name="yes">
+                                  <bodyText>yes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="no">
+                                  <bodyText>no</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <OTText id="9cbf761b-88ba-11dc-ace3-c72d315b29fd" name="Text field" />
+                            <OTText id="a582a802-88ba-11dc-ace3-c72d315b29fd" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%9972d764-7910-11dc-aaef-f7a1df3f6032">
@@ -2456,54 +2647,106 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continued">Elaborate 3</div>
-                                  1) Start with a new graph. Compare three situations:
+                                  <div class="subtitle">Elaborate</div>
+                                  Here are your data again.
+                                  <p />
+                                  TABLE (repeat from above)
                                   <br />
-                                  A) Plain shoe
+                                  bottles Friction force
                                   <br />
-                                  B) Wet shoe
+                                  one
                                   <br />
-                                  C) Oily shoe
+                                  two
                                   <br />
-                                  Create a new line for each situation and repeat your pulling experiment. Be sure to label each new line you have made on your graph.
-                                  <b>Test the oil last – it's the messiest!</b>
-                                  <p />
-                                  INSERT FORCE SENSOR GRAPH,  multiple dataset
-                                  <p />
-                                  Fill in the average sliding friction force for each in the table below.
-                                  <p />
-                                  <object refid="1269ae68-825c-11dc-a60b-a3bf30adfc97" />
-                                  <p />
-                                  <p />
-                                  Which had the most friction? Which had the least friction?
+                                  three
                                   <br />
-                                  <object refid="00ac9749-8244-11dc-a020-3582bc26fc16" />
                                   <p />
-                                  Was the result surprising, or was it what you expected?
+                                  Use the values you collected to predict what the friction force would be with three bottles of water in the box. The friction force with three bottles would be:
+                                  <br />
+                                  <object refid="cb580565-88ba-11dc-ace3-c72d315b29fd" />
+                                  <p />
+                                  Now put three water bottles in the box. Select dataset "three" and repeat your experiment. Be sure to label the new line you have made on your graph.
+                                  <p />
+                                  <object refid="b8626902-8948-11dc-8cc4-df44ebcd54b4" />
+                                  <p />
+                                  <font color="red">FORCE SENSOR GRAPH - repeat of above, multiple datasets</font>
+                                  <p />
+                                  Record the average value of the moving friction force.
+                                  <p />
+                                  TABLE (repeat from above)
+                                  <br />
+                                  bottles Friction force
+                                  <br />
+                                  one
+                                  <br />
+                                  two
+                                  <br />
+                                  three
+                                  <br />
+                                  How good was your prediction?
+                                  <p />
+                                  Is the friction force for three bottles about three times the friction force for one bottle?
+                                  <br />
+                                  <object refid="7804f6ec-88bd-11dc-ace3-c72d315b29fd" />
+                                  <p />
+                                  Calculate the exact ratio.
+                                  <p />
+                                  force with three bottles / force with one bottle =
+                                  <br />
+                                  <object refid="8100ec16-88bd-11dc-ace3-c72d315b29fd" />
+                                  <p />
                                   <br />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTDataTable id="1269ae68-825c-11dc-a60b-a3bf30adfc97" name="Data table" showLastRowForAddingNew="true">
-                              <dataStore>
-                                <OTDataStore numberChannels="2">
-                                  <channelDescriptions>
-                                    <OTDataChannelDescription name="Material" numericData="false" />
-                                    <OTDataChannelDescription name="Average friction force" numericData="false" />
-                                  </channelDescriptions>
-                                  <values>
-                                    <string>A: Plain shoe</string>
-                                    <null />
-                                    <string>B: Wet shoe</string>
-                                    <null />
-                                    <string>C: Oily shoe</string>
-                                  </values>
-                                </OTDataStore>
-                              </dataStore>
-                            </OTDataTable>
-                            <OTText id="00ac9749-8244-11dc-a020-3582bc26fc16" name="Text field" />
+                            <OTText id="cb580565-88ba-11dc-ace3-c72d315b29fd" name="Text field" />
+                            <OTDataCollector id="b8626902-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true">
+                              <source>
+                                <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                  <dataProducer>
+                                    <OTSensorDataProxy name="dataproducer">
+                                      <request>
+                                        <OTExperimentRequest period="0.01">
+                                          <sensorRequests>
+                                            <OTSensorRequest stepSize="0.01" type="5" unit="N" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                          </sensorRequests>
+                                        </OTExperimentRequest>
+                                      </request>
+                                      <zeroSensor>
+                                        <OTZeroSensor sensorIndex="0" />
+                                      </zeroSensor>
+                                    </OTSensorDataProxy>
+                                  </dataProducer>
+                                  <dataStore>
+                                    <OTDataStore dt="0.01" numberChannels="1">
+                                      <channelDescriptions>
+                                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                        <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
+                                      </channelDescriptions>
+                                    </OTDataStore>
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="60.0" units="s" min="0.0" label="Time" />
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="4.0" units="N" min="-4.0" label="Force" />
+                              </yDataAxis>
+                            </OTDataCollector>
+                            <OTChoice id="7804f6ec-88bd-11dc-ace3-c72d315b29fd" name="Choices">
+                              <choices>
+                                <OTCompoundDoc name="yes">
+                                  <bodyText>yes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="no">
+                                  <bodyText>no</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                            <OTText id="8100ec16-88bd-11dc-ace3-c72d315b29fd" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                         <OTUDLCompoundDoc name="%b3ec3295-7914-11dc-aaef-f7a1df3f6032">
@@ -2511,54 +2754,51 @@ The molecules will
                             <div class="buffer">
                               <div class="border">
                                 <div class="body">
-                                  <div class="subtitle-continued">Elaborate 2</div>
-                                  Try another material, such as newspaper, cloth or plastic, under the shoe. Repeat your pulling experiment. Be sure to label the new line you have made on your graph.
-                                  <p />
-                                  REPEAT FORCE SENSOR GRAPH FROM PREVIOUS PAGE
-                                  <p />
-                                  If you have sandpaper, glue it to the bottom of the shoe with rubber cement. Repeat your pulling experiment. Be sure to label each new line you have made on your graph.
-                                </div>
-                              </div>
-                            </div>
-                          </bodyText>
-                        </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc name="%b7e77c16-7914-11dc-aaef-f7a1df3f6032">
-                          <bodyText>
-                            <div class="buffer">
-                              <div class="border">
-                                <div class="body">
                                   <div class="subtitle">Evaluate</div>
-                                  Summarize your results.  List each material you tried and the average sliding friction force for each in the table below.
- Go back to previous pages to collect your data.You can add as many rows as you need.
+                                  Suppose you could zoom in to where the box surface touches the table top. Draw what you think the two surfaces would look like.
                                   <p />
-                                  <object refid="84b63dcc-825c-11dc-a60b-a3bf30adfc97" />
+                                  <object refid="99cd7eb9-88bd-11dc-ace3-c72d315b29fd" />
                                   <p />
+                                  What causes the friction between the two surfaces?
+                                  <br />
+                                  <object refid="9e077f00-88bd-11dc-ace3-c72d315b29fd" />
                                   <p />
-                                  Which materials had the effect on friction that you expected? Which materials behaved differently?
+                                  Refer to your drawing to explain why the friction value increases as the weight increases.
+                                  <br />
+                                  <object refid="a37fcba7-88bd-11dc-ace3-c72d315b29fd" />
                                   <p />
-                                  <object refid="fbf13d67-7914-11dc-aaef-f7a1df3f6032" />
+                                  Do you think you would get the same results if you were pulling on the box instead of pushing?
+                                  <br />
+                                  <object refid="a86ca12e-88bd-11dc-ace3-c72d315b29fd" />
+                                  <p />
+                                  Why?
+                                  <br />
+                                  <object refid="af6aca85-88bd-11dc-ace3-c72d315b29fd" />
+                                  <p />
                                 </div>
                               </div>
                             </div>
                           </bodyText>
                           <documentRefs>
-                            <OTDataTable id="84b63dcc-825c-11dc-a60b-a3bf30adfc97" name="Data table" showLastRowForAddingNew="true">
-                              <dataStore>
-                                <OTDataStore numberChannels="2">
-                                  <channelDescriptions>
-                                    <OTDataChannelDescription name="Material" numericData="false" />
-                                    <OTDataChannelDescription name="Friction force" numericData="false" />
-                                  </channelDescriptions>
-                                </OTDataStore>
-                              </dataStore>
-                            </OTDataTable>
-                            <OTText id="fbf13d67-7914-11dc-aaef-f7a1df3f6032" name="Text field" />
+                            <OTDrawingTool2 id="99cd7eb9-88bd-11dc-ace3-c72d315b29fd" name="Draw tool" />
+                            <OTText id="9e077f00-88bd-11dc-ace3-c72d315b29fd" name="Text field" />
+                            <OTText id="a37fcba7-88bd-11dc-ace3-c72d315b29fd" name="Text field" />
+                            <OTText id="a86ca12e-88bd-11dc-ace3-c72d315b29fd" name="Text field" />
+                            <OTText id="af6aca85-88bd-11dc-ace3-c72d315b29fd" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="b18091a4-7906-11dc-b03e-ed6d4a0c2086" />
+                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[5]" />
                       </currentCard>
+                      <viewedCards>
+                        <object refid="b18091a4-7906-11dc-b03e-ed6d4a0c2086" />
+                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[1]" />
+                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[2]" />
+                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[3]" />
+                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[4]" />
+                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[5]" />
+                      </viewedCards>
                     </OTCardContainer>
                   </content>
                   <header>
@@ -3060,10 +3300,11 @@ The molecules will
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_1}" />
+                <object refid="${section_6}" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
+                <object refid="${section_6}" />
               </viewedCards>
             </OTCardContainer>
           </content>
@@ -3124,8 +3365,8 @@ The molecules will
         <OTSnapshotAlbum local_id="album" />
         <OTDefinitionManager local_id="definition-manager">
           <definitions>
-            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/common-glossary.txt" />
-            <OTDefinitionList src="http://continuum.concord.org/otrunk/examples/UDL/glossary/friction-glossary.txt" />
+            <OTDefinitionList src="glossary/common-glossary.txt" />
+            <OTDefinitionList src="glossary/friction-glossary.txt" />
           </definitions>
           <frame>
             <OTFrame local_id="definition_frame" width="280" height="150" borderlessPopup="true" />
