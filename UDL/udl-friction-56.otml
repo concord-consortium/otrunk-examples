@@ -2289,7 +2289,7 @@ The molecules will
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[1]" name="%aec55759-7908-11dc-b03e-ed6d4a0c2086">
+                        <OTUDLCompoundDoc name="%aec55759-7908-11dc-b03e-ed6d4a0c2086">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -2335,7 +2335,7 @@ The molecules will
                             <OTText id="dd8b767e-8947-11dc-8cc4-df44ebcd54b4" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[2]" name="%ce75a648-790b-11dc-ab2b-cb448e5223d3">
+                        <OTUDLCompoundDoc name="%ce75a648-790b-11dc-ab2b-cb448e5223d3">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -2352,7 +2352,7 @@ The molecules will
                             </div>
                           </bodyText>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[3]" name="%7dcff04d-790c-11dc-aaef-f7a1df3f6032">
+                        <OTUDLCompoundDoc name="%7dcff04d-790c-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -2382,14 +2382,14 @@ The molecules will
                           <documentRefs>
                             <OTDataCollector id="fe1bcc64-8947-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" multipleGraphableEnabled="true" autoScaleEnabled="true">
                               <graphables>
-                                <OTDataGraphable name="Prediction" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="Prediction" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
                                   <dataStore>
                                     <object refid="${force-prediction-ds}" />
                                   </dataStore>
                                 </OTDataGraphable>
                               </graphables>
                               <source>
-                                <OTDataGraphable name="One bottle" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="One bottle" connectPoints="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
                                   <dataProducer>
                                     <OTSensorDataProxy name="dataproducer">
                                       <request>
@@ -2405,7 +2405,7 @@ The molecules will
                                     </OTSensorDataProxy>
                                   </dataProducer>
                                   <dataStore>
-                                    <OTDataStore dt="0.01" numberChannels="1" local_id="force-one-ds">
+                                    <OTDataStore local_id="force-one-ds" dt="0.01" numberChannels="1">
                                       <channelDescriptions>
                                         <OTDataChannelDescription name="dt" precision="2" numericData="true" />
                                         <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
@@ -2425,7 +2425,7 @@ The molecules will
                             <OTText id="3cffd772-88b5-11dc-ace3-c72d315b29fd" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[4]" name="%0c88cdce-790d-11dc-aaef-f7a1df3f6032">
+                        <OTUDLCompoundDoc name="%0c88cdce-790d-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -2461,14 +2461,14 @@ The molecules will
                           <documentRefs>
                             <OTDataCollector id="71ac9ad8-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
                               <graphables>
-                                <OTDataGraphable name="One bottle" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="One bottle" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
                                   <dataStore>
                                     <object refid="${force-one-ds}" />
                                   </dataStore>
                                 </OTDataGraphable>
                               </graphables>
                               <source>
-                                <OTDataGraphable name="Two bottles" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="Two bottles" connectPoints="true" yColumn="1" drawMarks="false" color="65280" xColumn="0" lineWidth="2.0">
                                   <dataProducer>
                                     <OTSensorDataProxy name="dataproducer">
                                       <request>
@@ -2484,7 +2484,7 @@ The molecules will
                                     </OTSensorDataProxy>
                                   </dataProducer>
                                   <dataStore>
-                                    <OTDataStore dt="0.01" numberChannels="1" local_id="force-two-ds">
+                                    <OTDataStore local_id="force-two-ds" dt="0.01" numberChannels="1">
                                       <channelDescriptions>
                                         <OTDataChannelDescription name="dt" precision="2" numericData="true" />
                                         <OTDataChannelDescription name="" unit="N" precision="-2" numericData="true" />
@@ -2503,7 +2503,7 @@ The molecules will
                             <OTText id="5c44e8ab-88b5-11dc-ace3-c72d315b29fd" name="Text field" />
                           </documentRefs>
                         </OTUDLCompoundDoc>
-                        <OTUDLCompoundDoc id="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[5]" name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
+                        <OTUDLCompoundDoc name="%cc3911cf-790d-11dc-aaef-f7a1df3f6032">
                           <bodyText>
                             <div class="buffer">
                               <div class="border">
@@ -2537,19 +2537,19 @@ The molecules will
                           <documentRefs>
                             <OTDataCollector id="987be8a0-8948-11dc-8cc4-df44ebcd54b4" name="Force (5N)" title="Force Sensor Graph" autoScaleEnabled="true" multipleGraphableEnabled="true">
                               <graphables>
-                                <OTDataGraphable name="One bottle" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="One bottle" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0">
                                   <dataStore>
                                     <object refid="${force-one-ds}" />
                                   </dataStore>
                                 </OTDataGraphable>
-                                <OTDataGraphable name="Two bottles" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="Two bottles" locked="true" connectPoints="true" yColumn="1" drawMarks="false" color="65280" xColumn="0" lineWidth="2.0">
                                   <dataStore>
                                     <object refid="${force-two-ds}" />
                                   </dataStore>
                                 </OTDataGraphable>
                               </graphables>
                               <source>
-                                <OTDataGraphable name="Three bottles" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0">
+                                <OTDataGraphable name="Three bottles" connectPoints="true" yColumn="1" drawMarks="false" color="-16724788" xColumn="0" lineWidth="2.0">
                                   <dataProducer>
                                     <OTSensorDataProxy name="dataproducer">
                                       <request>
@@ -2789,15 +2789,10 @@ The molecules will
                         </OTUDLCompoundDoc>
                       </cards>
                       <currentCard>
-                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[5]" />
+                        <object refid="b18091a4-7906-11dc-b03e-ed6d4a0c2086" />
                       </currentCard>
                       <viewedCards>
                         <object refid="b18091a4-7906-11dc-b03e-ed6d4a0c2086" />
-                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[1]" />
-                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[2]" />
-                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[3]" />
-                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[4]" />
-                        <object refid="b180b8b5-7906-11dc-b03e-ed6d4a0c2086/cards[5]" />
                       </viewedCards>
                     </OTCardContainer>
                   </content>
@@ -3300,11 +3295,10 @@ The molecules will
                 </OTUDLSection>
               </cards>
               <currentCard>
-                <object refid="${section_6}" />
+                <object refid="${section_1}" />
               </currentCard>
               <viewedCards>
                 <object refid="${section_1}" />
-                <object refid="${section_6}" />
               </viewedCards>
             </OTCardContainer>
           </content>
