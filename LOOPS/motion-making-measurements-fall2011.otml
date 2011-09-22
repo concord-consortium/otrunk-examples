@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="c66ef18f-acd7-4e83-87e2-73fac44b1d6d">
+  <imports>
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.OTInclude" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.util.OTSharingBundle" />
+    <import class="org.concord.datagraph.state.OTDataCollector" />
+    <import class="org.concord.datagraph.state.OTDataGraphable" />
+    <import class="org.concord.data.state.OTTimeLimitDataProducerFilter" />
+    <import class="org.concord.data.state.OTLinearProducerFilter" />
+    <import class="org.concord.sensor.state.OTSensorDataProxy" />
+    <import class="org.concord.sensor.state.OTExperimentRequest" />
+    <import class="org.concord.sensor.state.OTSensorRequest" />
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.datagraph.state.OTDataAxis" />
+    <import class="org.concord.sensor.state.OTInterfaceManager" />
+    <import class="org.concord.sensor.state.OTDeviceConfig" />
+    <import class="org.concord.otrunk.overlay.OTOverlay" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunk.ui.OTCurriculumUnit" />
+    <import class="org.concord.otrunk.ui.OTSection" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.ui.OTCardContainer" />
+    <import class="org.concord.otrunk.overlay.OTOverlayWrapper" />
+    <import class="org.concord.otrunk.intrasession.OTMultiUserPickN" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.intrasession.OTMultiUserPollingGraph" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.menu.OTMenu" />
+    <import class="org.concord.otrunk.ui.menu.OTMenuRule" />
+    <import class="org.concord.otrunk.ui.menu.OTNavBar" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.ui.snapshot.OTSnapshotAlbum" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.datagraph.state.OTDataPointLabel" />
+    <import class="org.concord.datagraph.log.OTEventLog" />
+    <import class="org.concord.graph.util.state.OTDrawingTool2" />
+    <import class="org.concord.graph.util.state.OTDrawingShape" />
+    <import class="org.concord.graph.util.state.OTPointTextLabel" />
+    <import class="org.concord.otrunk.util.OTLabbookBundle" />
+    <import class="org.concord.otrunk.labbook.OTLabbookButton" />
+    <import class="org.concord.data.state.OTHoltsMethodSmoothing" />
+  </imports>
+  <objects>
+    <OTSystem local_id="system">
+      <includes>
+        <OTInclude href="global-imports/loops-view-bundle.otml" />
+      </includes>
+      <bundles>
+        <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.jruby.OTJRuby" engineClass="org.concord.otrunk.script.jruby.OTJRubyEngine" />
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+        <OTSharingBundle>
+          <sharedObjects>
+            <OTDataCollector id="2178d9e2-3d90-426f-837c-3c1c2ed04b90" name="My Train Trip Graph" title="Position Graph" autoScaleEnabled="true" showControlBar="true" useDefaultToolBar="true" autoFitMode="0">
+              <source>
+                <OTDataGraphable name="" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" visible="true">
+                  <dataProducer>
+                    <OTTimeLimitDataProducerFilter timeLimit="15000" sourceChannel="1">
+                      <source>
+                        <OTLinearProducerFilter k0="1.5" k1="-1.0" sourceChannel="1">
+                          <source>
+                            <OTSensorDataProxy name="dataproducer">
+                              <request>
+                                <OTExperimentRequest period="0.1">
+                                  <sensorRequests>
+                                    <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                  </sensorRequests>
+                                </OTExperimentRequest>
+                              </request>
+                            </OTSensorDataProxy>
+                          </source>
+                        </OTLinearProducerFilter>
+                      </source>
+                    </OTTimeLimitDataProducerFilter>
+                  </dataProducer>
+                  <dataStore>
+                    <OTDataStore dt="0.1" numberChannels="1">
+                      <channelDescriptions>
+                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                        <OTDataChannelDescription name="" numericData="true" />
+                      </channelDescriptions>
+                    </OTDataStore>
+                  </dataStore>
+                </OTDataGraphable>
+              </source>
+              <xDataAxis>
+                <OTDataAxis max="15.0" units="s" min="0.0" label="Time" labelFormat="Engineering">
+                  <customGridLabels />
+                </OTDataAxis>
+              </xDataAxis>
+              <yDataAxis>
+                <OTDataAxis max="2.0" units="m" min="-0.0" label="Position" labelFormat="Engineering">
+                  <customGridLabels />
+                </OTDataAxis>
+              </yDataAxis>
+            </OTDataCollector>
+            <object refid="3f402f91-1007-11de-aaa0-11f6f031d6ce" />
+            <OTDataCollector id="c239c4ed-d13d-4705-88b5-893c327b634c" name="My Try-to-match Graph" title="Position Graph " autoScaleEnabled="true" showControlBar="true" useDefaultToolBar="true" multipleGraphableEnabled="true" autoFitMode="0">
+              <source>
+                <OTDataGraphable name="Matching Graph" connectPoints="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" visible="true">
+                  <dataProducer>
+                    <OTTimeLimitDataProducerFilter timeLimit="15000" sourceChannel="1">
+                      <source>
+                        <OTLinearProducerFilter k0="1.5" k1="-1.0" sourceChannel="1">
+                          <source>
+                            <OTSensorDataProxy name="dataproducer">
+                              <request>
+                                <OTExperimentRequest id="21e91f62-067e-4e2d-aad0-309dfd35285b" period="0.1">
+                                  <sensorRequests>
+                                    <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                  </sensorRequests>
+                                </OTExperimentRequest>
+                              </request>
+                            </OTSensorDataProxy>
+                          </source>
+                        </OTLinearProducerFilter>
+                      </source>
+                    </OTTimeLimitDataProducerFilter>
+                  </dataProducer>
+                  <dataStore>
+                    <OTDataStore dt="0.1" numberChannels="1">
+                      <channelDescriptions>
+                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                        <OTDataChannelDescription name="" numericData="true" />
+                      </channelDescriptions>
+                    </OTDataStore>
+                  </dataStore>
+                </OTDataGraphable>
+              </source>
+              <xDataAxis>
+                <OTDataAxis max="15.0" units="s" min="-0.04571936" label="Time" labelFormat="Engineering">
+                  <customGridLabels />
+                </OTDataAxis>
+              </xDataAxis>
+              <yDataAxis>
+                <OTDataAxis max="2.0128798" units="m" min="-1.4942935E-4" label="Position" labelFormat="Engineering">
+                  <customGridLabels />
+                </OTDataAxis>
+              </yDataAxis>
+              <graphables>
+                <OTDataGraphable name="Train trip" connectPoints="true" yColumn="1" drawMarks="false" color="204" xColumn="0" lineWidth="2.0" visible="true" locked="true">
+                  <dataStore>
+                    <object refid="3f402f91-1007-11de-aaa0-11f6f031d6ce/source/dataStore" />
+                  </dataStore>
+                </OTDataGraphable>
+              </graphables>
+            </OTDataCollector>
+            <object refid="3f402f91-1007-11de-aaa0-11f6f031d6ce" />
+            <OTDataCollector id="a9b4adac-1f06-4c93-963c-09fdb889d422" name="My Prediction Graph" title="Position Graph" showControlBar="true" useDefaultToolBar="false" showLabelCoordinates="false" labelDecimalPlaces="2" displayButtons="4,">
+              <source>
+                <OTDataGraphable name="Prediction" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" visible="true" showAllChannels="false">
+                  <dataStore>
+                    <OTDataStore numberChannels="2" />
+                  </dataStore>
+                </OTDataGraphable>
+              </source>
+              <xDataAxis>
+                <OTDataAxis max="20.0" units="Minutes" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                  <customGridLabels />
+                </OTDataAxis>
+              </xDataAxis>
+              <yDataAxis>
+                <OTDataAxis max="8000.0" units="m" min="-0.0" label="Position" labelFormat="Engineering" locked="true">
+                  <customGridLabels />
+                </OTDataAxis>
+              </yDataAxis>
+              <labels>
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" color="0xffffbe" fontSize="10" text="Data Point" />
+              </labels>
+            </OTDataCollector>
+            <OTDataCollector id="b7df5c89-f975-400b-a77b-8678ca34b7c2" name="Movie Theater Trip" title="Position Graph" autoScaleEnabled="true" showControlBar="true" useDefaultToolBar="false" autoFitMode="0" multipleGraphableEnabled="false" showLabelCoordinates="true" labelDecimalPlaces="2" displayButtons="4,">
+              <source>
+                <OTDataGraphable name="Movie Trip" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" visible="true" showAllChannels="false">
+                  <dataProducer>
+                    <OTTimeLimitDataProducerFilter timeLimit="20000" sourceChannel="1" name="time limit">
+                      <source>
+                        <OTLinearProducerFilter k0="1.5" k1="-1.0" sourceChannel="1">
+                          <source>
+                            <OTSensorDataProxy name="dataproducer">
+                              <request>
+                                <OTExperimentRequest period="0.1">
+                                  <sensorRequests>
+                                    <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                  </sensorRequests>
+                                </OTExperimentRequest>
+                              </request>
+                            </OTSensorDataProxy>
+                          </source>
+                        </OTLinearProducerFilter>
+                      </source>
+                    </OTTimeLimitDataProducerFilter>
+                  </dataProducer>
+                  <dataStore>
+                    <OTDataStore dt="0.1" numberChannels="1">
+                      <channelDescriptions>
+                        <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                        <OTDataChannelDescription name="" numericData="true" />
+                      </channelDescriptions>
+                    </OTDataStore>
+                  </dataStore>
+                </OTDataGraphable>
+              </source>
+              <xDataAxis>
+                <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" intervalWorld="1" locked="true">
+                  <customGridLabels />
+                </OTDataAxis>
+              </xDataAxis>
+              <yDataAxis>
+                <OTDataAxis max="2.5" units="m" min="-1.0" label="Position" labelFormat="Engineering" locked="true">
+                  <customGridLabels />
+                </OTDataAxis>
+              </yDataAxis>
+            </OTDataCollector>
+          </sharedObjects>
+        </OTSharingBundle>
+        <OTInterfaceManager>
+          <deviceConfigs>
+            <OTDeviceConfig configString="none" deviceId="10" />
+          </deviceConfigs>
+        </OTInterfaceManager>
+      </bundles>
+      <overlays>
+        <object refid="6cc8e2b0-c44e-11dc-95ff-0800200c9a66" />
+        <object refid="b5d8b4a0-db35-11dc-95ff-0800200c9a66" />
+        <OTOverlay>
+          <deltaObjectMap>
+            <entry key="${authoring_script.js}">
+              <OTJavascript src="scripts/student_script.js" />
+            </entry>
+          </deltaObjectMap>
+        </OTOverlay>
+      </overlays>
+      <root>
+        <OTCurriculumUnit version="2" name="LOOPS Activity">
+          <activity>
+            <OTSection local_id="section_1" name="Making Measurements">
+              <header>
+                <OTCompoundDoc id="bb067a83-5179-4eef-982f-a0d73000df6b" showEditBar="false">
+                  <bodyText>
+                    <div class="title">Making Measurements</div>
+                  </bodyText>
+                </OTCompoundDoc>
+              </header>
+              <content>
+                <OTCardContainer local_id="activity-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true" closeViewOnExit="true">
+                  <cards>
+                    <OTCompoundDoc id="87d179ee-20a6-4b3b-81a4-f10c8d1a4476" name="%87d179ee-20a6-4b3b-81a4-f10c8d1a4476" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Using a Graph to Measure</div>
+                              <br />
+                              <table width="100%">
+                                <tr>
+                                  <td style="padding-right: 12px; padding-top: 12px; padding-bottom: 12px; padding-left: 10px">
+                                    <img border="0" src="images/walking_track_oppo.png" />
+                                  </td>
+                                  <td style="padding-right: 20px; padding-top: 20px; padding-bottom: 20px; padding-left: 10px">
+                                    You need to make some measurements. How can the motion probe 
+                and graph help you?
+                                    <br />
+                                    <br />
+                                    To make measurements, you need 
+                numbers, so now it is time to focus on the axes of the graph. 
+                You need to find out what they tell you.
+                                    <br />
+                                    <br />
+                                    Go on to the 
+                next page.
+                                    <br />
+                                    <br />
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="8f6221a0-e46e-421c-bc81-82bcb05da0d0" name="%8f6221a0-e46e-421c-bc81-82bcb05da0d0" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">The X-Axis: Time</div>
+                              The motion probe measures time on the horizontal axis, also known as 
+          the X-axis. The length of time between two events is called a 
+          duration. To practice measuring time, you will measure the duration 
+          between two jumps. Record this motion in front of the probe:
+                              <br />
+                              <ul>
+                                <li>Stand still and wait a while.</li>
+                                <li>Make a small jump toward or away from the probe, and wait a 
+              while again.</li>
+                                <li>Then jump back and stand still.</li>
+                              </ul>
+                              <br />
+                              Use your graph to measure the time between the jumps. You can use 
+          the
+                              <u>
+                                <i>Labeling Tool</i>
+                              </u>
+                              <i />
+                              on the right of the graph to 
+          help you read the time values.
+                              <br />
+                              <br />
+                              Submit the graph and the 
+          answer the questions below.
+                              <br />
+                              <br />
+                              <object refid="bf1e1397-6188-11df-986f-7335cea73a00" />
+                              <br />
+                              <br />
+                              <object refid="b9d32e02-618a-11df-986f-7335cea73a00" />
+                              <br />
+                              <br />
+                              <object refid="374e9d13-e3cb-11e0-aab6-a77b330a4dd4" />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTDataCollector id="bf1e1397-6188-11df-986f-7335cea73a00" name="JumpingGraph" title="Jumping Graph" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
+                          <source>
+                            <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
+                                <OTLinearProducerFilter name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
+                                  <source>
+                                    <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTTimeLimitDataProducerFilter>
+                                  </source>
+                                </OTLinearProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                          <eventLog>
+                            <OTEventLog />
+                          </eventLog>
+                        </OTDataCollector>
+                        <OTQuestion id="b9d32e02-618a-11df-986f-7335cea73a00" name="HowLongQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>How long was the duration between the two jumps?  How did you get your answer?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="374e9d13-e3cb-11e0-aab6-a77b330a4dd4" name="JumpingGraphAndQIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <OTObjectSet name="JumpingGraphAndQIntrasession (Set)">
+                              <objects>
+                                <object refid="b9d32e02-618a-11df-986f-7335cea73a00" />
+                                <object refid="bf1e1397-6188-11df-986f-7335cea73a00" />
+                              </objects>
+                            </OTObjectSet>
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="59594dd1-ce2d-473b-a6fa-04860efaa090" name="%59594dd1-ce2d-473b-a6fa-04860efaa090" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">The Y-Axis: Position</div>
+                              <br />
+                              The motion probe measures position in meters on the vertical axis, 
+          also known as the Y-axis.
+                              <br />
+                              <br />
+                              Use the graph to draw a straight 
+          line at the indicated position, then answer the questions below. 
+          Submit the answers to the questions when you are done.
+                              <br />
+                              A 1-meter measure is available to help you.
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="384db30b-6148-11df-a515-3d81042453ee" />
+                              <br />
+                              <br />
+                              <object refid="262b683a-6149-11df-a515-3d81042453ee" />
+                              <br />
+                              <br />
+                              <object refid="9c577443-6171-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="2b2d13c3-e3cd-11e0-aab6-a77b330a4dd4" />
+                              <br />
+                              <br />
+                              <object refid="d4f98d90-e3cd-11e0-aab6-a77b330a4dd4" />
+                              <br />
+                              <br />
+                              <object refid="fec4dd07-e3cd-11e0-aab6-a77b330a4dd4" />
+                              <br />
+                              <br />
+                              <object refid="4222f439-e3ce-11e0-aab6-a77b330a4dd4" />
+                              <br />
+                              <br />
+                              <object refid="e8323ef5-e3ce-11e0-aab6-a77b330a4dd4" />
+                              <br />
+                              <br />
+                              <object refid="0e9f212c-e3cf-11e0-aab6-a77b330a4dd4" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTDataCollector id="384db30b-6148-11df-a515-3d81042453ee" name="RangeFindingGraph" title="Finding Zero" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
+                          <source>
+                            <OTDataGraphable name="Position" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
+                                <OTLinearProducerFilter name="FrameOfReference" k1="1.0" k0="-1.0" sourceChannel="1">
+                                  <source>
+                                    <OTTimeLimitDataProducerFilter name="TimeLimit" timeLimit="20000" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTTimeLimitDataProducerFilter>
+                                  </source>
+                                </OTLinearProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="2.0242424" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                          <eventLog>
+                            <OTEventLog />
+                          </eventLog>
+                        </OTDataCollector>
+                        <OTQuestion id="262b683a-6149-11df-a515-3d81042453ee" name="ZeroQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>How far were you from the probe in meters?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText name="Open response" />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="9c577443-6171-11df-90e6-cf681ddd0d2d" name="ZeroIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <OTObjectSet name="ZeroIntrasession (Set)">
+                              <objects>
+                                <object refid="384db30b-6148-11df-a515-3d81042453ee" />
+                                <object refid="262b683a-6149-11df-a515-3d81042453ee" />
+                              </objects>
+                            </OTObjectSet>
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTDataCollector id="2b2d13c3-e3cd-11e0-aab6-a77b330a4dd4" name="Motion" title="Finding Negative One" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" logGraphOnReset="true" logGraphOnPlaybackReset="true" displayButtons="0,4,">
+                          <source>
+                            <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
+                                <OTTimeLimitDataProducerFilter name="TimeLimit" timeLimit="20000" sourceChannel="1">
+                                  <source>
+                                    <OTHoltsMethodSmoothing name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTHoltsMethodSmoothing>
+                                  </source>
+                                </OTTimeLimitDataProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                        </OTDataCollector>
+                        <OTQuestion id="d4f98d90-e3cd-11e0-aab6-a77b330a4dd4" name="NegativeOneQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>How far were you from the probe?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="fec4dd07-e3cd-11e0-aab6-a77b330a4dd4" name="NegativeOneIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <OTObjectSet name="NegativeOneIntrasession (Set)">
+                              <objects>
+                                <object refid="d4f98d90-e3cd-11e0-aab6-a77b330a4dd4" />
+                                <object refid="2b2d13c3-e3cd-11e0-aab6-a77b330a4dd4" />
+                              </objects>
+                            </OTObjectSet>
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTDataCollector id="4222f439-e3ce-11e0-aab6-a77b330a4dd4" name="Motion" title="Finding One" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4,">
+                          <source>
+                            <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
+                                <OTTimeLimitDataProducerFilter name="TimeLimit" timeLimit="20000" sourceChannel="1">
+                                  <source>
+                                    <OTHoltsMethodSmoothing name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTHoltsMethodSmoothing>
+                                  </source>
+                                </OTTimeLimitDataProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                        </OTDataCollector>
+                        <OTQuestion id="e8323ef5-e3ce-11e0-aab6-a77b330a4dd4" name="PositiveOneQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>How far were you from the probe?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="0e9f212c-e3cf-11e0-aab6-a77b330a4dd4" name="PositiveOneIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <OTObjectSet name="PositiveOneIntrasession (Set)">
+                              <objects>
+                                <object refid="e8323ef5-e3ce-11e0-aab6-a77b330a4dd4" />
+                                <object refid="4222f439-e3ce-11e0-aab6-a77b330a4dd4" />
+                              </objects>
+                            </OTObjectSet>
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="69056c15-1a87-41d5-8f59-759fd42915fc" name="%69056c15-1a87-41d5-8f59-759fd42915fc" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Frame of Reference</div>
+                              <br />
+                              The number line on which motions occur can be called a frame of 
+          reference.  On a piece of paper, draw the number line that shows the 
+          position of the probe and the frame of reference that you discovered 
+          in the previous step.  Start with a number line like the one below; 
+          each interval is 0.5 meters.  Mark positions zero, -1, and 1, and 
+          then put numbers at each tick mark.
+                              <br />
+                              picture goes here
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc name="%e33d9322-e52c-11e0-ba4c-73adc7e2babf" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Calculating Distances from Positions</div>
+                              Draw on the graph below the movement described:
+                              <br />
+                              <ul>
+                                <li>
+                                  stay still at 2 m for 4 s
+                                  <br />
+                                </li>
+                                <li>
+                                  move to 1 m and stay still for 4 s
+                                  <br />
+                                </li>
+                                <li>
+                                  move to -1 m and stay still for 4 s
+                                  <br />
+                                </li>
+                                <li>
+                                  move to -2 m and stay still for 4 s
+                                  <br />
+                                </li>
+                              </ul>
+                              and Submit your graph.
+                              <br />
+                              <br />
+                              <object refid="1b76f7c3-e52f-11e0-ba4c-73adc7e2babf" />
+                              <br />
+                              <br />
+                              <object refid="970c155c-e52f-11e0-ba4c-73adc7e2babf" />
+                              <br />
+                              <br />
+                              <object refid="dbe7a59d-e52f-11e0-ba4c-73adc7e2babf" />
+                              <br />
+                              <br />
+                              <object refid="309e1073-e559-11e0-82f0-39e2a6d28f61" />
+                              <br />
+                              <br />
+                              <object refid="018ac17f-e55b-11e0-82f0-39e2a6d28f61" />
+                              <br />
+                              <br />
+                              <object refid="7d2e8426-e55b-11e0-82f0-39e2a6d28f61" />
+                              <br />
+                              <br />
+                              <object refid="a0f76f7b-e55b-11e0-82f0-39e2a6d28f61" />
+                              <br />
+                              <br />
+                              <object refid="ff945270-e55b-11e0-82f0-39e2a6d28f61" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTDataCollector id="1b76f7c3-e52f-11e0-ba4c-73adc7e2babf" name="Data graph" title="Using Your Frame of Reference" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="false" useDefaultToolBar="false" displayButtons="0,">
+                          <source>
+                            <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataStore>
+                                <OTDataStore numberChannels="2" />
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="3.0" units="m" min="-3.0" label="Position" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                        </OTDataCollector>
+                        <OTOverlayWrapper id="970c155c-e52f-11e0-ba4c-73adc7e2babf" name="FORIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="1b76f7c3-e52f-11e0-ba4c-73adc7e2babf" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="dbe7a59d-e52f-11e0-ba4c-73adc7e2babf" name="TwoToOneQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is the distance between positions 2 and 1?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="3638ae0c-e530-11e0-ba4c-73adc7e2babf" name="1">
+                                  <bodyText>1</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="3638ae0d-e530-11e0-ba4c-73adc7e2babf" name="2">
+                                  <bodyText>2</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="3638ae0e-e530-11e0-ba4c-73adc7e2babf" name="3">
+                                  <bodyText>3</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="3638ae0f-e530-11e0-ba4c-73adc7e2babf" name="4">
+                                  <bodyText>4</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="309e1073-e559-11e0-82f0-39e2a6d28f61" name="Pos2to1Intrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="dbe7a59d-e52f-11e0-ba4c-73adc7e2babf" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="018ac17f-e55b-11e0-82f0-39e2a6d28f61" name="OneToNOneQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is the distance between positions 1 and -1?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="480ab2fe-e55b-11e0-82f0-39e2a6d28f61" name="-2">
+                                  <bodyText>-2</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="60b7d580-e55b-11e0-82f0-39e2a6d28f61" name="0">
+                                  <bodyText>0</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="2f4a7cac-e55b-11e0-82f0-39e2a6d28f61" name="1">
+                                  <bodyText>1</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="39c374cd-e55b-11e0-82f0-39e2a6d28f61" name="2">
+                                  <bodyText>2</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="39c374cd-e55b-11e0-82f0-39e2a6d28f61" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="7d2e8426-e55b-11e0-82f0-39e2a6d28f61" name="OneToNOneIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="018ac17f-e55b-11e0-82f0-39e2a6d28f61" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="a0f76f7b-e55b-11e0-82f0-39e2a6d28f61" name="NTwoToNOneQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is the distance between positions -1 and -2?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="cd609b57-e55b-11e0-82f0-39e2a6d28f61" name="-3">
+                                  <bodyText>-3</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="d5232608-e55b-11e0-82f0-39e2a6d28f61" name="-1">
+                                  <bodyText>-1</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="dda6ddd9-e55b-11e0-82f0-39e2a6d28f61" name="1">
+                                  <bodyText>1</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e8968c9a-e55b-11e0-82f0-39e2a6d28f61" name="2">
+                                  <bodyText>2</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="dda6ddd9-e55b-11e0-82f0-39e2a6d28f61" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="ff945270-e55b-11e0-82f0-39e2a6d28f61" name="NOneToNTwoIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="a0f76f7b-e55b-11e0-82f0-39e2a6d28f61" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc name="%60438e15-ad12-11de-a14d-a7646795da1c" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Position and Distance</div>
+                              <br />
+                              <br />
+                              Draw on the graph below the movement described:
+                              <br />
+                              <ul>
+                                <li>
+                                  stay still at 1.25 m for 4 s
+                                  <br />
+                                </li>
+                                <li>
+                                  move to 0.5 m and stay still for 4 s
+                                  <br />
+                                </li>
+                                <li>
+                                  move to -0.5 m and stay still for 4 s
+                                  <br />
+                                </li>
+                                <li>
+                                  move to -0.25 m and stay still for 4 s
+                                  <br />
+                                </li>
+                              </ul>
+                              and Submit your graph.
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="4b35172b-6181-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <object refid="b0734bf1-e55d-11e0-82f0-39e2a6d28f61" />
+                              <br />
+                              <br />
+                              <object refid="45968a80-6191-11df-96e0-b17f48c12307" />
+                              <br />
+                              <br />
+                              <object refid="89b189ed-6191-11df-96e0-b17f48c12307" />
+                              <br />
+                              <br />
+                              <object refid="54bd82ad-6183-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <object refid="808c9168-6183-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <object refid="dcb1d9e9-6182-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <object refid="25b0d524-6183-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTDataCollector id="4b35172b-6181-11df-90e6-cf681ddd0d2d" name="PositionVsDistance" title="Measuring Distance between Two Positions" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" useAspectRatio="false" aspectRatio="1.5">
+                          <source>
+                            <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" controllable="true">
+                              <dataStore>
+                                <OTDataStore numberChannels="2" />
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                          <eventLog>
+                            <OTEventLog />
+                          </eventLog>
+                        </OTDataCollector>
+                        <OTOverlayWrapper id="b0734bf1-e55d-11e0-82f0-39e2a6d28f61" name="DistGraphIntrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="4b35172b-6181-11df-90e6-cf681ddd0d2d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="45968a80-6191-11df-96e0-b17f48c12307" name="PosToDist3">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is the distance between position 0.5 to 1.25 meters?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="b07abb24-e55c-11e0-82f0-39e2a6d28f61" name="-0.75">
+                                  <bodyText>-0.75</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="b3ee3705-e55c-11e0-82f0-39e2a6d28f61" name="0.5">
+                                  <bodyText>0.5</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="b8da2216-e55c-11e0-82f0-39e2a6d28f61" name="0.75">
+                                  <bodyText>0.75</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="bc8b9157-e55c-11e0-82f0-39e2a6d28f61" name="1.2">
+                                  <bodyText>1.2</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="b8da2216-e55c-11e0-82f0-39e2a6d28f61" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="89b189ed-6191-11df-96e0-b17f48c12307" name="PosToDist3Intrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="45968a80-6191-11df-96e0-b17f48c12307" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="54bd82ad-6183-11df-90e6-cf681ddd0d2d" name="PosToDist2">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is the distance between position 0.5 to -0.5 meters?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="1d72643d-e55d-11e0-82f0-39e2a6d28f61" name="-1.0">
+                                  <bodyText>-1.0</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="2510ec2e-e55d-11e0-82f0-39e2a6d28f61" name="-0.25">
+                                  <bodyText>-0.25</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="284b56af-e55d-11e0-82f0-39e2a6d28f61" name="0">
+                                  <bodyText>0</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="2d5ca410-e55d-11e0-82f0-39e2a6d28f61" name="1.0">
+                                  <bodyText>1.0</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="808c9168-6183-11df-90e6-cf681ddd0d2d" name="Intrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="54bd82ad-6183-11df-90e6-cf681ddd0d2d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="dcb1d9e9-6182-11df-90e6-cf681ddd0d2d" name="PosToDist1">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is the distance between position -0.5 to -0.25 meters?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="5265fea1-e55d-11e0-82f0-39e2a6d28f61" name="-0.75">
+                                  <bodyText>-0.75</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="58a82ae2-e55d-11e0-82f0-39e2a6d28f61" name="-0.25">
+                                  <bodyText>-0.25</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="5f4bb103-e55d-11e0-82f0-39e2a6d28f61" name="0.2">
+                                  <bodyText>0.2</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="667975c4-e55d-11e0-82f0-39e2a6d28f61" name="0.25">
+                                  <bodyText>0.25</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="667975c4-e55d-11e0-82f0-39e2a6d28f61" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="25b0d524-6183-11df-90e6-cf681ddd0d2d" name="PosToDist1Intrasession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="dcb1d9e9-6182-11df-90e6-cf681ddd0d2d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="13c55db1-3bb7-49a3-a223-5b37a144f354" name="%13c55db1-3bb7-49a3-a223-5b37a144f354" showEditBar="true">
+                      <documentRefs>
+                        <OTDataCollector id="c5c49d92-617c-11df-90e6-cf681ddd0d2d" name="GiantStepGraph" title="Giant Step Graph" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true">
+                          <source>
+                            <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
+                                <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
+                                  <source>
+                                    <OTTimeLimitDataProducerFilter name="TimerLimiter" timeLimit="20000" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTTimeLimitDataProducerFilter>
+                                  </source>
+                                </OTLinearProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                          <eventLog>
+                            <OTEventLog />
+                          </eventLog>
+                        </OTDataCollector>
+                        <OTQuestion id="57d7ad45-617e-11df-90e6-cf681ddd0d2d" name="GiantStepOR">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>How long were each of your team members’ giant steps?  Describe how you measured these distances.</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="859dd10c-617e-11df-90e6-cf681ddd0d2d" name="GiantStepIntersession" embedWrappedObject="false">
+                          <wrappedObject>
+                            <OTObjectSet name="GiantStepIntersession (Set)">
+                              <objects>
+                                <object refid="57d7ad45-617e-11df-90e6-cf681ddd0d2d" />
+                                <object refid="c5c49d92-617c-11df-90e6-cf681ddd0d2d" />
+                              </objects>
+                            </OTObjectSet>
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Measuring Giant Steps</div>
+                              <br />
+                              <table width="100%">
+                                <tr>
+                                  <td style="padding-right: 12px; padding-bottom: 12px; padding-top: 12px; padding-left: 10px">
+                                    <img src="images/big_step_girl_reduced.PNG" border="0" />
+                                  </td>
+                                  <td style="padding-right: 20px; padding-bottom: 20px; padding-top: 20px; padding-left: 10px">
+                                    Use the probe and graph to measure the distance of
+                                    <b>one 
+                giant step.</b>
+                                    You can use the
+                                    <u>
+                                      <i>Labeling Tool</i>
+                                    </u>
+                                    to 
+                the right of the graph to help you see exact numbers.
+                                    <br />
+                                    <br />
+                                    Measure 
+                the giant step distance for each team member, label who's step 
+                it is, and submit each graph, showing how you measured this 
+                distance. Then answer the question below.
+                                    <br />
+                                  </td>
+                                </tr>
+                              </table>
+                              <br />
+                              <object refid="c5c49d92-617c-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <object refid="57d7ad45-617e-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                              <object refid="859dd10c-617e-11df-90e6-cf681ddd0d2d" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="94ba2e97-9acf-4ea6-8d71-969bb8190ef1" name="%94ba2e97-9acf-4ea6-8d71-969bb8190ef1" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Measuring Speed</div>
+                              Can you walk heel-to-toe, heel-to-toe at a uniform speed? Can you 
+          find out with the motion probe?
+                              <br />
+                              <br />
+                              So far, you have measured 
+          distance and time. Can you measure speed?
+                              <b>Speed</b>
+                              is
+                              <b>distance</b>
+                              divided by the
+                              <b>time</b>
+                              it took to go that distance.
+                              <br />
+                              <br />
+                              Create 
+          a graph of heel-to-toe walking. Place labels on your graph to help 
+          you make measurments and explain how you got your measurements.
+                              <br />
+                              <br />
+                              Submit 
+          the graph and the answer to the question below.
+                              <br />
+                              <br />
+                              <object refid="673e3512-618c-11df-986f-7335cea73a00" />
+                              <br />
+                              <br />
+                              <object refid="8043c6f6-618e-11df-96e0-b17f48c12307" />
+                              <br />
+                              <br />
+                              <object refid="9d84554d-618e-11df-96e0-b17f48c12307" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTDataCollector id="673e3512-618c-11df-986f-7335cea73a00" name="MeasuringSpeed" title="Measuring Speed" autoScaleEnabled="true" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," multipleGraphableEnabled="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
+                          <source>
+                            <OTDataGraphable name="Pete" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
+                                <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
+                                  <source>
+                                    <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTTimeLimitDataProducerFilter>
+                                  </source>
+                                </OTLinearProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                              </dataStore>
+                            </OTDataGraphable>
+                          </source>
+                          <xDataAxis>
+                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </xDataAxis>
+                          <yDataAxis>
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                              <customGridLabels />
+                            </OTDataAxis>
+                          </yDataAxis>
+                          <graphables>
+                            <OTDataGraphable drawMarks="false" color="65535" connectPoints="true" xColumn="0" yColumn="1" name="Jake" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataStore>
+                                <OTDataStore />
+                              </dataStore>
+                            </OTDataGraphable>
+                          </graphables>
+                          <eventLog>
+                            <OTEventLog />
+                          </eventLog>
+                        </OTDataCollector>
+                        <OTQuestion id="8043c6f6-618e-11df-96e0-b17f48c12307" name="MeasureSpeedORQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is the speed of the heel-to-toe walking shown on your graph?  How did you find your answer?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="9d84554d-618e-11df-96e0-b17f48c12307" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <OTObjectSet name="Intrasession Saving (Set)">
+                              <objects>
+                                <object refid="8043c6f6-618e-11df-96e0-b17f48c12307" />
+                                <object refid="673e3512-618c-11df-986f-7335cea73a00" />
+                              </objects>
+                            </OTObjectSet>
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="cd7f4c48-6023-4eb1-ad61-1b558ffc5b60" name="%cd7f4c48-6023-4eb1-ad61-1b558ffc5b60" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">The End</div>
+                              Congratulations! You made three measurements with the motion probe 
+          and motion graph:
+                              <br />
+                              <ul>
+                                <li>The time between two jumps</li>
+                                <li>The distance of a giant step</li>
+                                <li>The speed of heel-to-toe walking</li>
+                              </ul>
+                              Good job!
+                              <br />
+                              <br />
+                              You may now close this activity. Your work will be saved automatically.
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                    </OTCompoundDoc>
+                  </cards>
+                  <currentCard>
+                    <object refid="87d179ee-20a6-4b3b-81a4-f10c8d1a4476" />
+                  </currentCard>
+                  <viewedCards>
+                    <object refid="87d179ee-20a6-4b3b-81a4-f10c8d1a4476" />
+                  </viewedCards>
+                </OTCardContainer>
+              </content>
+              <footer>
+                <object refid="${nav-bar}" />
+              </footer>
+              <north>
+                <object refid="bb067a83-5179-4eef-982f-a0d73000df6b" />
+              </north>
+              <center>
+                <object refid="${activity-card-container}" />
+              </center>
+              <south>
+                <object refid="${nav-bar}" />
+              </south>
+            </OTSection>
+          </activity>
+          <script>
+            <object refid="${authoring-script}" />
+          </script>
+        </OTCurriculumUnit>
+      </root>
+      <library>
+        <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
+        <OTMenu local_id="section-1-menu">
+          <cardContainer>
+            <object refid="${activity-card-container}" />
+          </cardContainer>
+          <menuRule>
+            <object refid="${page-rule}" />
+          </menuRule>
+        </OTMenu>
+        <OTSnapshotAlbum local_id="album" />
+        <OTMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
+        <OTJavascript local_id="change_page.js" src="scripts/change_page.js" />
+        <OTJavascript local_id="show_message.js" src="scripts/show_message.js" />
+        <OTJavascript local_id="loops_authoring_script.js" src="scripts/loops_authoring_script.js" />
+        <OTScriptObject local_id="authoring-script">
+          <variables>
+            <OTScriptVariable name="cardContainer">
+              <reference>
+                <object refid="${activity-card-container}" />
+              </reference>
+            </OTScriptVariable>
+            <OTScriptVariable name="system">
+              <reference>
+                <object refid="${system}" />
+              </reference>
+            </OTScriptVariable>
+            <OTScriptVariable name="menuPageRule">
+              <reference>
+                <object refid="${page-rule}" />
+              </reference>
+            </OTScriptVariable>
+          </variables>
+          <script>
+            <object refid="${loops_authoring_script.js}" />
+          </script>
+          <scriptState />
+        </OTScriptObject>
+        <OTNavBar local_id="nav-bar">
+          <menuView>
+            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+          </menuView>
+          <cssColor>
+            <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
+          </cssColor>
+        </OTNavBar>
+      </library>
+    </OTSystem>
+  </objects>
+</otrunk>
+
