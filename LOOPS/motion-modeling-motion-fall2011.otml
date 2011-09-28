@@ -236,7 +236,7 @@
                             </OTDataInput>
                           </input>
                         </OTNLogoModel>
-                        <OTDataCollector id="f7372754-e5fb-11e0-b2a5-e0cb4ebd2b6d" name="Chico's Walk" graphableListEditable="false" title="Chico's Position vs. Time" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoScaleEnabled="false" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="1" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0,">
+                        <OTDataCollector id="f7372754-e5fb-11e0-b2a5-e0cb4ebd2b6d" name="Chico's Walk" showControlBar="false" graphableListEditable="false" title="Chico's Position vs. Time" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoScaleEnabled="false" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="1" useAspectRatio="false" aspectRatio="1.5" useDefaultToolBar="false" displayButtons="0,">
                           <source>
                             <OTDataGraphable name="Chico" connectPoints="true" controllable="false" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -384,7 +384,7 @@ Submit your graph and story.</bodyText>
                             </OTDataInput>
                           </input>
                         </OTNLogoModel>
-                        <OTDataCollector id="f7374e64-e5fb-11e0-b2ab-e0cb4ebd2b6d" name="Dog Walk" graphableListEditable="false" title="Chico's Walk - Position vs. Time" tickMode="AUTO" xTickInterval="0.5" yTickInterval="2.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="1" useAspectRatio="false" aspectRatio="3.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," autoScaleEnabled="false">
+                        <OTDataCollector id="f7374e64-e5fb-11e0-b2ab-e0cb4ebd2b6d" name="Dog Walk" showControlBar="false" graphableListEditable="false" title="Chico's Walk - Position vs. Time" tickMode="AUTO" xTickInterval="0.5" yTickInterval="2.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="1" useAspectRatio="false" aspectRatio="3.5" useDefaultToolBar="false" displayButtons="0," autoScaleEnabled="false">
                           <xDataAxis>
                             <OTDataAxis max="20.0" units="mins" min="0.0" label="Time" labelFormat="Engineering" locked="true">
                               <customGridLabels />
