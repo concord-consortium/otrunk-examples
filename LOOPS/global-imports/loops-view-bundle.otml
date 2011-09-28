@@ -54,7 +54,6 @@
     <import class="org.concord.otrunk.labbook.OTLabbookButton" />
     <import class="org.concord.otrunk.labbook.OTLabbook" />
     <import class="org.concord.otrunk.labbook.OTLabbookEntryChooser" />
-    <!-- <import class="org.concord.multimedia.state.OTSoundDataCollector" /> -->
   </imports>
   <idMap>
   	<idMapping local_id="css-font" id="23cc14f0-c44f-11dc-95ff-0800200c9a66"/>
@@ -147,9 +146,6 @@
                 <entry key="${smart-graph-question-view}">
 					<OTViewEntry objectClass="org.concord.smartgraph.OTSmartGraphQuestion" viewClass="org.concord.smartgraph.OTSmartGraphQuestionEditView" />
 				</entry>
-                <entry key="${sound-grapher-view}">
-                	<OTViewEntry viewClass="org.concord.multimedia.state.ui.OTSoundDataCollectorEditView" objectClass="org.concord.multimedia.state.OTSoundDataCollector" />
-                </entry>
                 <entry key="${moz-swing-view}">
                   <OTViewEntry objectClass="org.concord.otrunk.browser.mozswing.OTMozSwing" viewClass="org.concord.otrunk.browser.mozswing.OTMozSwingEditView" />
                 </entry>
@@ -161,6 +157,9 @@
                 </entry>
                 <entry key="${container_view}">
                   <OTViewEntry objectClass="org.concord.otrunk.ui.OTUDLContainer" viewClass="org.concord.otrunk.ui.OTUDLContainerEditView" />
+                </entry>
+                <entry key="${rites_container_view}">
+                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTRITESContainer" viewClass="org.concord.otrunk.ui.OTUDLContainerEditView" />
                 </entry>
                 <entry key="${choice-radio-view}">
                   <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceComboBoxEditView" useViewsAsChoices="true" />
@@ -353,24 +352,6 @@
                         </note>
                       </OTTeacherNote>-->
                       <OTSoundPlayer name="Sound player"/>
-                      <OTSoundDataCollector name="Sound grapher" title="Data graph">
-                        <source>
-                          <OTDataGraphable drawMarks="false" color="255" connectPoints="true" xColumn="0" yColumn="1" name="vf" lineWidth="2.0">
-		                      <dataProducer>
-		                      	<OTSoundDataProducer isFFT="false"/>
-		                      </dataProducer>
-		                      <dataStore>
-		                        <OTDataStore />
-		                      </dataStore>
-		                    </OTDataGraphable>
-                        </source>
-                        <xDataAxis>
-                          <OTDataAxis max="0.06" units="ms" min="0.0" label="Time" />
-                        </xDataAxis>
-                        <yDataAxis>
-                          <OTDataAxis max="150" units="" min="-150" label="" />
-                        </yDataAxis>
-                      </OTSoundDataCollector>
                       <OTModelerPage name="Molecular workbench" authoredDataURL="http://mw2.concord.org/public/student/classic/motion/undershotwaterwheel.cml"/>
                       <OTCompoundDoc name="Inner pages" showEditBar="false">
                       	<bodyText>
@@ -486,6 +467,7 @@
               viewClass="org.concord.otrunk.ui.swing.OTSliderView" />            
             <OTViewEntry local_id="labbook-button-view" objectClass="org.concord.otrunk.labbook.OTLabbookButton" viewClass="org.concord.otrunk.labbook.ui.OTLabbookButtonView" />
             <OTViewEntry local_id="labbook-entry-chooser-view" objectClass="org.concord.otrunk.labbook.OTLabbookEntryChooser" viewClass="org.concord.otrunk.labbook.ui.OTLabbookEntryChooserView" />
+            <OTViewEntry local_id="rites_container_view" objectClass="org.concord.otrunk.ui.OTRITESContainer" viewClass="org.concord.otrunk.ui.OTRITESContainerView" />
             <OTViewEntry local_id="container_view" objectClass="org.concord.otrunk.ui.OTUDLContainer" viewClass="org.concord.otrunk.ui.OTUDLContainerView" />
             <OTViewEntry objectClass="org.concord.framework.otrunk.wrapper.OTBlob" viewClass="org.concord.otrunk.ui.swing.OTBlobImageView"/>
             <OTViewEntry local_id="curriculum-unit-view" objectClass="org.concord.otrunk.ui.OTCurriculumUnit" viewClass="org.concord.otrunk.ui.swing.OTCurriculumUnitView"/>
@@ -501,7 +483,6 @@
 			<OTViewEntry local_id="smart-graph-view" objectClass="org.concord.smartgraph.OTSmartGraphTool" viewClass="org.concord.smartgraph.OTSmartGraphToolHiddenView" />
             <OTViewEntry objectClass="org.concord.otrunk.ui.menu.OTNavBar" viewClass="org.concord.otrunk.ui.menu.OTNavBarView"/>
             <!--<OTViewEntry local_id="lab-page-view" objectClass="org.concord.otrunk.udl.OTUDLLabPage" viewClass="org.concord.otrunk.udl.ui.OTUDLLabPageView"/>-->
-            <OTViewEntry local_id="sound-grapher-view" viewClass="org.concord.multimedia.state.ui.OTSoundDataCollectorView" objectClass="org.concord.multimedia.state.OTSoundDataCollector" />
             <OTViewEntry local_id="mw-view" objectClass="org.concord.otrunkmw.OTModelerPage" viewClass="org.concord.otrunkmw.OTModelerPageView" />
             <OTViewEntry objectClass="org.concord.otrunk.OTIncludeRootObject" viewClass="org.concord.otrunk.OTIncludeRootObjectView" />
             <!--<OTViewEntry objectClass="org.concord.otrunk.udl.OTZoom" viewClass="org.concord.otrunk.udl.OTZoomView" />-->
@@ -538,7 +519,6 @@
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTBorderContainer" viewClass="org.concord.otrunk.ui.swing.OTBorderContainerView" />
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTPlacementContainer" viewClass="org.concord.otrunk.ui.swing.OTPlacementContainerView" />
             <OTViewEntry id="be713960-e18a-11dc-95ff-0800200c9a66" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextEditView" />
-            <OTViewEntry id="b283beb0-cf35-4f68-bce3-d3420e1f2219" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.multiuser.OTTextMultiUserView" />
             <OTViewEntry id="c93a7460-e18a-11dc-95ff-0800200c9a66" objectClass="org.concord.otrunk.ui.OTText" viewClass="org.concord.otrunk.ui.swing.OTTextView" />
             <OTViewEntry local_id="data-collector-view" viewClass="org.concord.datagraph.state.OTDataCollectorView" objectClass="org.concord.datagraph.state.OTDataCollector" />
             <OTViewEntry viewClass="org.concord.datagraph.state.OTDataGraphView" objectClass="org.concord.datagraph.state.OTDataGraph" />

@@ -19,7 +19,7 @@
     <import class="org.concord.otrunk.ui.menu.OTMenuRule" />
     <import class="org.concord.otrunk.ui.menu.OTNavBar" />
     <import class="org.concord.otrunk.ui.OTSection" />
-    <import class="org.concord.otrunk.ui.OTUDLContainer" />
+    <import class="org.concord.otrunk.ui.OTRITESContainer" />
     <import class="org.concord.otrunk.navigation.OTNavigationHistoryService" />
     <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
     <import class="org.concord.otrunk.intrasession.OTIntrasessionService" />
@@ -39,13 +39,7 @@
             <OTFrame useScrollPane="false" width="1000" height="700" />
           </frame>
           <views>
-            <OTViewEntry local_id="container_view" objectClass="org.concord.otrunk.ui.OTUDLContainer" viewClass="org.concord.otrunk.ui.OTUDLContainerView" />
-            <!--<OTViewEntry objectClass="org.concord.otrunk.ui.OTSection" viewClass="org.concord.otrunk.ui.swing.OTSectionView" />-->
             <OTViewEntry objectClass="org.concord.otrunk.ui.menu.OTMenu" viewClass="org.concord.otrunk.swingx.OTMenuAccordionSectionView" />
-            <!--<OTViewEntry local_id="section-menu-view" objectClass="org.concord.otrunk.ui.menu.OTMenu" viewClass="org.concord.otrunk.ui.menu.OTMenuPageExpandView" />-->
-            <!--<OTViewEntry objectClass="org.concord.otrunk.view.document.OTDocument" viewClass="org.concord.otrunk.view.document.OTDocumentView" />-->
-            <!--<OTViewEntry objectClass="org.concord.otrunk.ui.OTCardContainer" viewClass="org.concord.otrunk.ui.swing.OTCardContainerView" />-->
-            <!--<OTViewEntry objectClass="org.concord.otrunk.ui.menu.OTNavBar" viewClass="org.concord.otrunk.ui.menu.OTNavBarView" />-->
           </views>
         </OTViewBundle>
         <!-- default settings -->
@@ -72,7 +66,7 @@
         <object refid="b5d8b4a0-db35-11dc-95ff-0800200c9a66" />
       </overlays>
       <root>
-        <OTUDLContainer name="LOOPS">
+        <OTRITESContainer name="LOOPS" leftPanelWidth="235">
           <title>
             <OTCompoundDoc local_id="title" showEditBar="false">
               <bodyText>
@@ -99,7 +93,7 @@
               </cards>
             </OTCardContainer>
           </content>
-        </OTUDLContainer>
+        </OTRITESContainer>
       </root>
       <library>
         <OTMenu local_id="menu">
