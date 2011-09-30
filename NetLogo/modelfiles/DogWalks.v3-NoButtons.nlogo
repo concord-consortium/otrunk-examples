@@ -407,38 +407,6 @@ GRAPHICS-WINDOW
 0
 ticks
 
-BUTTON
-6
-151
-76
-184
-Clear
-Setup
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-
-BUTTON
-88
-151
-207
-184
-Walk the Dog
-go
-T
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-
 @#$#@#$#@
 WHAT IS IT?
 -----------
