@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otrunk id="e3eb2b02-edce-11e0-bc03-e0cb4ebd2b6d">
+  <imports>
+    <import class="org.concord.data.state.OTDataStore" />
+    <import class="org.concord.data.state.OTDataChannelDescription" />
+    <import class="org.concord.data.state.OTDataField" />
+    <import class="org.concord.data.state.OTDataTable" />
+    <import class="org.concord.datagraph.state.OTDataGraph" />
+    <import class="org.concord.datagraph.state.OTDataAxis" />
+    <import class="org.concord.datagraph.state.OTDataGraphable" />
+    <import class="org.concord.datagraph.state.OTDataCollector" />
+    <import class="org.concord.datagraph.state.OTMultiDataGraph" />
+    <import class="org.concord.datagraph.state.OTPluginView" />
+    <import class="org.concord.datagraph.state.OTDataBarGraphable" />
+    <import class="org.concord.framework.otrunk.view.OTFrame" />
+    <import class="org.concord.framework.otrunk.wrapper.OTBlob" />
+    <import class="org.concord.graph.util.state.OTDrawingTool" />
+    <import class="org.concord.graph.util.state.OTDrawingStamp" />
+    <import class="org.concord.graph.util.state.OTDrawingImageIcon" />
+    <import class="org.concord.graph.util.state.OTDrawingShape" />
+    <import class="org.concord.graph.util.state.OTDrawingTool2" />
+    <import class="org.concord.graph.util.state.OTPointTextLabel" />
+    <import class="org.concord.otrunk.OTInclude" />
+    <import class="org.concord.otrunk.OTSystem" />
+    <import class="org.concord.otrunk.browser.mozswing.OTMozSwing" />
+    <import class="org.concord.otrunk.overlay.OTOverlay" />
+    <import class="org.concord.otrunk.script.ui.OTScriptObject" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariableComponent" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariableView" />
+    <import class="org.concord.otrunk.script.js.OTJavascript" />
+    <import class="org.concord.otrunk.script.OTScriptEngineBundle" />
+    <import class="org.concord.otrunk.script.OTScriptEngineEntry" />
+    <import class="org.concord.otrunk.graph.OTDataCollectorViewConfig" />
+    <import class="org.concord.otrunk.ui.OTButton" />
+    <import class="org.concord.otrunk.ui.OTCardContainer" />
+    <import class="org.concord.otrunk.ui.OTChoice" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
+    <import class="org.concord.otrunk.ui.OTCurriculumUnit" />
+    <import class="org.concord.otrunk.ui.OTImage" />
+    <import class="org.concord.otrunk.ui.OTImageMap" />
+    <import class="org.concord.otrunk.ui.OTLayerContainer" />
+    <import class="org.concord.otrunk.ui.OTModeSwitcher" />
+    <import class="org.concord.otrunk.ui.OTText" />
+    <import class="org.concord.otrunk.ui.OTPlacement" />
+    <import class="org.concord.otrunk.ui.OTPlacementContainer" />
+    <import class="org.concord.otrunk.ui.snapshot.OTSnapshot" />
+    <import class="org.concord.otrunk.ui.snapshot.OTSnapshotButton" />
+    <import class="org.concord.otrunk.ui.snapshot.OTSnapshotAlbum" />
+    <import class="org.concord.otrunk.ui.snapshot.OTSnapshotChooser" />
+    <import class="org.concord.otrunk.ui.swing.OTChoiceViewConfig" />
+    <import class="org.concord.otrunk.util.OTSharingBundle" />
+    <import class="org.concord.otrunk.view.OTObjectEditViewConfig" />
+    <import class="org.concord.otrunk.view.OTViewChild" />
+    <import class="org.concord.otrunk.view.OTViewEntry" />
+    <import class="org.concord.otrunk.view.OTViewBundle" />
+    <import class="org.concord.otrunk.view.OTViewMode" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.view.document.OTCssText" />
+    <import class="org.concord.otrunk.view.prototype.OTPrototypeViewEntry" />
+    <import class="org.concord.otrunk.view.prototype.OTPrototypeEventController" />
+    <import class="org.concord.otrunk.view.prototype.OTPrototypeMapEntry" />
+    <import class="org.concord.otrunknl4.OTNLogoModel" />
+    <import class="org.concord.sensor.state.OTDeviceConfig" />
+    <import class="org.concord.sensor.state.OTExperimentRequest" />
+    <import class="org.concord.sensor.state.OTInterfaceManager" />
+    <import class="org.concord.sensor.state.OTSensorDataProxy" />
+    <import class="org.concord.sensor.state.OTSensorRequest" />
+    <import class="org.concord.sensor.state.OTZeroSensor" />
+    <import class="org.concord.datagraph.state.OTDataPointLabel" />
+    <import class="org.concord.otrunkmw.OTModelerPage" />
+    <import class="org.concord.otrunkmw.OTMwDataProducer" />
+    <import class="org.concord.otrunkmw.OTMwChannelData" />
+    <import class="org.concord.otrunk.ui.OTSoundPlayer" />
+    <import class="org.concord.otrunk.util.OTReference" />
+    <import class="org.concord.smartgraph.OTSmartGraphTool" />
+    <import class="org.concord.otrunk.script.ui.OTScriptButton" />
+    <import class="org.concord.otrunk.script.jruby.OTJRuby" />
+    <import class="org.concord.otrunk.script.ui.OTScriptVariableRealObject" />
+    <import class="org.concord.framework.otrunk.wrapper.OTInt" />
+    <import class="org.concord.framework.otrunk.wrapper.OTBoolean" />
+    <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
+    <import class="org.concord.otrunk.ui.menu.OTNavBar" />
+    <import class="org.concord.otrunk.view.document.OTCompoundDoc" />
+    <import class="org.concord.otrunk.ui.question.OTQuestion" />
+    <import class="org.concord.otrunk.ui.menu.OTMenu" />
+    <import class="org.concord.otrunk.ui.OTSection" />
+    <import class="org.concord.otrunk.ui.menu.OTMenuRule" />
+    <import class="org.concord.otrunk.overlay.OTOverlayWrapper" />
+    <import class="org.concord.datagraph.state.rubric.OTGraphSegment" />
+    <import class="org.concord.datagraph.state.rubric.OTGraphSegmentCriterion" />
+  </imports>
+  <objects>
+    <OTSystem local_id="system">
+      <includes>
+        <OTInclude href="http://continuum.concord.org/otrunk/examples/LOOPS/global-imports/loops-view-bundle.otml" />
+      </includes>
+      <bundles>
+        <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
+        <OTScriptEngineBundle>
+          <engines>
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.jruby.OTJRuby" engineClass="org.concord.otrunk.script.jruby.OTJRubyEngine" />
+            <OTScriptEngineEntry objectClass="org.concord.otrunk.script.js.OTJavascript" engineClass="org.concord.otrunk.script.js.OTJavascriptEngine" />
+          </engines>
+        </OTScriptEngineBundle>
+        <OTSharingBundle />
+        <OTInterfaceManager>
+          <deviceConfigs>
+            <OTDeviceConfig configString="none" deviceId="10" />
+          </deviceConfigs>
+        </OTInterfaceManager>
+      </bundles>
+      <overlays>
+        <object refid="6cc8e2b0-c44e-11dc-95ff-0800200c9a66" />
+        <object refid="b5d8b4a0-db35-11dc-95ff-0800200c9a66" />
+        <OTOverlay>
+          <deltaObjectMap>
+            <entry key="${authoring_script.js}">
+              <OTJavascript src="http://continuum.concord.org/otrunk/examples/LOOPS/scripts/student_script.js" />
+            </entry>
+          </deltaObjectMap>
+        </OTOverlay>
+      </overlays>
+      <root>
+        <OTCurriculumUnit version="2" name="LOOPS Activity">
+          <activity>
+            <OTSection local_id="section_1" name="Motion and Graphs" headerVisible="false">
+              <header>
+                <OTCompoundDoc showEditBar="false">
+                  <bodyText>
+                    <div class="title">
+                      Motion and Graphs
+                      <br />
+                    </div>
+                  </bodyText>
+                </OTCompoundDoc>
+              </header>
+              <content>
+                <OTCardContainer local_id="activity-card-container" contentsMayScroll="true" loadViewOnlyOnDemand="true">
+                  <cards>
+                    <OTCompoundDoc local_id="page-1" name="What Do You Know Already?">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">What Do You Know Already?</div>
+                              Soon, you will be starting a unit on distance, time, motion and how 
+          motion is graphed. We'll start this unit with a few questions to see 
+          what you may already know about them.
+                              <br />
+                              <br />
+                              Please think about the 
+          questions on the following pages and give your best answer.
+                              <br />
+                              <br />
+                              Below, 
+          click the right arrow to go to the next page.
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="e435a29a-edce-11e0-bc03-e0cb4ebd2b6d" name="%e435a29a-edce-11e0-bc03-e0cb4ebd2b6d" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">A Race from North and South</div>
+                              Vijay and Wei-Lynn have a 50 meter race. The finish line is at 50 
+          meters as shown in the graph below. They do not start at the same 
+          position. Vijay starts 50 meters North of the finish line and 
+          Wei-Lynn starts 50 meters South of the finish line. The graph below 
+          shows the first 30 meters of both Vijay's and Wei-Lynn's runs.
+                              <br />
+                              <img src="images/vijay.png" />
+                              <br />
+                              <object refid="e435c9aa-edce-11e0-bc03-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e435c9aa-edce-11e0-bc09-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e435c9aa-edce-11e0-bc0a-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e435f0ba-edce-11e0-bc0f-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e435f0ba-edce-11e0-bc10-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e435f0ba-edce-11e0-bc13-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e435f0ba-edce-11e0-bc14-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e435f0ba-edce-11e0-bc15-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTQuestion id="e435c9aa-edce-11e0-bc03-e0cb4ebd2b6d" name="First10MetersQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>In running the first ten meters, how many seconds does Vijay take?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" alignContent="0" horizontal="false">
+                              <choices>
+                                <OTCompoundDoc id="e435c9aa-edce-11e0-bc04-e0cb4ebd2b6d" name="1 second">
+                                  <bodyText>1 second</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435c9aa-edce-11e0-bc05-e0cb4ebd2b6d" name="2 seconds">
+                                  <bodyText>2 seconds</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435c9aa-edce-11e0-bc06-e0cb4ebd2b6d" name="3 seconds">
+                                  <bodyText>3 seconds</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435c9aa-edce-11e0-bc07-e0cb4ebd2b6d" name="6 seconds">
+                                  <bodyText>6 seconds</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435c9aa-edce-11e0-bc08-e0cb4ebd2b6d" name="Vijay">
+                                  <bodyText>15 seconds</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="e435c9aa-edce-11e0-bc05-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e435c9aa-edce-11e0-bc09-e0cb4ebd2b6d" name="First10MetersWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e435c9aa-edce-11e0-bc03-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="e435c9aa-edce-11e0-bc0a-e0cb4ebd2b6d" name="First10SecondsQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>During the first ten seconds, how many meters did Wei-Lynn run?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="e435c9aa-edce-11e0-bc0b-e0cb4ebd2b6d" name="30 meters">
+                                  <bodyText>10 meters</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435c9aa-edce-11e0-bc0c-e0cb4ebd2b6d" name="20 meters">
+                                  <bodyText>20 meters</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435f0ba-edce-11e0-bc0c-e0cb4ebd2b6d" name="30 meters">
+                                  <bodyText>30 meters</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435f0ba-edce-11e0-bc0d-e0cb4ebd2b6d" name="80 meters">
+                                  <bodyText>70 meters</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435f0ba-edce-11e0-bc0e-e0cb4ebd2b6d" name="20 meters">
+                                  <bodyText>80 meters</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="e435c9aa-edce-11e0-bc0c-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e435f0ba-edce-11e0-bc0f-e0cb4ebd2b6d" name="First10SecondsWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e435c9aa-edce-11e0-bc0a-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="e435f0ba-edce-11e0-bc10-e0cb4ebd2b6d" name="PredictRaceQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>Who do you predict to win the race?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="e435f0ba-edce-11e0-bc11-e0cb4ebd2b6d" name="Wei-Lynn">
+                                  <bodyText>Wei-Lynn</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e435f0ba-edce-11e0-bc12-e0cb4ebd2b6d" name="Vijay">
+                                  <bodyText>Vijay</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="e435f0ba-edce-11e0-bc12-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e435f0ba-edce-11e0-bc13-e0cb4ebd2b6d" name="PredictRaceWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e435f0ba-edce-11e0-bc10-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="e435f0ba-edce-11e0-bc14-e0cb4ebd2b6d" name="ExplainPredictionQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>Please explain your answer for the previous question.</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e435f0ba-edce-11e0-bc15-e0cb4ebd2b6d" name="ExplainPredictionWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e435f0ba-edce-11e0-bc14-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="e435f0ba-edce-11e0-bc16-e0cb4ebd2b6d" name="%e435f0ba-edce-11e0-bc16-e0cb4ebd2b6d" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">The Football Field</div>
+                              The markings on a standard American football field show the distance 
+          to the nearest end zone. The whole field is 100 yards long, but it 
+          is marked with 50 yards in the middle and decreasing numbers toward 
+          each end zone. The diagram shows the football field markings with 
+          the two end zones, one for the red team and one for the blue team.
+                              <br />
+                              <br />
+                              <img src="images/FootballField1.PNG" />
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="e43617ca-edce-11e0-bc16-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e43617ca-edce-11e0-bc1d-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="e43617ca-edce-11e0-bc1e-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e43617ca-edce-11e0-bc1f-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTQuestion id="e43617ca-edce-11e0-bc16-e0cb4ebd2b6d" name="FootballMC">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>The red team makes a pass from their own 20 yard line to the blue team's 40 yard line.  How long was the pass?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="1" autoLetter="false">
+                              <choices>
+                                <OTCompoundDoc id="e43617ca-edce-11e0-bc17-e0cb4ebd2b6d" name="20 yards">
+                                  <bodyText>20 yards</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e43617ca-edce-11e0-bc18-e0cb4ebd2b6d" name="30 yards">
+                                  <bodyText>30 yards</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e43617ca-edce-11e0-bc19-e0cb4ebd2b6d" name="40 yards">
+                                  <bodyText>40 yards</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e43617ca-edce-11e0-bc1a-e0cb4ebd2b6d" name="50 yards">
+                                  <bodyText>50 yards</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e43617ca-edce-11e0-bc1b-e0cb4ebd2b6d" name="20 yards">
+                                  <bodyText>60 yards</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <OTCompoundDoc id="e43617ca-edce-11e0-bc1c-e0cb4ebd2b6d" name="50 yards">
+                                  <bodyText>40 yards</bodyText>
+                                </OTCompoundDoc>
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e43617ca-edce-11e0-bc1d-e0cb4ebd2b6d" name="FootballMCWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e43617ca-edce-11e0-bc16-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="e43617ca-edce-11e0-bc1e-e0cb4ebd2b6d" name="ExplainFootball">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>Please explain how you got your answer.</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e43617ca-edce-11e0-bc1f-e0cb4ebd2b6d" name="ExplainFootballWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e43617ca-edce-11e0-bc1e-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="e43617ca-edce-11e0-bc20-e0cb4ebd2b6d" name="%e43617ca-edce-11e0-bc20-e0cb4ebd2b6d" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Acorn and Berry</div>
+                              The diagram below represents a piece of train track along which two 
+          towns named Acorn and Berry are located. The track happens to be 
+          marked with mile markers as indicated.
+                              <br />
+                              <img src="images/Acorn-Berry-traintrack.PNG" />
+                              <br />
+                              The 
+          red line on the graph below represents a trip of a train on the 
+          track that connects Acorn and Berry as it moves in time.
+                              <br />
+                              <img src="images/Acorn-Berry-graph-small.PNG" />
+                              <br />
+                              <object refid="e4363eda-edce-11e0-bc20-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e4363eda-edce-11e0-bc25-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e4363eda-edce-11e0-bc26-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e43665ea-edce-11e0-bc2a-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e43665ea-edce-11e0-bc2b-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e43665ea-edce-11e0-bc30-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTQuestion id="e4363eda-edce-11e0-bc20-e0cb4ebd2b6d" name="AcornBerry1">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>How far did the train travel?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc21-e0cb4ebd2b6d" name="18 miles">
+                                  <bodyText>18 miles</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc22-e0cb4ebd2b6d" name="25 miles">
+                                  <bodyText>25 miles</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc23-e0cb4ebd2b6d" name="6 miles">
+                                  <bodyText>6 miles</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc24-e0cb4ebd2b6d" name="18 miles">
+                                  <bodyText>4 miles</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="e4363eda-edce-11e0-bc24-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e4363eda-edce-11e0-bc25-e0cb4ebd2b6d" name="AcornBerry1Wrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e4363eda-edce-11e0-bc20-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="e4363eda-edce-11e0-bc26-e0cb4ebd2b6d" name="AcronBerry2">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>When was the train stopped?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc27-e0cb4ebd2b6d" name="It never stopped.">
+                                  <bodyText>It never stopped.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc28-e0cb4ebd2b6d" name="It stopped at 25 minutes">
+                                  <bodyText>It stopped at 25 minutes.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc29-e0cb4ebd2b6d" name="It stopped from 0 to 6 minutes and 18 to 25 minutes.">
+                                  <bodyText>It stopped from 0 to 6 minutes and 18 to 25 minutes.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4363eda-edce-11e0-bc2a-e0cb4ebd2b6d" name="It never stopped.">
+                                  <bodyText>It stopped at 2 minutes and at 6 minutes.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="e4363eda-edce-11e0-bc29-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e43665ea-edce-11e0-bc2a-e0cb4ebd2b6d" name="AcronBerry2Wrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e4363eda-edce-11e0-bc26-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="e43665ea-edce-11e0-bc2b-e0cb4ebd2b6d" name="AcornBerry3">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>How long was the train actually moving?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="e43665ea-edce-11e0-bc2c-e0cb4ebd2b6d" name="12 minutes">
+                                  <bodyText>6 minutes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e43665ea-edce-11e0-bc2d-e0cb4ebd2b6d" name="18 minutes">
+                                  <bodyText>12 minutes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e43665ea-edce-11e0-bc2e-e0cb4ebd2b6d" name="25 minutes">
+                                  <bodyText>18 minutes</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e43665ea-edce-11e0-bc2f-e0cb4ebd2b6d" name="18 minutes">
+                                  <bodyText>25 minutes</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="e43665ea-edce-11e0-bc2d-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e43665ea-edce-11e0-bc30-e0cb4ebd2b6d" name="AcornBerry3Wrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e43665ea-edce-11e0-bc2b-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="e43665ea-edce-11e0-bc31-e0cb4ebd2b6d" name="%e43665ea-edce-11e0-bc31-e0cb4ebd2b6d" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Graphs Tell a Story</div>
+                              Graphs of motion tell stories of trips. The graph below represents 
+          another trip on the track that connects Acorn and Berry. On this 
+          graph, each part of the trip is labeled with a letter.
+                              <br />
+                              <br />
+                              <img src="images/Acorn-Berry-traintrack.PNG" />
+                              <br />
+                              <img src="images/Acorn-Berry-roundtrip-small.PNG" />
+                              <br />
+                              <object refid="e43665ea-edce-11e0-bc32-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e4368cfa-edce-11e0-bc36-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e4368cfa-edce-11e0-bc37-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e4368cfa-edce-11e0-bc39-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTQuestion id="e43665ea-edce-11e0-bc32-e0cb4ebd2b6d" name="AB-Story1">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>Which statement below best describes the story of the train's trip?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="e43665ea-edce-11e0-bc33-e0cb4ebd2b6d" name="The train went down into a valley and back up on the other side.">
+                                  <bodyText>The train went down into a valley and back up on the other side.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4368cfa-edce-11e0-bc33-e0cb4ebd2b6d" name="The train went from Berry down into the valley, stopped at Acorn, and returned to Berry.">
+                                  <bodyText>The train went from Berry down into the valley, stopped briefly at Acorn, and returned to Berry.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4368cfa-edce-11e0-bc34-e0cb4ebd2b6d" name="The train went from Berry to Acorn, stopped but continued on to a new destination.">
+                                  <bodyText>The train went from Berry to Acorn, stopped briefly at Acorn, and returned to Berry.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4368cfa-edce-11e0-bc35-e0cb4ebd2b6d" name="The train went down into a valley and back up on the other side.">
+                                  <bodyText>The train went from Berry to Acorn, stopped briefly at Acorn and then travelled to a new destination.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="e4368cfa-edce-11e0-bc34-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e4368cfa-edce-11e0-bc36-e0cb4ebd2b6d" name="AB-Story1Wrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e43665ea-edce-11e0-bc32-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="e4368cfa-edce-11e0-bc37-e0cb4ebd2b6d" name="AB-Story2">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>On which part of the trip was the train going the fastest?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" alignContent="0" horizontal="false">
+                              <choices>
+                                <OTCompoundDoc name="A">
+                                  <bodyText>A</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e4368cfa-edce-11e0-bc38-e0cb4ebd2b6d" name="B">
+                                  <bodyText>B</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="C">
+                                  <bodyText>C</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="D">
+                                  <bodyText>D</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="E">
+                                  <bodyText>E</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <object refid="e4368cfa-edce-11e0-bc38-e0cb4ebd2b6d" />
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e4368cfa-edce-11e0-bc39-e0cb4ebd2b6d" name="AB-Story2Wrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e4368cfa-edce-11e0-bc37-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="e4368cfa-edce-11e0-bc3a-e0cb4ebd2b6d" name="%e4368cfa-edce-11e0-bc3a-e0cb4ebd2b6d" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Sketch the Graph</div>
+                              Sketch a graph that tells the story below. Click on the pencil tool 
+          to the right of the graph and use your mouse or stylus to draw the 
+          graph. You can change your line by redrawing it, or clear it and 
+          start over if you like. Remember, this graph is a sketch; it does 
+          not need to be perfect.
+                              <br />
+                              <br />
+                              <img src="images/Acorn-Berry-traintrack.PNG" />
+                              <br />
+                              <object refid="e4368cfa-edce-11e0-bc3b-e0cb4ebd2b6d" />
+                              <br />
+                              <object refid="e436b40a-edce-11e0-bc3c-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTQuestion id="e4368cfa-edce-11e0-bc3b-e0cb4ebd2b6d" name="Question">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <ul>
+                                  <li>The 
+train is stopped in Acorn for two minutes, but then leaves for Berry.</li>
+                                  <li>Three 
+minutes into the trip the engineer sees a cow on the tracks and 
+stops the train.</li>
+                                  <li>After two minutes, the cow moves on and the engineer resumes the trip.</li>
+                                  <li>When the train reaches Berry it stops for three minutes, and then returns to Acorn.</li>
+                                </ul>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTDataCollector id="e4368cfa-edce-11e0-bc3c-e0cb4ebd2b6d" name="Data graph" title="Cow on the Tracks" showControlBar="true" useDefaultToolBar="false" showLabelCoordinates="true" labelDecimalPlaces="2" displayButtons="0" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
+                              <source>
+                                <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" visible="true" showAllChannels="false">
+                                  <dataStore>
+                                    <OTDataStore numberChannels="2" />
+                                  </dataStore>
+                                  <rubric>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="BEGINNING_X" operation="EQUAL_TO" tolerance="0.25" />
+                                        <OTGraphSegmentCriterion property="ENDING_X" operation="EQUAL_TO" expectedValue="2.0" tolerance="0.25" />
+                                        <OTGraphSegmentCriterion property="BEGINNING_Y" expectedValue="2.0" operation="EQUAL_TO" tolerance="0.25" />
+                                        <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="3.0" tolerance="0.4" points="1.333" />
+                                        <OTGraphSegmentCriterion property="SLOPE" operation="GREATER_THAN" tolerance="0.25" points="1.333" />
+                                        <OTGraphSegmentCriterion property="ENDING_Y" operation="LESS_THAN" expectedValue="6.0" tolerance="0.25" points="1.333" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="2.0" tolerance="0.35" points="2.0" />
+                                        <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="2.0" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="6.0" tolerance="0.25" points="2.0" />
+                                        <OTGraphSegmentCriterion property="SLOPE" operation="GREATER_THAN" tolerance="0.25" points="2.0" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="3.0" tolerance="0.5" points="2.0" />
+                                        <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="2.0" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="2.0" tolerance="0.25" points="2.0" />
+                                        <OTGraphSegmentCriterion property="SLOPE" operation="LESS_THAN" tolerance="0.25" points="2.0" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment optional="true">
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" />
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="GREATER_THAN_OR_EQUAL_TO" expectedValue="0.5" tolerance="0.25" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                  </rubric>
+                                  <exampleGraphOverlayUrls>
+                                    <string>http://67.207.147.133/dav/loops//33/1423-data-e4368cfa-edce-11e0-bc3b-e0cb4ebd2b6d-1.otml</string>
+                                    <string>http://67.207.147.133/dav/loops//33/1423-data-e4368cfa-edce-11e0-bc3b-e0cb4ebd2b6d-1.otml</string>
+                                  </exampleGraphOverlayUrls>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="25.0" units="minutes" min="0.0" label="Time" labelFormat="None" locked="true">
+                                  <customGridLabels />
+                                </OTDataAxis>
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="8.0" units="miles" min="-0.0" label="Mile Markers" labelFormat="None" locked="true">
+                                  <customGridLabels />
+                                </OTDataAxis>
+                              </yDataAxis>
+                            </OTDataCollector>
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e436b40a-edce-11e0-bc3c-e0cb4ebd2b6d" name="CowOnTracksWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e4368cfa-edce-11e0-bc3b-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="e436b40a-edce-11e0-bc3d-e0cb4ebd2b6d" name="%e436b40a-edce-11e0-bc3d-e0cb4ebd2b6d" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">Speed</div>
+                              The graph below shows the movement of an object at several points in 
+          time.
+                              <br />
+                              <img src="images/CArelease1.png" />
+                              <br />
+                              <br />
+                              <object refid="e436b40a-edce-11e0-bc3e-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="e436b40a-edce-11e0-bc40-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                      <documentRefs>
+                        <OTQuestion id="e436b40a-edce-11e0-bc3e-e0cb4ebd2b6d" name="SpeedQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>
+                                <b>What is the average speed of the object?</b>
+                              </bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" alignContent="0" horizontal="false">
+                              <choices>
+                                <OTCompoundDoc name="0.5 meters / minute">
+                                  <bodyText>0.5 meters / minute</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="e436b40a-edce-11e0-bc3f-e0cb4ebd2b6d" name="2 meters / minute">
+                                  <bodyText>2 meters / minute</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="25 meters / minute">
+                                  <bodyText>25 meters / minute</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc name="50 meters / minute">
+                                  <bodyText>50 meters / minute</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <object refid="e436b40a-edce-11e0-bc3f-e0cb4ebd2b6d" />
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e436b40a-edce-11e0-bc40-e0cb4ebd2b6d" name="SpeedQWrap" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="e436b40a-edce-11e0-bc3e-e0cb4ebd2b6d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                    </OTCompoundDoc>
+                    <OTCompoundDoc id="e436b40a-edce-11e0-bc41-e0cb4ebd2b6d" name="%e436b40a-edce-11e0-bc41-e0cb4ebd2b6d" showEditBar="true">
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <div class="subtitle">The End</div>
+                              Thank you for answering these questions.  You may close this 
+          activity.  Your answers will be saved.
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
+                    </OTCompoundDoc>
+                  </cards>
+                  <currentCard>
+                    <object refid="${page-1}" />
+                  </currentCard>
+                  <viewedCards>
+                    <object refid="${page-1}" />
+                  </viewedCards>
+                </OTCardContainer>
+              </content>
+              <footer>
+                <object refid="${nav-bar}" />
+              </footer>
+              <center>
+                <object refid="${activity-card-container}" />
+              </center>
+              <south>
+                <object refid="${nav-bar}" />
+              </south>
+            </OTSection>
+          </activity>
+          <script>
+            <object refid="${authoring-script}" />
+          </script>
+        </OTCurriculumUnit>
+      </root>
+      <library>
+        <object refid="b6350a20-e3b4-11dc-95ff-0800200c9a66" />
+        <OTMenu local_id="section-1-menu">
+          <cardContainer>
+            <object refid="${activity-card-container}" />
+          </cardContainer>
+          <menuRule>
+            <object refid="${page-rule}" />
+          </menuRule>
+        </OTMenu>
+        <OTSnapshotAlbum local_id="album" />
+        <OTMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
+        <OTJavascript local_id="change_page.js" src="http://continuum.concord.org/otrunk/examples/LOOPS/scripts/change_page.js" />
+        <OTJavascript local_id="show_message.js" src="http://continuum.concord.org/otrunk/examples/LOOPS/scripts/show_message.js" />
+        <OTJavascript local_id="loops_authoring_script.js" src="http://continuum.concord.org/otrunk/examples/LOOPS/scripts/loops_authoring_script.js" />
+        <OTScriptObject local_id="authoring-script">
+          <variables>
+            <OTScriptVariable name="cardContainer">
+              <reference>
+                <object refid="${activity-card-container}" />
+              </reference>
+            </OTScriptVariable>
+            <OTScriptVariable name="system">
+              <reference>
+                <object refid="${system}" />
+              </reference>
+            </OTScriptVariable>
+            <OTScriptVariable name="menuPageRule">
+              <reference>
+                <object refid="${page-rule}" />
+              </reference>
+            </OTScriptVariable>
+          </variables>
+          <script>
+            <object refid="${loops_authoring_script.js}" />
+          </script>
+          <scriptState />
+        </OTScriptObject>
+        <OTNavBar local_id="nav-bar">
+          <menuView>
+            <object refid="29dc5ef0-c453-11dc-95ff-0800200c9a66" />
+          </menuView>
+          <cssColor>
+            <object refid="31193bb0-c44f-11dc-95ff-0800200c9a66" />
+          </cssColor>
+        </OTNavBar>
+      </library>
+    </OTSystem>
+  </objects>
+</otrunk>
+
