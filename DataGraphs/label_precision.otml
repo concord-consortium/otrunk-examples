@@ -122,7 +122,7 @@
               </eventLog>
             </OTDataCollector>
             <OTDataCollector id="58830dbf-f911-458c-8d4b-bfcf84eabdb8" title="Graph 2" autoScaleEnabled="true" autoFitMode="0"
-              showLabelCoordinates="true" labelDecimalPlaces="4" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO"
+              showLabelCoordinates="true" labelDecimalPlaces="1" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO"
               xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false"
               aspectRatio="1.5">
               <source>
@@ -170,7 +170,7 @@
               </eventLog>
             </OTDataCollector>
             <OTDataCollector id="b04c9243-807f-460a-85e6-6ea3b45fcc85" title="Graph 3" autoScaleEnabled="true" autoFitMode="0"
-              showLabelCoordinates="true" labelDecimalPlaces="4" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO"
+              showLabelCoordinates="true" labelDecimalPlaces="10" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO"
               xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false"
               aspectRatio="1.5">
               <source>
@@ -181,7 +181,7 @@
                       <source>
                         <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
                           <source>
-                            <OTWaveGenerator timeScale="0.02" sampleTime="0.01" precision="3" />
+                            <OTWaveGenerator timeScale="0.02" sampleTime="0.01" precision="8" />
                           </source>
                         </OTTimeLimitDataProducerFilter>
                       </source>
