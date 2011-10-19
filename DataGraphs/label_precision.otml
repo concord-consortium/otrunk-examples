@@ -133,7 +133,7 @@
                       <source>
                         <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
                           <source>
-                            <OTWaveGenerator timeScale="0.02" sampleTime="0.01" precision="3" />
+                            <OTWaveGenerator timeScale="1" sampleTime="0.001" precision="3" />
                           </source>
                           <channelDescription>
                             <OTDataChannelDescription name="pos" unit="km" precision="0" numericData="true" />
@@ -161,7 +161,7 @@
                 </OTDataAxis>
               </xDataAxis>
               <yDataAxis>
-                <OTDataAxis max="2.0" units="mm" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
+                <OTDataAxis max="2.0" units="km" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
                   <customGridLabels />
                 </OTDataAxis>
               </yDataAxis>
