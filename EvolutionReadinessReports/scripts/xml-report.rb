@@ -38,7 +38,9 @@ class XmlReport
   end
   
   def getText
-    @doc.to_s
+    text = ''
+    @doc.write(text, 2)
+    text
   end
   
   def getPrettyText
@@ -61,7 +63,7 @@ class XmlReport
       elsif question == :navigation_log
       else
         userQuestion = @otrunkHelper.userObject(question, user)
-        answersElem.add_element(_getAnswerElem(userQuestion, index, user))
+        _getAnswerElem(answersElem, userQuestion, index, user)
       end
     end
   end
@@ -84,14 +86,14 @@ class XmlReport
   
   def _addQuestions
     @questions.each_with_index do |question, index|
-      @questionsElem.add_element(_getQuestionElem(question, @numQuestions))
+      _getQuestionElem(@questionsElem, question, @numQuestions)
       @numQuestions += 1
     end
   end
   
-  def _getQuestionElem(question, index)
+  def _getQuestionElem(parentElem, question, index)
     questionType = _getQuestionType(question)
-    elem = REXML::Element.new('question')
+    elem = parentElemt.add_element('question')
     elem.add_attributes('id' => (index+1).to_s,
       'prompt' => (question.is_a?(Symbol) ? '' : _plainPromptText(question)),
       'type' => questionType)
@@ -106,8 +108,8 @@ class XmlReport
     elem
   end
 
-  def _getAnswerElem(question, index, user)
-    elem = REXML::Element.new('answer')
+  def _getAnswerElem(parentElem, question, index, user)
+    elem = parentElem.add_element('answer')
     elem.attributes['questionId'] = (index + 1).to_s
     case _getQuestionType(question)
       when 'choice' then
@@ -123,7 +125,6 @@ class XmlReport
       elem.text = 'UNKNOWN'
       STDERR.puts("getAnswerElem: Unknown question type!")
     end
-    elem
   end
 
   def _doChoiceAnswerElem(answerElem, question)
