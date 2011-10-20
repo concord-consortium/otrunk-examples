@@ -93,7 +93,7 @@ class XmlReport
   
   def _getQuestionElem(parentElem, question, index)
     questionType = _getQuestionType(question)
-    elem = parentElemt.add_element('question')
+    elem = parentElem.add_element('question')
     elem.add_attributes('id' => (index+1).to_s,
       'prompt' => (question.is_a?(Symbol) ? '' : _plainPromptText(question)),
       'type' => questionType)
