@@ -105,7 +105,7 @@ class XmlReport
       elem.attributes['type'] = 'text'
       elem.attributes['tags'] = 'navigation_log'
     end
-    elem
+    elem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
   end
 
   def _getAnswerElem(parentElem, question, index, user)
@@ -139,6 +139,7 @@ class XmlReport
       STDERR.puts("      answer! "+num.to_s+" " +(text == nil ? 'nil' : text))
       choiceElem = choicesElem.add_element('choice')
       choiceElem.add_attributes('num' => num.to_s, 'text' => text)
+      choiceElem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
     end
   end
 
