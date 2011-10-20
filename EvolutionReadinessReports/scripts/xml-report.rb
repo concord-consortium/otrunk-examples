@@ -155,6 +155,7 @@ class XmlReport
     if url
       imageElem = answerElem.add_element('image')
       imageElem.attributes['src'] =  url.toExternalForm
+      imageElem.text = ' '
     else
       answerElem.text = 'NO_ANSWER'
     end
