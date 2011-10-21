@@ -1,6 +1,12 @@
 class FlowerPotModelReporter
   
-  @@fields = [:total_correct, 
+  def self.model_name
+    "Three flower model"
+  end
+  
+  @@fields = [
+    :times_run,
+    :total_correct, 
     :total_incorrect,
     :percent_correct,
     :correct_boxes,
@@ -17,6 +23,7 @@ class FlowerPotModelReporter
   end
   
   def self.report_header
+    '<th>Times run</th>' +
     '<th>Total correct</th>' +
     '<th>Total incorrect</th>' +
     '<th>Percent correct</th>' +
@@ -41,6 +48,7 @@ class FlowerPotModelReporter
   end
   
   def report_row
+    "<td>#{@times_run}</td>" +
     "<td>#{@total_correct}</td>" +
     "<td>#{@total_incorrect}</td>" +
     "<td>#{@percent_correct ? '%.0f%' % [@percent_correct] : 'N/A'}</td>" +
@@ -52,6 +60,8 @@ class FlowerPotModelReporter
   
   def parseModelActivityData(modelActivityData)
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
+    
+    @times_run = modelActivityMatrix.length
     
     modelActivityMatrix.each do |run|
       run.each_with_index do |box, box_ix|

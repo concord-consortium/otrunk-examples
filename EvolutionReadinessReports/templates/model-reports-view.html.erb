@@ -20,15 +20,19 @@
       <th rowspan="2"></th>
       <% models = @activity.sectionModels(@activity.activity) %>
       <% models.each do |model| %>
-        <% puts model.otExternalId %>
-        <th colspan="<%= modelReporterClass(model).num_fields %>" style="text-align: left;">
-          Model <%= model.object_id %>
-        </th>
+        <% if modelReporterClass(model) %>
+          <% puts model.otExternalId %>
+          <th colspan="<%= modelReporterClass(model).num_fields %>" style="text-align: left;">
+            Model <%= modelReporterClass(model).model_name %>
+          </th>
+         <% end %>
       <% end %>
     </tr>
     <tr bgcolor="<%= ROWCOLOR2 %>">
       <% models.each do |model| %>
-        <%= modelReporterClass(model).report_header %>
+        <% if modelReporterClass(model) %>
+          <%= modelReporterClass(model).report_header %>
+        <% end %>
       <% end %>
     </tr>
     
@@ -39,24 +43,26 @@
         <% line_toggle = !line_toggle %>
         <td><%= user.name %></td>
         <% models.each do |model| %>
-          <% userModel = @otrunkHelper.userObject(model, user) %>
-          <% unless userModel.modelActivityData %>
-            <% 7.times do %>
-              <td></td>
+          <% if modelReporterClass(model) %>
+            <% userModel = @otrunkHelper.userObject(model, user) %>
+            <% unless userModel.modelActivityData %>
+              <% 7.times do %>
+                <td></td>
+              <% end %>
+              <% next %>
             <% end %>
-            <% next %>
-          <% end %>
-          <%= createModelReporter(userModel).report_row %>
-          <% if false %>
-          <% reporter = FlowerPotModelReporter.new(userModel) %>
-          <td><%= reporter.total_correct %></td>
-          <td><%= reporter.total_incorrect %></td>
-          <td><%= reporter.percent_correct ? "%.0f%" % [reporter.percent_correct] : 'N/A' %></td>
-          <td><%= reporter.correct_boxes %></td>
-          <td><%= reporter.correct_flowers%>/3</td>
-          <td><%= reporter.types_planted_per_box.inspect %></td>
-          <td><%= reporter.planted_all_possibilities %></td>
-          <% end %>
+            <%= createModelReporter(userModel).report_row %>
+            <% if false %>
+            <% reporter = FlowerPotModelReporter.new(userModel) %>
+            <td><%= reporter.total_correct %></td>
+            <td><%= reporter.total_incorrect %></td>
+            <td><%= reporter.percent_correct ? "%.0f%" % [reporter.percent_correct] : 'N/A' %></td>
+            <td><%= reporter.correct_boxes %></td>
+            <td><%= reporter.correct_flowers%>/3</td>
+            <td><%= reporter.types_planted_per_box.inspect %></td>
+            <td><%= reporter.planted_all_possibilities %></td>
+            <% end %>
+           <%end %>
         <% end %>
       </tr>
     <% end %>
