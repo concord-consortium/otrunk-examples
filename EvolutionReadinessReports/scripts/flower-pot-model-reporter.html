@@ -6,13 +6,16 @@ class FlowerPotModelReporter
   
   @@fields = [
     :times_run,
+    :find_solution,
     :total_correct, 
     :total_incorrect,
     :percent_correct,
-    :correct_boxes,
     :correct_flowers,
+    :types_seeds_planted,
+    :boxes_planted,
     :types_planted_per_box,
-    :planted_all_possibilities
+    :planted_all_possibilities,
+    :distance_from_perfect
     ]
   @@fields.each { |field| attr_reader field }
     
@@ -24,13 +27,16 @@ class FlowerPotModelReporter
   
   def self.report_header
     '<th>Model 2: Times run</th>' +
-    '<th>Model 2: Total correct</th>' +
+    '<th>Model 2: Student found solution</th>' +
+    '<th>Model 2: Total correctly-planted seeds</th>' +
     '<th>Model 2: Total incorrect</th>' +
     '<th>Model 2: Percent correct</th>' +
-    '<th>Model 2: Correct boxes</th>' +
-    '<th>Model 2: Total correct flowers</th>' +
+    '<th>Model 2: Total correct flowers (out of 3)</th>' +
+    '<th>Model 2: # of types of seeds planted (out of 3)</th>' +
+    '<th>Model 2: # of boxes seeds were planted in (out of 5)</th>' +
     '<th>Model 2: Types planted per box</th>' +
-    '<th>Model 2: Planted all possibilities?</th>'
+    '<th>Model 2: Planted all possibilities?</th>' +
+    '<th>Model 2: Distance from perfect strategy</th>'
   end
   
   def initialize(model)
@@ -49,25 +55,30 @@ class FlowerPotModelReporter
   
   def report_row
     "<td>#{@times_run}</td>" +
+    "<td>#{(@correct_boxes.eql? [1,0,1,0,1]) ? 1 : 0}</td>" +
     "<td>#{@total_correct}</td>" +
     "<td>#{@total_incorrect}</td>" +
     "<td>#{@percent_correct ? '%.0f%' % [@percent_correct] : 'N/A'}</td>" +
-    "<td>#{@correct_boxes}</td>" +
-    "<td>#{@correct_flowers}/3</td>" +
+    "<td>#{@correct_flowers}</td>" +
+    "<td>#{@total_types.inspect}</td>" +
+    "<td>#{@total_boxes}</td>" +
     "<td>#{@types_planted_per_box.inspect}</td>" +
-    "<td>#{@planted_all_possibilities}</td>"
+    "<td>#{@planted_all_possibilities ? 1 : 0}</td>" +
+    "<td>#{@distance_from_perfect}</td>"
   end
   
   def parseModelActivityData(modelActivityData)
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
     
     @times_run = modelActivityMatrix.length
+    numTypesPlanted = [0,0,0]
     
     modelActivityMatrix.each do |run|
       run.each_with_index do |box, box_ix|
         next unless box
-        box.each do |type|
+        box.each_with_index do |type, type_ix|
           next unless type
+          numTypesPlanted[type_ix] = numTypesPlanted[type_ix] + type.length
           type.each do |correctness|
             if correctness == 1
               @total_correct += 1
@@ -86,7 +97,11 @@ class FlowerPotModelReporter
       @percent_correct = @total_correct.to_f / (@total_incorrect + @total_correct) * 100
     end
     @correct_flowers = @correct_boxes.inject { |a, b| a + b }
-    @planted_all_possibilities = @types_planted_per_box.inject { |a, b| a + b } == 15
+    @total_types = 3 - numTypesPlanted.select { |type| type == 0 }.length
+    @total_boxes = 5 - @types_planted_per_box.select { |box| box == 0 }.length
+    total_different_plantings = @types_planted_per_box.inject { |a, b| a + b }
+    @planted_all_possibilities = total_different_plantings == 15
+    @distance_from_perfect = 15 - total_different_plantings
   end
   
   def calcModelActivityMatrix(modelActivityData)
