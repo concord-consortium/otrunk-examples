@@ -60,7 +60,9 @@ class XmlReport
     answersElem = studentElem.add_element('answers')
     @questions.each_with_index do |question, index|
       if question == :mw_interaction_log
+        # TODO We want to include the interaction log?
       elsif question == :navigation_log
+        # TODO We want to include the navigation log?
       else
         userQuestion = @otrunkHelper.userObject(question, user)
         _getAnswerElem(answersElem, userQuestion, index, user)

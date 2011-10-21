@@ -130,6 +130,11 @@
                 <OTBlob src='scripts/exporter.rb'/>
               </reference>
             </OTScriptVariable>
+            <OTScriptVariable name="activity_helper_script">
+              <reference>
+                <OTBlob src="scripts/er-activity-helper.html"/>
+              </reference>
+            </OTScriptVariable>
           </variables>
         </OTXHTMLScriptViewEntry>
         <OTXHTMLScriptViewEntry local_id="report_xml_view"

@@ -21,6 +21,7 @@ def getText
   otImport($questionScript)
   otImport($reportableScript)
   otImport($exporterScript)
+  otImport($activity_helper_script)
   
   @otrunkHelper = OTrunkHelper.new
   @questions = Questions.new(@otrunkHelper)
@@ -102,5 +103,5 @@ def getXmlReport
   @xmlText = report.getText
   @xmlPrettyText = report.getPrettyText
   # puts @xmlText
-  puts @xmlPrettyText
+  # puts @xmlPrettyText
 end

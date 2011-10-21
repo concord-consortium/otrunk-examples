@@ -22,6 +22,11 @@ class OTrunkHelper
     @questions = []
     _sanityCheck
     @otrunk = $viewContext.getViewService(OTrunk.java_class)
+    
+    @activityHelper = nil
+    if defined? ERActivityHelper
+      @activityHelper = ERActivityHelper.new(activityRoot, @otrunkHelper)
+    end
   end
   
   ## Return root of the main OTML (e.g., the report otml)
@@ -112,10 +117,18 @@ class OTrunkHelper
   end
   
   def getQuestions
-    allQuestions = @otrunk.getAllObjects(org.concord.otrunk.ui.question.OTQuestion.java_class)
-  allQuestions.each do |q|
-    _addQuestion("",q)
-  end
+    unless @questions && @questions.size > 0
+      allQuestions = []
+      if @activityHelper
+        # Use the activity helper to get all the questions
+        allQuestions = @activityHelper.sectionQuestions(activityRoot.activity)
+      else
+        allQuestions = @otrunk.getAllObjects(org.concord.otrunk.ui.question.OTQuestion.java_class)
+      end
+      allQuestions.each do |q|
+        _addQuestion("",q)
+      end
+    end
     @questions
   end
 

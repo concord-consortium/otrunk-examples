@@ -23,7 +23,7 @@ class Questions
 
   def initialize(otrunkHelper)
     @otrunkHelper = otrunkHelper
-	@otrunk = @otrunkHelper.otrunk
+	  @otrunk = @otrunkHelper.otrunk
     @questions = @otrunkHelper.getQuestions
   end
 
