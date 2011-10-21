@@ -1,0 +1,96 @@
+<div class="menu">
+  <table>
+    <tr>
+      <td width="100px">
+      <% unless $printing %>
+        <%= @erbHelper.embedObject $printButton %>
+      <% end %>
+     </td>
+     <td>
+      Showing original answers<br/>
+      <%= @erbHelper.linkToObject "Show final answers", activityRoot(), $section_view %><br/>    
+     </td>
+     <td>
+      <%= @erbHelper.linkToObject "CSV", activityRoot(), $csv_view %><br/> 
+     </td>
+    </tr>
+  </table>
+</div>
+
+<hr />
+
+<div id="content">
+  <h2><%= @activity.title %></h2>
+  
+  <h3>Questions</h3>
+  <table class="report_table">
+    <% question_correct = {}; question_answered = {}; num_users = 0; gradable_questions = 0 %>
+      
+    <tr>
+      <th>User</th>
+      <% questions = @activity.sectionQuestions(activityRoot.activity) %>
+      <% questions.each do |question| %>
+          <% gradable_questions += 1 if @questionHelper.gradable?(question) %>
+          <% question_correct[question] = 0; question_answered[question] = 0 %>
+        <th><%= @erbHelper.popupLinkToObject Util.truncate(@questionHelper.plainPromptText(question), 30), question, $question_popup_view %></th>  
+      <% end %>
+      <% models = @activity.sectionModels(@activity.activity) %>
+      <% models.each do |model| %>
+        <% if modelReporterClass(model) %>
+          <%= modelReporterClass(model).report_header %>
+        <% end %>
+      <% end %>
+      <th>Score</th>
+    </tr>
+    <% line_toggle = true %>
+    <% @otrunkHelper.users.each do |user| %>
+      <% num_users += 1 %>
+      <tr BGCOLOR = <%= line_toggle ? ROWCOLOR1 : ROWCOLOR2 %>>
+        <% line_toggle = !line_toggle %>
+        <td><%= user.name %></td>
+        <% user_correct = 0; user_answered = 0 %>
+        <% questions.each do |question| %>
+          <% userQuestion = @otrunkHelper.userObject(question, user) %>
+          <% if @questionHelper.questionFirstChoiceCorrect(userQuestion) 
+               user_correct += 1 
+               question_correct[question] += 1
+             end 
+             
+             if @questionHelper.questionAnswered(userQuestion) and @questionHelper.gradable?(question)
+               user_answered += 1
+               question_answered[question] += 1
+             end
+             %>
+          <td><%= @questionHelper.questionFirstAnswerHtml(userQuestion) %></td>
+        <% end %>
+        <% models.each do |model| %>
+          <% if modelReporterClass(model) %>
+            <% userModel = @otrunkHelper.userObject(model, user) %>
+            <% unless userModel.modelActivityData %>
+              <% modelReporterClass(model).num_fields.times do %>
+                <td></td>
+              <% end %>
+              <% next %>
+            <% end %>
+            <%= createModelReporter(userModel).report_row %>
+           <%end %>
+        <% end %>      
+        <td><img src="http://chart.apis.google.com/chart?cht=p&chd=t:<%= "#{user_correct},#{gradable_questions - user_correct}" %>&chs=40&40"/><br/>
+           <%= "#{user_correct}/#{gradable_questions}" %></td>
+      </tr>
+    <% end %>
+      <tr>
+        <td>Score: Correct/ Answered/ Possible</td>
+        <% questions.each do |question| %>
+          <td>
+            <% if @questionHelper.gradable?(question) %>
+              <img src="http://chart.apis.google.com/chart?cht=p&chd=t:<%= "#{question_correct[question]},#{question_answered[question] - question_correct[question]},#{num_users - question_answered[question]}" %>&chs=40&40"/><br/>
+              <%= "#{question_correct[question]}/#{question_answered[question]}/#{num_users}" %>
+            <% else %>
+              N/A
+            <% end %>
+          </td>
+        <% end %>        
+      </tr>      
+  </table>
+</div>

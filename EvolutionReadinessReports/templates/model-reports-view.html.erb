@@ -46,22 +46,12 @@
           <% if modelReporterClass(model) %>
             <% userModel = @otrunkHelper.userObject(model, user) %>
             <% unless userModel.modelActivityData %>
-              <% 7.times do %>
+              <% modelReporterClass(model).num_fields.times do %>
                 <td></td>
               <% end %>
               <% next %>
             <% end %>
             <%= createModelReporter(userModel).report_row %>
-            <% if false %>
-            <% reporter = FlowerPotModelReporter.new(userModel) %>
-            <td><%= reporter.total_correct %></td>
-            <td><%= reporter.total_incorrect %></td>
-            <td><%= reporter.percent_correct ? "%.0f%" % [reporter.percent_correct] : 'N/A' %></td>
-            <td><%= reporter.correct_boxes %></td>
-            <td><%= reporter.correct_flowers%>/3</td>
-            <td><%= reporter.types_planted_per_box.inspect %></td>
-            <td><%= reporter.planted_all_possibilities %></td>
-            <% end %>
            <%end %>
         <% end %>
       </tr>
