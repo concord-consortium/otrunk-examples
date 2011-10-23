@@ -43,7 +43,7 @@
     <OTSystem local_id="system">
       <includes>
         <OTInclude href="../EvolutionReadiness/global-imports/er-view-bundle.otml" />
-        <!--<OTInclude href="model-report-map.otml" />-->
+        <OTInclude href="model-report-map.otml" />
       </includes>
       <bundles>
         <!-- include the global udl view bundle -->
@@ -133,6 +133,12 @@
             <OTScriptVariable name="activity_helper_script">
               <reference>
                 <OTBlob src="scripts/er-activity-helper.html"/>
+              </reference>
+            </OTScriptVariable>
+            <OTScriptVariable name="model_reports_map" reference="f3a98f0c-6363-4f17-86c4-bf9b481d0d01" />
+            <OTScriptVariable name="flower_pot_model_reporter_script">
+              <reference>
+                <OTBlob src="scripts/flower-pot-model-reporter.html"/>
               </reference>
             </OTScriptVariable>
           </variables>

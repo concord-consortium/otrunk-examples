@@ -7,6 +7,7 @@ include_class 'org.concord.otrunk.ui.OTChoice'
 include_class 'org.concord.otrunk.ui.OTImage'
 include_class 'org.concord.otrunk.ui.OTText'
 include_class 'org.concord.otrunk.ui.question.OTQuestion'
+include_class 'org.concord.otrunk.OTrunkUtil'
 
 class XmlReport
   
@@ -14,10 +15,10 @@ class XmlReport
     xmlText.gsub!(/</, '&lt;')
   end
   
-  def initialize(projectName, otrunkHelper, questions, mwModels, navigationHistory)
+  def initialize(projectName, otrunkHelper, questions, models, navigationHistory)
     @otrunkHelper = otrunkHelper
     @questions = questions
-    @mwModels = mwModels
+    @models = models
     @navHistory = navigationHistory
     
     @doc = REXML::Document.new
@@ -33,8 +34,18 @@ class XmlReport
     
     @numQuestions = 0;
     _addQuestions()
+    _addModels()
     
     @studentsElem = @rootElem.add_element('students')
+  end
+  
+  def modelReporterClass(model)
+    stringObj = OTrunkUtil.getObjectFromMapWithIdKeys($model_reports_map.map, model)
+    stringObj ? Object.const_get(stringObj.string) : nil
+  end
+  
+  def createModelReporter(model)
+    modelReporterClass(model).new(model)
   end
   
   def getText
@@ -68,6 +79,24 @@ class XmlReport
         _getAnswerElem(answersElem, userQuestion, index, user)
       end
     end
+    
+    modelAnswerIndex = @questions.size
+    @models.each do |model|
+      if modelReporterClass(model)
+        userModel = @otrunkHelper.userObject(model, user)
+        if userModel.modelActivityData
+          createModelReporter(userModel).row_values.each do |value|
+            _getModelAnswerElem(answersElem, value, modelAnswerIndex)
+            modelAnswerIndex += 1
+          end
+        else
+          modelReporterClass(model).num_fields.times do
+            _getModelAnswerElem(answersElem, '', modelAnswerIndex)
+            modelAnswerIndex += 1
+          end
+        end
+      end
+    end
   end
   
   private
@@ -85,6 +114,25 @@ class XmlReport
     return sdsId
   end
   
+  def _addModels
+    @models.each do |model|
+      if modelReporterClass(model)
+        modelReporterClass(model).headers.each do |header|
+          _getModelElem(@questionsElem, header, @numQuestions)
+          @numQuestions += 1
+        end
+      end
+    end
+  end
+  
+  def _getModelElem(parentElem, header, index)
+    elem = parentElem.add_element('question')
+    elem.add_attributes('id' => (index+1).to_s,
+      'prompt' => _cleanText(header),
+      'type' => 'text',
+      'tags' => 'model')
+    elem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
+  end
   
   def _addQuestions
     @questions.each_with_index do |question, index|
@@ -110,6 +158,14 @@ class XmlReport
     elem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
   end
 
+  def _getModelAnswerElem(parentElem, value, index)
+    elem = parentElem.add_element('answer')
+    elem.attributes['questionId'] = (index + 1).to_s
+      
+    value = (value == nil ? '' : value.to_s.strip)
+    elem.text = (value == '' ? 'NO_ANSWER' : value)
+  end
+  
   def _getAnswerElem(parentElem, question, index, user)
     elem = parentElem.add_element('answer')
     elem.attributes['questionId'] = (index + 1).to_s
@@ -261,6 +317,10 @@ class XmlReport
     elsif obj.is_a? String
       text = obj
     end
+    _cleanText(text)
+  end
+  
+  def _cleanText(text)
     text.gsub!(/<.*?>/, '')
     text.gsub!(/\s+/, ' ')
     text.strip

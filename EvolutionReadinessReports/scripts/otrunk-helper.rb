@@ -20,6 +20,7 @@ class OTrunkHelper
   def initialize
     @users = nil
     @questions = []
+    @models = []
     _sanityCheck
     @otrunk = $viewContext.getViewService(OTrunk.java_class)
     
@@ -130,6 +131,23 @@ class OTrunkHelper
       end
     end
     @questions
+  end
+  
+  def getModels
+    unless @models && @models.size > 0
+      allmodels = []
+      if @activityHelper
+        # Use the activity helper to get all the questions
+        allModels = @activityHelper.sectionModels(activityRoot.activity)
+      else
+        # FIXME Do we have a fallback way to get models?
+        # allModels = @otrunk.getAllObjects(org.concord.otrunk.ui.question.OTQuestion.java_class)
+      end
+      allModels.each do |m|
+        @models << m
+      end
+    end
+    @models
   end
 
   # returns an array of numbers, each number representing the index of each level
