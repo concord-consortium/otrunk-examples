@@ -57,6 +57,7 @@
       <includes>
         <OTInclude href="../EvolutionReadiness/models/five-sunlight-breed-true-three-plants.otml" />
         <OTInclude href="../EvolutionReadiness/models/five-water-breed-true.otml" />
+        <OTInclude href="../EvolutionReadiness/models/gradated-sunlight-variation.otml" />
       </includes>
       <root>
         <OTModelReportMap id="f3a98f0c-6363-4f17-86c4-bf9b481d0d01">
@@ -66,6 +67,9 @@
             </entry>
             <entry key="1dee48db-fdc8-450e-9b40-d02b400ada64!/env-holder">
                 <OTString string="Act5Model1Reporter"/>
+            </entry>
+            <entry key="1A3FE8564-9198-11DE-B4A8-78BC55D89593!/env-holder">
+                <OTString string="Act3Model2Reporter"/>
             </entry>
           </map>
         </OTModelReportMap>

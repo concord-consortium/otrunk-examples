@@ -1,0 +1,150 @@
+class Act3Model2Reporter
+  
+  def self.model_name
+    "Gradated Sunlight variation model"
+  end
+  
+  @@fields = {
+    :times_run             => {:header => 'Model 2: Times run'},
+    :total_time            => {:header => 'Model 2: Total time'},
+    :found_solution        => {:header => 'Model 2: Student found solution'},
+    :first_correct_run     => {:header => 'Model 2: Run first correctly planted'},
+    :avg_seeds_per_run     => {:header => 'Model 2: Average seeds planted'},
+    :total_correct_seeds   => {:header => 'Model 2: Total correct seeds'},
+    :total_incorrect_seeds => {:header => 'Model 2: Total incorrect seeds'},
+    :magnifier_uses        => {:header => 'Model 2: # of magnifying glass uses'}
+  }
+  @@fields.each { |field, attrs| attr_reader field }
+    
+  @@numFields = @@fields.length
+  
+  def self.num_fields
+    @@numFields
+  end
+  
+  def self.headers
+    return @@fields.collect{|k,v| v[:header] }
+  end
+  
+  def self.report_header
+    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
+  end
+  
+  def initialize(model)
+    @times_run = 0
+    @total_time = 0
+    @found_solution = 0
+    @first_correct_run = -1
+    @avg_seeds_per_run = 0
+    @total_correct_seeds = 0
+    @total_incorrect_seeds = 0
+    @magnifier_uses = 0
+    
+    modelActivityData = model.modelActivityData
+    if modelActivityData
+      parseModelActivityData(modelActivityData)
+    else
+      Util.log("Act3Model2Reporter: Model #{model} doesn't have model activity data")
+    end
+  end
+  
+  def row_values
+    return [
+      @times_run, # done
+      _toTimeStr(@total_time), # done
+      @found_solution, # done
+      @first_correct_run, # done
+      @avg_seeds_per_run, # done
+      @total_correct_seeds, # done
+      @total_incorrect_seeds, # done
+      @magnifier_uses #done
+    ]
+  end
+  
+  def report_row
+    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
+  end
+  
+  private
+  
+  def parseModelActivityData(modelActivityData)
+    modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
+    
+    @times_run = modelActivityMatrix.length
+    
+    total_seeds = 0
+    modelActivityMatrix.each_with_index do |run, idx|
+      if run[:correct_placement]
+        @found_solution = 1
+        @first_correct_run = (idx+1) if @first_correct_run == -1
+      end
+      total_seeds += run[:number_of_seeds]
+      @total_correct_seeds += run[:correct_seeds]
+      @total_incorrect_seeds += run[:incorrect_seeds]
+    end
+    @avg_seeds_per_run = (((total_seeds*10)/modelActivityMatrix.size).to_i)/10.0
+  end
+  
+  def calcModelActivityMatrix(modelActivityData)
+    planted_ci = modelActivityData.computationalInputs.detect{|c| c.name == "Agents added" }
+    magnifier_ci = modelActivityData.computationalInputs.detect{|c| c.name == "Info tool used" }
+    
+    modelActivityMatrix = []
+    modelActivityData.modelRuns.each do |modelRun|
+      modelActivityMatrix << calcModelRunInfo(modelRun, planted_ci)
+      @magnifier_uses += modelRun.computationalInputValues.select{|civ| civ.reference == magnifier_ci}.size
+      @total_time += ((modelRun.endTime - modelRun.startTime)/1000).to_i if modelRun.startTime && modelRun.endTime
+    end
+    modelActivityMatrix
+  end
+
+  def calcModelRunInfo(modelRun, ci)
+    modelRunInfo = {
+      :correct_placement => false,
+      :number_of_seeds => 0,
+      :correct_seeds => 0,
+      :incorrect_seeds => 0
+    }
+      
+    modelRun.computationalInputValues.each do |civ|
+      if civ.reference == ci
+        isCorrect = _isPlantedCorrectly(civ)
+        modelRunInfo[:correct_placement] = (modelRunInfo[:correct_placement] || isCorrect)
+        modelRunInfo[:number_of_seeds] += 1
+        if isCorrect
+          modelRunInfo[:correct_seeds] += 1
+        else
+          modelRunInfo[:incorrect_seeds] += 1
+        end
+      end
+    end
+    
+    modelRunInfo
+  end
+  
+  ## Returns a boolean to indicate whether the seed was placed in an ideal location or not
+  def _isPlantedCorrectly(computationalInputValue)
+    values = computationalInputValue.values
+
+    y = values.get('y')
+    
+    if y < 60 && y > 49
+      return true
+    end
+    return false
+  end
+  
+  def _toTimeStr(timeVal)
+    # works as long as it doesn't go over 24 hours. We should be safe.
+    Time.at(timeVal).gmtime.strftime('%H:%M:%S')
+  end
+  
+  def _debugCIVMap(values)
+    out = []
+    values.keys.each do |k|
+      v = values.get(k)
+      out << "#{k} => #{v}"
+    end
+    out.join(';')
+  end
+end
