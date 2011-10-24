@@ -42,7 +42,7 @@ class FlowerPotModelReporter
   end
   
   def self.report_header
-    headers.map{|h| "<th>" + h + "</th>" }.join('')
+    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
   end
   
   def initialize(model)
@@ -76,7 +76,7 @@ class FlowerPotModelReporter
   end
   
   def report_row
-    row_values.map{|v| "<td>" + v + "</td>" }.join('')
+    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
   end
   
   def parseModelActivityData(modelActivityData)
