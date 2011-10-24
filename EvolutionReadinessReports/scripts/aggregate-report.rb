@@ -22,7 +22,10 @@ def getText
   otImport($reportableScript)
   otImport($exporterScript)
   otImport($activity_helper_script)
+  otImport($util_script)
+  
   otImport($flower_pot_model_reporter_script)
+  otImport($act5_model1_reporter_script)
   
   @otrunkHelper = OTrunkHelper.new
   @questions = Questions.new(@otrunkHelper)

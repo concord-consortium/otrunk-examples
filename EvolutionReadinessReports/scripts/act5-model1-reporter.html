@@ -1,0 +1,199 @@
+class Act5Model1Reporter
+  
+  def self.model_name
+    "Three flower model"
+  end
+  
+  @@fields = [
+    :times_run,
+    :find_solution,
+    :total_correct, 
+    :total_incorrect,
+    :percent_correct,
+    :correct_flowers,
+    :types_seeds_planted,
+    :boxes_planted,
+    :types_planted_per_box,
+    :planted_all_possibilities,
+    :distance_from_perfect
+    ]
+  @@fields.each { |field| attr_reader field }
+    
+  @@numFields = @@fields.length
+  
+  def self.num_fields
+    @@numFields
+  end
+  
+  def self.headers
+    return [
+      'Model 1: Times run',
+      'Model 1: Student found solution',
+      'Model 1: Total correctly-planted seeds',
+      'Model 1: Total incorrect',
+      'Model 1: Percent correct',
+      'Model 1: Total correct flowers (out of 3)',
+      'Model 1: # of types of seeds planted (out of 3)',
+      'Model 1: # of boxes seeds were planted in (out of 5)',
+      'Model 1: Types planted per box',
+      'Model 1: Planted all possibilities?',
+      'Model 1: Distance from perfect strategy'
+    ]
+  end
+  
+  def self.report_header
+    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
+  end
+  
+  def initialize(model)
+    @total_correct = 0
+    @total_incorrect = 0
+    @correct_boxes = [0,0,0,0,0]
+    @types_planted_per_box = [0,0,0,0,0]
+    
+    modelActivityData = model.modelActivityData
+    if modelActivityData
+      parseModelActivityData(modelActivityData)
+    else
+      Util.log("Act5Model1Reporter: Model #{model} doesn't have model activity data")
+    end
+  end
+  
+  def row_values
+    return [
+      @times_run,
+      ((@correct_boxes.eql? [1,0,1,0,1]) ? 1 : 0),
+      @total_correct,
+      @total_incorrect,
+      (@percent_correct ? ('%.0f%' % [@percent_correct]) : 'N/A'),
+      @correct_flowers,
+      @total_types.inspect,
+      @total_boxes,
+      @types_planted_per_box.inspect,
+      (@planted_all_possibilities ? 1 : 0),
+      @distance_from_perfect
+    ]
+  end
+  
+  def report_row
+    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
+  end
+  
+  private
+  
+  def parseModelActivityData(modelActivityData)
+    modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
+    
+    @times_run = modelActivityMatrix.length
+    numTypesPlanted = [0,0,0]
+    
+    modelActivityMatrix.each do |run|
+      run.each_with_index do |box, box_ix|
+        next unless box
+        box.each_with_index do |type, type_ix|
+          next unless type
+          numTypesPlanted[type_ix] = numTypesPlanted[type_ix] + type.length
+          type.each do |correctness|
+            if correctness == 1
+              @total_correct += 1
+              if @correct_boxes[box_ix] == 0
+                @correct_boxes[box_ix] = 1
+              end
+            else
+              @total_incorrect += 1
+            end
+          end
+          @types_planted_per_box[box_ix] = box.select{ |e| e != nil }.length
+        end
+      end
+    end
+    if @total_incorrect + @total_correct != 0
+      @percent_correct = @total_correct.to_f / (@total_incorrect + @total_correct) * 100
+    end
+    @correct_flowers = @correct_boxes.inject { |a, b| a + b }
+    @total_types = 3 - numTypesPlanted.select { |type| type == 0 }.length
+    @total_boxes = 5 - @types_planted_per_box.select { |box| box == 0 }.length
+    total_different_plantings = @types_planted_per_box.inject { |a, b| a + b }
+    @planted_all_possibilities = total_different_plantings == 15
+    @distance_from_perfect = 15 - total_different_plantings
+  end
+  
+  def calcModelActivityMatrix(modelActivityData)
+    ci = modelActivityData.computationalInputs.detect{|c| c.name == "Agents added" }
+    
+    modelActivityMatrix = []
+    modelActivityData.modelRuns.each do |modelRun|
+      modelActivityMatrix << calcModelRunMatrix(modelRun, ci)
+    end
+    modelActivityMatrix
+  end
+
+  def calcModelRunMatrix(modelRun, ci)
+    modelRunMatrix = []
+      
+    modelRun.computationalInputValues.each do |civ|
+      if civ.reference == ci
+        flowerBox, plantType, correctness = calculateArray(civ)
+        modelRunMatrix[flowerBox] = [] unless modelRunMatrix[flowerBox]
+        modelRunMatrix[flowerBox][plantType] = [] unless modelRunMatrix[flowerBox][plantType]
+        modelRunMatrix[flowerBox][plantType] << correctness
+      end
+    end
+    
+    modelRunMatrix
+  end
+
+  ## Returns an array with the flowerbox number, plant number, and correctness
+  def calculateArray(computationalInputValue)
+    values = computationalInputValue.values
+
+    x = values.get('x')
+    if x < 40
+      flowerBox = 0
+    elsif x < 80
+      flowerBox = 1
+    elsif x < 120
+      flowerBox = 2
+    elsif x < 160
+      flowerBox = 3
+    elsif x < 200
+      flowerBox = 4
+    else
+      flowerBox = -1
+      Util.error("Error calculating flower box. x = #{x}")
+    end
+    
+    leaves = values.get('size of roots')
+    case leaves
+    when 5
+      plantType = 0
+    when 10
+      plantType = 1
+    when 1
+      plantType = 2
+    else
+      plantType = -1
+      Util.error("Error calculating type of plant. Size of leaves = #{leaves}")
+    end
+    
+    if (flowerBox == 0 && plantType == 2) ||
+       (flowerBox == 2 && plantType == 0) ||
+       (flowerBox == 4 && plantType == 1)
+    then
+      correctness = 1
+    else
+      correctness = 0
+    end
+  
+    [flowerBox, plantType, correctness]
+  end
+  
+  def _debugCIVMap(values)
+    out = []
+    values.keys.each do |k|
+      v = values.get(k)
+      out << "#{k} => #{v}"
+    end
+    out.join(';')
+  end
+end
