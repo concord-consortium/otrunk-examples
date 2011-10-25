@@ -55,11 +55,16 @@
         </OTScriptEngineBundle>
       </bundles>
       <includes>
-        <OTInclude href="../EvolutionReadiness/models/five-sunlight-breed-true-three-plants.otml" />
-        <OTInclude href="../EvolutionReadiness/models/five-water-breed-true.otml" />
-        <OTInclude href="../EvolutionReadiness/models/gradated-sunlight-variation.otml" />
-        <OTInclude href="../EvolutionReadiness/models/three-sunlight-movable-variation.otml" />
-        <OTInclude href="../EvolutionReadiness/models/gradated-water-variation-money.otml" />
+        <OTInclude href="../EvolutionReadiness/models/five-sunlight-breed-true-three-plants.otml" />     <!-- model 1:1 -->
+        <OTInclude href="../EvolutionReadiness/models/three-sunlight-movable-variation.otml" />          <!-- model 2:2 -->
+        <OTInclude href="../EvolutionReadiness/models/three-sunlight-movable-variation-plant-2.otml" />  <!-- model 3:1 -->
+        <OTInclude href="../EvolutionReadiness/models/gradated-sunlight-variation.otml" />               <!-- model 3:2 -->
+        <OTInclude href="../EvolutionReadiness/models/mountain-sunlight-variation.otml" />               <!-- model 4:2 -->
+        <OTInclude href="../EvolutionReadiness/models/five-water-breed-true.otml" />                     <!-- model 5:1 -->
+        <OTInclude href="../EvolutionReadiness/models/gradated-water-variation-money.otml" />            <!-- model 5:2 -->
+        <OTInclude href="../EvolutionReadiness/models/dam-plants-rabbits.otml" />                        <!-- model 8:1 -->
+        <OTInclude href="../EvolutionReadiness/models/dam-plants-rabbits-reverse.otml" />                <!-- model 8:2 -->
+        <OTInclude href="../EvolutionReadiness/models/hawk-controllable.otml" />                         <!-- model 9:1 -->
       </includes>
       <root>
         <OTModelReportMap id="f3a98f0c-6363-4f17-86c4-bf9b481d0d01">
