@@ -1,0 +1,126 @@
+class Act2Model2Reporter
+  
+  def self.model_name
+    "Three flower pot model"
+  end
+  
+  @@fields = [
+    :times_run,
+    :started_correct,
+    :total_plantings,
+    :success,
+    :total_successes,
+    :infoToolUsed
+    ]
+  @@fields.each { |field| attr_reader field }
+    
+  @@numFields = @@fields.length
+  
+  def self.num_fields
+    @@numFields
+  end
+  
+  def self.headers
+    return [
+      'Act 2 Model 2: Times run',
+      'Act 2 Model 2: Ever started in correct flowerbox',
+      'Act 2 Model 2: Total plantings',
+      'Act 2 Model 2: Ever succeeded',
+      'Act 2 Model 2: Total successes',
+      'Act 2 Model 2: Magnifying glass used'
+    ]
+  end
+  
+  def self.report_header
+    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
+  end
+  
+  def row_values
+    return [
+      @times_run,
+      @started_correct,
+      @total_plantings,
+      @success,
+      @total_successes,
+      @infoToolUsed
+    ]
+  end
+  
+  def report_row
+    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
+  end
+  
+  def initialize(model)
+    modelActivityData = model.modelActivityData
+    if modelActivityData
+      parseModelActivityData(modelActivityData)
+    else
+      Util.log("FlowerPotModelReporter: Model #{model} doesn't have model activity data")
+    end
+  end
+  
+  
+  
+  def parseModelActivityData(modelActivityData)
+    modelData = calcModelData(modelActivityData)
+    plantingArray = modelData[0]
+    successArray = modelData[1]
+    infoToolArray = modelData[2]
+    
+    @times_run = modelActivityData.modelRuns.length
+    @total_plantings = plantingArray.inspect
+    @started_correct = (plantingArray.select { |box| box == 2 }.length) > 0
+    @total_successes = successArray.inspect
+    @success = (successArray.select { |success| success == true }.length) > 0
+    @infoToolUsed = (infoToolArray.select { |used| used == true }.length) > 0
+  end
+  
+  def calcModelData(modelActivityData)
+    ci_added = modelActivityData.computationalInputs.detect{|c| c.name == "Agents added" }
+    ci_success = modelActivityData.computationalInputs.detect{|c| c.name == "Success" }
+    ci_info = modelActivityData.computationalInputs.detect{|c| c.name == "Info tool used" }
+    plantingArray = []
+    successArray = []
+    infoToolArray = []
+    modelActivityData.modelRuns.each do |modelRun|
+      modelData = calcData(modelRun, ci_added, ci_success, ci_info)
+      plantingArray << modelData[0]
+      successArray << modelData[1]
+      infoToolArray << modelData[2]
+    end
+    [plantingArray, successArray, infoToolArray]
+  end
+
+  def calcData(modelRun, ci_added, ci_success, ci_info)
+    box = 0
+    success = false
+    infoToolUsed = false
+    
+    modelRun.computationalInputValues.each do |civ|  # we can only plant one, so we expect only one AgentsAdded civ
+      if civ.reference == ci_added
+        box = calculateBox(civ)
+      elsif civ.reference == ci_success
+        success = true
+      elsif civ.reference == ci_info
+        infoToolUsed = true
+      end
+    end
+    
+    [box, success, infoToolUsed]
+  end
+  
+  def calculateBox(computationalInputValue)
+    values = computationalInputValue.values
+    flowerbox = 0
+    y = values.get('y')
+    if y < 50
+      flowerbox = 1
+    elsif y < 90
+      flowerbox = 2
+    elsif y < 130
+      flowerbox = 3
+    end
+    flowerbox
+  end
+ 
+end

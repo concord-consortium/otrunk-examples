@@ -67,7 +67,7 @@
               <OTString string="FlowerPotModelReporter"/>
             </entry>
             <entry key="23d3fb4f-123a-425f-9d60-d84e145c0678!/env-holder">
-              <OTString string="ThreeSunlightMovableVariationReporter"/>
+              <OTString string="Act2Model2Reporter"/>
             </entry>
           </map>
         </OTModelReportMap>
