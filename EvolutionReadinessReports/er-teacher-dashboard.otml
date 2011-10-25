@@ -102,13 +102,13 @@
               local_id="external_activity_url
             -->
             <OTIncludeRootObject local_id="external_user_list_url"
-              href="http://er.diy.concord.org/external_otrunk_activities/53/ot_learner_data?users=853,854,857,862,865,870,874,875,878,881,884,886,889,891,894,897,898,901" />
+              href="http://er.diy.concord.org/external_otrunk_activities/68/ot_learner_data?users=847,849,869,851,855,856,858,859,860,861,863,864,1243" />
           </userList>
           <reportTemplate>
             <!-- <OTIncludeRootObject local_id="external_activity_url"
               href="http://otrunk.concord.org/examples/EvolutionReadiness/plants-1.otml" />-->
             <OTIncludeRootObject local_id="external_activity_url"
-              href="../EvolutionReadiness/act4-txmo.otml" />
+              href="../EvolutionReadiness/act9-animal.otml" />
           </reportTemplate>
         </OTMultiUserRoot>
       </root>
@@ -171,6 +171,11 @@
             <OTScriptVariable name="act4_model2_reporter_script">
               <reference>
                 <OTBlob src="scripts/act4-model2-reporter.html"/>
+              </reference>
+            </OTScriptVariable>
+            <OTScriptVariable name="act9_model1_reporter_script">
+              <reference>
+                <OTBlob src="scripts/act9-model1-reporter.html"/>
               </reference>
             </OTScriptVariable>
             <OTScriptVariable name="util_script">

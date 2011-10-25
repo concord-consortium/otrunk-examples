@@ -171,6 +171,11 @@
                 <OTBlob src='scripts/act5-model2-reporter.html'/>
               </reference>
             </OTScriptVariable>
+            <OTScriptVariable name="act9_model1_reporter_script">
+              <reference>
+                <OTBlob src="scripts/act9-model1-reporter.html"/>
+              </reference>
+            </OTScriptVariable>
           </variables>
         </OTXHTMLScriptViewEntry>
         <OTXHTMLScriptViewEntry local_id="report_xml_view"
