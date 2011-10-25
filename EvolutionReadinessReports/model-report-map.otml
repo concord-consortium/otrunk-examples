@@ -72,6 +72,12 @@
             <entry key="c0db25d0-28fd-41cd-ac69-51252d5f6579!/env-holder">
               <OTString string="Act2Model2Reporter"/>
             </entry>
+            <entry key="1dee48db-fdc8-450e-9b40-d02b400ada64!/env-holder">
+                <OTString string="Act5Model1Reporter"/>
+            </entry>
+            <entry key="1A3FE8564-9198-11DE-B4A8-78BC55D89593!/env-holder">
+                <OTString string="Act3Model2Reporter"/>
+            </entry>
           </map>
         </OTModelReportMap>
       </root>
