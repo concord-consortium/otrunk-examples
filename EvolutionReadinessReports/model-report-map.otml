@@ -59,6 +59,7 @@
         <OTInclude href="../EvolutionReadiness/models/five-water-breed-true.otml" />
         <OTInclude href="../EvolutionReadiness/models/gradated-sunlight-variation.otml" />
         <OTInclude href="../EvolutionReadiness/models/three-sunlight-movable-variation.otml" />
+        <OTInclude href="../EvolutionReadiness/models/gradated-water-variation-money.otml" />
       </includes>
       <root>
         <OTModelReportMap id="f3a98f0c-6363-4f17-86c4-bf9b481d0d01">
@@ -77,6 +78,9 @@
             </entry>
             <entry key="1A3FE8564-9198-11DE-B4A8-78BC55D89593!/env-holder">
                 <OTString string="Act3Model2Reporter"/>
+            </entry>
+            <entry key="fa2d7fe7-4fe8-4fcd-b574-bb9fae224900!/env-holder">
+                <OTString string="Act5Model2Reporter"/>
             </entry>
           </map>
         </OTModelReportMap>

@@ -27,6 +27,7 @@ def getText
   otImport($flower_pot_model_reporter_script)
   otImport($three_sunlight_movable_variation_reporter_script)
   otImport($act5_model1_reporter_script)
+  otImport($act5_model2_reporter_script)
   otImport($act3_model2_reporter_script)
   otImport($act2_model2_reporter_script)
   
