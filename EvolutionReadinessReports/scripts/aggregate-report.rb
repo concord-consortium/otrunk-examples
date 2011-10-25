@@ -30,6 +30,7 @@ def getText
   otImport($act5_model2_reporter_script)
   otImport($act3_model2_reporter_script)
   otImport($act2_model2_reporter_script)
+  otImport($act4_model2_reporter_script)
   
   @otrunkHelper = OTrunkHelper.new
   @questions = Questions.new(@otrunkHelper)

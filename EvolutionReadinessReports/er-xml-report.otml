@@ -161,6 +161,11 @@
                 <OTBlob src='scripts/act2-model2-reporter.html'/>
               </reference>
             </OTScriptVariable>
+            <OTScriptVariable name='act4_model2_reporter_script'>
+              <reference>
+                <OTBlob src='scripts/act4-model2-reporter.html'/>
+              </reference>
+            </OTScriptVariable>
             <OTScriptVariable name='act5_model2_reporter_script'>
               <reference>
                 <OTBlob src='scripts/act5-model2-reporter.html'/>
