@@ -11,6 +11,7 @@ class Act2Model2Reporter
     :first_success,
     :started_correct,
     :total_plantings,
+    :first_correct_planting,
     :infoToolUsed
     ]
   @@fields.each { |field| attr_reader field }
@@ -23,14 +24,14 @@ class Act2Model2Reporter
   
   def self.headers
     return [
-      'Act 2 Model 2: Times run',
-      'Act 2 Model 2: Ever succeeded',
-      'Act 2 Model 2: Total successes',
-      'Act 2 Model 2: First successes',
-      'Act 2 Model 2: Ever started in correct flowerbox',
-      'Act 2 Model 2: Total plantings',
-      'Act 2 Model 2: First correct planting',
-      'Act 2 Model 2: Times magnifying glass used'
+      'Model 2:2: Times run',
+      'Model 2:2: Ever succeeded',
+      'Model 2:2: Total successes',
+      'Model 2:2: First successes',
+      'Model 2:2: Ever started in correct flowerbox',
+      'Model 2:2: Total plantings',
+      'Model 2:2: First correct planting',
+      'Model 2:2: Times magnifying glass used'
     ]
   end
   
