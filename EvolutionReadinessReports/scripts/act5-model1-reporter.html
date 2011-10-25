@@ -15,7 +15,9 @@ class Act5Model1Reporter
     :boxes_planted,
     :types_planted_per_box,
     :planted_all_possibilities,
-    :distance_from_perfect
+    :distance_from_perfect,
+    :total_moves,
+    :first_correct_moving_run
     ]
   @@fields.each { |field| attr_reader field }
     
@@ -37,7 +39,9 @@ class Act5Model1Reporter
       'Model 5:1: # of boxes seeds were planted in (out of 5)',
       'Model 5:1: Types planted per box',
       'Model 5:1: Planted all possibilities?',
-      'Model 5:1: Distance from perfect strategy'
+      'Model 5:1: Distance from perfect strategy',
+      'Model 5:1: Total plants moved',
+      'Model 5:1: First run where all plants were correct (after moving some)'
     ]
   end
   
@@ -50,6 +54,8 @@ class Act5Model1Reporter
     @total_incorrect = 0
     @correct_boxes = [0,0,0,0,0]
     @types_planted_per_box = [0,0,0,0,0]
+    @total_moves = 0
+    @first_correct_moving_run = 0
     
     modelActivityData = model.modelActivityData
     if modelActivityData
@@ -71,7 +77,9 @@ class Act5Model1Reporter
       @total_boxes,
       @types_planted_per_box.inspect,
       (@planted_all_possibilities ? 1 : 0),
-      @distance_from_perfect
+      @distance_from_perfect,
+      @total_moves,
+      @first_correct_moving_run
     ]
   end
   
@@ -87,8 +95,9 @@ class Act5Model1Reporter
     @times_run = modelActivityMatrix.length
     numTypesPlanted = [0,0,0]
     
-    modelActivityMatrix.each do |run|
-      run.each_with_index do |box, box_ix|
+    modelActivityMatrix.each_with_index do |run, run_ix|
+      incorrect_plantings = 0
+      run[:planted].each_with_index do |box, box_ix|
         next unless box
         box.each_with_index do |type, type_ix|
           next unless type
@@ -96,16 +105,20 @@ class Act5Model1Reporter
           type.each do |correctness|
             if correctness == 1
               @total_correct += 1
-              if @correct_boxes[box_ix] == 0
-                @correct_boxes[box_ix] = 1
-              end
+              @correct_boxes[box_ix] = 1
             else
+              incorrect_plantings += 1
               @total_incorrect += 1
             end
           end
           @types_planted_per_box[box_ix] = box.select{ |e| e != nil }.length
         end
       end
+      if incorrect_plantings > 0 && run[:moved][:correct] == incorrect_plantings
+        # the user appears to have moved their originally incorrect plants into correct placement
+        @first_correct_moving_run = run_ix+1
+      end
+      @total_moves += run[:moved][:moves]
     end
     if @total_incorrect + @total_correct != 0
       @percent_correct = @total_correct.to_f / (@total_incorrect + @total_correct) * 100
@@ -119,20 +132,40 @@ class Act5Model1Reporter
   end
   
   def calcModelActivityMatrix(modelActivityData)
-    ci = modelActivityData.computationalInputs.detect{|c| c.name == "Agents added" }
+    added_ci = modelActivityData.computationalInputs.detect{|c| c.name == "Agents added" }
+    moved_ci = modelActivityData.computationalInputs.detect{|c| c.name == "User moved agent" }
+    
+    moves = 0
+    correctMoves = 0
     
     modelActivityMatrix = []
     modelActivityData.modelRuns.each do |modelRun|
-      modelActivityMatrix << calcModelRunMatrix(modelRun, ci)
+      result = {:planted => calcModelRunMatrix(modelRun, added_ci)}
+      modelRun.computationalInputValues.each do |civ|
+        if civ.reference == moved_ci
+          moves += 1
+          # if it was moved from an incorrect location
+          # to a correct location, note this
+          values = civ.values
+          plantType = _getPlantType(values.get('size of roots'))
+          oldCorrect = _isCorrect(_getFlowerBox(values.get('old_x')), plantType)
+          newCorrect = _isCorrect(_getFlowerBox(values.get('x')), plantType)
+          if oldCorrect == 0 && newCorrect == 1
+            correctMoves += 1
+          end
+        end
+      end
+      result[:moved] = {:moves => moves, :correct => correctMoves}
+      modelActivityMatrix << result
     end
     modelActivityMatrix
   end
 
-  def calcModelRunMatrix(modelRun, ci)
+  def calcModelRunMatrix(modelRun, added_ci)
     modelRunMatrix = []
       
     modelRun.computationalInputValues.each do |civ|
-      if civ.reference == ci
+      if civ.reference == added_ci
         flowerBox, plantType, correctness = calculateArray(civ)
         modelRunMatrix[flowerBox] = [] unless modelRunMatrix[flowerBox]
         modelRunMatrix[flowerBox][plantType] = [] unless modelRunMatrix[flowerBox][plantType]
@@ -148,6 +181,18 @@ class Act5Model1Reporter
     values = computationalInputValue.values
 
     x = values.get('x')
+    flowerBox = _getFlowerBox(x)
+    
+    leaves = values.get('size of roots')
+    plantType = _getPlantType(leaves)
+    
+    correctness = _isCorrect(flowerBox, plantType)
+  
+    [flowerBox, plantType, correctness]
+  end
+  
+  def _getFlowerBox(x)
+    flowerBox = -1
     if x < 40
       flowerBox = 0
     elsif x < 80
@@ -162,8 +207,11 @@ class Act5Model1Reporter
       flowerBox = -1
       Util.error("Error calculating flower box. x = #{x}")
     end
-    
-    leaves = values.get('size of roots')
+    return flowerBox
+  end
+  
+  def _getPlantType(leaves)
+    plantType = -1
     case leaves
     when 5
       plantType = 0
@@ -175,17 +223,18 @@ class Act5Model1Reporter
       plantType = -1
       Util.error("Error calculating type of plant. Size of leaves = #{leaves}")
     end
-    
+    return plantType
+  end
+  
+  def _isCorrect(flowerBox, plantType)
+    correctness = 0
     if (flowerBox == 0 && plantType == 2) ||
-       (flowerBox == 2 && plantType == 0) ||
-       (flowerBox == 4 && plantType == 1)
+           (flowerBox == 2 && plantType == 0) ||
+           (flowerBox == 4 && plantType == 1)
     then
       correctness = 1
-    else
-      correctness = 0
     end
-  
-    [flowerBox, plantType, correctness]
+    return correctness
   end
   
   def _debugCIVMap(values)
