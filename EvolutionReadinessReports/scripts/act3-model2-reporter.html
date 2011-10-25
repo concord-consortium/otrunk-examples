@@ -7,6 +7,7 @@ class Act3Model2Reporter
   @@fields = {
     :times_run             => {:header => 'Model 2: Times run'},
     :total_time            => {:header => 'Model 2: Total time'},
+    :longest_run           => {:header => 'Model 2: Longest run'},
     :found_solution        => {:header => 'Model 2: Student found solution'},
     :first_correct_run     => {:header => 'Model 2: Run first correctly planted'},
     :avg_seeds_per_run     => {:header => 'Model 2: Average seeds planted'},
@@ -33,6 +34,7 @@ class Act3Model2Reporter
   def initialize(model)
     @times_run = 0
     @total_time = 0
+    @longest_run = 0
     @found_solution = 0
     @first_correct_run = -1
     @avg_seeds_per_run = 0
@@ -50,14 +52,15 @@ class Act3Model2Reporter
   
   def row_values
     return [
-      @times_run, # done
-      _toTimeStr(@total_time), # done
-      @found_solution, # done
-      @first_correct_run, # done
-      @avg_seeds_per_run, # done
-      @total_correct_seeds, # done
-      @total_incorrect_seeds, # done
-      @magnifier_uses #done
+      @times_run,
+      _toTimeStr(@total_time),
+      _toTimeStr(@longest_run),
+      @found_solution,
+      @first_correct_run,
+      @avg_seeds_per_run,
+      @total_correct_seeds,
+      @total_incorrect_seeds,
+      @magnifier_uses
     ]
   end
   
@@ -93,7 +96,11 @@ class Act3Model2Reporter
     modelActivityData.modelRuns.each do |modelRun|
       modelActivityMatrix << calcModelRunInfo(modelRun, planted_ci)
       @magnifier_uses += modelRun.computationalInputValues.select{|civ| civ.reference == magnifier_ci}.size
-      @total_time += ((modelRun.endTime - modelRun.startTime)/1000).to_i if modelRun.startTime && modelRun.endTime
+      if modelRun.startTime && modelRun.endTime
+        runTime = ((modelRun.endTime - modelRun.startTime)/1000).round
+        @total_time += runTime
+        @longest_run = runTime if runTime > @longest_run
+      end
     end
     modelActivityMatrix
   end
