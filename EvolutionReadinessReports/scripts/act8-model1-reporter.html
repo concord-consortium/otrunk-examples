@@ -1,0 +1,64 @@
+class Act8Model1Reporter
+  def self.location
+    "8:1"
+  end
+  
+  def self.model_name
+    "Gradated Water variation money model"
+  end
+  
+  @@fields = {
+    :times_run                  => {:header => "Times run"},
+    :magnifier_uses             => {:header => "# of magnifying glass uses"}
+  }
+  @@fields.each { |field, attrs| attr_reader field }
+    
+  @@numFields = @@fields.length
+  
+  def self.num_fields
+    @@numFields
+  end
+  
+  def self.headers
+    return @@fields.collect{|k,v| "Model #{location}: #{v[:header]}" }
+  end
+  
+  def self.report_header
+    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
+  end
+  
+  def initialize(model)
+    @times_run = 0
+    @magnifier_uses = 0
+    
+    modelActivityData = model.modelActivityData
+    if modelActivityData
+      parseModelActivityData(modelActivityData)
+    else
+      Util.log("Act8Model1Reporter: Model #{model} doesn't have model activity data")
+    end
+  end
+  
+  def row_values
+    return [
+      @times_run,
+      @magnifier_uses
+    ]
+  end
+  
+  def report_row
+    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
+  end
+  
+  private
+  
+  def parseModelActivityData(modelActivityData)
+    @times_run = modelActivityData.modelRuns.size
+    
+    magnifier_ci = modelActivityData.computationalInputs.detect{|c| c.name == "Info tool used" }
+
+    modelActivityData.modelRuns.each do |modelRun|
+      @magnifier_uses += modelRun.computationalInputValues.select{|civ| civ.reference == magnifier_ci}.size
+    end
+  end
+end
