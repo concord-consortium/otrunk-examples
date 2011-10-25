@@ -6,10 +6,11 @@ class Act2Model2Reporter
   
   @@fields = [
     :times_run,
-    :started_correct,
-    :total_plantings,
     :success,
     :total_successes,
+    :first_success,
+    :started_correct,
+    :total_plantings,
     :infoToolUsed
     ]
   @@fields.each { |field| attr_reader field }
@@ -23,11 +24,13 @@ class Act2Model2Reporter
   def self.headers
     return [
       'Act 2 Model 2: Times run',
-      'Act 2 Model 2: Ever started in correct flowerbox',
-      'Act 2 Model 2: Total plantings',
       'Act 2 Model 2: Ever succeeded',
       'Act 2 Model 2: Total successes',
-      'Act 2 Model 2: Magnifying glass used'
+      'Act 2 Model 2: First successes',
+      'Act 2 Model 2: Ever started in correct flowerbox',
+      'Act 2 Model 2: Total plantings',
+      'Act 2 Model 2: First correct planting',
+      'Act 2 Model 2: Times magnifying glass used'
     ]
   end
   
@@ -38,10 +41,12 @@ class Act2Model2Reporter
   def row_values
     return [
       @times_run,
-      @started_correct,
-      @total_plantings,
       @success,
       @total_successes,
+      @first_success,
+      @started_correct,
+      @total_plantings,
+      @first_correct_planting,
       @infoToolUsed
     ]
   end
@@ -70,9 +75,11 @@ class Act2Model2Reporter
     @times_run = modelActivityData.modelRuns.length
     @total_plantings = plantingArray.inspect
     @started_correct = (plantingArray.select { |box| box == 2 }.length) > 0
+    @first_correct_planting = plantingArray.index(2) ? plantingArray.index(2) + 1 : ""
     @total_successes = successArray.inspect
     @success = (successArray.select { |success| success == true }.length) > 0
-    @infoToolUsed = (infoToolArray.select { |used| used == true }.length) > 0
+    @first_success = successArray.index(true) ? successArray.index(true) + 1 : ""
+    @infoToolUsed = infoToolArray.inject { |a, b| a + b } || 0
   end
   
   def calcModelData(modelActivityData)
@@ -94,7 +101,7 @@ class Act2Model2Reporter
   def calcData(modelRun, ci_added, ci_success, ci_info)
     box = 0
     success = false
-    infoToolUsed = false
+    infoToolUsed = 0
     
     modelRun.computationalInputValues.each do |civ|  # we can only plant one, so we expect only one AgentsAdded civ
       if civ.reference == ci_added
@@ -102,7 +109,7 @@ class Act2Model2Reporter
       elsif civ.reference == ci_success
         success = true
       elsif civ.reference == ci_info
-        infoToolUsed = true
+        infoToolUsed = infoToolUsed + 1
       end
     end
     
