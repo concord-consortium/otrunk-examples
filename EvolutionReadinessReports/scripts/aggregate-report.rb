@@ -100,8 +100,10 @@ end
 
 def otImport(script)
   if script
+      Util.log("trying script import") if defined? Util
       srcProp = script.otClass().getProperty('src')
       srcValue = script.otGet(srcProp)
+      Util.log("importing script: #{srcValue.getBlobURL().toExternalForm()}") if defined? Util
       eval(Java::JavaLang::String.new(script.src).to_s, nil, srcValue.getBlobURL().toExternalForm())
   else
     System.err.println("Cannot import?? #{script}")
