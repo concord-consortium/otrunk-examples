@@ -30,7 +30,7 @@ def initReport
   otImport($erb_helper_script)
   otImport($question_helper_script)
   otImport($activity_helper_script)
-  otImport($flower_pot_model_reporter_script)
+  otImport($act1_model2_reporter_script)
 
   @otrunkHelper = OTrunkHelper.new($otObjectService, $viewContext)
   @erbHelper = ErbHelper.new(@otrunkHelper)

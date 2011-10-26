@@ -25,7 +25,7 @@ def getText
   otImport($util_script)
   
   otImport($act_model_reporter_script)
-  otImport($flower_pot_model_reporter_script)
+  otImport($act1_model2_reporter_script)
   otImport($act2_model2_reporter_script)
   otImport($act3_model1_reporter_script)
   otImport($act3_model2_reporter_script)

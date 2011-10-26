@@ -152,9 +152,9 @@
                 <OTBlob src="scripts/er-activity-helper.html"/>
               </reference>
             </OTScriptVariable>
-            <OTScriptVariable name="flower_pot_model_reporter_script">
+            <OTScriptVariable name="act1_model2_reporter_script">
               <reference>
-                <OTBlob src="scripts/flower-pot-model-reporter.html"/>
+                <OTBlob src="scripts/act1-model2-reporter.html"/>
               </reference>
             </OTScriptVariable>
             <OTScriptVariable name="util_script">
