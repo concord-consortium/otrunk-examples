@@ -117,7 +117,9 @@ class Act5Model2Reporter
     modelActivityData.modelRuns.each do |modelRun|
       modelActivityMatrix << calcModelRunInfo(modelRun, planted_ci)
       @magnifier_uses += modelRun.computationalInputValues.select{|civ| civ.reference == magnifier_ci}.size
-      if modelRun.startTime && modelRun.endTime
+      startTimeProp = modelRun.otClass().getProperty("startTime")
+      endTimeProp = modelRun.otClass().getProperty("endTime")
+      if modelRun.otIsSet(startTimeProp) && modelRun.otIsSet(endTimeProp)
         runTime = ((modelRun.endTime - modelRun.startTime)/1000).round
         @total_time += runTime
         @longest_run = runTime if runTime > @longest_run
