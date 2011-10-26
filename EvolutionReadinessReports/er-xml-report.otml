@@ -141,6 +141,11 @@
               </reference>
             </OTScriptVariable>
             <OTScriptVariable name="model_reports_map" reference="f3a98f0c-6363-4f17-86c4-bf9b481d0d01" />
+            <OTScriptVariable name='act_model_reporter_script'>
+              <reference>
+                <OTBlob src='scripts/act-model-reporter.html'/>
+              </reference>
+            </OTScriptVariable>
             <OTScriptVariable name="flower_pot_model_reporter_script">
               <reference>
                 <OTBlob src="scripts/flower-pot-model-reporter.html"/>
@@ -189,6 +194,11 @@
             <OTScriptVariable name="act9_model1_reporter_script">
               <reference>
                 <OTBlob src="scripts/act9-model1-reporter.html"/>
+              </reference>
+            </OTScriptVariable>
+            <OTScriptVariable name='act9_model2_reporter_script'>
+              <reference>
+                <OTBlob src='scripts/act9-model2-reporter.html'/>
               </reference>
             </OTScriptVariable>
           </variables>

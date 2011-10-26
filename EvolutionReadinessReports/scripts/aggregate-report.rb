@@ -24,6 +24,7 @@ def getText
   otImport($activity_helper_script)
   otImport($util_script)
   
+  otImport($act_model_reporter_script)
   otImport($flower_pot_model_reporter_script)
   otImport($act2_model2_reporter_script)
   otImport($act3_model1_reporter_script)
@@ -35,6 +36,7 @@ def getText
   otImport($act8_model2_reporter_script)
   otImport($act9_model1_reporter_script)
   otImport($act9_model1_reporter_script)
+  otImport($act9_model2_reporter_script)
   
   @otrunkHelper = OTrunkHelper.new
   @questions = Questions.new(@otrunkHelper)

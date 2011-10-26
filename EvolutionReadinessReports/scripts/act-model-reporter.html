@@ -1,0 +1,62 @@
+class ActModelReporter
+  ## Should override this and provide the location
+  ## This will be used in the headers:
+  ## Model <location>: <header>
+  def self.location
+    "undefined"
+  end
+  
+  ## Should override this and provide the fields this reporter reports
+  ## EG:
+  ## {
+  ##   :times_run        => {:header => "Times run",               :value => lambda { @times_run }     , :default_value => 0 },
+  ##   :runs_completed   => {:header => "Times run to completion", :value => lambda { @runs_completed }, :default_value => 0 }
+  ## }
+  def self.fields
+    { }
+  end
+ 
+  ## Should override this and provide code to interact with the model activity data
+  ## and calculate whatever results data is necessary
+  def parseModelActivityData(modelActivityData)
+  end
+  
+  # The rest of these should be left alone
+  
+  def self.num_fields
+    fields.length
+  end
+  
+  def self.headers
+    return fields.collect{|k,v| "Model #{location}: #{v[:header]}" }
+  end
+  
+  def self.report_header
+    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
+  end
+  
+  def initialize(model)
+    self.class.fields.each do |field, attrs|
+      self.class.class_eval do
+        attr_accessor field
+      end
+      
+      send("#{field.to_s}=", attrs[:default_value]) if attrs[:default_value]
+    end
+    
+    modelActivityData = model.modelActivityData
+    if modelActivityData
+      parseModelActivityData(modelActivityData)
+    else
+      Util.log("ActModelReporter: Model #{self.class.location} doesn't have model activity data")
+    end
+  end
+  
+  def row_values
+    return self.class.fields.collect{|k,v| instance_eval(&(v[:value])) }
+  end
+  
+  def report_row
+    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
+  end
+end
