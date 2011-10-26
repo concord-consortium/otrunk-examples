@@ -168,7 +168,7 @@
                 <OTBlob src='scripts/act3-model1-reporter.html'/>
               </reference>
             </OTScriptVariable>
-            <OTScriptVariable name="act3_model2_reporter">
+            <OTScriptVariable name="act3_model2_reporter_script">
               <reference>
                 <OTBlob src="scripts/act3-model2-reporter.html"/>
               </reference>
