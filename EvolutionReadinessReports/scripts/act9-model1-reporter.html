@@ -1,102 +1,17 @@
-class Act9Model1Reporter
+class Act9Model1Reporter < ActModelReporter
   
-  def self.model_name
-    "Three flower pot model"
+  def self.location
+    "9:1"
   end
   
-  @@fields = [
-    :times_run,
-    ]
-  @@fields.each { |field| attr_reader field }
-    
-  @@numFields = @@fields.length
-  
-  def self.num_fields
-    @@numFields
+  def self.fields
+    {
+      :times_run => {:header => "Times run", :value => lambda { @times_run }, :default_value => 0 }
+    }
   end
-  
-  def self.headers
-    return [
-      'Model 9:1: Times run',
-    ]
-  end
-  
-  def self.report_header
-    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
-  end
-  
-  def row_values
-    return [
-      @times_run
-    ]
-  end
-  
-  def report_row
-    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
-  end
-  
-  def initialize(model)
-    modelActivityData = model.modelActivityData
-    if modelActivityData
-      parseModelActivityData(modelActivityData)
-    else
-      Util.log("FlowerPotModelReporter: Model #{model} doesn't have model activity data")
-    end
-  end
-  
-  
-  
+
   def parseModelActivityData(modelActivityData)
-    
     @times_run = modelActivityData.modelRuns.length
   end
   
-  def calcModelData(modelActivityData)
-    ci_added = modelActivityData.computationalInputs.detect{|c| c.name == "Agents added" }
-    ci_success = modelActivityData.computationalInputs.detect{|c| c.name == "Success" }
-    ci_info = modelActivityData.computationalInputs.detect{|c| c.name == "Info tool used" }
-    plantingArray = []
-    successArray = []
-    infoToolArray = []
-    modelActivityData.modelRuns.each do |modelRun|
-      modelData = calcData(modelRun, ci_added, ci_success, ci_info)
-      plantingArray << modelData[0]
-      successArray << modelData[1]
-      infoToolArray << modelData[2]
-    end
-    [plantingArray, successArray, infoToolArray]
-  end
-
-  def calcData(modelRun, ci_added, ci_success, ci_info)
-    box = 0
-    success = false
-    infoToolUsed = 0
-    
-    modelRun.computationalInputValues.each do |civ|  # we can only plant one, so we expect only one AgentsAdded civ
-      if civ.reference == ci_added
-        box = calculateBox(civ)
-      elsif civ.reference == ci_success
-        success = true
-      elsif civ.reference == ci_info
-        infoToolUsed = infoToolUsed + 1
-      end
-    end
-    
-    [box, success, infoToolUsed]
-  end
-  
-  def calculateBox(computationalInputValue)
-    values = computationalInputValue.values
-    flowerbox = 0
-    y = values.get('y')
-    if y < 50
-      flowerbox = 1
-    elsif y < 90
-      flowerbox = 2
-    elsif y < 130
-      flowerbox = 3
-    end
-    flowerbox
-  end
- 
 end

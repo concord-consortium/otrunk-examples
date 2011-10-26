@@ -59,4 +59,19 @@ class ActModelReporter
   def report_row
     row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
   end
+  
+  
+  def _toTimeStr(timeVal)
+    # works as long as it doesn't go over 24 hours. We should be safe.
+    Time.at(timeVal).gmtime.strftime('%H:%M:%S')
+  end
+  
+  def _debugCIVMap(values)
+    out = []
+    values.keys.each do |k|
+      v = values.get(k)
+      out << "#{k} => #{v}"
+    end
+    out.join(';')
+  end
 end

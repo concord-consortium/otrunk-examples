@@ -1,75 +1,21 @@
-class Act2Model2Reporter
+class Act2Model2Reporter < ActModelReporter
   def self.location
     "2:2"
   end
   
-  def self.model_name
-    "Three flower pot model"
+  def self.fields
+    {
+      :times_run              => {:default_value => 0, :value => lambda { @times_run },                :header => 'Times run'},
+      :success                => {:default_value => 0, :value => lambda { @success },                  :header => 'Ever succeeded'},
+      :total_successes        => {:default_value => 0, :value => lambda { @total_successes },          :header => 'Total successes'},
+      :first_success          => {:default_value => 0, :value => lambda { @first_success },            :header => 'First successes'},
+      :started_correct        => {:default_value => 0, :value => lambda { @started_correct },          :header => 'Ever started in correct flowerbox'},
+      :total_plantings        => {:default_value => 0, :value => lambda { @total_plantings },          :header => 'Total plantings'},
+      :first_correct_planting => {:default_value => 0, :value => lambda { @first_correct_planting },   :header => 'First correct planting'},
+      :infoToolUsed           => {:default_value => 0, :value => lambda { @infoToolUsed },             :header => 'Times magnifying glass used'}
+    }
   end
-  
-  @@fields = [
-    :times_run,
-    :success,
-    :total_successes,
-    :first_success,
-    :started_correct,
-    :total_plantings,
-    :first_correct_planting,
-    :infoToolUsed
-    ]
-  @@fields.each { |field| attr_reader field }
-    
-  @@numFields = @@fields.length
-  
-  def self.num_fields
-    @@numFields
-  end
-  
-  def self.headers
-    return [
-      "Model #{location}: Times run",
-      "Model #{location}: Ever succeeded",
-      "Model #{location}: Total successes",
-      "Model #{location}: First successes",
-      "Model #{location}: Ever started in correct flowerbox",
-      "Model #{location}: Total plantings",
-      "Model #{location}: First correct planting",
-      "Model #{location}: Times magnifying glass used"
-    ]
-  end
-  
-  def self.report_header
-    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
-  end
-  
-  def row_values
-    return [
-      @times_run,
-      @success,
-      @total_successes,
-      @first_success,
-      @started_correct,
-      @total_plantings,
-      @first_correct_planting,
-      @infoToolUsed
-    ]
-  end
-  
-  def report_row
-    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
-  end
-  
-  def initialize(model)
-    modelActivityData = model.modelActivityData
-    if modelActivityData
-      parseModelActivityData(modelActivityData)
-    else
-      Util.log("FlowerPotModelReporter: Model #{model} doesn't have model activity data")
-    end
-  end
-  
-  
-  
+
   def parseModelActivityData(modelActivityData)
     modelData = calcModelData(modelActivityData)
     plantingArray = modelData[0]

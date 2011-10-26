@@ -1,95 +1,29 @@
-class Act5Model1Reporter
+class Act5Model1Reporter < ActModelReporter
   
-  def self.model_name
-    "Three flower model - Water"
+  def self.location
+    "5:1"
   end
   
-  @@fields = [
-    :times_run,
-    :find_solution,
-    :total_correct, 
-    :total_incorrect,
-    :percent_correct,
-    :correct_flowers,
-    :types_seeds_planted,
-    :boxes_planted,
-    :types_planted_per_box,
-    :planted_all_possibilities,
-    :distance_from_perfect,
-    :total_moves,
-    :first_correct_moving_run
-    ]
-  @@fields.each { |field| attr_reader field }
-    
-  @@numFields = @@fields.length
-  
-  def self.num_fields
-    @@numFields
+  def self.fields
+    {
+      :times_run =>                 {:default_value => 0, :value => lambda { @times_run },                 :header => 'Times run' },
+      :find_solution =>             {:default_value => 0, :value => lambda { @find_solution },             :header => 'Student found solution' },
+      :total_correct =>             {:default_value => 0, :value => lambda { @total_correct },             :header => 'Total correctly-planted seeds' },
+      :total_incorrect =>           {:default_value => 0, :value => lambda { @total_incorrect },           :header => 'Total incorrect' },
+      :percent_correct =>           {:default_value => 'N/A', :value => lambda { @percent_correct }, :header => 'Percent correct' },
+      :correct_flowers =>           {:default_value => 0, :value => lambda { @correct_flowers },           :header => 'Total correct flowers (out of 3)' },
+      :types_seeds_planted =>       {:default_value => 0, :value => lambda { @types_seeds_planted },       :header => '# of types of seeds planted (out of 3)' },
+      :boxes_planted =>             {:default_value => 0, :value => lambda { @boxes_planted },             :header => '# of boxes seeds were planted in (out of 5)' },
+      :types_planted_per_box =>     {:default_value => [0,0,0,0,0], :value => lambda { @types_planted_per_box.inspect }, :header => 'Types planted per box' },
+      :planted_all_possibilities => {:default_value => 0, :value => lambda { @planted_all_possibilities }, :header => 'Planted all possibilities?' },
+      :distance_from_perfect =>     {:default_value => 0, :value => lambda { @distance_from_perfect },     :header => 'Distance from perfect strategy' },
+      :total_moves =>               {:default_value => 0, :value => lambda { @total_moves },               :header => 'Total plants moved' },
+      :first_correct_moving_run =>  {:default_value => 0, :value => lambda { @first_correct_moving_run },  :header => 'First run where all plants were correct (after moving some)' }
+    }
   end
-  
-  def self.headers
-    return [
-      'Model 5:1: Times run',
-      'Model 5:1: Student found solution',
-      'Model 5:1: Total correctly-planted seeds',
-      'Model 5:1: Total incorrect',
-      'Model 5:1: Percent correct',
-      'Model 5:1: Total correct flowers (out of 3)',
-      'Model 5:1: # of types of seeds planted (out of 3)',
-      'Model 5:1: # of boxes seeds were planted in (out of 5)',
-      'Model 5:1: Types planted per box',
-      'Model 5:1: Planted all possibilities?',
-      'Model 5:1: Distance from perfect strategy',
-      'Model 5:1: Total plants moved',
-      'Model 5:1: First run where all plants were correct (after moving some)'
-    ]
-  end
-  
-  def self.report_header
-    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
-  end
-  
-  def initialize(model)
-    @total_correct = 0
-    @total_incorrect = 0
-    @correct_boxes = [0,0,0,0,0]
-    @types_planted_per_box = [0,0,0,0,0]
-    @total_moves = 0
-    @first_correct_moving_run = 0
-    
-    modelActivityData = model.modelActivityData
-    if modelActivityData
-      parseModelActivityData(modelActivityData)
-    else
-      Util.log("Act5Model1Reporter: Model #{model} doesn't have model activity data")
-    end
-  end
-  
-  def row_values
-    return [
-      @times_run,
-      ((@correct_boxes.eql? [1,0,1,0,1]) ? 1 : 0),
-      @total_correct,
-      @total_incorrect,
-      (@percent_correct ? ('%.0f%' % [@percent_correct]) : 'N/A'),
-      @correct_flowers,
-      @total_types.inspect,
-      @total_boxes,
-      @types_planted_per_box.inspect,
-      (@planted_all_possibilities ? 1 : 0),
-      @distance_from_perfect,
-      @total_moves,
-      @first_correct_moving_run
-    ]
-  end
-  
-  def report_row
-    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
-  end
-  
-  private
   
   def parseModelActivityData(modelActivityData)
+    @correct_boxes = [0,0,0,0,0]
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
     
     @times_run = modelActivityMatrix.length
@@ -121,14 +55,17 @@ class Act5Model1Reporter
       @total_moves += run[:moved][:moves]
     end
     if @total_incorrect + @total_correct != 0
-      @percent_correct = @total_correct.to_f / (@total_incorrect + @total_correct) * 100
+      @percent_correct = ('%.0f%' % [@total_correct.to_f / (@total_incorrect + @total_correct) * 100])
     end
     @correct_flowers = @correct_boxes.inject { |a, b| a + b }
-    @total_types = 3 - numTypesPlanted.select { |type| type == 0 }.length
-    @total_boxes = 5 - @types_planted_per_box.select { |box| box == 0 }.length
+    @types_seeds_planted = 3 - numTypesPlanted.select { |type| type == 0 }.length
+    @boxes_planted = 5 - @types_planted_per_box.select { |box| box == 0 }.length
     total_different_plantings = @types_planted_per_box.inject { |a, b| a + b }
-    @planted_all_possibilities = total_different_plantings == 15
+    @planted_all_possibilities = ((total_different_plantings == 15) ? 1 : 0)
     @distance_from_perfect = 15 - total_different_plantings
+    
+    @find_solution = ((@correct_boxes.eql? [1,0,1,0,1]) ? 1 : 0)
+    
   end
   
   def calcModelActivityMatrix(modelActivityData)
@@ -235,14 +172,5 @@ class Act5Model1Reporter
       correctness = 1
     end
     return correctness
-  end
-  
-  def _debugCIVMap(values)
-    out = []
-    values.keys.each do |k|
-      v = values.get(k)
-      out << "#{k} => #{v}"
-    end
-    out.join(';')
   end
 end

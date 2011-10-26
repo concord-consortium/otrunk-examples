@@ -1,71 +1,21 @@
-class Act4Model2Reporter
+class Act4Model2Reporter < ActModelReporter
   
-  def self.model_name
-    "Three flower pot model"
+  def self.location
+    "4:2"
   end
   
-  @@fields = [
-    :times_run,
-    :success,
-    :successes_array,
-    :first_success,
-    :total_successes,
-    :total_failures,
-    :mountain_steps,
-    :info_tool_use
-    ]
-  @@fields.each { |field| attr_reader field }
-    
-  @@numFields = @@fields.length
-  
-  def self.num_fields
-    @@numFields
+  def self.fields
+    {
+      :times_run       => {:default_value => 0, :value => lambda { @times_run },       :header => 'Times run' },
+      :success         => {:default_value => 0, :value => lambda { @success },         :header => 'Ever succeeded' },
+      :successes_array => {:default_value => [], :value => lambda { @successes_array }, :header => 'Successes array' },
+      :first_success   => {:default_value => 0, :value => lambda { @first_success },   :header => 'First success' },
+      :total_successes => {:default_value => 0, :value => lambda { @total_successes }, :header => 'Total successes' },
+      :total_failures  => {:default_value => 0, :value => lambda { @total_failures },  :header => 'Total failures' },
+      :mountain_steps  => {:default_value => 0, :value => lambda { @mountain_steps },  :header => 'Max mountain height step per run' },
+      :info_tool_use   => {:default_value => 0, :value => lambda { @info_tool_use },   :header => 'Times magnifying glass used' }
+    }
   end
-  
-  def self.headers
-    return [
-      'Model 4:2: Times run',
-      'Model 4:2: Ever succeeded',
-      'Model 4:2: Successes array',
-      'Model 4:2: First success',
-      'Model 4:2: Total successes',
-      'Model 4:2: Total failures',
-      'Model 4:2: Max mountain height step per run',
-      'Model 4:2: Times magnifying glass used',
-    ]
-  end
-  
-  def self.report_header
-    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
-  end
-  
-  def row_values
-    return [
-      @times_run,
-      @success,
-      @successes_array,
-      @first_success,
-      @total_successes,
-      @total_failures,
-      @mountain_steps,
-      @info_tool_use
-    ]
-  end
-  
-  def report_row
-    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
-  end
-  
-  def initialize(model)
-    modelActivityData = model.modelActivityData
-    if modelActivityData
-      parseModelActivityData(modelActivityData)
-    else
-      Util.log("FlowerPotModelReporter: Model #{model} doesn't have model activity data")
-    end
-  end
-  
-  
   
   def parseModelActivityData(modelActivityData)
     modelData = calcModelData(modelActivityData)

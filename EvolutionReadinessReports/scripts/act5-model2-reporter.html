@@ -1,61 +1,25 @@
-class Act5Model2Reporter
+class Act5Model2Reporter < ActModelReporter
   
-  def self.model_name
-    "Gradated Water variation money model"
+  def self.location
+    "5:2"
   end
   
-  @@fields = {
-    :times_run                  => {:header => 'Model 5:2: Times run'},
-    :total_time                 => {:header => 'Model 5:2: Total time'},
-    :longest_run                => {:header => 'Model 5:2: Longest run'},
-    :found_solution             => {:header => 'Model 5:2: Student found solution'},
-    :first_correct_run          => {:header => 'Model 5:2: Run first correctly planted'},
-    :avg_seeds_per_run          => {:header => 'Model 5:2: Average seeds planted'},
-    :total_correct_seeds        => {:header => 'Model 5:2: Total correct seeds'},
-    :total_incorrect_seeds      => {:header => 'Model 5:2: Total incorrect seeds'},
-    :seeds_first_run            => {:header => 'Model 5:2: Seeds planted in first run'},
-    :seeds_last_run             => {:header => 'Model 5:2: Seeds planted in last run'},
-    :planted_one_seed           => {:header => 'Model 5:2: Planted one seed'},
-    :planted_one_seed_correctly => {:header => 'Model 5:2: Planted one seed correctly'},
-    :magnifier_uses             => {:header => 'Model 5:2: # of magnifying glass uses'}
-  }
-  @@fields.each { |field, attrs| attr_reader field }
-    
-  @@numFields = @@fields.length
-  
-  def self.num_fields
-    @@numFields
-  end
-  
-  def self.headers
-    return @@fields.collect{|k,v| v[:header] }
-  end
-  
-  def self.report_header
-    headers.map{|h| "<th>" + h.to_s + "</th>" }.join('')
-  end
-  
-  def initialize(model)
-    @times_run = 0
-    @total_time = 0
-    @longest_run = 0
-    @found_solution = 0
-    @first_correct_run = -1
-    @avg_seeds_per_run = 0
-    @total_correct_seeds = 0
-    @total_incorrect_seeds = 0
-    @seeds_first_run = 0
-    @seeds_last_run = 0
-    @planted_one_seed = 0
-    @planted_one_seed_correctly = 0
-    @magnifier_uses = 0
-    
-    modelActivityData = model.modelActivityData
-    if modelActivityData
-      parseModelActivityData(modelActivityData)
-    else
-      Util.log("Act3Model2Reporter: Model #{model} doesn't have model activity data")
-    end
+  def self.fields
+    {
+      :times_run                  => {:header => 'Model 5:2: Times run',                   :value => lambda { @times_run },                  :default_value => 0},
+      :total_time                 => {:header => 'Model 5:2: Total time',                  :value => lambda { _toTimeStr(@total_time) },     :default_value => 0},
+      :longest_run                => {:header => 'Model 5:2: Longest run',                 :value => lambda { _toTimeStr(@longest_run) },    :default_value => 0},
+      :found_solution             => {:header => 'Model 5:2: Student found solution',      :value => lambda { @found_solution },             :default_value => 0},
+      :first_correct_run          => {:header => 'Model 5:2: Run first correctly planted', :value => lambda { @first_correct_run },          :default_value => 0},
+      :avg_seeds_per_run          => {:header => 'Model 5:2: Average seeds planted',       :value => lambda { @avg_seeds_per_run },          :default_value => 0},
+      :total_correct_seeds        => {:header => 'Model 5:2: Total correct seeds',         :value => lambda { @total_correct_seeds },        :default_value => 0},
+      :total_incorrect_seeds      => {:header => 'Model 5:2: Total incorrect seeds',       :value => lambda { @total_incorrect_seeds },      :default_value => 0},
+      :seeds_first_run            => {:header => 'Model 5:2: Seeds planted in first run',  :value => lambda { @seeds_first_run },            :default_value => 0},
+      :seeds_last_run             => {:header => 'Model 5:2: Seeds planted in last run',   :value => lambda { @seeds_last_run },             :default_value => 0},
+      :planted_one_seed           => {:header => 'Model 5:2: Planted one seed',            :value => lambda { @planted_one_seed },           :default_value => 0},
+      :planted_one_seed_correctly => {:header => 'Model 5:2: Planted one seed correctly',  :value => lambda { @planted_one_seed_correctly }, :default_value => 0},
+      :magnifier_uses             => {:header => 'Model 5:2: # of magnifying glass uses',  :value => lambda { @magnifier_uses },             :default_value => 0}
+    }
   end
   
   def row_values
@@ -75,13 +39,7 @@ class Act5Model2Reporter
       @magnifier_uses
     ]
   end
-  
-  def report_row
-    row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
-  end
-  
-  private
-  
+
   def parseModelActivityData(modelActivityData)
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
     
@@ -162,19 +120,5 @@ class Act5Model2Reporter
       return true
     end
     return false
-  end
-  
-  def _toTimeStr(timeVal)
-    # works as long as it doesn't go over 24 hours. We should be safe.
-    Time.at(timeVal).gmtime.strftime('%H:%M:%S')
-  end
-  
-  def _debugCIVMap(values)
-    out = []
-    values.keys.each do |k|
-      v = values.get(k)
-      out << "#{k} => #{v}"
-    end
-    out.join(';')
   end
 end
