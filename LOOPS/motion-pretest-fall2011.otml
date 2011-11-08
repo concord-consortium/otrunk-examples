@@ -342,15 +342,27 @@
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              <div class="subtitle">The Football Field</div>
-                              The markings on a standard American football field show the distance 
-          to the nearest end zone. The whole field is 100 yards long, but it 
-          is marked with 50 yards in the middle and decreasing numbers toward 
-          each end zone. The diagram shows the football field markings with 
-          the two end zones, one for the red team and one for the blue team.
-                              <br />
-                              <br />
-                              <img src="images/FootballField1.PNG" />
+                              <div class="subtitle">The Building Elevator</div>
+                              <table width="100%">
+                                <tr>
+                                  <td style="padding-bottom: 12px; padding-right: 12px; padding-left: 10px; padding-top: 12px">
+                                    <img src="images/elevator.png" border="0" />
+                                  </td>
+                                  <td style="padding-bottom: 20px; padding-right: 20px; padding-left: 10px; padding-top: 20px">
+                                    <br />
+                                    <br />
+                                    The building in the picture has 10 floors. Three of the floors 
+                are below ground level and seven of the floors are above 
+                ground level.
+                                    <br />
+                                    <br />
+                                    Jim parks his car in the Level -2 garage. He 
+                takes the elevator to Level 4.
+                                    <br />
+                                    <br />
+                                  </td>
+                                </tr>
+                              </table>
                               <br />
                               <br />
                               <br />
@@ -372,31 +384,28 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTQuestion id="e43617ca-edce-11e0-bc16-e0cb4ebd2b6d" name="FootballMC">
+                        <OTQuestion id="e43617ca-edce-11e0-bc16-e0cb4ebd2b6d" name="ElevatorlMC">
                           <prompt>
                             <OTCompoundDoc>
                               <bodyText>
-                                <b>The red team makes a pass from their own 20 yard line to the blue team's 40 yard line.  How long was the pass?</b>
+                                <b>How far did the elevator travel?</b>
                               </bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
                             <OTChoice name="Multiple choice" horizontal="false" alignContent="1" autoLetter="false">
                               <choices>
-                                <OTCompoundDoc id="e43617ca-edce-11e0-bc17-e0cb4ebd2b6d" name="20 yards">
-                                  <bodyText>20 yards</bodyText>
+                                <OTCompoundDoc id="417daf61-0013-11e1-aded-79b2e59cdab1" name="2 floors">
+                                  <bodyText>2 floors</bodyText>
                                 </OTCompoundDoc>
-                                <OTCompoundDoc id="e43617ca-edce-11e0-bc18-e0cb4ebd2b6d" name="30 yards">
-                                  <bodyText>30 yards</bodyText>
+                                <OTCompoundDoc id="480c26e2-0013-11e1-aded-79b2e59cdab1" name="6 floors">
+                                  <bodyText>6 floors</bodyText>
                                 </OTCompoundDoc>
-                                <OTCompoundDoc id="e43617ca-edce-11e0-bc19-e0cb4ebd2b6d" name="40 yards">
-                                  <bodyText>40 yards</bodyText>
+                                <OTCompoundDoc id="4bee6a23-0013-11e1-aded-79b2e59cdab1" name="7 floors">
+                                  <bodyText>7 floors</bodyText>
                                 </OTCompoundDoc>
-                                <OTCompoundDoc id="e43617ca-edce-11e0-bc1a-e0cb4ebd2b6d" name="50 yards">
-                                  <bodyText>50 yards</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc id="e43617ca-edce-11e0-bc1b-e0cb4ebd2b6d" name="20 yards">
-                                  <bodyText>60 yards</bodyText>
+                                <OTCompoundDoc id="504f0524-0013-11e1-aded-79b2e59cdab1" name="8 floors">
+                                  <bodyText>8 floors</bodyText>
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
@@ -404,19 +413,17 @@
                           <correctAnswer>
                             <OTObjectSet>
                               <objects>
-                                <OTCompoundDoc id="e43617ca-edce-11e0-bc1c-e0cb4ebd2b6d" name="50 yards">
-                                  <bodyText>40 yards</bodyText>
-                                </OTCompoundDoc>
+                                <object refid="480c26e2-0013-11e1-aded-79b2e59cdab1" />
                               </objects>
                             </OTObjectSet>
                           </correctAnswer>
                         </OTQuestion>
-                        <OTOverlayWrapper id="e43617ca-edce-11e0-bc1d-e0cb4ebd2b6d" name="FootballMCWrap" embedWrappedObject="false">
+                        <OTOverlayWrapper id="e43617ca-edce-11e0-bc1d-e0cb4ebd2b6d" name="ElevatorMCWrap" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="e43617ca-edce-11e0-bc16-e0cb4ebd2b6d" />
                           </wrappedObject>
                         </OTOverlayWrapper>
-                        <OTQuestion id="e43617ca-edce-11e0-bc1e-e0cb4ebd2b6d" name="ExplainFootball">
+                        <OTQuestion id="e43617ca-edce-11e0-bc1e-e0cb4ebd2b6d" name="ExplainElevator">
                           <prompt>
                             <OTCompoundDoc>
                               <bodyText>
@@ -428,7 +435,7 @@
                             <OTText />
                           </input>
                         </OTQuestion>
-                        <OTOverlayWrapper id="e43617ca-edce-11e0-bc1f-e0cb4ebd2b6d" name="ExplainFootballWrap" embedWrappedObject="false">
+                        <OTOverlayWrapper id="e43617ca-edce-11e0-bc1f-e0cb4ebd2b6d" name="ExplainElevatorWrap" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="e43617ca-edce-11e0-bc1e-e0cb4ebd2b6d" />
                           </wrappedObject>
@@ -901,10 +908,11 @@ stops the train.</li>
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="${page-1}" />
+                    <object refid="e435f0ba-edce-11e0-bc16-e0cb4ebd2b6d" />
                   </currentCard>
                   <viewedCards>
                     <object refid="${page-1}" />
+                    <object refid="e435f0ba-edce-11e0-bc16-e0cb4ebd2b6d" />
                   </viewedCards>
                 </OTCardContainer>
               </content>

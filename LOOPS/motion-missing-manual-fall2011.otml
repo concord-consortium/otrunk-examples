@@ -565,7 +565,7 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f6db4a60-e5fb-11e0-aaa7-e0cb4ebd2b6d" name="PredictionIntrasession" embedWrappedObject="false">
@@ -589,12 +589,16 @@
                                 Test Your Prediction
                                 <br />
                               </div>
-                              Now, test your instructions that are displayed below. Follow your 
-          instructions carefully to see if you have correctly predicted the 
-          motion. If you find that you missed something, return to the 
-          previous page and revise your instructions.
+                              Now, test your instructions (displayed below) with the motion probe! 
+          Follow your instructions carefully to see if you have correctly 
+          predicted the motion. If you find that you missed something, return 
+          to the previous page and revise your instructions.
                               <br />
-                              Student's insturctions go here!
+                              <br />
+                              Your instructions:
+                              <br />
+                              <br />
+                              <object viewid="c93a7460-e18a-11dc-95ff-0800200c9a66" refid="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
                               <br />
                               <br />
                               <object refid="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" />
@@ -612,7 +616,9 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="">
+                        <object refid="c93a7460-e18a-11dc-95ff-0800200c9a66" />
+                        <object refid="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
+                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," logGraphOnPlaybackStart="false">
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
