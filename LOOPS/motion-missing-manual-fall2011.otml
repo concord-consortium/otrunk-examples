@@ -97,24 +97,24 @@
                 </OTDataAxis>
               </yDataAxis>
             </OTDataCollector>
-            <OTDataCollector id="f6dad530-e5fb-11e0-aa9a-e0cb4ebd2b6d" name="Test Your Procedure" title="A Simple Motion" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="false" useDefaultToolBar="false" displayButtons="0,">
+            <OTDataCollector id="f6dad530-e5fb-11e0-aa9a-e0cb4ebd2b6d" name="Test Your Procedure" title="A Simple Motion" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="false" useDefaultToolBar="false" displayButtons="">
               <source>
-                <OTDataGraphable name="Motion Story" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                <OTDataGraphable name="Motion Story" connectPoints="true" controllable="false" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                   <dataStore>
                     <OTDataStore local_id="our_ds1" numberChannels="2">
                       <values>
-                        <float>0.04470939</float>
-                        <float>-0.9859438</float>
-                        <float>2.9955292</float>
-                        <float>-0.9859438</float>
-                        <float>6.0059614</float>
-                        <float>1.0060241</float>
-                        <float>8.986588</float>
-                        <float>1.0220884</float>
-                        <float>11.99702</float>
-                        <float>0.042168673</float>
-                        <float>14.992548</float>
-                        <float>0.042168673</float>
+                        <float>0.0</float>
+                        <float>-1.0</float>
+                        <float>3.0</float>
+                        <float>-1.0</float>
+                        <float>6.0</float>
+                        <float>1.0</float>
+                        <float>9.0</float>
+                        <float>1.0</float>
+                        <float>12.0</float>
+                        <float>0.0</float>
+                        <float>15.0</float>
+                        <float>0.0</float>
                       </values>
                     </OTDataStore>
                   </dataStore>
@@ -618,7 +618,7 @@
                       <documentRefs>
                         <object refid="c93a7460-e18a-11dc-95ff-0800200c9a66" />
                         <object refid="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
-                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," logGraphOnPlaybackStart="false">
+                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" tickMode="AUTO" xTickInterval="1.0" yTickInterval="0.5" multipleGraphableEnabled="true" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="" logGraphOnPlaybackStart="false">
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -688,8 +688,16 @@
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              <div class="subtitle">The End</div>
-                              You may close this window when you are done.  Your work will be saved.
+                              <div class="subtitle">
+                                The End
+                                <br />
+                              </div>
+                              Thanks for your hard work learning how the motion probe works and 
+          its graph describes motion!
+                              <br />
+                              <br />
+                              You may close this window when 
+          you are done. Your work will be saved.
                               <table width="100%">
                                 <tr>
                                   <td width="40%">

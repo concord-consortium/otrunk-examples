@@ -168,13 +168,13 @@
                           <div class="border">
                             <div class="body">
                               <div class="subtitle">A Race from North and South</div>
-                              Vijay and Wei-Lynn have a 50 meter race. The finish line is at 50 
-          meters as shown in the graph below. They do not start at the same 
-          position. Vijay starts 50 meters North of the finish line and 
-          Wei-Lynn starts 50 meters South of the finish line. The graph below 
-          shows the first 30 meters of both Vijay's and Wei-Lynn's runs.
+                              Aaron and Zoe run a 50 meter race. The finish line is at 50 meters 
+          as shown in the graph below. They do not start at the same position. 
+          Aaron starts 50 meters North of the finish line and Zoe starts 50 
+          meters South of the finish line. The graph below shows the first 30 
+          meters of both Aaron's and Zoe's runs.
                               <br />
-                              <img src="images/vijay.png" />
+                              <img src="images/aaronzoe.png" />
                               <br />
                               <object refid="e435c9aa-edce-11e0-bc03-e0cb4ebd2b6d" />
                               <br />
@@ -205,7 +205,7 @@
                           <prompt>
                             <OTCompoundDoc>
                               <bodyText>
-                                <b>In running the first ten meters, how many seconds does Vijay take?</b>
+                                <b>In running the first ten meters, how many seconds does Aaron take?</b>
                               </bodyText>
                             </OTCompoundDoc>
                           </prompt>
@@ -247,7 +247,7 @@
                           <prompt>
                             <OTCompoundDoc>
                               <bodyText>
-                                <b>During the first ten seconds, how many meters did Wei-Lynn run?</b>
+                                <b>During the first ten seconds, how many meters did Zoe run?</b>
                               </bodyText>
                             </OTCompoundDoc>
                           </prompt>
@@ -297,10 +297,10 @@
                             <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
                               <choices>
                                 <OTCompoundDoc id="e435f0ba-edce-11e0-bc11-e0cb4ebd2b6d" name="Wei-Lynn">
-                                  <bodyText>Wei-Lynn</bodyText>
+                                  <bodyText>Aaron</bodyText>
                                 </OTCompoundDoc>
                                 <OTCompoundDoc id="e435f0ba-edce-11e0-bc12-e0cb4ebd2b6d" name="Vijay">
-                                  <bodyText>Vijay</bodyText>
+                                  <bodyText>Zoe</bodyText>
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
@@ -908,11 +908,10 @@ stops the train.</li>
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="e435f0ba-edce-11e0-bc16-e0cb4ebd2b6d" />
+                    <object refid="${page-1}" />
                   </currentCard>
                   <viewedCards>
                     <object refid="${page-1}" />
-                    <object refid="e435f0ba-edce-11e0-bc16-e0cb4ebd2b6d" />
                   </viewedCards>
                 </OTCardContainer>
               </content>

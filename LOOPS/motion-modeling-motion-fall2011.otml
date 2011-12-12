@@ -571,7 +571,7 @@ Submit your graph and story.</bodyText>
                             </OTDataInput>
                           </input>
                         </OTNLogoModel>
-                        <OTDataCollector id="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="0.5" yTickInterval="2.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
+                        <OTDataCollector id="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
                           <source>
                             <OTDataGraphable name="Chico" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                               <dataStore>
@@ -716,39 +716,29 @@ Submit your graph and story.</bodyText>
                               <i>
                                 <b>Replay</b>
                               </i>
-                              <b />
+                              the graph to see if it is 
+          correct. Then
                               <i>
-                                the graph to see if it is 
-          correct. Then submit your graph.
-                                <br />
-                                <br />
-                                <object refid="f737c39e-e5fb-11e0-b2c4-e0cb4ebd2b6d" />
-                                <br />
+                                <b>Submit</b>
                               </i>
+                              your graph.
+                              <br />
+                              <br />
+                              <object refid="f737c39e-e5fb-11e0-b2c4-e0cb4ebd2b6d" />
+                              <br />
                               <ul>
-                                <li>
-                                  <i>At 3:00 Angie was at the Town Forest hunting for squirrels.</i>
-                                </li>
-                                <li>
-                                  <i>At 3:05 she hears Chico barking and runs to the Park in 3 
-              minutes, meeting Chico just as he gets there.</i>
-                                </li>
-                                <li>
-                                  <i>Angie and Chico frolic together at the Park for 4 minutes.</i>
-                                </li>
-                                <li>
-                                  <i>Then, they trot off to their own homes. Angie arrives home in 
-              3 minutes.</i>
-                                </li>
+                                <li>At 3:00 Angie was at the Town Forest hunting for squirrels.</li>
+                                <li>At 3:05 she hears Chico barking and runs to the Park in 3 
+              minutes, meeting Chico just as he gets there.</li>
+                                <li>Angie and Chico frolic together at the Park for 4 minutes.</li>
+                                <li>Then, they trot off to their own homes. Angie arrives home in 
+              3 minutes.</li>
                               </ul>
-                              <i>
-                                <br />
-                                <object refid="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
-                                <br />
-                                <br />
-                                <object refid="f737eaae-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
-                                <br />
-                              </i>
+                              <object refid="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="f737eaae-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
+                              <br />
                               <br />
                               <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
                               <br />
@@ -761,9 +751,7 @@ Submit your graph and story.</bodyText>
                               <br />
                               <object refid="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" />
                               <br />
-                              <i>
-                                <br />
-                              </i>
+                              <br />
                             </div>
                           </div>
                         </div>
@@ -791,7 +779,7 @@ Submit your graph and story.</bodyText>
                             </OTDataInput>
                           </input>
                         </OTNLogoModel>
-                        <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="0.5" yTickInterval="2.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackStart="true">
+                        <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackStart="true">
                           <source>
                             <OTDataGraphable name="Angie" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                               <dataStore>

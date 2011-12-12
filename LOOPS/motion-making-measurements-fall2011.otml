@@ -45,6 +45,8 @@
     <import class="org.concord.otrunk.util.OTLabbookBundle" />
     <import class="org.concord.otrunk.labbook.OTLabbookButton" />
     <import class="org.concord.data.state.OTHoltsMethodSmoothing" />
+    <import class="org.concord.datagraph.state.rubric.OTGraphSegment" />
+    <import class="org.concord.datagraph.state.rubric.OTGraphSegmentCriterion" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -537,7 +539,7 @@
                               <dataProducer>
                                 <OTTimeLimitDataProducerFilter name="TimeLimit" timeLimit="20000" sourceChannel="1">
                                   <source>
-                                    <OTHoltsMethodSmoothing name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
+                                    <OTLinearProducerFilter name="FrameOfReference" k1="1.0" k0="-1.0" sourceChannel="1">
                                       <source>
                                         <OTSensorDataProxy name="dataproducer">
                                           <request>
@@ -549,7 +551,7 @@
                                           </request>
                                         </OTSensorDataProxy>
                                       </source>
-                                    </OTHoltsMethodSmoothing>
+                                    </OTLinearProducerFilter>
                                   </source>
                                 </OTTimeLimitDataProducerFilter>
                               </dataProducer>
@@ -600,7 +602,7 @@
                               <dataProducer>
                                 <OTTimeLimitDataProducerFilter name="TimeLimit" timeLimit="20000" sourceChannel="1">
                                   <source>
-                                    <OTHoltsMethodSmoothing name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
+                                    <OTLinearProducerFilter name="FrameOfReference" k1="1.0" k0="-1.0" sourceChannel="1">
                                       <source>
                                         <OTSensorDataProxy name="dataproducer">
                                           <request>
@@ -612,7 +614,7 @@
                                           </request>
                                         </OTSensorDataProxy>
                                       </source>
-                                    </OTHoltsMethodSmoothing>
+                                    </OTLinearProducerFilter>
                                   </source>
                                 </OTTimeLimitDataProducerFilter>
                               </dataProducer>
@@ -667,13 +669,16 @@
                               <div class="subtitle">Frame of Reference</div>
                               <br />
                               The number line on which motions occur can be called a frame of 
-          reference.  On a piece of paper, draw the number line that shows the 
+          reference.
+                              <br />
+                              <br />
+                              You will receive a piece of paper that has the picture below. Put numbers on the number line to show the 
           position of the probe and the frame of reference that you discovered 
-          in the previous step.  Start with a number line like the one below; 
-          each interval is 0.5 meters.  Mark positions zero, -1, and 1, and 
+          in the previous step.  The interval between ticks is 0.5 meters.  Mark positions zero, -1, and 1, and 
           then put numbers at each tick mark.
                               <br />
-                              picture goes here
+                              <br />
+                              <img src="images/proberuler.png" border="0" />
                               <br />
                             </div>
                           </div>
@@ -740,10 +745,53 @@
                       <documentRefs>
                         <OTDataCollector id="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d" name="Data graph" title="Using Your Frame of Reference" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="false" useDefaultToolBar="false" displayButtons="0,">
                           <source>
-                            <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="2.2">
                               <dataStore>
                                 <OTDataStore numberChannels="2" />
                               </dataStore>
+                              <rubric>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="BEGINNING_Y" operation="EQUAL_TO" expectedValue="2.0" tolerance="0.25" points="0.5" />
+                                    <OTGraphSegmentCriterion property="BEGINNING_X" operation="EQUAL_TO" expectedValue="0.0" tolerance="0.25" points="0.5" />
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.5" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.5" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="1.0" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.666" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="-1.0" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.666" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="-2.0" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.666" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                              </rubric>
                             </OTDataGraphable>
                           </source>
                           <xDataAxis>
@@ -765,7 +813,7 @@
                         <OTQuestion id="f67e34e2-e5fb-11e0-b84e-e0cb4ebd2b6d" name="TwoToOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between positions 2 and 1?</bodyText>
+                              <bodyText>What is the distance between positions 2 m and 1 m?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -795,7 +843,7 @@
                         <OTQuestion id="f67e34e2-e5fb-11e0-b854-e0cb4ebd2b6d" name="OneToNOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between positions 1 and -1?</bodyText>
+                              <bodyText>What is the distance between positions 1 m and -1 m?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -832,7 +880,7 @@
                         <OTQuestion id="f67e5bf2-e5fb-11e0-b859-e0cb4ebd2b6d" name="NTwoToNOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between positions -1 and -2?</bodyText>
+                              <bodyText>What is the distance between positions -1 m and -2 m?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -874,8 +922,6 @@
                           <div class="border">
                             <div class="body">
                               <div class="subtitle">Position and Distance</div>
-                              <br />
-                              <br />
                               Draw on the graph below the movement described:
                               <br />
                               <ul>
@@ -896,8 +942,11 @@
                                   <br />
                                 </li>
                               </ul>
-                              and Submit your graph.
-                              <br />
+                              and
+                              <i>
+                                <b>Submit</b>
+                              </i>
+                              your graph.
                               <br />
                               <br />
                               <object refid="f67e8302-e5fb-11e0-b85e-e0cb4ebd2b6d" />
@@ -936,6 +985,49 @@
                               <dataStore>
                                 <OTDataStore numberChannels="2" />
                               </dataStore>
+                              <rubric>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="BEGINNING_Y" operation="EQUAL_TO" expectedValue="1.25" tolerance="0.25" points="0.5" />
+                                    <OTGraphSegmentCriterion property="BEGINNING_X" operation="EQUAL_TO" expectedValue="0.0" tolerance="0.25" points="0.5" />
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.5" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.5" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="0.5" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.666" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="-0.5" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.666" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="-0.25" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                                <OTGraphSegment>
+                                  <criteria>
+                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="0.666" />
+                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="0.666" />
+                                  </criteria>
+                                </OTGraphSegment>
+                              </rubric>
                             </OTDataGraphable>
                           </source>
                           <xDataAxis>

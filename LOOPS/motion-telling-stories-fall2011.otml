@@ -198,7 +198,7 @@
                 <string>2.0</string>
               </values>
             </OTDataStore>
-            <OTDataCollector id="f793a092-e5fb-11e0-b81b-e0cb4ebd2b6d" name="Train Position" title="Source Data Graph" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="true" tickMode="AUTO" xTickInterval="10.0" yTickInterval="5.0">
+            <OTDataCollector id="f793a092-e5fb-11e0-b81b-e0cb4ebd2b6d" name="Train Position" title="Source Data Graph" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
               <source>
                 <OTDataGraphable id="f793a092-e5fb-11e0-b81c-e0cb4ebd2b6d" name="Train" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                   <dataStore>
@@ -1619,27 +1619,27 @@
                 </OTDataAxis>
               </xDataAxis>
               <yDataAxis>
-                <OTDataAxis max="40.0" units="miles" min="0.0" label="Position" labelFormat="Engineering" locked="true">
+                <OTDataAxis max="40.0" units="miles" min="-0.0" label="Position" labelFormat="Engineering" locked="true">
                   <customGridLabels />
                 </OTDataAxis>
               </yDataAxis>
               <labels>
-                <OTDataPointLabel x="1.4017553" y="28.312183" fontSize="10" text="Station A" xData="-0.20338666" yData="0.17585206">
+                <OTDataPointLabel x="1.4017553" y="28.312183" fontSize="10" text="Station A" xData="-0.20338666" yData="0.17585206" color="-66">
                   <dataGraphable>
                     <object refid="f793a092-e5fb-11e0-b81c-e0cb4ebd2b6d" />
                   </dataGraphable>
                 </OTDataPointLabel>
-                <OTDataPointLabel x="26.612892" y="25.585218" fontSize="10" text="Station B" xData="19.931892" yData="10.023567">
+                <OTDataPointLabel x="26.612892" y="25.585218" fontSize="10" text="Station B" xData="19.931892" yData="10.023567" color="-66">
                   <dataGraphable>
                     <object refid="f793a092-e5fb-11e0-b81c-e0cb4ebd2b6d" />
                   </dataGraphable>
                 </OTDataPointLabel>
-                <OTDataPointLabel x="69.96501" y="33.411892" fontSize="10" text="Station C" xData="90.049446" yData="24.970993">
+                <OTDataPointLabel x="69.96501" y="33.411892" fontSize="10" text="Station C" xData="90.049446" yData="24.970993" color="-66">
                   <dataGraphable>
                     <object refid="f793a092-e5fb-11e0-b81c-e0cb4ebd2b6d" />
                   </dataGraphable>
                 </OTDataPointLabel>
-                <OTDataPointLabel x="Infinity" y="Infinity" fontSize="10" text="Data Point" />
+                <OTDataPointLabel x="Infinity" y="Infinity" fontSize="10" text="Data Point" color="-66" />
               </labels>
             </OTDataCollector>
           </sharedObjects>
@@ -1681,26 +1681,33 @@
                           <div class="border">
                             <div class="body">
                               <div class="subtitle">Making Graphs from Stories and Stories from Graphs</div>
-                              In this activity you'll continue exploring the relationship between 
+                              <table width="100%">
+                                <tr>
+                                  <td style="padding-bottom: 12px; padding-left: 10px; padding-top: 12px; padding-right: 12px">
+                                    <img src="images/cop_car_in_forest.jpg" border="0" />
+                                  </td>
+                                  <td style="padding-bottom: 20px; padding-left: 10px; padding-top: 20px; padding-right: 20px">
+                                    In this activity you'll continue exploring the relationship between 
           graphs and stories.
-                              <br />
-                              <br />
-                              This activity will give you practice 
+                                    <br />
+                                    <br />
+                                    This activity will give you practice 
           interpreting a motion graph of a race, creating a graph from a 
           story, and telling the details of motions from a graph.
-                              <br />
-                              You will 
+ You will 
           create a graph from a model of a bank robbery from the 
           points-of-view of the thieves and the police.
-                              <br />
-                              <br />
-                              Finally, you 
+                                    <br />
+                                    <br />
+                                    Finally, you 
           will create your own story from a graph about a train traveling 
           between several stations.
-                              <br />
-                              <br />
-                              Go on to the next step.
-                              <br />
+                                    <br />
+                                    <br />
+                                    Please go on to the next page.
+                                  </td>
+                                </tr>
+                              </table>
                             </div>
                           </div>
                         </div>
@@ -2220,7 +2227,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTNLogoModel id="f794d912-e5fb-11e0-b843-e0cb4ebd2b6d" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/NetLogo/modelfiles/Tracks.v5.nlogo">
+                        <OTNLogoModel id="f794d912-e5fb-11e0-b843-e0cb4ebd2b6d" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/NetLogo/modelfiles/Tracks.v5-NoButtons.nlogo">
                           <input>
                             <OTDataInput>
                               <channelFunctionMap>
@@ -2396,8 +2403,14 @@
                           <div class="border">
                             <div class="body">
                               <div class="subtitle">The End</div>
-                              When you are done, you may close this activity.  Your answers are 
+                              Congratulations on your hard work, and thanks for completing LOOPS!
+                              <br />
+                              <br />
+                              When you are done, you may close this activity. Your answers are 
           saved automatically.
+                              <br />
+                              <br />
+                              Photo Credit, page 1: PFSullivan on Flickr dot com
                               <br />
                               <br />
                             </div>
