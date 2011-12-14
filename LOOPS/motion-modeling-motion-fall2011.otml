@@ -214,7 +214,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTNLogoModel id="f7372754-e5fb-11e0-b2a4-e0cb4ebd2b6d" name="NetLogo model" authoredDataURL="../NetLogo/modelfiles/DogWalks.v3.nlogo" startButtonName="Walk the Dog" resetButtonName="Setup" useDt="false">
+                        <OTNLogoModel id="f7372754-e5fb-11e0-b2a4-e0cb4ebd2b6d" name="NetLogo model" authoredDataURL="../NetLogo/modelfiles/DogWalks.v3.nlogo" startButtonName="Walk the Dog" resetButtonName="Clear" useDt="false">
                           <initScript>set init-pos-random? false
                             set init-car1-pos 5
                             set define-car2? false</initScript>
@@ -247,7 +247,7 @@
                                 </OTSingleYPerXProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore local_id="first-dog-walk-ds" dt="NaN" numberChannels="2">
+                                <OTDataStore local_id="first-dog-walk-ds"  numberChannels="2">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="t1" numericData="true" />
                                     <OTDataChannelDescription name="x-car1-world" numericData="true" />
@@ -779,7 +779,7 @@ Submit your graph and story.</bodyText>
                             </OTDataInput>
                           </input>
                         </OTNLogoModel>
-                        <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackStart="true">
+                        <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="false" logGraphOnReset="true" logGraphOnPlaybackStart="true">
                           <source>
                             <OTDataGraphable name="Angie" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                               <dataStore>

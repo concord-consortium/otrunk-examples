@@ -349,7 +349,7 @@
                       <documentRefs>
                         <OTDataCollector id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d" name="JumpingGraph" title="Jumping Graph" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
                           <source>
-                            <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
                                   <source>
@@ -392,6 +392,32 @@
                           <eventLog>
                             <OTEventLog />
                           </eventLog>
+                          <graphables>
+                            <OTDataGraphable drawMarks="false" color="0xFF0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <dataProducer>
+                                <OTLinearProducerFilter name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
+                                  <source>
+                                    <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTTimeLimitDataProducerFilter>
+                                  </source>
+                                </OTLinearProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore />
+                              </dataStore>
+                            </OTDataGraphable>
+                          </graphables>
                         </OTDataCollector>
                         <OTQuestion id="f67de6c2-e5fb-11e0-b841-e0cb4ebd2b6d" name="HowLongQ">
                           <prompt>
@@ -1159,7 +1185,7 @@
                       <documentRefs>
                         <OTDataCollector id="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d" name="GiantStepGraph" title="Giant Step Graph" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true">
                           <source>
-                            <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
@@ -1188,7 +1214,38 @@
                                 </OTDataStore>
                               </dataStore>
                             </OTDataGraphable>
-                          </source>
+                            </source>
+                            <graphables>
+                             <OTDataGraphable name="Partner2" connectPoints="true" yColumn="1" drawMarks="false" color="0xFF0000" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
+                                <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
+                                  <source>
+                                    <OTTimeLimitDataProducerFilter name="TimerLimiter" timeLimit="20000" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTTimeLimitDataProducerFilter>
+                                  </source>
+                                </OTLinearProducerFilter>
+                              </dataProducer>
+                              <dataStore>
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                              </dataStore>
+                            </OTDataGraphable>
+                          </graphables>
                           <xDataAxis>
                             <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
                               <customGridLabels />
@@ -1315,7 +1372,7 @@
                       <documentRefs>
                         <OTDataCollector id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d" name="MeasuringSpeed" title="Measuring Speed" autoScaleEnabled="true" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," multipleGraphableEnabled="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
                           <source>
-                            <OTDataGraphable name="Pete" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable name="Partner1" graphableListEditable="false" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
@@ -1356,9 +1413,33 @@
                             </OTDataAxis>
                           </yDataAxis>
                           <graphables>
-                            <OTDataGraphable drawMarks="false" color="65535" connectPoints="true" xColumn="0" yColumn="1" name="Jake" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable graphableListEditable="false" drawMarks="false" color="0xFF0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
+							<dataProducer>
+                                <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
+                                  <source>
+                                    <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
+                                    </OTTimeLimitDataProducerFilter>
+                                  </source>
+                                </OTLinearProducerFilter>
+                              </dataProducer>
                               <dataStore>
-                                <OTDataStore />
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
                               </dataStore>
                             </OTDataGraphable>
                           </graphables>
@@ -1415,10 +1496,11 @@
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="f67dbfb2-e5fb-11e0-b83f-e0cb4ebd2b6d" />
+                    <object refid="f67dbfb2-e5fb-11e0-b840-e0cb4ebd2b6d" />
                   </currentCard>
                   <viewedCards>
                     <object refid="f67dbfb2-e5fb-11e0-b83f-e0cb4ebd2b6d" />
+                    <object refid="f67dbfb2-e5fb-11e0-b840-e0cb4ebd2b6d" />
                   </viewedCards>
                 </OTCardContainer>
               </content>

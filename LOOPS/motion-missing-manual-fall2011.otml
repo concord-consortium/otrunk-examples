@@ -619,7 +619,7 @@
                       <documentRefs>
                         <object refid="c93a7460-e18a-11dc-95ff-0800200c9a66" />
                         <object refid="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
-                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="" logGraphOnPlaybackStart="false">
+                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" tickMode="AUTO" xTickInterval="1.0" yTickInterval="0.5" multipleGraphableEnabled="true" graphListEditable="false" showControlBar="false" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5"  useDefaultToolBar="false" displayButtons="" logGraphOnPlaybackStart="false">
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -642,7 +642,7 @@
                                 </OTTimeLimitDataProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore dt="0.1" numberChannels="2">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="dt" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
@@ -661,6 +661,13 @@
                               <customGridLabels />
                             </OTDataAxis>
                           </yDataAxis>
+                          <graphables>
+                            <OTDataGraphable drawMarks="false" color="0xFF0000" connectPoints="true" xColumn="0" yColumn="1" name="Prediction" lineWidth="2.0" showAllChannels="true" visible="true">
+                              <dataStore>
+                                <object refid="${our_ds1}"  />
+                              </dataStore>
+                            </OTDataGraphable>
+                          </graphables>
                         </OTDataCollector>
                         <OTQuestion id="f6db4a60-e5fb-11e0-aaa9-e0cb4ebd2b6d" name="RevisionStoryResponse">
                           <prompt>
@@ -715,10 +722,11 @@
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="f6dafc40-e5fb-11e0-aa9b-e0cb4ebd2b6d" />
+                    <object refid="${page-1}" />
                   </currentCard>
                   <viewedCards>
                     <object refid="f6dafc40-e5fb-11e0-aa9b-e0cb4ebd2b6d" />
+                    <object refid="${page-1}" />
                   </viewedCards>
                 </OTCardContainer>
               </content>
