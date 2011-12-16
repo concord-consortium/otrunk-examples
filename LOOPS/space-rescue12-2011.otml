@@ -198,8 +198,24 @@
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              Practice Game: To begin, press <b><i>Setup</i></b> then <b><i>Start/Stop</i></b>. Fire the 
-          rocket engines with the <b><i>Left</i></b> and <b><i>Right</i></b> buttons.
+                              Practice Game: To begin, press
+                              <b>
+                                <i>Setup</i>
+                              </b>
+                              then
+                              <i>
+                                <b>Start/Stop</b>
+                              </i>
+                              . 
+          Fire the rocket engines with the
+                              <i>
+                                <b>Left</b>
+                              </i>
+                              and
+                              <i>
+                                <b>Right</b>
+                              </i>
+                              buttons.
                               <br />
                               <br />
                               <object refid="da6fbb40-5b45-11de-914d-6b8ca6afb695" />
@@ -233,8 +249,6 @@
                               <br />
                               <object refid="1a6c4c30-2774-11e1-80b5-1da3fc53c4bc" />
                               <br />
-                              <br />
-                              <object refid="3c0fbf7c-2774-11e1-80b5-1da3fc53c4bc" />
                               <br />
                               <br />
                               <object refid="63bb1521-2774-11e1-80b5-1da3fc53c4bc" />
@@ -283,7 +297,7 @@
                             </OTDataAxis>
                           </yDataAxis>
                         </OTDataCollector>
-                        <OTOverlayWrapper id="97eb2d97-2773-11e1-80b5-1da3fc53c4bc" name="PracticeGameGraph">
+                        <OTOverlayWrapper id="97eb2d97-2773-11e1-80b5-1da3fc53c4bc" name="PracticeGameGraph" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="${datagraph}" />
                           </wrappedObject>
@@ -298,7 +312,7 @@
                             <OTText name="Open response" />
                           </input>
                         </OTQuestion>
-                        <OTOverlayWrapper id="68f90cea-2773-11e1-80b5-1da3fc53c4bc" name="FastestSpeedQ">
+                        <OTOverlayWrapper id="68f90cea-2773-11e1-80b5-1da3fc53c4bc" name="FastestSpeedQ" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="b43cbd71-2772-11e1-837e-db5cad8e123e" />
                           </wrappedObject>
@@ -328,7 +342,7 @@
                             </OTChoice>
                           </input>
                         </OTQuestion>
-                        <OTOverlayWrapper id="ddc7da44-2773-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving">
+                        <OTOverlayWrapper id="ddc7da44-2773-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="b78e6410-2773-11e1-80b5-1da3fc53c4bc" />
                           </wrappedObject>
@@ -359,12 +373,7 @@
                             </OTObjectSet>
                           </correctAnswer>
                         </OTQuestion>
-                        <OTOverlayWrapper id="1a6c4c30-2774-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving">
-                          <wrappedObject>
-                            <object refid="f5712259-2773-11e1-80b5-1da3fc53c4bc" />
-                          </wrappedObject>
-                        </OTOverlayWrapper>
-                        <OTOverlayWrapper id="3c0fbf7c-2774-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving">
+                        <OTOverlayWrapper id="1a6c4c30-2774-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="f5712259-2773-11e1-80b5-1da3fc53c4bc" />
                           </wrappedObject>
@@ -385,7 +394,7 @@
                             </OTChoice>
                           </input>
                         </OTQuestion>
-                        <OTOverlayWrapper id="bb2159b4-2774-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving">
+                        <OTOverlayWrapper id="bb2159b4-2774-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="63bb1521-2774-11e1-80b5-1da3fc53c4bc" />
                           </wrappedObject>
