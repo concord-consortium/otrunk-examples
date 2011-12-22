@@ -203,14 +203,10 @@
                               To begin, press
                               <i>
                                 <b>Setup</b>
-                              </i>
-                              ,
-                              <b />
+                              </i>,
                               then
-                              <i>
-                                <b>Start/Stop</b>
-                              </i>
-                              . Fire the rocket engines with the
+                              <i><b>Start/Stop</b>
+                              </i>. Fire the rocket engines with the
                               <i>
                                 <b>Left</b>
                               </i>
@@ -348,7 +344,7 @@
                         <OTQuestion id="b78e6410-2773-11e1-80b5-1da3fc53c4bc" name="Firesto20mpsQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>How many times does the rocket have to fire to reach a speed of 20 m/s?</bodyText>
+                              <bodyText>How many times does the rocket (alone) have to fire to reach a speed of 20 m/s?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
