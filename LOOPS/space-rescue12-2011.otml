@@ -863,9 +863,10 @@
                               <br />
                               <u>Space Rescue Basic Game:</u>
                               To begin, press
-                              <i>
-                                <b>Setup,</b>
-                              </i>
+                              <b>
+                                <i>Setup,</i>
+                              </b>
+                              <i />
                               then
                               <i>
                                 <b>Start/Stop.</b>
@@ -886,7 +887,8 @@
                               <i>
                                 <b>Submit</b>
                               </i>
-                              your graph.
+                              your graph.  You may submit as many times as you like to try to 
+          get a better score.
                               <br />
                               <object refid="da6fbb42-5b45-11de-914d-6b8ca6afb695" />
                               <br />
@@ -947,8 +949,8 @@
                                 <OTCompoundDoc id="753c41d6-2cc8-11e1-a667-11dbdbe13ceb" name="The smaller the space between dots, the faster the rocket is going.">
                                   <bodyText>The smaller the space between dots, the faster the rocket is going.</bodyText>
                                 </OTCompoundDoc>
-                                <OTCompoundDoc id="7ee3e037-2cc8-11e1-a667-11dbdbe13ceb" name="The larger the space between dots, the faster ther rocket is going.">
-                                  <bodyText>The larger the space between dots, the faster ther rocket is going.</bodyText>
+                                <OTCompoundDoc id="9c7354e0-2ccc-11e1-aa03-db56757714cc" name="The larger the space between dots, the faster the rocket is going.">
+                                  <bodyText>The larger the space between dots, the faster the rocket is going.</bodyText>
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
@@ -956,7 +958,7 @@
                           <correctAnswer>
                             <OTObjectSet>
                               <objects>
-                                <object refid="7ee3e037-2cc8-11e1-a667-11dbdbe13ceb" />
+                                <object refid="9c7354e0-2ccc-11e1-aa03-db56757714cc" />
                               </objects>
                             </OTObjectSet>
                           </correctAnswer>
@@ -1687,7 +1689,7 @@
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="${page-3}" />
+                    <object refid="fb916175-7d53-11de-86c4-3d721432285a" />
                   </currentCard>
                   <viewedCards>
                     <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
@@ -1698,6 +1700,7 @@
                     <object refid="08d42a46-7c7a-11de-b0e6-75eb3a14c1be" />
                     <object refid="35555219-7c77-11de-b0e6-75eb3a14c1be" />
                     <object refid="${page-3}" />
+                    <object refid="fb916175-7d53-11de-86c4-3d721432285a" />
                   </viewedCards>
                 </OTCardContainer>
               </content>
