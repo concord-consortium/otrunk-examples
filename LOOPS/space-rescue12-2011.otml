@@ -90,11 +90,12 @@
     <import class="org.concord.otrunk.ui.menu.OTMenuRule" />
     <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
     <import class="org.concord.otrunk.intrasession.OTIntrasessionService" />
+    <import class="org.concord.otrunk.logging.OTModelEvent" />
   </imports>
   <objects>
     <OTSystem local_id="system">
       <includes>
-        <OTInclude href="global-imports/loops-view-bundle.otml" />
+        <OTInclude href="http://otrunk.concord.org/examples/LOOPS/global-imports/loops-view-bundle.otml" />
       </includes>
       <bundles>
         <object refid="8d880970-c22a-11dc-95ff-0800200c9a66" />
@@ -118,7 +119,7 @@
         <OTOverlay>
           <deltaObjectMap>
             <entry key="${authoring_script.js}">
-              <OTJavascript src="scripts/student_script.js" />
+              <OTJavascript src="http://otrunk.concord.org/examples/LOOPS/scripts/student_script.js" />
             </entry>
           </deltaObjectMap>
         </OTOverlay>
@@ -198,16 +199,18 @@
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              Practice Game: To begin, press
-                              <b>
-                                <i>Setup</i>
-                              </b>
+                              <u>Practice Game:</u>
+                              To begin, press
+                              <i>
+                                <b>Setup</b>
+                              </i>
+                              ,
+                              <b />
                               then
                               <i>
                                 <b>Start/Stop</b>
                               </i>
-                              . 
-          Fire the rocket engines with the
+                              . Fire the rocket engines with the
                               <i>
                                 <b>Left</b>
                               </i>
@@ -258,6 +261,12 @@
                               <br />
                               <br />
                               <br />
+                              <object refid="4e19be9d-2cb8-11e1-8f52-4359a9f5273b" />
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="341c0929-2cb9-11e1-8f52-4359a9f5273b" />
+                              <br />
                               <br />
                               <br />
                             </div>
@@ -265,7 +274,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTNLogoModel id="da6fbb40-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="models/Spaceship.1D.docking.nlogo" startButtonName="Start/stop" resetButtonName="Setup">
+                                              <OTNLogoModel id="da6fbb40-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="models/Spaceship.1D.docking.nlogo" startButtonName="Start/stop" resetButtonName="Setup">
                           <variables>
                             <string>rocket-x-vel</string>
                           </variables>
@@ -296,6 +305,10 @@
                               <customGridLabels />
                             </OTDataAxis>
                           </yDataAxis>
+                          <log>
+                            <OTModelEvent type="STOP" timestamp="1324571203847" />
+                            <OTModelEvent type="STOP" timestamp="1324571203847" />
+                          </log>
                         </OTDataCollector>
                         <OTOverlayWrapper id="97eb2d97-2773-11e1-80b5-1da3fc53c4bc" name="PracticeGameGraph" embedWrappedObject="false">
                           <wrappedObject>
@@ -309,7 +322,22 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText name="Open response" />
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="62ed6dab-2cb7-11e1-8f52-4359a9f5273b" name="10 m/s">
+                                  <bodyText>10 m/s</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="65be8f0c-2cb7-11e1-8f52-4359a9f5273b" name="20 m/s">
+                                  <bodyText>20 m/s</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="682751ad-2cb7-11e1-8f52-4359a9f5273b" name="30 m/s">
+                                  <bodyText>30 m/s</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="6d7a14de-2cb7-11e1-8f52-4359a9f5273b" name="40 m/s">
+                                  <bodyText>40 m/s</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="68f90cea-2773-11e1-80b5-1da3fc53c4bc" name="FastestSpeedQ" embedWrappedObject="false">
@@ -341,6 +369,13 @@
                               </choices>
                             </OTChoice>
                           </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="d2874c5c-2773-11e1-80b5-1da3fc53c4bc" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
                         </OTQuestion>
                         <OTOverlayWrapper id="ddc7da44-2773-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
@@ -356,11 +391,11 @@
                           <input>
                             <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
                               <choices>
-                                <OTCompoundDoc id="0c4ba8c5-2774-11e1-80b5-1da3fc53c4bc" name="yes">
-                                  <bodyText>yes</bodyText>
-                                </OTCompoundDoc>
                                 <OTCompoundDoc id="0dc59e96-2774-11e1-80b5-1da3fc53c4bc" name="no">
                                   <bodyText>no</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="2e9ef78a-2cb8-11e1-8f52-4359a9f5273b" name="yes">
+                                  <bodyText>yes</bodyText>
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
@@ -390,13 +425,63 @@
                                 <OTCompoundDoc id="a555ab3f-2774-11e1-80b5-1da3fc53c4bc" name="It stops moving.">
                                   <bodyText>It stops moving.</bodyText>
                                 </OTCompoundDoc>
+                                <OTCompoundDoc id="06ffd6b0-2cb8-11e1-8f52-4359a9f5273b" name="It moves two times slower.">
+                                  <bodyText>It moves two times slower.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="0af071d1-2cb8-11e1-8f52-4359a9f5273b" name="It moves two times faster.">
+                                  <bodyText>It moves two times faster.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="10a0be52-2cb8-11e1-8f52-4359a9f5273b" name="It continues at the same speed.">
+                                  <bodyText>It continues at the same speed.</bodyText>
+                                </OTCompoundDoc>
                               </choices>
                             </OTChoice>
                           </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="0af071d1-2cb8-11e1-8f52-4359a9f5273b" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
                         </OTQuestion>
                         <OTOverlayWrapper id="bb2159b4-2774-11e1-80b5-1da3fc53c4bc" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="63bb1521-2774-11e1-80b5-1da3fc53c4bc" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="4e19be9d-2cb8-11e1-8f52-4359a9f5273b" name="StopRocketQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>How do you make the rocket and shuttle stop at the end of the game?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="af95571c-2cb8-11e1-8f52-4359a9f5273b" name="The rocket stops by itself.">
+                                  <bodyText>The rocket stops by itself.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="020772d2-2cb9-11e1-8f52-4359a9f5273b" name="Fire the rocket &quot;left&quot; as many times as it was fired &quot;right.&quot;">
+                                  <bodyText>Fire the rocket "left" as many times as it was fired "right."</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="14e920b3-2cb9-11e1-8f52-4359a9f5273b" name="Fire the rocket with shuttle twice as many times as the rocket alone was fired.">
+                                  <bodyText>Fire the rocket with shuttle twice as many times as the rocket alone was fired.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="020772d2-2cb9-11e1-8f52-4359a9f5273b" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="341c0929-2cb9-11e1-8f52-4359a9f5273b" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="4e19be9d-2cb8-11e1-8f52-4359a9f5273b" />
                           </wrappedObject>
                         </OTOverlayWrapper>
                       </documentRefs>
@@ -603,7 +688,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTNLogoModel id="da6fbb41-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="models/SpaceRescue.v2-1.nlogo" />
+                        <OTNLogoModel id="da6fbb41-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/LOOPS/models/SpaceRescue.v2-1.nlogo" />
                       </documentRefs>
                     </OTCompoundDoc>
                     <OTCompoundDoc id="08d42a46-7c7a-11de-b0e6-75eb3a14c1be" name="%08d42a46-7c7a-11de-b0e6-75eb3a14c1be" showEditBar="true">
@@ -769,7 +854,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTNLogoModel id="da6fbb42-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="models/SpaceRescue.Basic.Game1.nlogo" />
+                        <OTNLogoModel id="da6fbb42-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/LOOPS/models/SpaceRescue.Basic.Game1.nlogo" />
                       </documentRefs>
                     </OTCompoundDoc>
                     <OTCompoundDoc id="fb916175-7d53-11de-86c4-3d721432285a" name="%fb916175-7d53-11de-86c4-3d721432285a" showEditBar="true">
@@ -961,7 +1046,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTNLogoModel id="da6fbb43-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="models/SpaceRescue.2D.game1.nlogo" />
+                        <OTNLogoModel id="da6fbb43-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/LOOPS/models/SpaceRescue.2D.game1.nlogo" />
                       </documentRefs>
                     </OTCompoundDoc>
                     <OTCompoundDoc name="%71883c77-7de5-11de-a225-011ffa63f2e0" showEditBar="true">
@@ -1241,6 +1326,7 @@
                     <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
                     <object refid="fcebd776-7b9d-11de-9f61-b5789c46dafe" />
                     <object refid="${page-1}" />
+                    <object refid="c7986f28-7c74-11de-b0e6-75eb3a14c1be" />
                   </viewedCards>
                 </OTCardContainer>
               </content>
@@ -1275,9 +1361,9 @@
         </OTMenu>
         <OTSnapshotAlbum local_id="album" />
         <OTMenuRule local_id="page-rule" jumpToViewedCard="true" stepAhead="true" />
-        <OTJavascript local_id="change_page.js" src="../common/scripts/change_page.js" />
-        <OTJavascript local_id="show_message.js" src="../common/scripts/show_message.js" />
-        <OTJavascript local_id="loops_authoring_script.js" src="../common/scripts/loops_authoring_script.js" />
+        <OTJavascript local_id="change_page.js" src="http://otrunk.concord.org/examples/common/scripts/change_page.js" />
+        <OTJavascript local_id="show_message.js" src="http://otrunk.concord.org/examples/common/scripts/show_message.js" />
+        <OTJavascript local_id="loops_authoring_script.js" src="http://otrunk.concord.org/examples/common/scripts/loops_authoring_script.js" />
         <OTScriptObject local_id="authoring-script">
           <variables>
             <OTScriptVariable name="cardContainer">
