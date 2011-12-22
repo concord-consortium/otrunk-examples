@@ -487,32 +487,64 @@
                     </OTCompoundDoc>
                     <OTCompoundDoc id="fcebd776-7b9d-11de-9f61-b5789c46dafe" name="%fcebd776-7b9d-11de-9f61-b5789c46dafe" showEditBar="true">
                       <documentRefs>
-                        <OTQuestion id="a500fee4-7bb0-11de-96cd-839ce163f942" name="ControlQ">
+                        <OTQuestion id="370d9821-2cc6-11e1-a667-11dbdbe13ceb" name="HypothesisQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What did you learn about controlling the rocket?  Write some rules for rescuing the shuttle.</bodyText>
+                              <bodyText>A rocket is traveling in a straight line at a speed of 20 m/s.  It uses up the fuel in its fuel tanks, making it less massive.  What happens to the speed of the rocket?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText rows="4" />
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="a0d29eed-2cc6-11e1-a667-11dbdbe13ceb" name="It speeds up.">
+                                  <bodyText>It speeds up.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="a3f9cf8e-2cc6-11e1-a667-11dbdbe13ceb" name="It slows down.">
+                                  <bodyText>It slows down.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="aa36f2bf-2cc6-11e1-a667-11dbdbe13ceb" name="It keeps going the same speed.">
+                                  <bodyText>It keeps going the same speed.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
                           </input>
                         </OTQuestion>
-                        <OTOverlayWrapper id="c9ef9bc7-2cbd-11e1-ba54-a5c6ffdf6e2d" name="Intrasession Saving" embedWrappedObject="false">
+                        <OTOverlayWrapper id="b6e9ae40-2cc6-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
-                            <object refid="a500fee4-7bb0-11de-96cd-839ce163f942" />
+                            <object refid="370d9821-2cc6-11e1-a667-11dbdbe13ceb" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="cda38d45-2cc6-11e1-a667-11dbdbe13ceb" name="ExplainQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>Explain your answer in the last question.</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText rows="3" />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="dc83b01c-2cc6-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="cda38d45-2cc6-11e1-a667-11dbdbe13ceb" />
                           </wrappedObject>
                         </OTOverlayWrapper>
                       </documentRefs>
                       <bodyText>
-                        <br />
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              <object refid="a500fee4-7bb0-11de-96cd-839ce163f942" />
+                              <br />
+                              <object refid="370d9821-2cc6-11e1-a667-11dbdbe13ceb" />
                               <br />
                               <br />
+                              <object refid="b6e9ae40-2cc6-11e1-a667-11dbdbe13ceb" />
                               <br />
-                              <object refid="c9ef9bc7-2cbd-11e1-ba54-a5c6ffdf6e2d" />
+                              <br />
+                              <object refid="cda38d45-2cc6-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="dc83b01c-2cc6-11e1-a667-11dbdbe13ceb" />
                               <br />
                               <br />
                               <br />
@@ -556,7 +588,9 @@
                             <div class="body">
                               <b>Rocket Engine Recharge Game</b>
                               <br />
-                              <u>Rocket Engine Recharge Game:</u>
+                              <br />
+                              <u>Rocket Engine Recharge 
+          Game:</u>
                               To begin, press
                               <i>
                                 <b>Setup,</b>
@@ -576,13 +610,13 @@
                               buttons. Remember to watch the time remaining!
                               <br />
                               <br />
-                              When you have 
-          successfully rescued the shuttle,
+                              When you 
+          have successfully rescued the shuttle,
                               <i>
                                 <b>Submit</b>
                               </i>
-                              your graph 
-          and answer the questions that follow.
+                              your 
+          graph and answer the questions that follow.
                               <br />
                               <br />
                               <object refid="da6fbb41-5b45-11de-914d-6b8ca6afb695" />
@@ -595,6 +629,18 @@
                               <br />
                               <br />
                               <object refid="6efeb802-2cc2-11e1-8fa0-e974fc7d3419" />
+                              <br />
+                              <br />
+                              <object refid="dfcb4c38-2cc4-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="172f9890-2cc5-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="34aa49db-2cc5-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="4491f0a2-2cc5-11e1-a667-11dbdbe13ceb" />
                               <br />
                               <br />
                               <br />
@@ -659,6 +705,52 @@
                             <object refid="ddf66c23-2cc1-11e1-8fa0-e974fc7d3419" />
                           </wrappedObject>
                         </OTOverlayWrapper>
+                        <OTQuestion id="dfcb4c38-2cc4-11e1-a667-11dbdbe13ceb" name="GraphTimeQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>Look at the graph.  Which trip took longer—the trip out to the shuttle or the trip back to the base?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="0a83bad9-2cc5-11e1-a667-11dbdbe13ceb" name="trip to the shuttle">
+                                  <bodyText>trip to the shuttle</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="0db328da-2cc5-11e1-a667-11dbdbe13ceb" name="trip back to the base">
+                                  <bodyText>trip back to the base</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="0db328da-2cc5-11e1-a667-11dbdbe13ceb" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="172f9890-2cc5-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="dfcb4c38-2cc4-11e1-a667-11dbdbe13ceb" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="34aa49db-2cc5-11e1-a667-11dbdbe13ceb" name="ExplainTimeQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>Why was there a difference in the amount of time each trip took?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText rows="2" />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="4491f0a2-2cc5-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="34aa49db-2cc5-11e1-a667-11dbdbe13ceb" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
                         <OTQuestion id="c91d6588-2cc2-11e1-8fa0-e974fc7d3419" name="DifferentJoinedQ">
                           <prompt>
                             <OTCompoundDoc>
@@ -706,7 +798,7 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText rows="2" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="83c2019d-2cc3-11e1-8fa0-e974fc7d3419" name="Intrasession Saving" embedWrappedObject="false">
@@ -717,99 +809,6 @@
                       </documentRefs>
                     </OTCompoundDoc>
                     <OTCompoundDoc id="08d42a46-7c7a-11de-b0e6-75eb3a14c1be" name="%08d42a46-7c7a-11de-b0e6-75eb3a14c1be" showEditBar="true">
-                      <documentRefs>
-                        <OTQuestion id="86478417-7d46-11de-b7e7-5b6a907558d8" name="Success2 (step 6)">
-                          <prompt>
-                            <OTCompoundDoc>
-                              <bodyText>Were you able to save the Shuttle?</bodyText>
-                            </OTCompoundDoc>
-                          </prompt>
-                          <input>
-                            <OTChoice name="Multiple choice" horizontal="true" alignContent="0">
-                              <choices>
-                                <OTCompoundDoc name="Yes">
-                                  <bodyText>Yes</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="No">
-                                  <bodyText>No</bodyText>
-                                </OTCompoundDoc>
-                              </choices>
-                            </OTChoice>
-                          </input>
-                        </OTQuestion>
-                        <OTQuestion id="56ff85fa-7d47-11de-b7e7-5b6a907558d8" name="RechargeTime">
-                          <prompt>
-                            <OTCompoundDoc>
-                              <bodyText>While the engine is recharging, the Rocket is</bodyText>
-                            </OTCompoundDoc>
-                          </prompt>
-                          <input>
-                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                              <choices>
-                                <OTCompoundDoc name="Slowing down">
-                                  <bodyText>Slowing down</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="Being attracted to either the Shuttle or home base">
-                                  <bodyText>Being attracted to either the Shuttle or home base</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="Speeding up">
-                                  <bodyText>Speeding up</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="Staying the same speed">
-                                  <bodyText>Staying the same speed</bodyText>
-                                </OTCompoundDoc>
-                              </choices>
-                            </OTChoice>
-                          </input>
-                        </OTQuestion>
-                        <OTQuestion id="a8957d8c-7d48-11de-b7e7-5b6a907558d8" name="DescribeTrips">
-                          <prompt>
-                            <OTCompoundDoc>
-                              <bodyText>What do you notice that is different about the return trip when the Rocket and Shuttle are joined?</bodyText>
-                            </OTCompoundDoc>
-                          </prompt>
-                          <input>
-                            <OTChoiceMultiple name="Multiple choice (check boxes)" horizontal="false" alignContent="0">
-                              <choices>
-                                <OTCompoundDoc name="The Rocket and Shuttle slow down more">
-                                  <bodyText>The Rocket and Shuttle slow down more</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="It takes more firings to stop">
-                                  <bodyText>It takes more firings to stop</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="It takes more firings to get going fast">
-                                  <bodyText>It takes more firings to get going fast</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc name="It is slower than the trip out">
-                                  <bodyText>It is slower than the trip out</bodyText>
-                                </OTCompoundDoc>
-                              </choices>
-                            </OTChoiceMultiple>
-                          </input>
-                        </OTQuestion>
-                        <OTQuestion id="5a4b3fe3-7d50-11de-86c4-3d721432285a" name="ExplainTrips">
-                          <prompt>
-                            <OTCompoundDoc>
-                              <bodyText>Can you explain why the trip out and the return trip are different?</bodyText>
-                            </OTCompoundDoc>
-                          </prompt>
-                          <input>
-                            <OTText />
-                          </input>
-                        </OTQuestion>
-                        <OTOverlayWrapper id="8801cb6f-7f00-11de-8ad2-1186905b2664" name="Intrasession Saving" embedWrappedObject="false" autoSubmit="true">
-                          <wrappedObject>
-                            <OTObjectSet name="Intrasession Saving (Set)">
-                              <objects>
-                                <object refid="86478417-7d46-11de-b7e7-5b6a907558d8" />
-                                <object refid="56ff85fa-7d47-11de-b7e7-5b6a907558d8" />
-                                <object refid="a8957d8c-7d48-11de-b7e7-5b6a907558d8" />
-                                <object refid="5a4b3fe3-7d50-11de-86c4-3d721432285a" />
-                              </objects>
-                            </OTObjectSet>
-                          </wrappedObject>
-                        </OTOverlayWrapper>
-                      </documentRefs>
                       <bodyText>
                         <br />
                         <div class="buffer">
@@ -817,21 +816,6 @@
                             <div class="body">
                               <b>Questions for the Rocket Engine Recharge Game</b>
                               <br />
-                              <br />
-                              <object refid="86478417-7d46-11de-b7e7-5b6a907558d8" />
-                              <br />
-                              <br />
-                              <object refid="56ff85fa-7d47-11de-b7e7-5b6a907558d8" />
-                              <br />
-                              <br />
-                              <br />
-                              <object refid="a8957d8c-7d48-11de-b7e7-5b6a907558d8" />
-                              <br />
-                              <br />
-                              <object refid="5a4b3fe3-7d50-11de-86c4-3d721432285a" />
-                              <br />
-                              <br />
-                              <object refid="8801cb6f-7f00-11de-8ad2-1186905b2664" />
                               <br />
                               <br />
                             </div>
@@ -847,16 +831,23 @@
                               <b>Space Rescue Basic Game</b>
                               <br />
                               <br />
-                              The Space Rescue Basic Game on the next page is very much like the warm-up games you have already played, but now we keep score!
+                              The Space Rescue Basic Game 
+          (on the next page) is very much like the space rescue games you have 
+          already played, but now we keep score!
                               <br />
                               <br />
-                              The Rocket's engine still needs to recharge between firings.
+                              The rocket's engine 
+          still needs to recharge between firings, so you still need to plan 
+          when you'll fire the engines.
                               <br />
                               <br />
-                              Try to get a high score!  In order to score, you need to return to the green zone with the shuttle.
+                              Try to get a high score! To get 
+          a score, you must return to the green zone with the shuttle.
                               <br />
                               <br />
-                              You have 60 seconds to rescue the Shuttle.  Go on to the next page to play.
+                              You 
+          have 60 seconds to rescue the shuttle. Go on to the next page to 
+          play.
                               <br />
                               <br />
                             </div>
@@ -869,9 +860,62 @@
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              Space Rescue Basic Game
+                              <br />
+                              <u>Space Rescue Basic Game:</u>
+                              To begin, press
+                              <i>
+                                <b>Setup,</b>
+                              </i>
+                              then
+                              <i>
+                                <b>Start/Stop.</b>
+                              </i>
+                              Fire the rocket engines with the
+                              <i>
+                                <b>Left</b>
+                              </i>
+                              and
+                              <i>
+                                <b>Right</b>
+                              </i>
+                              buttons. Remember to watch the time 
+          remaining!
+                              <br />
+                              <br />
+                              When you have successfully rescued the shuttle,
+                              <i>
+                                <b>Submit</b>
+                              </i>
+                              your graph.
                               <br />
                               <object refid="da6fbb42-5b45-11de-914d-6b8ca6afb695" />
+                              <br />
+                              <br />
+                              <object refid="4003f2a7-2cc7-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="0f5622e5-2cc8-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="8aab9f7d-2cc8-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="96225892-2cc8-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="e92ce42b-2cc8-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="f63cb3d0-2cc8-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="8ed4eb87-2cca-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="eaf1cf79-2cc9-11e1-a667-11dbdbe13ceb" />
+                              <br />
+                              <br />
+                              <object refid="6f121f00-2cca-11e1-a667-11dbdbe13ceb" />
                               <br />
                               <br />
                             </div>
@@ -880,6 +924,154 @@
                       </bodyText>
                       <documentRefs>
                         <OTNLogoModel id="da6fbb42-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/LOOPS/models/SpaceRescue.Basic.Game1.nlogo" />
+                        <OTOverlayWrapper id="4003f2a7-2cc7-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="da6fbb42-5b45-11de-914d-6b8ca6afb695" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="0f5622e5-2cc8-11e1-a667-11dbdbe13ceb" name="DotQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>In this game, the rocket leaves a trail of dots behind it.  What do these dots tell you?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="2a3c4681-2cc8-11e1-a667-11dbdbe13ceb" name="The rocket has power.">
+                                  <bodyText>The rocket has power.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="58030685-2cc8-11e1-a667-11dbdbe13ceb" name="The rocket is ready to fire.">
+                                  <bodyText>The rocket is ready to fire.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="753c41d6-2cc8-11e1-a667-11dbdbe13ceb" name="The smaller the space between dots, the faster the rocket is going.">
+                                  <bodyText>The smaller the space between dots, the faster the rocket is going.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="7ee3e037-2cc8-11e1-a667-11dbdbe13ceb" name="The larger the space between dots, the faster ther rocket is going.">
+                                  <bodyText>The larger the space between dots, the faster ther rocket is going.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="7ee3e037-2cc8-11e1-a667-11dbdbe13ceb" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="8aab9f7d-2cc8-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="0f5622e5-2cc8-11e1-a667-11dbdbe13ceb" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="96225892-2cc8-11e1-a667-11dbdbe13ceb" name="DotSpaceQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>When is the spacing between the dots not the same? (Select all correct answers.)</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoiceMultiple name="Multiple choice (check boxes)" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="cd5eaa83-2cc8-11e1-a667-11dbdbe13ceb" name="The rocket speeds up.">
+                                  <bodyText>The rocket speeds up.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="d12bb814-2cc8-11e1-a667-11dbdbe13ceb" name="The rocket slows down.">
+                                  <bodyText>The rocket slows down.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="d76272a5-2cc8-11e1-a667-11dbdbe13ceb" name="The rocket travels at constant speed.">
+                                  <bodyText>The rocket travels at constant speed.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoiceMultiple>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="cd5eaa83-2cc8-11e1-a667-11dbdbe13ceb" />
+                                <object refid="d12bb814-2cc8-11e1-a667-11dbdbe13ceb" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="e92ce42b-2cc8-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="96225892-2cc8-11e1-a667-11dbdbe13ceb" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="f63cb3d0-2cc8-11e1-a667-11dbdbe13ceb" name="Fire2XQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>If the rocket is stopped, and you fire one time and then another in the same direction, waiting for the engine to recharge, and you do not hit a wall, what will be the change in the rocket's speed?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="74dbdd1e-2cc9-11e1-a667-11dbdbe13ceb" name="The rocket will go half the speed of firing once.">
+                                  <bodyText>The rocket will go half the speed of firing once.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="7b56305f-2cc9-11e1-a667-11dbdbe13ceb" name="The rocket will go twice the speed of firing once.">
+                                  <bodyText>The rocket will go twice the speed of firing once.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="97e41080-2cc9-11e1-a667-11dbdbe13ceb" name="The rocket does not always have the same speed.">
+                                  <bodyText>The rocket does not always have the same speed.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="7b56305f-2cc9-11e1-a667-11dbdbe13ceb" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="8ed4eb87-2cca-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="f63cb3d0-2cc8-11e1-a667-11dbdbe13ceb" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="eaf1cf79-2cc9-11e1-a667-11dbdbe13ceb" name="RocketStopQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>What is a good rule for stopping the rocket or stopping the joined rocket and shuttle?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="146959a6-2cca-11e1-a667-11dbdbe13ceb" name="Crash into the walls.">
+                                  <bodyText>Crash into the walls.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="1b9c9ca7-2cca-11e1-a667-11dbdbe13ceb" name="Keep firing the rocket until it stops.">
+                                  <bodyText>Keep firing the rocket until it stops.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="3219c0c8-2cca-11e1-a667-11dbdbe13ceb" name="Fire one time in the direction opposite to the one the rocket is traveling.">
+                                  <bodyText>Fire one time in the direction opposite to the one the rocket is traveling.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="55032189-2cca-11e1-a667-11dbdbe13ceb" name="Fire the same number of times as you did to move the rocket, but in the opposite direction.">
+                                  <bodyText>Fire the same number of times as you did to move the rocket, but in the opposite direction.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="55032189-2cca-11e1-a667-11dbdbe13ceb" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="6f121f00-2cca-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="eaf1cf79-2cc9-11e1-a667-11dbdbe13ceb" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
                     <OTCompoundDoc id="fb916175-7d53-11de-86c4-3d721432285a" name="%fb916175-7d53-11de-86c4-3d721432285a" showEditBar="true">
@@ -1319,17 +1511,83 @@
                         </OTMultiUserPollingGraph>
                         <OTMultiUserPollingGraph id="8e0d594d-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
                           <object>
-                            <object refid="86478417-7d46-11de-b7e7-5b6a907558d8" />
+                            <OTQuestion id="86478417-7d46-11de-b7e7-5b6a907558d8" name="Success2 (step 6)">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>Were you able to save the Shuttle?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" horizontal="true" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Yes">
+                                      <bodyText>Yes</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="No">
+                                      <bodyText>No</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTQuestion>
                           </object>
                         </OTMultiUserPollingGraph>
                         <OTMultiUserPollingGraph id="b36a2b0e-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
                           <object>
-                            <object refid="56ff85fa-7d47-11de-b7e7-5b6a907558d8" />
+                            <OTQuestion id="56ff85fa-7d47-11de-b7e7-5b6a907558d8" name="RechargeTime">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>While the engine is recharging, the Rocket is</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="Slowing down">
+                                      <bodyText>Slowing down</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Being attracted to either the Shuttle or home base">
+                                      <bodyText>Being attracted to either the Shuttle or home base</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Speeding up">
+                                      <bodyText>Speeding up</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="Staying the same speed">
+                                      <bodyText>Staying the same speed</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoice>
+                              </input>
+                            </OTQuestion>
                           </object>
                         </OTMultiUserPollingGraph>
                         <OTMultiUserPollingGraph id="bca1063f-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
                           <object>
-                            <object refid="a8957d8c-7d48-11de-b7e7-5b6a907558d8" />
+                            <OTQuestion id="a8957d8c-7d48-11de-b7e7-5b6a907558d8" name="DescribeTrips">
+                              <prompt>
+                                <OTCompoundDoc>
+                                  <bodyText>What do you notice that is different about the return trip when the Rocket and Shuttle are joined?</bodyText>
+                                </OTCompoundDoc>
+                              </prompt>
+                              <input>
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" horizontal="false" alignContent="0">
+                                  <choices>
+                                    <OTCompoundDoc name="The Rocket and Shuttle slow down more">
+                                      <bodyText>The Rocket and Shuttle slow down more</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="It takes more firings to stop">
+                                      <bodyText>It takes more firings to stop</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="It takes more firings to get going fast">
+                                      <bodyText>It takes more firings to get going fast</bodyText>
+                                    </OTCompoundDoc>
+                                    <OTCompoundDoc name="It is slower than the trip out">
+                                      <bodyText>It is slower than the trip out</bodyText>
+                                    </OTCompoundDoc>
+                                  </choices>
+                                </OTChoiceMultiple>
+                              </input>
+                            </OTQuestion>
                           </object>
                         </OTMultiUserPollingGraph>
                         <OTMultiUserPollingGraph id="dac45371-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
@@ -1429,7 +1687,7 @@
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="${page-2}" />
+                    <object refid="${page-3}" />
                   </currentCard>
                   <viewedCards>
                     <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
@@ -1437,6 +1695,9 @@
                     <object refid="${page-1}" />
                     <object refid="c7986f28-7c74-11de-b0e6-75eb3a14c1be" />
                     <object refid="${page-2}" />
+                    <object refid="08d42a46-7c7a-11de-b0e6-75eb3a14c1be" />
+                    <object refid="35555219-7c77-11de-b0e6-75eb3a14c1be" />
+                    <object refid="${page-3}" />
                   </viewedCards>
                 </OTCardContainer>
               </content>
