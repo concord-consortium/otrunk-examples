@@ -216,7 +216,7 @@
                               <i>
                                 <b>Right</b>
                               </i>
-                              buttons.  Stop the rocket when it is over the shuttle to pick it up and start towing it back home.
+                              buttons.  Stop the rocket when it is over the shuttle to pick it up and start towing it back home.  The rocket and shuttle will turn red when they are locked together.
                               <br />
                               <br />
                               When you have successfully rescued the shuttle,
