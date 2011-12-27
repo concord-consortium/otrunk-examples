@@ -780,7 +780,7 @@
                         <OTQuestion id="553c0699-30b0-11e1-a03d-71a42947a83d" name="HypothesisQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>The rocket is traveling in a straight line at a speed of 20 m/s.  As it uses up its fuel, it becomes less massive.  How does this affect the speed of the rocket?</bodyText>
+                              <bodyText>A rocket is traveling in a straight line at a speed of 20 m/s.  As it uses up its fuel, it becomes less massive.  How does this affect the speed of the rocket?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -894,7 +894,6 @@
                               <i>
                                 <b>Setup,</b>
                               </i>
-                              <b />
                               then
                               <i>
                                 <b>Start/Stop.</b>
