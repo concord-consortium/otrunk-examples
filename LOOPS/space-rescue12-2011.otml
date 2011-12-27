@@ -761,7 +761,7 @@
                         <OTQuestion id="35b9a842-2cc3-11e1-8fa0-e974fc7d3419" name="ExplainQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>Why is there a difference between the trip to the shuttle and the trip back to the base?  How does that affect the speed?</bodyText>
+                              <bodyText>How does having the shuttle attached to the rocket affect the speed?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
