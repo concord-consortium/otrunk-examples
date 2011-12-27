@@ -278,7 +278,7 @@
                             <string>rocket-x-vel</string>
                           </variables>
                         </OTNLogoModel>
-                        <OTDataCollector local_id="datagraph" name="Velocity" title="Velocity Graph" autoScaleEnabled="true" showControlBar="false" showLabelCoordinates="true" labelDecimalPlaces="2" useDefaultToolBar="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
+                        <OTDataCollector local_id="datagraph" name="Velocity" title="Velocity Graph" autoScaleEnabled="true" showControlBar="false" showLabelCoordinates="true" labelDecimalPlaces="2" useDefaultToolBar="true" tickMode="AUTO" xTickInterval="2.0" yTickInterval="10.0">
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -487,41 +487,14 @@
                     </OTCompoundDoc>
                     <OTCompoundDoc id="fcebd776-7b9d-11de-9f61-b5789c46dafe" name="%fcebd776-7b9d-11de-9f61-b5789c46dafe" showEditBar="true">
                       <documentRefs>
-                        <OTQuestion id="370d9821-2cc6-11e1-a667-11dbdbe13ceb" name="HypothesisQ">
+                        <OTQuestion id="cda38d45-2cc6-11e1-a667-11dbdbe13ceb" name="RuleQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>A rocket is traveling in a straight line at a speed of 20 m/s.  It uses up the fuel in its fuel tanks, making it less massive.  What happens to the speed of the rocket?</bodyText>
+                              <bodyText>Write some rules for controlling the rocket and rescuing the shuttle.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                              <choices>
-                                <OTCompoundDoc id="a0d29eed-2cc6-11e1-a667-11dbdbe13ceb" name="It speeds up.">
-                                  <bodyText>It speeds up.</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc id="a3f9cf8e-2cc6-11e1-a667-11dbdbe13ceb" name="It slows down.">
-                                  <bodyText>It slows down.</bodyText>
-                                </OTCompoundDoc>
-                                <OTCompoundDoc id="aa36f2bf-2cc6-11e1-a667-11dbdbe13ceb" name="It keeps going the same speed.">
-                                  <bodyText>It keeps going the same speed.</bodyText>
-                                </OTCompoundDoc>
-                              </choices>
-                            </OTChoice>
-                          </input>
-                        </OTQuestion>
-                        <OTOverlayWrapper id="b6e9ae40-2cc6-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
-                          <wrappedObject>
-                            <object refid="370d9821-2cc6-11e1-a667-11dbdbe13ceb" />
-                          </wrappedObject>
-                        </OTOverlayWrapper>
-                        <OTQuestion id="cda38d45-2cc6-11e1-a667-11dbdbe13ceb" name="ExplainQ">
-                          <prompt>
-                            <OTCompoundDoc>
-                              <bodyText>Explain your answer in the last question.</bodyText>
-                            </OTCompoundDoc>
-                          </prompt>
-                          <input>
-                            <OTText rows="3" />
+                            <OTText rows="4" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="dc83b01c-2cc6-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
@@ -534,12 +507,6 @@
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              <br />
-                              <object refid="370d9821-2cc6-11e1-a667-11dbdbe13ceb" />
-                              <br />
-                              <br />
-                              <object refid="b6e9ae40-2cc6-11e1-a667-11dbdbe13ceb" />
-                              <br />
                               <br />
                               <object refid="cda38d45-2cc6-11e1-a667-11dbdbe13ceb" />
                               <br />
@@ -807,6 +774,82 @@
                           </wrappedObject>
                         </OTOverlayWrapper>
                       </documentRefs>
+                    </OTCompoundDoc>
+                                        <OTCompoundDoc id="374101e8-30b0-11e1-a03d-71a42947a83d" name="%374101e8-30b0-11e1-a03d-71a42947a83d" showEditBar="true">
+                      <documentRefs>
+                        <OTQuestion id="553c0699-30b0-11e1-a03d-71a42947a83d" name="HypothesisQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>The rocket is traveling in a straight line at a speed of 20 m/s.  As it uses up its fuel, it becomes less massive.  How does this affect the speed of the rocket?</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
+                              <choices>
+                                <OTCompoundDoc id="a8df01a8-30b0-11e1-a03d-71a42947a83d" name="The rocket slows down.">
+                                  <bodyText>The rocket slows down.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="8e33eb3d-30b0-11e1-a03d-71a42947a83d" name="The rocket speeds up.">
+                                  <bodyText>The rocket speeds up.</bodyText>
+                                </OTCompoundDoc>
+                                <OTCompoundDoc id="9ac933ae-30b0-11e1-a03d-71a42947a83d" name="The rocket continues at the same speed.">
+                                  <bodyText>The rocket continues at the same speed.</bodyText>
+                                </OTCompoundDoc>
+                              </choices>
+                            </OTChoice>
+                          </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="8e33eb3d-30b0-11e1-a03d-71a42947a83d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="b35cdbc9-30b0-11e1-a03d-71a42947a83d" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="553c0699-30b0-11e1-a03d-71a42947a83d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="bf63edfe-30b0-11e1-a03d-71a42947a83d" name="ExplainQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>Explain your answer to the previous question.</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText rows="4" />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="d306a1f5-30b0-11e1-a03d-71a42947a83d" name="Intrasession Saving" embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="bf63edfe-30b0-11e1-a03d-71a42947a83d" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                      </documentRefs>
+                      <bodyText>
+                        <div class="buffer">
+                          <div class="border">
+                            <div class="body">
+                              <br />
+                              <object refid="553c0699-30b0-11e1-a03d-71a42947a83d" />
+                              <br />
+                              <br />
+                              <object refid="b35cdbc9-30b0-11e1-a03d-71a42947a83d" />
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="bf63edfe-30b0-11e1-a03d-71a42947a83d" />
+                              <br />
+                              <br />
+                              <br />
+                              <object refid="d306a1f5-30b0-11e1-a03d-71a42947a83d" />
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      </bodyText>
                     </OTCompoundDoc>
                     <OTCompoundDoc id="35555219-7c77-11de-b0e6-75eb3a14c1be" name="%35555219-7c77-11de-b0e6-75eb3a14c1be" showEditBar="true">
                       <bodyText>
@@ -1672,20 +1715,21 @@
                         <br />
                       </bodyText>
                     </OTCompoundDoc>
+
                   </cards>
                   <currentCard>
-                    <object refid="fb916175-7d53-11de-86c4-3d721432285a" />
+                    <object refid="374101e8-30b0-11e1-a03d-71a42947a83d" />
                   </currentCard>
                   <viewedCards>
                     <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
-                    <object refid="fcebd776-7b9d-11de-9f61-b5789c46dafe" />
                     <object refid="${page-1}" />
+                    <object refid="fcebd776-7b9d-11de-9f61-b5789c46dafe" />
                     <object refid="c7986f28-7c74-11de-b0e6-75eb3a14c1be" />
                     <object refid="${page-2}" />
-                    <object refid="08d42a46-7c7a-11de-b0e6-75eb3a14c1be" />
                     <object refid="35555219-7c77-11de-b0e6-75eb3a14c1be" />
                     <object refid="${page-3}" />
                     <object refid="fb916175-7d53-11de-86c4-3d721432285a" />
+                    <object refid="374101e8-30b0-11e1-a03d-71a42947a83d" />
                   </viewedCards>
                 </OTCardContainer>
               </content>
