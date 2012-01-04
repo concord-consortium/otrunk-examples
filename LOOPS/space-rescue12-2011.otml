@@ -415,7 +415,7 @@
                         <OTQuestion id="63bb1521-2774-11e1-80b5-1da3fc53c4bc" name="Fire2xQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>If you fire the rocket two times in the same direction, what happens?</bodyText>
+                              <bodyText>If you fire the rocket two times in the same direction from a dead stop, what happens?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -1305,7 +1305,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc name="%2828bc96-7de3-11de-a225-011ffa63f2e0" showEditBar="true">
+                    <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/activity-card-container/cards[9]" name="%2828bc96-7de3-11de-a225-011ffa63f2e0" showEditBar="true">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -1358,23 +1358,21 @@
                               <i>
                                 <b>Left, 
           Right,</b>
-                              </i>
-                              <i>
                                 <b>Up,</b>
                               </i>
                               and
                               <i>
                                 <b>Down</b>
                               </i>
-                              buttons. 
-          Remember to watch the time remaining!
+                              buttons. Remember 
+          to watch the time remaining!
                               <br />
                               <br />
                               Remember to
                               <i>
                                 <b>Submit</b>
                               </i>
-                              your graph!
+                              !
                               <br />
                               <br />
                               <object refid="da6fbb43-5b45-11de-914d-6b8ca6afb695" />
@@ -1387,6 +1385,13 @@
                               <br />
                               <br />
                               <object refid="9822401b-30b9-11e1-bc14-fbff49ab140f" />
+                              <br />
+                              <br />
+                              <object refid="b9eaabed-36f4-11e1-abb2-47e1ad83f29a" />
+                              <br />
+                              <br />
+                              <object refid="1c1374b4-36f5-11e1-abb2-47e1ad83f29a" />
+                              <br />
                               <br />
                               <br />
                               <object refid="435c8597-30bb-11e1-bc14-fbff49ab140f" />
@@ -1440,6 +1445,21 @@
                         <OTOverlayWrapper id="9822401b-30b9-11e1-bc14-fbff49ab140f" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="1d304146-30b9-11e1-bc14-fbff49ab140f" />
+                          </wrappedObject>
+                        </OTOverlayWrapper>
+                        <OTQuestion id="b9eaabed-36f4-11e1-abb2-47e1ad83f29a" name="WhyOR">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText>If you were unable to rescue the shuttle, explain why not.  If you did rescue the shuttle, explain how you did it.</bodyText>
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTText />
+                          </input>
+                        </OTQuestion>
+                        <OTOverlayWrapper id="1c1374b4-36f5-11e1-abb2-47e1ad83f29a" name="WhyORIntrasession " embedWrappedObject="false">
+                          <wrappedObject>
+                            <object refid="b9eaabed-36f4-11e1-abb2-47e1ad83f29a" />
                           </wrappedObject>
                         </OTOverlayWrapper>
                         <OTQuestion id="435c8597-30bb-11e1-bc14-fbff49ab140f" name="VectorQ">
@@ -2079,10 +2099,20 @@
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
+                    <object refid="${page-4}" />
                   </currentCard>
                   <viewedCards>
                     <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
+                    <object refid="${page-1}" />
+                    <object refid="fcebd776-7b9d-11de-9f61-b5789c46dafe" />
+                    <object refid="c7986f28-7c74-11de-b0e6-75eb3a14c1be" />
+                    <object refid="${page-2}" />
+                    <object refid="374101e8-30b0-11e1-a03d-71a42947a83d" />
+                    <object refid="35555219-7c77-11de-b0e6-75eb3a14c1be" />
+                    <object refid="${page-3}" />
+                    <object refid="fb916175-7d53-11de-86c4-3d721432285a" />
+                    <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/activity-card-container/cards[9]" />
+                    <object refid="${page-4}" />
                   </viewedCards>
                 </OTCardContainer>
               </content>
