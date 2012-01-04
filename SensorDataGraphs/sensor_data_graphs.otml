@@ -89,6 +89,7 @@ Sensor Type Ids from SensorConfig
     <import class="org.concord.otrunk.ui.OTChoice"/>
     <import class="org.concord.data.state.OTLinearProducerFilter"/>
     <import class="org.concord.data.state.OTIntegratingProducerFilter"/>
+    <import class="org.concord.data.state.OTDifferentiatingProducerFilter"/>
   </imports>
   <objects>
     <OTSystem>
@@ -539,6 +540,30 @@ Sensor Type Ids from SensorConfig
                 <OTDataAxis min="-5" max="5" label="Distance" units="m"/>
               </yDataAxis>
             </OTDataCollector>
+            <OTDataCollector name="Velocity Calculated">
+              <source>
+                <OTDataGraphable connectPoints="true" color="0xff0000"
+                  drawMarks="false" name="Dataset1" xColumn="0" yColumn="1">
+                  <dataProducer>
+                    <OTDifferentiatingProducerFilter sourceChannel="1"
+            source="${motion_dp}">
+                      <channelDescription>
+                        <OTDataChannelDescription>
+                          <unit>m/s</unit>
+                          <precision>-1</precision>
+                        </OTDataChannelDescription>
+                      </channelDescription>
+                    </OTDifferentiatingProducerFilter>
+                  </dataProducer>
+                </OTDataGraphable>
+              </source>
+              <xDataAxis>
+                <OTDataAxis min="0" max="30" label="Time" units="s"/>
+              </xDataAxis>
+              <yDataAxis>
+                <OTDataAxis min="-5" max="5" label="Distance" units="m"/>
+              </yDataAxis>
+            </OTDataCollector>            
             <OTDataCollector name="Relative Humidity">
               <source>
                 <OTDataGraphable connectPoints="true" color="0xff0000"
@@ -672,7 +697,7 @@ Sensor Type Ids from SensorConfig
               </xDataAxis>
               <yDataAxis>
                 <OTDataAxis min="0" max="100" label="Magnetic Field"
-                  units="G"/>
+                  units="mT"/>
               </yDataAxis>
             </OTDataCollector>
             <OTDataCollector name="Lung Air Flow">
@@ -1440,7 +1465,7 @@ Sensor Type Ids from SensorConfig
                           <!-- requested resolution -->
                           <displayPrecision>-2</displayPrecision>
                           <port>0</port>
-                          <unit>m/s</unit>
+                          <unit>m</unit>
                           <requiredMax>4</requiredMax>
                           <requiredMin>-4</requiredMin>
                         </OTSensorRequest>
@@ -1524,7 +1549,7 @@ Sensor Type Ids from SensorConfig
                           <!-- requested resolution -->
                           <displayPrecision>-1</displayPrecision>
                           <port>0</port>
-                          <unit>ppm</unit>
+                          <unit></unit>
                           <requiredMax>500</requiredMax>
                           <requiredMin>0</requiredMin>
                         </OTSensorRequest>
@@ -1629,7 +1654,7 @@ Sensor Type Ids from SensorConfig
                           <stepSize>0.1</stepSize>
                           <displayPrecision>-1</displayPrecision>
                           <port>0</port>
-                          <unit>G</unit>
+                          <unit>mT</unit>
                           <requiredMax>10</requiredMax>
                           <requiredMin>0</requiredMin>
                         </OTSensorRequest>
