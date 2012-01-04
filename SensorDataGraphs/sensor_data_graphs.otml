@@ -645,8 +645,8 @@ Sensor Type Ids from SensorConfig
                 <OTDataAxis min="0" max="30" label="Time" units="s"/>
               </xDataAxis>
               <yDataAxis>
-                <OTDataAxis min="0" max="400" label="Oxygen Gas"
-                  units="ppt"/>
+                <OTDataAxis min="0" max="100" label="Oxygen Gas"
+                  units="%"/>
               </yDataAxis>
             </OTDataCollector>
             <OTDataCollector name="Salinity">
@@ -1526,10 +1526,10 @@ Sensor Type Ids from SensorConfig
                           <!-- type of sensor -->
                           <stepSize>0.1</stepSize>
                           <!-- requested resolution -->
-                          <displayPrecision>0</displayPrecision>
+                          <displayPrecision>-2</displayPrecision>
                           <port>0</port>
-                          <unit>ppm</unit>
-                          <requiredMax>500</requiredMax>
+                          <unit>%</unit>
+                          <requiredMax>100</requiredMax>
                           <requiredMin>0</requiredMin>
                         </OTSensorRequest>
                       </sensorRequests>
