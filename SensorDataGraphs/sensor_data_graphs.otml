@@ -782,7 +782,7 @@ Sensor Type Ids from SensorConfig
               </xDataAxis>
               <yDataAxis>
                 <OTDataAxis min="0" max="100" label="Conductivity"
-                  units="MICS"/>
+                  units="uS/ms"/>
               </yDataAxis>
             </OTDataCollector>
             <OTDataCollector name="Dissolved Oxygen">
@@ -816,8 +816,7 @@ Sensor Type Ids from SensorConfig
                 <OTDataAxis min="0" max="30" label="Time" units="s"/>
               </xDataAxis>
               <yDataAxis>
-                <OTDataAxis min="0" max="100" label="Colorimeter"
-                  units="%T"/>
+                <OTDataAxis min="0" max="3" label="Absorbance"/>
               </yDataAxis>
             </OTDataCollector>
             <OTDataCollector name="Hand Dynamometer">
@@ -1409,6 +1408,9 @@ Sensor Type Ids from SensorConfig
                       </sensorRequests>
                     </OTExperimentRequest>
                   </request>
+                  <zeroSensor>
+                    <OTZeroSensor local_id="force_zero_40N_dp" sensorIndex="0"/>
+                  </zeroSensor>
                 </OTSensorDataProxy>
                 <OTSensorDataProxy local_id="rel_humidity_dp">
                   <name>Relative Humidity</name>
@@ -1759,7 +1761,7 @@ Sensor Type Ids from SensorConfig
                           <stepSize>1</stepSize>
                           <displayPrecision>-1</displayPrecision>
                           <port>0</port>
-                          <unit>MICS</unit>
+                          <unit>uS/cm</unit>
                           <requiredMax>10</requiredMax>
                           <requiredMin>0</requiredMin>
                         </OTSensorRequest>
@@ -1799,10 +1801,9 @@ Sensor Type Ids from SensorConfig
                           <type>33</type>
                           <!-- requested resolution -->
                           <stepSize>0.1</stepSize>
-                          <displayPrecision>-1</displayPrecision>
+                          <displayPrecision>-3</displayPrecision>
                           <port>0</port>
-                          <unit>%T</unit>
-                          <requiredMax>10</requiredMax>
+                          <requiredMax>3</requiredMax>
                           <requiredMin>0</requiredMin>
                         </OTSensorRequest>
                       </sensorRequests>
