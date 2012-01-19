@@ -2064,7 +2064,12 @@
                           <source>
                             <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                               <dataStore>
-                                <OTDataStore numberChannels="2" />
+                                <OTDataStore numberChannels="2">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="Time" unit="hr" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="Position" unit="mi" precision="2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
                               </dataStore>
                               <rubric>
                                 <OTGraphSegment>
