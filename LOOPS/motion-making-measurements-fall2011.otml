@@ -317,15 +317,15 @@
                               <br />
                               Use your graph to measure the time between the jumps. You can use 
           the
-                              <u>
-                                <i>Labeling Tool</i>
-                              </u>
-                              <i />
+                              <i>
+                                <u>Labeling Tool</u>
+                              </i>
                               on the right of the graph to 
           help you read the time values.
-                              <br />
-                              <br />
-                              Submit the graph and the 
+                              <i>
+                                <b>Submit</b>
+                              </i>
+                              the graph and the 
           answer the questions below.
                               <br />
                               <br />
@@ -393,8 +393,8 @@
                             <OTEventLog />
                           </eventLog>
                           <graphables>
-                            <OTDataGraphable drawMarks="false" color="0xFF0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
-                            <dataProducer>
+                            <OTDataGraphable drawMarks="false" color="0xff0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
                                   <source>
                                     <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
@@ -414,7 +414,12 @@
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore />
+                                <OTDataStore dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                  </channelDescriptions>
+                                </OTDataStore>
                               </dataStore>
                             </OTDataGraphable>
                           </graphables>
@@ -737,7 +742,11 @@
                                   <br />
                                 </li>
                               </ul>
-                              and Submit your graph.
+                              and
+                              <i>
+                                <b>Submit</b>
+                              </i>
+                              your graph.
                               <br />
                               <br />
                               <object refid="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d" />
@@ -1214,9 +1223,9 @@
                                 </OTDataStore>
                               </dataStore>
                             </OTDataGraphable>
-                            </source>
-                            <graphables>
-                             <OTDataGraphable name="Partner2" connectPoints="true" yColumn="1" drawMarks="false" color="0xFF0000" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                          </source>
+                          <graphables>
+                            <OTDataGraphable name="Partner2" connectPoints="true" yColumn="1" drawMarks="false" color="0xff0000" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
@@ -1350,10 +1359,10 @@
                               Create 
           a graph of heel-to-toe walking. Place labels on your graph to help 
           you make measurments and explain how you got your measurements.
-                              <br />
-                              <br />
-                              Submit 
-          the graph and the answer to the question below.
+                              <i>
+                                <b>Submit</b>
+                              </i>
+                              the graph and the answer to the question below.
                               <br />
                               <br />
                               <object refid="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d" />
@@ -1372,7 +1381,7 @@
                       <documentRefs>
                         <OTDataCollector id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d" name="MeasuringSpeed" title="Measuring Speed" autoScaleEnabled="true" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," multipleGraphableEnabled="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
                           <source>
-                            <OTDataGraphable name="Partner1" graphableListEditable="false" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
@@ -1413,8 +1422,8 @@
                             </OTDataAxis>
                           </yDataAxis>
                           <graphables>
-                            <OTDataGraphable graphableListEditable="false" drawMarks="false" color="0xFF0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
-							<dataProducer>
+                            <OTDataGraphable drawMarks="false" color="0xff0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
+                              <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
                                     <OTTimeLimitDataProducerFilter name="TimeLimiter" timeLimit="20000" sourceChannel="1">
@@ -1496,11 +1505,10 @@
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="f67dbfb2-e5fb-11e0-b840-e0cb4ebd2b6d" />
+                    <object refid="f67dbfb2-e5fb-11e0-b83f-e0cb4ebd2b6d" />
                   </currentCard>
                   <viewedCards>
                     <object refid="f67dbfb2-e5fb-11e0-b83f-e0cb4ebd2b6d" />
-                    <object refid="f67dbfb2-e5fb-11e0-b840-e0cb4ebd2b6d" />
                   </viewedCards>
                 </OTCardContainer>
               </content>
