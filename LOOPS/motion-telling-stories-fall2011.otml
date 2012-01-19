@@ -1681,33 +1681,25 @@
                           <div class="border">
                             <div class="body">
                               <div class="subtitle">Making Graphs from Stories and Stories from Graphs</div>
-                              <table width="100%">
-                                <tr>
-                                  <td style="padding-bottom: 12px; padding-left: 10px; padding-top: 12px; padding-right: 12px">
-                                    <img src="images/cop_car_in_forest75.jpg" border="0" />
-                                  </td>
-                                  <td style="padding-bottom: 20px; padding-left: 10px; padding-top: 20px; padding-right: 20px">
-                                    In this activity you'll continue exploring the relationship between 
+                              In this activity you'll continue exploring the relationship between 
           graphs and stories.
-                                    <br />
-                                    <br />
-                                    This activity will give you practice 
+                              <br />
+                              <br />
+                              This activity will give you practice 
           interpreting a motion graph of a race, creating a graph from a 
           story, and telling the details of motions from a graph.
  You will 
           create a graph from a model of a bank robbery from the 
           points-of-view of the thieves and the police.
-                                    <br />
-                                    <br />
-                                    Finally, you 
+                              <br />
+                              <img src="images/cop_car_in_forest75.jpg" border="0" hspace="5" vspace="10" />
+                              <br />
+                              Finally, you 
           will create your own story from a graph about a train traveling 
           between several stations.
-                                    <br />
-                                    <br />
-                                    Please go on to the next page.
-                                  </td>
-                                </tr>
-                              </table>
+                              <br />
+                              <br />
+                              Please go on to the next page.
                             </div>
                           </div>
                         </div>
@@ -1887,7 +1879,7 @@
                                 <object refid="f7937982-e5fb-11e0-b81a-e0cb4ebd2b6d" />
                               </dataStore>
                             </OTDataGraphable>
-                            <OTDataGraphable name="Shanice" connectPoints="true" controllable="true" yColumn="1" drawMarks="true" color="0x0000FF" xColumn="0" lineWidth="2.0" visible="true" locked="true" showAllChannels="false">
+                            <OTDataGraphable name="Shanice" connectPoints="true" controllable="true" yColumn="1" drawMarks="true" color="0xff" xColumn="0" lineWidth="2.0" visible="true" locked="true" showAllChannels="false">
                               <dataStore>
                                 <object refid="f793a092-e5fb-11e0-b81a-e0cb4ebd2b6d" />
                               </dataStore>
