@@ -158,12 +158,8 @@ Sensor Type Ids from SensorConfig
               		<prototype>
               			<OTChoice>
               				<choices>
-              					<OTDeviceConfig name="psuedo device">
-              						<deviceId>0</deviceId>
-              						<configString>
-              							/dev/rfcomm0
-              						</configString>
-              					</OTDeviceConfig>
+              					<OTDeviceConfig name="psuedo device" deviceId="0"/>
+                                <OTDeviceConfig name="psuedo device variable time" deviceId="1"/> 
               					
               					<OTDeviceConfig name="Pasco SW500" 
               					   configString="_auto_" deviceId="60"/>
