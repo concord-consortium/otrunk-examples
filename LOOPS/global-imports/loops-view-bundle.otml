@@ -166,10 +166,10 @@
                   <OTViewEntry objectClass="org.concord.otrunk.ui.snapshot.OTSnapshotChooser" viewClass="org.concord.otrunk.ui.snapshot.OTSnapshotChooserEditView" />
                 </entry>
                 <entry key="${container_view}">
-                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTUDLContainer" viewClass="org.concord.otrunk.ui.OTUDLContainerEditView" />
+                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTUDLContainer" viewClass="org.concord.otrunk.ui.OTUDLContainerView" />
                 </entry>
                 <entry key="${rites_container_view}">
-                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTRITESContainer" viewClass="org.concord.otrunk.ui.OTUDLContainerEditView" />
+                  <OTViewEntry objectClass="org.concord.otrunk.ui.OTRITESContainer" viewClass="org.concord.otrunk.ui.OTRITESContainerView" />
                 </entry>
                 <entry key="${choice-radio-view}">
                   <OTChoiceViewConfig objectClass="org.concord.otrunk.ui.OTChoice" viewClass="org.concord.otrunk.ui.swing.OTChoiceComboBoxEditView" useViewsAsChoices="true" />
