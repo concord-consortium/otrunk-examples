@@ -38,7 +38,6 @@
     <import class="org.concord.otrunk.script.ui.OTScriptVariable" />
     <import class="org.concord.otrunk.ui.snapshot.OTSnapshotAlbum" />
     <import class="org.concord.framework.otrunk.wrapper.OTObjectSet" />
-    <import class="org.concord.data.state.OTHoltsMethodSmoothing" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -464,8 +463,7 @@
                                 <OTLinearProducerFilter name="Dirction-Offset" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
                                     <OTTimeLimitDataProducerFilter name="TimeLimit20" timeLimit="20000" sourceChannel="1">
-                                      <source>
-                                        <OTHoltsMethodSmoothing name="" k0="0.5" k1="0.5" sourceChannel="1">
+                                      
                                           <source>
                                             <OTSensorDataProxy name="dataproducer">
                                               <request>
@@ -477,8 +475,7 @@
                                               </request>
                                             </OTSensorDataProxy>
                                           </source>
-                                        </OTHoltsMethodSmoothing>
-                                      </source>
+                                        
                                     </OTTimeLimitDataProducerFilter>
                                   </source>
                                 </OTLinearProducerFilter>
@@ -619,13 +616,13 @@
                       <documentRefs>
                         <object refid="c93a7460-e18a-11dc-95ff-0800200c9a66" />
                         <object refid="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
-                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" tickMode="AUTO" xTickInterval="1.0" yTickInterval="0.5" multipleGraphableEnabled="true" graphListEditable="false" showControlBar="true" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5"  useDefaultToolBar="false" displayButtons="" logGraphOnPlaybackStart="false">
+                        <OTDataCollector id="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" name="Motion" title="Test Your Procedure" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" showControlBar="true" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" useDefaultToolBar="false" displayButtons="" logGraphOnPlaybackStart="false">
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
-                                <OTTimeLimitDataProducerFilter name="Time20s" timeLimit="20000" sourceChannel="1">
+                              <OTLinearProducerFilter name="MinusOneIncreasing" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
-                                    <OTHoltsMethodSmoothing name="MinusOneIncreasing" k0="1.0" k1="-1.0" sourceChannel="1">
+                                    <OTTimeLimitDataProducerFilter name="Time20s" timeLimit="20000" sourceChannel="1">
                                       <source>
                                         <OTSensorDataProxy name="dataproducer">
                                           <request>
@@ -637,12 +634,12 @@
                                           </request>
                                         </OTSensorDataProxy>
                                       </source>
-                                    </OTHoltsMethodSmoothing>
+                                    </OTTimeLimitDataProducerFilter>
                                   </source>
-                                </OTTimeLimitDataProducerFilter>
+                                </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="2">
+                                <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="dt" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
@@ -662,9 +659,9 @@
                             </OTDataAxis>
                           </yDataAxis>
                           <graphables>
-                            <OTDataGraphable drawMarks="false" color="0xFF0000" connectPoints="true" xColumn="0" yColumn="1" name="Prediction" lineWidth="2.0" visible="true">
+                            <OTDataGraphable drawMarks="false" color="0xff0000" locked="true" connectPoints="true" xColumn="0" yColumn="1" name="Prediction" lineWidth="2.0" visible="true" showAllChannels="false">
                               <dataStore>
-                                <object refid="${our_ds1}"  />
+                                <object refid="${our_ds1}" />
                               </dataStore>
                             </OTDataGraphable>
                           </graphables>
@@ -722,11 +719,10 @@
                     </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="${page-1}" />
+                    <object refid="f6dafc40-e5fb-11e0-aa9b-e0cb4ebd2b6d" />
                   </currentCard>
                   <viewedCards>
                     <object refid="f6dafc40-e5fb-11e0-aa9b-e0cb4ebd2b6d" />
-                    <object refid="${page-1}" />
                   </viewedCards>
                 </OTCardContainer>
               </content>

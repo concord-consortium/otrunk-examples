@@ -194,7 +194,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc local_id="page-1" name="1">
+                    <OTCompoundDoc local_id="page-1" name="Practice Game">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -485,7 +485,7 @@
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
-                    <OTCompoundDoc id="fcebd776-7b9d-11de-9f61-b5789c46dafe" name="%fcebd776-7b9d-11de-9f61-b5789c46dafe" showEditBar="true">
+                    <OTCompoundDoc id="fcebd776-7b9d-11de-9f61-b5789c46dafe" name="Rules for the Rocket" showEditBar="true">
                       <documentRefs>
                         <OTQuestion id="cda38d45-2cc6-11e1-a667-11dbdbe13ceb" name="RuleQ">
                           <prompt>
@@ -520,7 +520,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc id="c7986f28-7c74-11de-b0e6-75eb3a14c1be" name="%c7986f28-7c74-11de-b0e6-75eb3a14c1be" showEditBar="true">
+                    <OTCompoundDoc id="c7986f28-7c74-11de-b0e6-75eb3a14c1be" name="Rules for Recharge Game" showEditBar="true">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -548,7 +548,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc local_id="page-2" name="2">
+                    <OTCompoundDoc local_id="page-2" name="Rocket Recharge Game">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -775,7 +775,7 @@
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
-                    <OTCompoundDoc id="374101e8-30b0-11e1-a03d-71a42947a83d" name="%374101e8-30b0-11e1-a03d-71a42947a83d" showEditBar="true">
+                    <OTCompoundDoc id="374101e8-30b0-11e1-a03d-71a42947a83d" name="Lightening the Load" showEditBar="true">
                       <documentRefs>
                         <OTQuestion id="553c0699-30b0-11e1-a03d-71a42947a83d" name="HypothesisQ">
                           <prompt>
@@ -851,7 +851,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc id="35555219-7c77-11de-b0e6-75eb3a14c1be" name="%35555219-7c77-11de-b0e6-75eb3a14c1be" showEditBar="true">
+                    <OTCompoundDoc id="35555219-7c77-11de-b0e6-75eb3a14c1be" name="Rules for Basic Game" showEditBar="true">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -883,7 +883,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc local_id="page-3" name="3">
+                    <OTCompoundDoc local_id="page-3" name="Basic Game">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -1146,7 +1146,7 @@
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
-                    <OTCompoundDoc id="fb916175-7d53-11de-86c4-3d721432285a" name="%fb916175-7d53-11de-86c4-3d721432285a" showEditBar="true">
+                    <OTCompoundDoc id="fb916175-7d53-11de-86c4-3d721432285a" name="Rescued?" showEditBar="true">
                       <documentRefs>
                         <OTQuestion id="d1c5cac3-30b5-11e1-bc14-fbff49ab140f" name="SaveQ">
                           <prompt>
@@ -1305,7 +1305,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc id="2767fe20-6c7d-11dc-8314-0800200c9a66!/activity-card-container/cards[9]" name="%2828bc96-7de3-11de-a225-011ffa63f2e0" showEditBar="true">
+                    <OTCompoundDoc name="Rules for the 2D Game" showEditBar="true">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -1339,7 +1339,7 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc local_id="page-4" name="4">
+                    <OTCompoundDoc local_id="page-4" name="2D Game">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
@@ -1548,7 +1548,7 @@
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
-                    <OTCompoundDoc name="%71883c77-7de5-11de-a225-011ffa63f2e0" showEditBar="true">
+                    <OTCompoundDoc name="Rowing on a River" showEditBar="true">
                       <documentRefs>
                         <OTQuestion id="1a8712ec-30bc-11e1-bc14-fbff49ab140f" name="BoatQ">
                           <prompt>
@@ -1633,13 +1633,11 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc name="%c7b81492-7deb-11de-a225-011ffa63f2e0" showEditBar="true">
+                    <OTCompoundDoc name="The End" showEditBar="true">
                       <bodyText>
                         <div class="buffer">
                           <div class="border">
                             <div class="body">
-                              <br />
-                              <br />
                               <b>The End</b>
                               <br />
                               <br />
@@ -1653,466 +1651,12 @@
                         </div>
                       </bodyText>
                     </OTCompoundDoc>
-                    <OTCompoundDoc id="10247a56-7f0a-11de-ace0-4db87b9c619f" name="%10247a56-7f0a-11de-ace0-4db87b9c619f" showEditBar="true">
-                      <documentRefs>
-                        <OTMultiUserPollingGraph id="1688d497-7f0a-11de-ace0-4db87b9c619f" name="Pick N Results View">
-                          <object>
-                            <OTQuestion id="61d48387-7b9e-11de-9f61-b5789c46dafe" name="Success (step 3)">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>Were you able to rescue the shuttle?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="true" alignContent="1">
-                                  <choices>
-                                    <OTCompoundDoc name="Yes">
-                                      <bodyText>Yes</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="No">
-                                      <bodyText>No</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="d00769e4-7f0e-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="8b9cca6a-7d44-11de-b7e7-5b6a907558d8" name="Direction">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>Did the rocket always go the same direction as you fired?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="true" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Yes">
-                                      <bodyText>Yes</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="No">
-                                      <bodyText>No</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="eb1eaf95-7f0e-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="d33fe7df-7bae-11de-96cd-839ce163f942" name="Strategy">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>If you fire the Rocket twice in the same direction will the Rocket go</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="The same speed as firing once">
-                                      <bodyText>The same speed as firing once</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Faster than firing once">
-                                      <bodyText>Faster than firing once</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Slower than firing once">
-                                      <bodyText>Slower than firing once</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Depends on the direction the Rocket was originally going">
-                                      <bodyText>Depends on the direction the Rocket was originally going</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="f6773246-7f0e-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="b7fb8252-7baf-11de-96cd-839ce163f942" name="Question">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>How did you stop the Rocket or the Rocket plus Shuttle?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Kept pressing Fire until it stopped">
-                                      <bodyText>Kept pressing Fire until it stopped</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Hit the wall">
-                                      <bodyText>Hit the wall</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Press Left the same number of times as Right">
-                                      <bodyText>Press Left the same number of times as Right</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="The Rocket stopped by itself">
-                                      <bodyText>The Rocket stopped by itself</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="8e0d594d-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="86478417-7d46-11de-b7e7-5b6a907558d8" name="Success2 (step 6)">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>Were you able to save the Shuttle?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="true" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Yes">
-                                      <bodyText>Yes</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="No">
-                                      <bodyText>No</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="b36a2b0e-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="56ff85fa-7d47-11de-b7e7-5b6a907558d8" name="RechargeTime">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>While the engine is recharging, the Rocket is</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Slowing down">
-                                      <bodyText>Slowing down</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Being attracted to either the Shuttle or home base">
-                                      <bodyText>Being attracted to either the Shuttle or home base</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Speeding up">
-                                      <bodyText>Speeding up</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Staying the same speed">
-                                      <bodyText>Staying the same speed</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="bca1063f-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="a8957d8c-7d48-11de-b7e7-5b6a907558d8" name="DescribeTrips">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>What do you notice that is different about the return trip when the Rocket and Shuttle are joined?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="The Rocket and Shuttle slow down more">
-                                      <bodyText>The Rocket and Shuttle slow down more</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="It takes more firings to stop">
-                                      <bodyText>It takes more firings to stop</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="It takes more firings to get going fast">
-                                      <bodyText>It takes more firings to get going fast</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="It is slower than the trip out">
-                                      <bodyText>It is slower than the trip out</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoiceMultiple>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="dac45371-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="b141ff4a-7d58-11de-86c4-3d721432285a" name="Dots (step 9)">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>In this game, the Rocket leaves a trail of dots behind.  What do the dots tell you?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="The Rocket has power">
-                                      <bodyText>The Rocket has power</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="The larger the space between the dots, the faster the Rocket is going">
-                                      <bodyText>The larger the space between the dots, the faster the Rocket is going</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="The Rocket is about to run out of fuel">
-                                      <bodyText>The Rocket is about to run out of fuel</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="The rocket goes at a constant speed">
-                                      <bodyText>The rocket goes at a constant speed</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="e8921be2-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="546fe868-7de0-11de-a225-011ffa63f2e0" name="Projection">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>If the Rocket or Rocket plus Shuttle is stopped and you fire once and then twice more in the same direction, waiting for recharge between firings, and you don't hit a wall, the Rocket will go</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="The same speed as firing twice">
-                                      <bodyText>The same speed as firing twice</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Three times the speed of firing once">
-                                      <bodyText>Three times the speed of firing once</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Four times the speed of firing once">
-                                      <bodyText>Four times the speed of firing once</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="The change in speed is not always the same">
-                                      <bodyText>The change in speed is not always the same</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="efa68c43-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="31463896-7de2-11de-a225-011ffa63f2e0" name="StoppingRule">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>What is a good rule for stopping the Rocket or for stopping the Rocket plus Shuttle?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Fire once in the opposite direction from the direction it is moving ">
-                                      <bodyText>Fire once in the opposite direction from the direction it is moving</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Hit the brakes">
-                                      <bodyText>Hit the brakes</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Keep firing the Rocket until it stops ">
-                                      <bodyText>Keep firing the Rocket until it stops</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Fire the same number of  times in the opposite direction as you did to get it going">
-                                      <bodyText>Fire the same number of  times in the opposite direction as you did to get it going</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="f6a7c2c4-7f0f-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="b9df17fc-7de2-11de-a225-011ffa63f2e0" name="Question">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>What is a good plan to get a high score?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Always try to go as fast as possible ">
-                                      <bodyText>Always try to go as fast as possible</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Go slowly, because it is too hard to stop ">
-                                      <bodyText>Go slowly, because it is too hard to stop</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Just go as fast as you can being sure to leave time to stop ">
-                                      <bodyText>Just go as fast as you can being sure to leave time to stop</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Just avoid crashing into walls">
-                                      <bodyText>Just avoid crashing into walls</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="07089225-7f10-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="a696fff8-7de5-11de-a225-011ffa63f2e0" name="Succeed4 (step 12)">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>Were you able to rescue the Shuttle?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="true" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Yes">
-                                      <bodyText>Yes</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="No">
-                                      <bodyText>No</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="0d129766-7f10-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="f082570f-7de5-11de-a225-011ffa63f2e0" name="Diagonal">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>Were you able to fly in a diagonal line or just side to side or up and down?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Yes, but I always crashed into the red no-fly zones">
-                                      <bodyText>Yes, but I always crashed into the red no-fly zones</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Yes, the same rules for stopping work in this game as they did in the previous games">
-                                      <bodyText>Yes, the same rules for stopping work in this game as they did in the previous games</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="No, I always had to stop to go in a different direction">
-                                      <bodyText>No, I always had to stop to go in a different direction</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Yes, but I always ran out of time or fuel">
-                                      <bodyText>Yes, but I always ran out of time or fuel</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                        <OTMultiUserPollingGraph id="13f57077-7f10-11de-966c-45f98301867c" name="Histogram Results View">
-                          <object>
-                            <OTQuestion id="25912871-7deb-11de-a225-011ffa63f2e0" name="DiagonalStop">
-                              <prompt>
-                                <OTCompoundDoc>
-                                  <bodyText>If you are going in a diagonal line, say to the right and down, how would you stop?</bodyText>
-                                </OTCompoundDoc>
-                              </prompt>
-                              <input>
-                                <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
-                                  <choices>
-                                    <OTCompoundDoc name="Fire up twice ">
-                                      <bodyText>Fire up twice</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Fire up then down">
-                                      <bodyText>Fire up then down</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Fire down then up">
-                                      <bodyText>Fire down then up</bodyText>
-                                    </OTCompoundDoc>
-                                    <OTCompoundDoc name="Fire as many times up as I had down and as many times left as I had right">
-                                      <bodyText>Fire as many times up as I had down and as many times left as I had right</bodyText>
-                                    </OTCompoundDoc>
-                                  </choices>
-                                </OTChoice>
-                              </input>
-                            </OTQuestion>
-                          </object>
-                        </OTMultiUserPollingGraph>
-                      </documentRefs>
-                      <bodyText>
-                        Step 3 Polls
-                        <br />
-                        <object refid="1688d497-7f0a-11de-ace0-4db87b9c619f" />
-                        <br />
-                        <br />
-                        <object refid="d00769e4-7f0e-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="eb1eaf95-7f0e-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="f6773246-7f0e-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        Step 
-    6 Polls
-                        <br />
-                        <br />
-                        <object refid="8e0d594d-7f0f-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="b36a2b0e-7f0f-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="bca1063f-7f0f-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        Step 
-    9 Polls
-                        <br />
-                        <object refid="dac45371-7f0f-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <br />
-                        <object refid="e8921be2-7f0f-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="efa68c43-7f0f-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="f6a7c2c4-7f0f-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        Step 
-    12 Polls
-                        <br />
-                        <br />
-                        <object refid="07089225-7f10-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="0d129766-7f10-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                        <object refid="13f57077-7f10-11de-966c-45f98301867c" />
-                        <br />
-                        <br />
-                      </bodyText>
-                    </OTCompoundDoc>
                   </cards>
                   <currentCard>
-                    <object refid="${page-4}" />
+                    <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
                   </currentCard>
                   <viewedCards>
                     <object refid="77f3fc95-77c3-11de-8181-fb1fceaa9d84" />
-                    <object refid="${page-1}" />
-                    <object refid="fcebd776-7b9d-11de-9f61-b5789c46dafe" />
-                    <object refid="c7986f28-7c74-11de-b0e6-75eb3a14c1be" />
-                    <object refid="${page-2}" />
-                    <object refid="374101e8-30b0-11e1-a03d-71a42947a83d" />
-                    <object refid="35555219-7c77-11de-b0e6-75eb3a14c1be" />
-                    <object refid="${page-3}" />
-                    <object refid="fb916175-7d53-11de-86c4-3d721432285a" />
-                    <object refid="2767fe20-6c7d-11dc-8314-0800200c9a66!/activity-card-container/cards[9]" />
-                    <object refid="${page-4}" />
                   </viewedCards>
                 </OTCardContainer>
               </content>

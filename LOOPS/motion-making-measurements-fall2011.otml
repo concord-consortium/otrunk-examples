@@ -347,7 +347,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d" name="JumpingGraph" title="Jumping Graph" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
+                        <OTDataCollector id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d" name="JumpingGraph" title="Jumping Graph" graphableListEditable="false" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
                           <source>
                             <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -1192,7 +1192,7 @@
                     </OTCompoundDoc>
                     <OTCompoundDoc id="f67eaa12-e5fb-11e0-b871-e0cb4ebd2b6d" name="%f67eaa12-e5fb-11e0-b871-e0cb4ebd2b6d" showEditBar="true">
                       <documentRefs>
-                        <OTDataCollector id="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d" name="GiantStepGraph" title="Giant Step Graph" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true">
+                        <OTDataCollector id="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d" name="GiantStepGraph" title="Giant Step Graph" autoScaleEnabled="true" graphableListEditable="false" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true">
                           <source>
                             <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -1379,7 +1379,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d" name="MeasuringSpeed" title="Measuring Speed" autoScaleEnabled="true" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," multipleGraphableEnabled="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
+                        <OTDataCollector id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d" name="MeasuringSpeed" title="Measuring Speed" graphableListEditable="false" autoScaleEnabled="true" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," multipleGraphableEnabled="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
                           <source>
                             <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
