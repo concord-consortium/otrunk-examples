@@ -523,7 +523,7 @@
                               <dataStore>
                                 <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -589,7 +589,7 @@
                               <dataStore>
                                 <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -610,7 +610,7 @@
                         <OTQuestion id="f67e0dd2-e5fb-11e0-b847-e0cb4ebd2b6d" name="NegativeOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>How far were you from the probe?</bodyText>
+                              <bodyText>How far were you from the probe in meters?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -652,7 +652,7 @@
                               <dataStore>
                                 <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -673,7 +673,7 @@
                         <OTQuestion id="f67e0dd2-e5fb-11e0-b84a-e0cb4ebd2b6d" name="PositiveOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>How far were you from the probe?</bodyText>
+                              <bodyText>How far were you from the probe in meters?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -848,7 +848,7 @@
                         <OTQuestion id="f67e34e2-e5fb-11e0-b84e-e0cb4ebd2b6d" name="TwoToOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between positions 2 m and 1 m?</bodyText>
+                              <bodyText>What is the distance in meters between positions 2 m and 1 m?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -878,7 +878,7 @@
                         <OTQuestion id="f67e34e2-e5fb-11e0-b854-e0cb4ebd2b6d" name="OneToNOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between positions 1 m and -1 m?</bodyText>
+                              <bodyText>What is the distance in meters between positions 1 m and -1 m?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -915,7 +915,7 @@
                         <OTQuestion id="f67e5bf2-e5fb-11e0-b859-e0cb4ebd2b6d" name="NTwoToNOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between positions -1 m and -2 m?</bodyText>
+                              <bodyText>What is the distance in meters between positions -1 m and -2 m?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -1087,7 +1087,7 @@
                         <OTQuestion id="f67e8302-e5fb-11e0-b860-e0cb4ebd2b6d" name="PosToDist3">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between position 0.5 to 1.25 meters?</bodyText>
+                              <bodyText>What is the distance in meters between position 0.5 to 1.25 meters?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -1124,7 +1124,7 @@
                         <OTQuestion id="f67e8302-e5fb-11e0-b866-e0cb4ebd2b6d" name="PosToDist2">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between position 0.5 to -0.5 meters?</bodyText>
+                              <bodyText>What is the distance in meters between position 0.5 to -0.5 meters?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -1154,7 +1154,7 @@
                         <OTQuestion id="f67eaa12-e5fb-11e0-b86b-e0cb4ebd2b6d" name="PosToDist1">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>What is the distance between position -0.5 to -0.25 meters?</bodyText>
+                              <bodyText>What is the distance in meters between position -0.5 to -0.25 meters?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>

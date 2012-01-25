@@ -2246,7 +2246,7 @@
                           <source>
                             <OTDataGraphable name="Robbers" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                               <dataStore>
-                                <OTDataStore local_id="ds1" numberChannels="2" />
+                                <OTDataStore local_id="ds2" numberChannels="2" />
                               </dataStore>
                               <rubric>
                                 <OTGraphSegment>
@@ -2306,7 +2306,7 @@
                           <graphables>
                             <OTDataGraphable name="Police" yColumn="1" drawMarks="false" controllable="true" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" connectPoints="true">
                               <dataStore>
-                                <OTDataStore local_id="ds2" numberChannels="2" />
+                                <OTDataStore local_id="ds1" numberChannels="2" />
                               </dataStore>
                             </OTDataGraphable>
                           </graphables>
@@ -2321,7 +2321,7 @@
                     <OTCompoundDoc id="f795002c-e5fb-11e0-b845-e0cb4ebd2b6d" name="%f795002c-e5fb-11e0-b845-e0cb4ebd2b6d" showEditBar="true">
                       <documentRefs>
                         <object refid="f795002c-e5fb-11e0-b84a-e0cb4ebd2b6d" />
-                        <OTDataCollector id="f795002c-e5fb-11e0-b846-e0cb4ebd2b6d" name="Data graph" title="Train Story Graph" showLabelCoordinates="false" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,1,2,3," tickMode="AUTO" xTickInterval="5.0" yTickInterval="5.0">
+                        <OTDataCollector id="f795002c-e5fb-11e0-b846-e0cb4ebd2b6d" name="Data graph" title="Train Story Graph" showLabelCoordinates="false" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,1,2,3," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
                           <xDataAxis>
                             <OTDataAxis max="99.06977" units="minutes" min="-0.33023256" label="Time" labelFormat="Engineering" locked="true">
                               <customGridLabels />
@@ -2369,13 +2369,6 @@
           C is at position 25. Create a story about a train trip that matches 
           the graph. Feel free to invent characters and actions. What might 
           have happened, for example, after 35 minutes?
-                              <br />
-                              <br />
-                              After you 
-          submit your story you'll be able to see some of the class' stories 
-          on the next page if your teacher chooses several and releases them 
-          for viewing.
-                              <br />
                               <br />
                               <table width="100%">
                                 <tr>
