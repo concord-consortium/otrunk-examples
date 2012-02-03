@@ -53,6 +53,7 @@
     <import class="org.concord.data.state.OTSingleYPerXProducerFilter" />
     <import class="org.concord.datagraph.state.rubric.OTGraphSegment" />
     <import class="org.concord.datagraph.state.rubric.OTGraphSegmentCriterion" />
+    <import class="org.concord.otrunk.ui.OTChoiceMultiple" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -712,6 +713,61 @@ Submit your graph and story.</bodyText>
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="2.0" unset="autoTick" />
+                                </entry>
+                                <entry key="${chico-ds1}">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.025906736</float>
+                                      <float>5.025641</float>
+                                      <float>1.9948187</float>
+                                      <float>-0.0</float>
+                                      <float>4.015544</float>
+                                      <float>-0.051282052</float>
+                                      <float>5.0</float>
+                                      <float>-2.974359</float>
+                                      <float>8.005181</float>
+                                      <float>-0.0</float>
+                                      <float>11.994819</float>
+                                      <float>0.051282052</float>
+                                      <float>15.984456</float>
+                                      <float>5.076923</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f737c39e-e5fb-11e0-b2bd-e0cb4ebd2b6d" name="FastestSpeedQ">
                           <prompt>
