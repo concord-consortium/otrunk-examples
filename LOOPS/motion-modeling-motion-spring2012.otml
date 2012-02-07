@@ -715,56 +715,6 @@ Submit your graph and story.</bodyText>
                           </wrappedObject>
                           <exampleSubmissionOverlay>
                             <OTOverlay>
-                              <nonDeltaObjects>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                                <OTText name="Open response" />
-                                <OTChoice name="Multiple choice" />
-                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
-                                <OTCompoundDoc name="Custom">
-                                  <bodyText>Right-click to edit</bodyText>
-                                </OTCompoundDoc>
-                              </nonDeltaObjects>
                               <deltaObjectMap>
                                 <entry key="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d">
                                   <OTDataCollector xTickInterval="1.0" yTickInterval="2.0" unset="autoTick" />
