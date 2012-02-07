@@ -576,7 +576,7 @@ Submit your graph and story.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTDataCollector id="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
+                            <OTDataCollector id="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="2.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
                               <source>
                                 <OTDataGraphable name="Chico" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                                   <dataStore>
@@ -698,7 +698,7 @@ Submit your graph and story.</bodyText>
                             <OTOverlay>
                               <deltaObjectMap>
                                 <entry key="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d/input">
-                                  <OTText text="Chico is going the fastest when he sprints between the Park and Angie's house when he goes 3 blocks in 1 minute.  This is when the line is the steepest.  The next fastest speed is when he travels from his house to the Park, when he travels 5 blocks in 2 minutes or 2.5 blocks per minute." />
+                                  <OTText text="" />
                                 </entry>
                               </deltaObjectMap>
                             </OTOverlay>
@@ -708,8 +708,8 @@ Submit your graph and story.</bodyText>
                           <wrappedObject>
                             <OTObjectSet name="FastestQIntrasession (Set)">
                               <objects>
-                                <object refid="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d" />
                                 <object refid="4975eda9-4db5-11e1-a4a7-2bd2f4e32af2" />
+                                <object refid="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d" />
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
@@ -740,10 +740,34 @@ Submit your graph and story.</bodyText>
                                 <OTCompoundDoc name="Custom">
                                   <bodyText>Right-click to edit</bodyText>
                                 </OTCompoundDoc>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
+                                <OTText name="Open response" />
+                                <OTChoice name="Multiple choice" />
+                                <OTChoiceMultiple name="Multiple choice (check boxes)" />
+                                <OTCompoundDoc name="Custom">
+                                  <bodyText>Right-click to edit</bodyText>
+                                </OTCompoundDoc>
                               </nonDeltaObjects>
                               <deltaObjectMap>
                                 <entry key="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d">
-                                  <OTDataCollector xTickInterval="2.0" yTickInterval="2.0" unset="autoTick" />
+                                  <OTDataCollector xTickInterval="1.0" yTickInterval="2.0" unset="autoTick" />
                                 </entry>
                                 <entry key="${chico-ds1}">
                                   <OTDataStore>
@@ -764,6 +788,9 @@ Submit your graph and story.</bodyText>
                                       <float>5.076923</float>
                                     </values>
                                   </OTDataStore>
+                                </entry>
+                                <entry key="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d/input">
+                                  <OTText text="Chico is going the fastest when he sprints between the Park and Angie's house. This is when the line is the steepest.  Chico's speed is 3 blocks per minute.  The next steppest line is when he travels from his house to the Park, when he travels 5 blocks in 2 minutes or 2.5 blocks per minute." rows="3" />
                                 </entry>
                               </deltaObjectMap>
                             </OTOverlay>
