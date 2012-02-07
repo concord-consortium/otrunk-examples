@@ -719,6 +719,9 @@ Submit your graph and story.</bodyText>
                                 <entry key="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d">
                                   <OTDataCollector xTickInterval="1.0" yTickInterval="2.0" unset="autoTick" />
                                 </entry>
+                                <entry key="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d/input">
+                                  <OTText text="Chico is going the fastest when he sprints between the Park and Angie's house. This is when the line is the steepest.  Chico's speed is 3 blocks per minute.  The next steppest line is when he travels from his house to the Park, when he travels 5 blocks in 2 minutes or 2.5 blocks per minute." rows="3" />
+                                </entry>
                                 <entry key="${chico-ds1}">
                                   <OTDataStore>
                                     <values>
@@ -738,9 +741,6 @@ Submit your graph and story.</bodyText>
                                       <float>5.076923</float>
                                     </values>
                                   </OTDataStore>
-                                </entry>
-                                <entry key="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d/input">
-                                  <OTText text="Chico is going the fastest when he sprints between the Park and Angie's house. This is when the line is the steepest.  Chico's speed is 3 blocks per minute.  The next steppest line is when he travels from his house to the Park, when he travels 5 blocks in 2 minutes or 2.5 blocks per minute." rows="3" />
                                 </entry>
                               </deltaObjectMap>
                             </OTOverlay>
@@ -797,45 +797,55 @@ Submit your graph and story.</bodyText>
                               Let's make the story of Chico's walk have a happier ending. The 
           graph you drew of Chico's walk appears below. Add Angie's story to 
           it, and
+                              <b>
+                                <i>Replay</i>
+                              </b>
                               <i>
-                                <b>Replay</b>
-                              </i>
-                              the graph to see if it is 
-          correct. Then
-                              <i>
+                                the graph to see if it is correct. 
+          Then
                                 <b>Submit</b>
+                                your graph.
+                                <br />
+                                <br />
+                                <object refid="f737c39e-e5fb-11e0-b2c4-e0cb4ebd2b6d" />
+                                <br />
                               </i>
-                              your graph.
-                              <br />
-                              <br />
-                              <object refid="f737c39e-e5fb-11e0-b2c4-e0cb4ebd2b6d" />
-                              <br />
                               <ul>
-                                <li>At 3:00 Angie was at the Town Forest hunting for squirrels.</li>
-                                <li>At 3:05 she hears Chico barking and runs to the Park in 3 
-              minutes, meeting Chico just as he gets there.</li>
-                                <li>Angie and Chico frolic together at the Park for 4 minutes.</li>
-                                <li>Then, they trot off to their own homes. Angie arrives home in 
-              3 minutes.</li>
+                                <li>
+                                  <i>At 3:00 Angie was at the Town Forest hunting for squirrels.</i>
+                                </li>
+                                <li>
+                                  <i>At 3:05 she hears Chico barking and runs to the Park in 3 
+              minutes, meeting Chico just as he gets there.</i>
+                                </li>
+                                <li>
+                                  <i>Angie and Chico frolic together at the Park for 4 minutes.</i>
+                                </li>
+                                <li>
+                                  <i>Then, they trot off to their own homes. Angie arrives home in 
+              3 minutes.</i>
+                                </li>
                               </ul>
-                              <object refid="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
-                              <br />
-                              <br />
-                              <object refid="f737eaae-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
-                              <br />
-                              <br />
-                              <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
-                              <br />
-                              <br />
-                              <object refid="f737eaae-e5fb-11e0-b2c7-e0cb4ebd2b6d" />
-                              <br />
-                              <br />
-                              <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
-                              <br />
-                              <br />
-                              <object refid="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" />
-                              <br />
-                              <br />
+                              <i>
+                                <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
+                                <br />
+                                <br />
+                                <object refid="f737eaae-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
+                                <br />
+                                <br />
+                                <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
+                                <br />
+                                <br />
+                                <object refid="f737eaae-e5fb-11e0-b2c7-e0cb4ebd2b6d" />
+                                <br />
+                                <br />
+                                <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
+                                <br />
+                                <br />
+                                <object refid="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" />
+                                <br />
+                                <br />
+                              </i>
                             </div>
                           </div>
                         </div>
@@ -863,77 +873,118 @@ Submit your graph and story.</bodyText>
                             </OTDataInput>
                           </input>
                         </OTNLogoModel>
-                        <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackStart="true">
-                          <source>
-                            <OTDataGraphable name="Angie" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
-                              <dataStore>
-                                <OTDataStore local_id="angie-ds1" numberChannels="2" />
-                              </dataStore>
-                              <rubric>
-                                <OTGraphSegment>
-                                  <criteria>
-                                    <OTGraphSegmentCriterion property="BEGINNING_X" operation="EQUAL_TO" tolerance="0.25" />
-                                    <OTGraphSegmentCriterion property="BEGINNING_Y" operation="EQUAL_TO" expectedValue="-5.0" tolerance="0.5" />
-                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="5.0" tolerance="0.25" />
-                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" />
-                                  </criteria>
-                                </OTGraphSegment>
-                                <OTGraphSegment>
-                                  <criteria>
-                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="3.0" tolerance="0.25" points="2.0" />
-                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" tolerance="0.25" points="2.0" />
-                                  </criteria>
-                                </OTGraphSegment>
-                                <OTGraphSegment>
-                                  <criteria>
-                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="2.0" />
-                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="2.0" />
-                                  </criteria>
-                                </OTGraphSegment>
-                                <OTGraphSegment>
-                                  <criteria>
-                                    <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="3.0" tolerance="0.25" points="2.0" />
-                                    <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="-3.0" tolerance="0.5" points="2.0" />
-                                  </criteria>
-                                </OTGraphSegment>
-                                <OTGraphSegment optional="true">
-                                  <criteria>
-                                    <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" />
-                                  </criteria>
-                                </OTGraphSegment>
-                              </rubric>
-                            </OTDataGraphable>
-                          </source>
-                          <xDataAxis>
-                            <OTDataAxis max="20.0" units="mins" min="0.0" label="Time" labelFormat="Engineering" locked="true">
-                              <customGridLabels />
-                            </OTDataAxis>
-                          </xDataAxis>
-                          <yDataAxis>
-                            <OTDataAxis max="6.0" units="blocks" min="-6.0" label="Position" labelFormat="Engineering" locked="true">
-                              <customGridLabels />
-                            </OTDataAxis>
-                          </yDataAxis>
-                          <playbackDataProducer>
-                            <OTTimerDataStoreDataProducer local_id="angie_timer_producer" sampleTime="0.05">
-                              <dataStores>
-                                <object refid="${chico-ds1}" />
-                                <object refid="${angie-ds1}" />
-                              </dataStores>
-                            </OTTimerDataStoreDataProducer>
-                          </playbackDataProducer>
-                          <graphables>
-                            <OTDataGraphable name="Chico" locked="true" yColumn="1" drawMarks="false" controllable="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" connectPoints="true">
-                              <dataStore>
-                                <object refid="${chico-ds1}" />
-                              </dataStore>
-                            </OTDataGraphable>
-                          </graphables>
-                        </OTDataCollector>
+                        <OTQuestion id="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" name="AngiesGraphQ">
+                          <prompt>
+                            <OTCompoundDoc>
+                              <bodyText />
+                            </OTCompoundDoc>
+                          </prompt>
+                          <input>
+                            <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="2.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackStart="true">
+                              <source>
+                                <OTDataGraphable name="Angie" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
+                                  <dataStore>
+                                    <OTDataStore local_id="angie-ds1" numberChannels="2" />
+                                  </dataStore>
+                                  <rubric>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="BEGINNING_X" operation="EQUAL_TO" tolerance="0.25" />
+                                        <OTGraphSegmentCriterion property="BEGINNING_Y" operation="EQUAL_TO" expectedValue="-5.0" tolerance="0.5" />
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="5.0" tolerance="0.25" />
+                                        <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="3.0" tolerance="0.25" points="2.0" />
+                                        <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" tolerance="0.25" points="2.0" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="4.0" tolerance="0.25" points="2.0" />
+                                        <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" points="2.0" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment>
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_X" operation="EQUAL_TO" expectedValue="3.0" tolerance="0.25" points="2.0" />
+                                        <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="-3.0" tolerance="0.5" points="2.0" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                    <OTGraphSegment optional="true">
+                                      <criteria>
+                                        <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="0.25" />
+                                      </criteria>
+                                    </OTGraphSegment>
+                                  </rubric>
+                                </OTDataGraphable>
+                              </source>
+                              <xDataAxis>
+                                <OTDataAxis max="20.0" units="mins" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                                  <customGridLabels />
+                                </OTDataAxis>
+                              </xDataAxis>
+                              <yDataAxis>
+                                <OTDataAxis max="6.0" units="blocks" min="-6.0" label="Position" labelFormat="Engineering" locked="true">
+                                  <customGridLabels />
+                                </OTDataAxis>
+                              </yDataAxis>
+                              <playbackDataProducer>
+                                <OTTimerDataStoreDataProducer local_id="angie_timer_producer" sampleTime="0.05">
+                                  <dataStores>
+                                    <object refid="${chico-ds1}" />
+                                    <object refid="${angie-ds1}" />
+                                  </dataStores>
+                                </OTTimerDataStoreDataProducer>
+                              </playbackDataProducer>
+                              <graphables>
+                                <OTDataGraphable name="Chico" locked="true" yColumn="1" drawMarks="false" controllable="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" connectPoints="true">
+                                  <dataStore>
+                                    <object refid="${chico-ds1}" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                              </graphables>
+                            </OTDataCollector>
+                          </input>
+                        </OTQuestion>
                         <OTOverlayWrapper id="f737eaae-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="AngiesGraphIntrasession" embedWrappedObject="false">
                           <wrappedObject>
-                            <object refid="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
+                            <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTModelEvent id="c5789456-51c0-11e1-bb00-8738be3d7acb" type="RESET" timestamp="1328642418641" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d">
+                                  <OTDataCollector yTickInterval="2.0" xTickInterval="2.0" unset="autoTick">
+                                    <log>
+                                      <object refid="c5789456-51c0-11e1-bb00-8738be3d7acb" />
+                                    </log>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="${angie-ds1}">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.0</float>
+                                      <float>-5.0</float>
+                                      <float>5.0</float>
+                                      <float>-5.0</float>
+                                      <float>8.0</float>
+                                      <float>-0.0</float>
+                                      <float>12.0</float>
+                                      <float>0.0</float>
+                                      <float>15.0</float>
+                                      <float>-3.0</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" name="WhoIsFasterQ">
                           <prompt>
@@ -947,7 +998,7 @@ Submit your graph and story.</bodyText>
                         </OTQuestion>
                         <OTOverlayWrapper id="f737eaae-e5fb-11e0-b2c7-e0cb4ebd2b6d" name="ChicoAngieParkIntrasession" embedWrappedObject="false">
                           <wrappedObject>
-                            <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
+                            <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
                           </wrappedObject>
                         </OTOverlayWrapper>
                         <OTQuestion id="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" name="ChicoAngieHomeQ">
