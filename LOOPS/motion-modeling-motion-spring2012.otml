@@ -576,7 +576,7 @@ Submit your graph and story.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTDataCollector id="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
+                            <OTDataCollector id="4975eda9-4db5-11e1-a4a7-2bd2f4e32af2" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
                               <source>
                                 <OTDataGraphable name="Chico" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                                   <dataStore>
@@ -648,42 +648,7 @@ Submit your graph and story.</bodyText>
                               </playbackDataProducer>
                             </OTDataCollector>
                           </input>
-                          <exampleAnswerOverlay>
-                            <OTOverlay>
-                              <nonDeltaObjects>
-                                <OTModelEvent id="7f7ddd1a-4dc0-11e1-bd6b-cfa3ce938647" type="RESET" timestamp="1328202496584" />
-                              </nonDeltaObjects>
-                              <deltaObjectMap>
-                                <entry key="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d">
-                                  <OTDataCollector yTickInterval="1.0" xTickInterval="1.0" unset="autoTick">
-                                    <log>
-                                      <object refid="7f7ddd1a-4dc0-11e1-bd6b-cfa3ce938647" />
-                                    </log>
-                                  </OTDataCollector>
-                                </entry>
-                                <entry key="${chico-ds1}">
-                                  <OTDataStore>
-                                    <values>
-                                      <float>0.0</float>
-                                      <float>5.0</float>
-                                      <float>2.0</float>
-                                      <float>0.0</float>
-                                      <float>4.0</float>
-                                      <float>0.0</float>
-                                      <float>5.0</float>
-                                      <float>-3.0</float>
-                                      <float>8.0</float>
-                                      <float>0.0</float>
-                                      <float>12.0</float>
-                                      <float>0.0</float>
-                                      <float>16.0</float>
-                                      <float>5.0</float>
-                                    </values>
-                                  </OTDataStore>
-                                </entry>
-                              </deltaObjectMap>
-                            </OTOverlay>
-                          </exampleAnswerOverlay>
+
                         </OTQuestion>
                         <OTQuestion id="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d" name="FastestQ">
                           <prompt>
@@ -694,15 +659,7 @@ Submit your graph and story.</bodyText>
                           <input>
                             <OTText id="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d/input" />
                           </input>
-                          <exampleAnswerOverlay>
-                            <OTOverlay>
-                              <deltaObjectMap>
-                                <entry key="f7379c8e-e5fb-11e0-b2bc-e0cb4ebd2b6d/input">
-                                  <OTText text="" />
-                                </entry>
-                              </deltaObjectMap>
-                            </OTOverlay>
-                          </exampleAnswerOverlay>
+
                         </OTQuestion>
                         <OTOverlayWrapper id="f7379c8e-e5fb-11e0-b2bd-e0cb4ebd2b6d" name="FastestQIntrasession" embedWrappedObject="false">
                           <wrappedObject>
