@@ -248,7 +248,7 @@
                                 </OTSingleYPerXProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore local_id="first-dog-walk-ds" numberChannels="2">
+                                <OTDataStore local_id="first-dog-walk-ds" numberChannels="2" dt="NaN">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="t1" numericData="true" />
                                     <OTDataChannelDescription name="x-car1-world" numericData="true" />
@@ -385,7 +385,7 @@ Submit your graph and story.</bodyText>
                             </OTDataInput>
                           </input>
                         </OTNLogoModel>
-                        <OTDataCollector id="f7374e64-e5fb-11e0-b2ab-e0cb4ebd2b6d" name="Dog Walk" showControlBar="false" graphableListEditable="false" title="Chico's Walk - Position vs. Time" tickMode="AUTO" xTickInterval="0.5" yTickInterval="2.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="1" useAspectRatio="false" aspectRatio="3.5" useDefaultToolBar="false" displayButtons="0," autoScaleEnabled="false">
+                        <OTDataCollector id="f7374e64-e5fb-11e0-b2ab-e0cb4ebd2b6d" name="Dog Walk" showControlBar="false" graphableListEditable="false" title="Chico's Walk - Position vs. Time" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="1" useAspectRatio="false" aspectRatio="3.5" useDefaultToolBar="false" displayButtons="0," autoScaleEnabled="false">
                           <xDataAxis>
                             <OTDataAxis max="20.0" units="mins" min="0.0" label="Time" labelFormat="Engineering" locked="true">
                               <customGridLabels />
@@ -576,7 +576,7 @@ Submit your graph and story.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTDataCollector id="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="2.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
+                            <OTDataCollector id="f7379c8e-e5fb-11e0-b2ba-e0cb4ebd2b6d" name="Data graph" title="Graph to Make Chico Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" logGraphOnStart="false" logGraphOnPlaybackStart="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," logGraphOnReset="true">
                               <source>
                                 <OTDataGraphable name="Chico" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                                   <dataStore>
@@ -797,55 +797,42 @@ Submit your graph and story.</bodyText>
                               Let's make the story of Chico's walk have a happier ending. The 
           graph you drew of Chico's walk appears below. Add Angie's story to 
           it, and
-                              <b>
-                                <i>Replay</i>
-                              </b>
                               <i>
-                                the graph to see if it is correct. 
-          Then
+                                <b>Replay</b>
+                              </i>
+                              the graph to see if it is 
+          correct. Then
+                              <i>
                                 <b>Submit</b>
-                                your graph.
-                                <br />
-                                <br />
-                                <object refid="f737c39e-e5fb-11e0-b2c4-e0cb4ebd2b6d" />
-                                <br />
                               </i>
+                              your graph.
+                              <br />
+                              <br />
+                              <object refid="f737c39e-e5fb-11e0-b2c4-e0cb4ebd2b6d" />
+                              <br />
                               <ul>
-                                <li>
-                                  <i>At 3:00 Angie was at the Town Forest hunting for squirrels.</i>
-                                </li>
-                                <li>
-                                  <i>At 3:05 she hears Chico barking and runs to the Park in 3 
-              minutes, meeting Chico just as he gets there.</i>
-                                </li>
-                                <li>
-                                  <i>Angie and Chico frolic together at the Park for 4 minutes.</i>
-                                </li>
-                                <li>
-                                  <i>Then, they trot off to their own homes. Angie arrives home in 
-              3 minutes.</i>
-                                </li>
+                                <li>At 3:00 Angie was at the Town Forest hunting for squirrels.</li>
+                                <li>At 3:05 she hears Chico barking and runs to the Park in 3 
+              minutes, meeting Chico just as he gets there.</li>
+                                <li>Angie and Chico frolic together at the Park for 4 minutes.</li>
+                                <li>Then, they trot off to their own homes. Angie arrives home in 3 
+              minutes.</li>
                               </ul>
-                              <i>
-                                <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
-                                <br />
-                                <br />
-                                <object refid="f737eaae-e5fb-11e0-b2c5-e0cb4ebd2b6d" />
-                                <br />
-                                <br />
-                                <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
-                                <br />
-                                <br />
-                                <object refid="f737eaae-e5fb-11e0-b2c7-e0cb4ebd2b6d" />
-                                <br />
-                                <br />
-                                <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
-                                <br />
-                                <br />
-                                <object refid="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" />
-                                <br />
-                                <br />
-                              </i>
+                              <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
+                              <br />
+                              <br />
+                              <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="f737eaae-e5fb-11e0-b2c7-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
+                              <object refid="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" />
+                              <br />
+                              <br />
                             </div>
                           </div>
                         </div>
@@ -880,7 +867,7 @@ Submit your graph and story.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="2.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackStart="true">
+                            <OTDataCollector id="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="Data graph" title="Angie's Walk" graphableListEditable="false" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0," multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackStart="true">
                               <source>
                                 <OTDataGraphable name="Angie" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                                   <dataStore>
@@ -949,43 +936,6 @@ Submit your graph and story.</bodyText>
                             </OTDataCollector>
                           </input>
                         </OTQuestion>
-                        <OTOverlayWrapper id="f737eaae-e5fb-11e0-b2c5-e0cb4ebd2b6d" name="AngiesGraphIntrasession" embedWrappedObject="false">
-                          <wrappedObject>
-                            <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
-                          </wrappedObject>
-                          <exampleSubmissionOverlay>
-                            <OTOverlay>
-                              <nonDeltaObjects>
-                                <OTModelEvent id="c5789456-51c0-11e1-bb00-8738be3d7acb" type="RESET" timestamp="1328642418641" />
-                              </nonDeltaObjects>
-                              <deltaObjectMap>
-                                <entry key="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d">
-                                  <OTDataCollector yTickInterval="2.0" xTickInterval="2.0" unset="autoTick">
-                                    <log>
-                                      <object refid="c5789456-51c0-11e1-bb00-8738be3d7acb" />
-                                    </log>
-                                  </OTDataCollector>
-                                </entry>
-                                <entry key="${angie-ds1}">
-                                  <OTDataStore>
-                                    <values>
-                                      <float>0.0</float>
-                                      <float>-5.0</float>
-                                      <float>5.0</float>
-                                      <float>-5.0</float>
-                                      <float>8.0</float>
-                                      <float>-0.0</float>
-                                      <float>12.0</float>
-                                      <float>0.0</float>
-                                      <float>15.0</float>
-                                      <float>-3.0</float>
-                                    </values>
-                                  </OTDataStore>
-                                </entry>
-                              </deltaObjectMap>
-                            </OTOverlay>
-                          </exampleSubmissionOverlay>
-                        </OTOverlayWrapper>
                         <OTQuestion id="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" name="WhoIsFasterQ">
                           <prompt>
                             <OTCompoundDoc>
@@ -1000,6 +950,35 @@ Submit your graph and story.</bodyText>
                           <wrappedObject>
                             <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f737c39e-e5fb-11e0-b2c5-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="1.0" yTickInterval="2.0" unset="autoTick">
+                                    <log>
+                                      <OTModelEvent id="da58791a-525e-11e1-b9f3-1766fe3ca66a" type="RESET" timestamp="1328710314146" />
+                                    </log>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="${angie-ds1}">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.0</float>
+                                      <float>-5.0</float>
+                                      <float>5.0</float>
+                                      <float>-5.0</float>
+                                      <float>8.0</float>
+                                      <float>-0.0</float>
+                                      <float>12.0</float>
+                                      <float>-0.0</float>
+                                      <float>15.0</float>
+                                      <float>-3.0</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" name="ChicoAngieHomeQ">
                           <prompt>
@@ -1008,13 +987,22 @@ Submit your graph and story.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" name="ChicoAngieHomeIntrasession" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d/input">
+                                  <OTText text="Chico was faster than Angie.  Chico went 5 blocks in 4 minutes or 1.25 blocks per minuter and Angie went 3 blocks in 3 minutes or 1 block per minute." />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
