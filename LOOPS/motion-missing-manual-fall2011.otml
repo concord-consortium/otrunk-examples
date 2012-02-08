@@ -463,19 +463,17 @@
                                 <OTLinearProducerFilter name="Dirction-Offset" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
                                     <OTTimeLimitDataProducerFilter name="TimeLimit20" timeLimit="20000" sourceChannel="1">
-                                      
-                                          <source>
-                                            <OTSensorDataProxy name="dataproducer">
-                                              <request>
-                                                <OTExperimentRequest period="0.1">
-                                                  <sensorRequests>
-                                                    <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
-                                                  </sensorRequests>
-                                                </OTExperimentRequest>
-                                              </request>
-                                            </OTSensorDataProxy>
-                                          </source>
-                                        
+                                      <source>
+                                        <OTSensorDataProxy name="dataproducer">
+                                          <request>
+                                            <OTExperimentRequest period="0.1">
+                                              <sensorRequests>
+                                                <OTSensorRequest stepSize="0.1" type="13" unit="m" port="0" requiredMax="4.0" displayPrecision="-2" requiredMin="-4.0" />
+                                              </sensorRequests>
+                                            </OTExperimentRequest>
+                                          </request>
+                                        </OTSensorDataProxy>
+                                      </source>
                                     </OTTimeLimitDataProducerFilter>
                                   </source>
                                 </OTLinearProducerFilter>
@@ -574,6 +572,24 @@
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f6dad530-e5fb-11e0-aa9a-e0cb4ebd2b6d">
+                                  <OTDataCollector yTickInterval="0.5" unset="autoTick" />
+                                </entry>
+                                <entry key="7ec63a50-0a2a-11e1-be50-0800200c9a66">
+                                  <OTText>
+                                    <text>1. Stand very close to the probe for 3 seconds.
+2. Move 2 meters backwards for 3 seconds.
+3. Stand still for 3 seconds.
+4. Move 1 meter towards the probe for 3 seconds.
+5. Stand still for 3 seconds.</text>
+                                  </OTText>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
@@ -596,8 +612,7 @@
           instructions:
                               <br />
                               <br />
-                              <object viewid="2f9f55fa-d72c-4f20-82c0-bd4071b5de2c"	
-                              	 refid="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
+                              <object viewid="2f9f55fa-d72c-4f20-82c0-bd4071b5de2c" refid="7ec63a50-0a2a-11e1-be50-0800200c9a66" />
                               <br />
                               <br />
                               <object refid="f6db4a60-e5fb-11e0-aaa8-e0cb4ebd2b6d" />
@@ -621,7 +636,7 @@
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
-                              <OTLinearProducerFilter name="MinusOneIncreasing" k0="-1.0" k1="1.0" sourceChannel="1">
+                                <OTLinearProducerFilter name="MinusOneIncreasing" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
                                     <OTTimeLimitDataProducerFilter name="Time20s" timeLimit="20000" sourceChannel="1">
                                       <source>
@@ -642,7 +657,7 @@
                               <dataStore>
                                 <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
