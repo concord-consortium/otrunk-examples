@@ -894,8 +894,12 @@ Submit your graph and story.</bodyText>
                         </OTQuestion>
                         <OTOverlayWrapper id="f737eaae-e5fb-11e0-b2c7-e0cb4ebd2b6d" name="ChicoAngieParkIntrasession" embedWrappedObject="false">
                           <wrappedObject>
-                            <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
-                            <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
+                                <object refid="f737eaae-e5fb-11e0-b2c6-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
                           </wrappedObject>
                           <exampleSubmissionOverlay>
                             <OTOverlay>
@@ -939,8 +943,12 @@ Submit your graph and story.</bodyText>
                         </OTQuestion>
                         <OTOverlayWrapper id="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" name="ChicoAngieHomeIntrasession" embedWrappedObject="false">
                           <wrappedObject>
-                            <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
-                            <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
+                            <OTObjectSet>
+                                <objects>
+                                    <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
+                                    <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
+                                </objects>
+                            </OTObjectSet>
                           </wrappedObject>
                           <exampleSubmissionOverlay>
                             <OTOverlay>
