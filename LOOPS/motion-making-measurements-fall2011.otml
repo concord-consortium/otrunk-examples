@@ -47,6 +47,7 @@
     <import class="org.concord.data.state.OTHoltsMethodSmoothing" />
     <import class="org.concord.datagraph.state.rubric.OTGraphSegment" />
     <import class="org.concord.datagraph.state.rubric.OTGraphSegmentCriterion" />
+    <import class="org.concord.otrunk.logging.OTModelEvent" />
   </imports>
   <objects>
     <OTSystem local_id="system">
@@ -347,9 +348,9 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d" name="JumpingGraph" title="Jumping Graph" graphableListEditable="false" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
+                        <OTDataCollector id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d" name="JumpingGraph" title="Jumping Graph" graphableListEditable="false" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="0.5" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
                           <source>
-                            <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
                                   <source>
@@ -370,9 +371,9 @@
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -393,7 +394,7 @@
                             <OTEventLog />
                           </eventLog>
                           <graphables>
-                            <OTDataGraphable drawMarks="false" color="0xff0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/graphables[0]" drawMarks="false" color="0xff0000" connectPoints="true" xColumn="0" yColumn="1" name="Partner2" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k1="1.0" k0="-1.0" sourceChannel="1">
                                   <source>
@@ -414,9 +415,9 @@
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/graphables[0]/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -431,7 +432,7 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f67de6c2-e5fb-11e0-b841-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f67de6c2-e5fb-11e0-b842-e0cb4ebd2b6d" name="JumpingGraphAndQIntrasession" embedWrappedObject="false">
@@ -443,6 +444,349 @@
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription id="9d333f84-529d-11e1-9e02-7335e7d8dd60" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="9d333f85-529d-11e1-9e02-7335e7d8dd60" unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="9d3a6b76-529d-11e1-9e02-7335e7d8dd60" type="START" timestamp="1328737269902" />
+                                <OTModelEvent id="a388ccb7-529d-11e1-9e02-7335e7d8dd60" type="STOP" timestamp="1328737280482" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription id="bd1812da-529d-11e1-9e02-7335e7d8dd60" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="bd1812db-529d-11e1-9e02-7335e7d8dd60" unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="bd2188bc-529d-11e1-9e02-7335e7d8dd60" type="START" timestamp="1328737323426" />
+                                <OTModelEvent id="c570c30d-529d-11e1-9e02-7335e7d8dd60" type="STOP" timestamp="1328737337367" />
+                                <OTDataPointLabel x="2.5177112" y="-0.014819496" color="-66" fontSize="10" text="start of partner1 jump" xData="2.0" yData="-0.568011">
+                                  <dataGraphable>
+                                    <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel x="4.1449594" y="0.79709995" color="-66" fontSize="10" text="Data Point" xData="3.6000001" yData="0.22972405">
+                                  <dataGraphable>
+                                    <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="dc0f51e0-529d-11e1-9e02-7335e7d8dd60" x="1.0294279" y="1.3696898" color="-66" fontSize="10" text="end of partner1 first jump" xData="3.4" yData="0.16401601">
+                                  <dataGraphable>
+                                    <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel x="3.744959" y="0.6626899" color="-66" fontSize="10" text="Data Point" xData="3.2" yData="0.095314026">
+                                  <dataGraphable>
+                                    <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="f149e3e2-529d-11e1-9e02-7335e7d8dd60" x="6.6727524" y="1.4734576" color="-66" fontSize="10" text="start of partner1 second jump" xData="6.7000003" yData="0.23941505">
+                                  <dataGraphable>
+                                    <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="fd6149c3-529d-11e1-9e02-7335e7d8dd60" x="1.6920981" y="-1.1499935" color="-66" fontSize="10" text="start of partner2 first jump" xData="3.0" yData="-0.809568">
+                                  <dataGraphable>
+                                    <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/graphables[0]" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="25cb5b84-529e-11e1-9e02-7335e7d8dd60" x="9.17357" y="-1.1665313" color="-66" fontSize="10" text="end of partner2 second jump" xData="10.1" yData="-0.868659">
+                                  <dataGraphable>
+                                    <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/graphables[0]" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="3786fff5-529e-11e1-9e02-7335e7d8dd60" x="Infinity" y="Infinity" color="-66" fontSize="10" text="Data Point" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d">
+                                  <OTDataCollector yTickInterval="0.5" xTickInterval="1.0" unset="autoTick">
+                                    <log>
+                                      <object refid="9d3a6b76-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="a388ccb7-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="bd2188bc-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="c570c30d-529d-11e1-9e02-7335e7d8dd60" />
+                                    </log>
+                                    <labels>
+                                      <object refid="dc0f51e0-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="f149e3e2-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="fd6149c3-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="25cb5b84-529e-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="3786fff5-529e-11e1-9e02-7335e7d8dd60" />
+                                    </labels>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/graphables[0]/dataStore">
+                                  <OTDataStore dt="0.1">
+                                    <channelDescriptions>
+                                      <object refid="bd1812da-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="bd1812db-529d-11e1-9e02-7335e7d8dd60" />
+                                    </channelDescriptions>
+                                    <values>
+                                      <float>-0.867604</float>
+                                      <float>-0.869264</float>
+                                      <float>-0.868849</float>
+                                      <float>-0.868313</float>
+                                      <float>-0.868088</float>
+                                      <float>-0.868313</float>
+                                      <float>-0.86833</float>
+                                      <float>-0.868538</float>
+                                      <float>-0.869627</float>
+                                      <float>-0.86781096</float>
+                                      <float>-0.86779404</float>
+                                      <float>-0.867759</float>
+                                      <float>-0.868953</float>
+                                      <float>-0.867846</float>
+                                      <float>-0.867742</float>
+                                      <float>-0.869333</float>
+                                      <float>-0.86898696</float>
+                                      <float>-0.86942</float>
+                                      <float>-0.86788</float>
+                                      <float>-0.867898</float>
+                                      <float>-0.867967</float>
+                                      <float>-0.86788</float>
+                                      <float>-0.868174</float>
+                                      <float>-0.868641</float>
+                                      <float>-0.867033</float>
+                                      <float>-0.857971</float>
+                                      <float>-0.855395</float>
+                                      <float>-0.846368</float>
+                                      <float>-0.833623</float>
+                                      <float>-0.826308</float>
+                                      <float>-0.809568</float>
+                                      <float>-0.790787</float>
+                                      <float>-0.712259</float>
+                                      <float>-0.58193696</float>
+                                      <float>-0.512228</float>
+                                      <float>-0.44905603</float>
+                                      <float>-0.363074</float>
+                                      <float>-0.296911</float>
+                                      <float>-0.227081</float>
+                                      <float>-0.17997402</float>
+                                      <float>-0.12271601</float>
+                                      <float>-0.112115026</float>
+                                      <float>-0.09741598</float>
+                                      <float>-0.09852302</float>
+                                      <float>-0.08555299</float>
+                                      <float>-0.05717498</float>
+                                      <float>-0.07666397</float>
+                                      <float>-0.074312985</float>
+                                      <float>-0.07541901</float>
+                                      <float>-0.069453</float>
+                                      <float>-0.06625402</float>
+                                      <float>-0.07355201</float>
+                                      <float>-0.07432997</float>
+                                      <float>-0.073517025</float>
+                                      <float>-0.07154602</float>
+                                      <float>-0.06801802</float>
+                                      <float>-0.06350398</float>
+                                      <float>-0.060132027</float>
+                                      <float>-0.05883503</float>
+                                      <float>-0.060737014</float>
+                                      <float>-0.048147976</float>
+                                      <float>-0.06511301</float>
+                                      <float>-0.06511301</float>
+                                      <float>-0.06497401</float>
+                                      <float>-0.06449002</float>
+                                      <float>-0.06459397</float>
+                                      <float>-0.06452501</float>
+                                      <float>-0.063849986</float>
+                                      <float>-0.06327897</float>
+                                      <float>-0.062519014</float>
+                                      <float>-0.06196499</float>
+                                      <float>-0.061222017</float>
+                                      <float>-0.061013997</float>
+                                      <float>-0.060063004</float>
+                                      <float>-0.05933702</float>
+                                      <float>-0.058299005</float>
+                                      <float>-0.05717498</float>
+                                      <float>-0.052748024</float>
+                                      <float>-0.053490996</float>
+                                      <float>-0.05492699</float>
+                                      <float>-0.048667014</float>
+                                      <float>-0.02898699</float>
+                                      <float>-0.027171016</float>
+                                      <float>-0.032254994</float>
+                                      <float>-0.029695988</float>
+                                      <float>-0.03405398</float>
+                                      <float>-0.02810502</float>
+                                      <float>-0.06039101</float>
+                                      <float>-0.088648975</float>
+                                      <float>-0.17492402</float>
+                                      <float>-0.30541903</float>
+                                      <float>-0.40999103</float>
+                                      <float>-0.50890803</float>
+                                      <float>-0.59801996</float>
+                                      <float>-0.691818</float>
+                                      <float>-0.770243</float>
+                                      <float>-0.803809</float>
+                                      <float>-0.822174</float>
+                                      <float>-0.831478</float>
+                                      <float>-0.85811</float>
+                                      <float>-0.869229</float>
+                                      <float>-0.868659</float>
+                                      <float>-0.867984</float>
+                                      <float>-0.868209</float>
+                                      <float>-0.86791503</float>
+                                      <float>-0.869143</float>
+                                      <float>-0.868192</float>
+                                      <float>-0.868053</float>
+                                      <float>-0.867725</float>
+                                      <float>-0.86539</float>
+                                      <float>-0.866168</float>
+                                      <float>-0.867154</float>
+                                      <float>-0.86533797</float>
+                                      <float>-0.866082</float>
+                                      <float>-0.866601</float>
+                                      <float>-0.86639297</float>
+                                      <float>-0.86582303</float>
+                                      <float>-0.865096</float>
+                                      <float>-0.864664</float>
+                                      <float>-0.864318</float>
+                                      <float>-0.86411</float>
+                                      <float>-0.86411</float>
+                                      <float>-0.866168</float>
+                                      <float>-0.865667</float>
+                                      <float>-0.865511</float>
+                                      <float>-0.86712</float>
+                                      <float>-0.867258</float>
+                                      <float>-0.867292</float>
+                                      <float>-0.865442</float>
+                                      <float>-0.86545897</float>
+                                      <float>-0.865736</float>
+                                      <float>-0.865529</float>
+                                      <float>-0.866013</float>
+                                      <float>-0.86651397</float>
+                                      <float>-0.86731</float>
+                                      <float>-0.867206</float>
+                                      <float>-0.865892</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore dt="0.1">
+                                    <channelDescriptions>
+                                      <object refid="9d333f84-529d-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="9d333f85-529d-11e1-9e02-7335e7d8dd60" />
+                                    </channelDescriptions>
+                                    <values>
+                                      <float>-0.59897</float>
+                                      <float>-0.598468</float>
+                                      <float>-0.598036</float>
+                                      <float>-0.597776</float>
+                                      <float>-0.597188</float>
+                                      <float>-0.596928</float>
+                                      <float>-0.59678996</float>
+                                      <float>-0.59625304</float>
+                                      <float>-0.596426</float>
+                                      <float>-0.596357</float>
+                                      <float>-0.596218</float>
+                                      <float>-0.596565</float>
+                                      <float>-0.596668</float>
+                                      <float>-0.597066</float>
+                                      <float>-0.597534</float>
+                                      <float>-0.59770703</float>
+                                      <float>-0.598018</float>
+                                      <float>-0.598226</float>
+                                      <float>-0.596582</float>
+                                      <float>-0.58647597</float>
+                                      <float>-0.568011</float>
+                                      <float>-0.546466</float>
+                                      <float>-0.553855</float>
+                                      <float>-0.48094898</float>
+                                      <float>-0.405221</float>
+                                      <float>-0.35732</float>
+                                      <float>-0.26530898</float>
+                                      <float>-0.18615502</float>
+                                      <float>-0.095510006</float>
+                                      <float>-0.036741972</float>
+                                      <float>0.019395947</float>
+                                      <float>0.060912013</float>
+                                      <float>0.095314026</float>
+                                      <float>0.12345302</float>
+                                      <float>0.16401601</float>
+                                      <float>0.21491003</float>
+                                      <float>0.22972405</float>
+                                      <float>0.24412203</float>
+                                      <float>0.24792898</float>
+                                      <float>0.24554098</float>
+                                      <float>0.24469304</float>
+                                      <float>0.24912298</float>
+                                      <float>0.26628995</float>
+                                      <float>0.26802003</float>
+                                      <float>0.266065</float>
+                                      <float>0.25308597</float>
+                                      <float>0.23892999</float>
+                                      <float>0.23768401</float>
+                                      <float>0.23173106</float>
+                                      <float>0.23415399</float>
+                                      <float>0.243083</float>
+                                      <float>0.24043596</float>
+                                      <float>0.23384202</float>
+                                      <float>0.22953296</float>
+                                      <float>0.22814906</float>
+                                      <float>0.22998297</float>
+                                      <float>0.23450005</float>
+                                      <float>0.23292506</float>
+                                      <float>0.23600602</float>
+                                      <float>0.23572898</float>
+                                      <float>0.25514495</float>
+                                      <float>0.24578297</float>
+                                      <float>0.22728395</float>
+                                      <float>0.235556</float>
+                                      <float>0.22022295</float>
+                                      <float>0.21122396</float>
+                                      <float>0.22344196</float>
+                                      <float>0.23941505</float>
+                                      <float>0.015416026</float>
+                                      <float>-0.04224497</float>
+                                      <float>0.06506503</float>
+                                      <float>-0.13820201</float>
+                                      <float>-0.27989697</float>
+                                      <float>-0.386895</float>
+                                      <float>-0.54783297</float>
+                                      <float>-0.594315</float>
+                                      <float>-0.599939</float>
+                                      <float>-0.60009503</float>
+                                      <float>-0.609474</float>
+                                      <float>-0.610236</float>
+                                      <float>-0.608522</float>
+                                      <float>-0.60725904</float>
+                                      <float>-0.60128903</float>
+                                      <float>-0.606827</float>
+                                      <float>-0.607726</float>
+                                      <float>-0.608817</float>
+                                      <float>-0.607796</float>
+                                      <float>-0.609492</float>
+                                      <float>-0.615323</float>
+                                      <float>-0.620861</float>
+                                      <float>-0.62572396</float>
+                                      <float>-0.629808</float>
+                                      <float>-0.632473</float>
+                                      <float>-0.633234</float>
+                                      <float>-0.632802</float>
+                                      <float>-0.631504</float>
+                                      <float>-0.63167703</float>
+                                      <float>-0.632542</float>
+                                      <float>-0.633113</float>
+                                      <float>-0.633667</float>
+                                      <float>-0.633425</float>
+                                      <float>-0.633044</float>
+                                      <float>-0.63250697</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67de6c2-e5fb-11e0-b841-e0cb4ebd2b6d/input">
+                                  <OTText>
+                                    <text>The duration between partner1's jumps was 3.3 seconds.  I got this by subtracting the times (6.7s - 3.4s=3.3s).
+The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 seconds and ended jumping at 10.1 seconds.  The amount of time between those jumps is 7.1 seconds (10.1s - 3s =7.1s)</text>
+                                  </OTText>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
@@ -521,7 +865,7 @@
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67de6c2-e5fb-11e0-b844-e0cb4ebd2b6d/source/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
@@ -551,7 +895,7 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText name="Open response" />
+                            <OTText id="f67de6c2-e5fb-11e0-b845-e0cb4ebd2b6d/input" name="Open response" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f67de6c2-e5fb-11e0-b846-e0cb4ebd2b6d" name="ZeroIntrasession" embedWrappedObject="false">
@@ -563,6 +907,242 @@
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription id="c74c1da7-529e-11e1-9e02-7335e7d8dd60" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="c74c1da8-529e-11e1-9e02-7335e7d8dd60" unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="c7534999-529e-11e1-9e02-7335e7d8dd60" type="START" timestamp="1328737770026" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f67de6c2-e5fb-11e0-b844-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="0.5" unset="autoTick">
+                                    <log>
+                                      <object refid="c7534999-529e-11e1-9e02-7335e7d8dd60" />
+                                    </log>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="f67de6c2-e5fb-11e0-b844-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore dt="0.1">
+                                    <channelDescriptions>
+                                      <object refid="c74c1da7-529e-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="c74c1da8-529e-11e1-9e02-7335e7d8dd60" />
+                                    </channelDescriptions>
+                                    <values>
+                                      <float>-0.11191702</float>
+                                      <float>-0.11319703</float>
+                                      <float>-0.10992801</float>
+                                      <float>-0.11003202</float>
+                                      <float>-0.11165702</float>
+                                      <float>-0.111760974</float>
+                                      <float>-0.113491</float>
+                                      <float>-0.110186994</float>
+                                      <float>-0.109616995</float>
+                                      <float>-0.10795599</float>
+                                      <float>-0.10579401</float>
+                                      <float>-0.10781801</float>
+                                      <float>-0.110584974</float>
+                                      <float>-0.117641985</float>
+                                      <float>-0.12571901</float>
+                                      <float>-0.12779403</float>
+                                      <float>-0.13590598</float>
+                                      <float>-0.142721</float>
+                                      <float>-0.14701003</float>
+                                      <float>-0.16463399</float>
+                                      <float>-0.19222099</float>
+                                      <float>-0.208565</float>
+                                      <float>-0.22350901</float>
+                                      <float>-0.23075598</float>
+                                      <float>-0.230842</float>
+                                      <float>-0.226847</float>
+                                      <float>-0.23501098</float>
+                                      <float>-0.22715801</float>
+                                      <float>-0.21370202</float>
+                                      <float>-0.19531697</float>
+                                      <float>-0.16657102</float>
+                                      <float>-0.142254</float>
+                                      <float>-0.12281299</float>
+                                      <float>-0.11816102</float>
+                                      <float>-0.109945</float>
+                                      <float>-0.101955</float>
+                                      <float>-0.091093004</float>
+                                      <float>-0.075423</float>
+                                      <float>-0.06141299</float>
+                                      <float>-0.051796973</float>
+                                      <float>-0.035954</float>
+                                      <float>-0.027357996</float>
+                                      <float>-0.014558971</float>
+                                      <float>-1.40070915E-5</float>
+                                      <float>0.015985012</float>
+                                      <float>0.030444026</float>
+                                      <float>0.020498991</float>
+                                      <float>0.023023963</float>
+                                      <float>0.027884007</float>
+                                      <float>0.035632968</float>
+                                      <float>0.026051044</float>
+                                      <float>0.029129982</float>
+                                      <float>0.026484013</float>
+                                      <float>0.023162961</float>
+                                      <float>0.028645039</float>
+                                      <float>0.021415949</float>
+                                      <float>0.021000981</float>
+                                      <float>0.02127695</float>
+                                      <float>0.024564028</float>
+                                      <float>0.023543</float>
+                                      <float>0.019029021</float>
+                                      <float>0.017801046</float>
+                                      <float>0.017403007</float>
+                                      <float>0.017611027</float>
+                                      <float>0.017056942</float>
+                                      <float>0.016831994</float>
+                                      <float>0.016002059</float>
+                                      <float>0.015449047</float>
+                                      <float>0.01522398</float>
+                                      <float>0.014947057</float>
+                                      <float>0.013910055</float>
+                                      <float>0.012889028</float>
+                                      <float>0.012318015</float>
+                                      <float>0.012526035</float>
+                                      <float>0.01236999</float>
+                                      <float>0.012699008</float>
+                                      <float>0.015396953</float>
+                                      <float>0.015949965</float>
+                                      <float>0.0141170025</float>
+                                      <float>0.018198967</float>
+                                      <float>0.016193032</float>
+                                      <float>0.015864015</float>
+                                      <float>0.01631403</float>
+                                      <float>0.016746044</float>
+                                      <float>0.019548059</float>
+                                      <float>0.019271016</float>
+                                      <float>0.020637989</float>
+                                      <float>0.018890977</float>
+                                      <float>0.019790053</float>
+                                      <float>0.020671964</float>
+                                      <float>0.021052957</float>
+                                      <float>0.021986961</float>
+                                      <float>0.021744013</float>
+                                      <float>0.021865964</float>
+                                      <float>0.02188301</float>
+                                      <float>0.022037983</float>
+                                      <float>0.023041964</float>
+                                      <float>0.018509984</float>
+                                      <float>0.017974019</float>
+                                      <float>0.017990947</float>
+                                      <float>0.024270058</float>
+                                      <float>0.017230034</float>
+                                      <float>0.015933037</float>
+                                      <float>0.015120029</float>
+                                      <float>0.01501596</float>
+                                      <float>0.014912963</float>
+                                      <float>0.012578011</float>
+                                      <float>0.01178205</float>
+                                      <float>0.016556025</float>
+                                      <float>0.015604019</float>
+                                      <float>0.015501022</float>
+                                      <float>0.01493001</float>
+                                      <float>0.01444602</float>
+                                      <float>0.014238</float>
+                                      <float>0.014307022</float>
+                                      <float>0.014255047</float>
+                                      <float>0.014031053</float>
+                                      <float>0.013805985</float>
+                                      <float>0.018993974</float>
+                                      <float>0.01786995</float>
+                                      <float>0.013010025</float>
+                                      <float>0.008633971</float>
+                                      <float>0.005676985</float>
+                                      <float>0.003082037</float>
+                                      <float>5.0497055E-4</float>
+                                      <float>2.4604797E-4</float>
+                                      <float>-0.0047529936</float>
+                                      <float>-0.0029370189</float>
+                                      <float>-0.002591014</float>
+                                      <float>-0.012449026</float>
+                                      <float>-0.016219974</float>
+                                      <float>-0.018710017</float>
+                                      <float>-0.021339</float>
+                                      <float>-0.020232022</float>
+                                      <float>-0.023742974</float>
+                                      <float>-0.026511014</float>
+                                      <float>-0.025784016</float>
+                                      <float>-0.025559008</float>
+                                      <float>-0.023811996</float>
+                                      <float>-0.023154974</float>
+                                      <float>-0.022445977</float>
+                                      <float>-0.021685004</float>
+                                      <float>-0.021373987</float>
+                                      <float>-0.017844975</float>
+                                      <float>-0.021287024</float>
+                                      <float>-0.018624008</float>
+                                      <float>-0.020717025</float>
+                                      <float>-0.02064699</float>
+                                      <float>-0.019851983</float>
+                                      <float>-0.019228995</float>
+                                      <float>-0.018432975</float>
+                                      <float>-0.017481983</float>
+                                      <float>-0.01673901</float>
+                                      <float>-0.012449026</float>
+                                      <float>-0.011515021</float>
+                                      <float>-0.010753989</float>
+                                      <float>-0.010304987</float>
+                                      <float>-0.009561002</float>
+                                      <float>-0.007312</float>
+                                      <float>-0.009006977</float>
+                                      <float>-0.009940982</float>
+                                      <float>-0.010114014</float>
+                                      <float>-0.012863994</float>
+                                      <float>-0.013572991</float>
+                                      <float>-0.014023006</float>
+                                      <float>-0.014213026</float>
+                                      <float>-0.014316976</float>
+                                      <float>-0.011497974</float>
+                                      <float>-0.012103021</float>
+                                      <float>-0.011740029</float>
+                                      <float>-0.014265001</float>
+                                      <float>-0.013867021</float>
+                                      <float>-0.013764024</float>
+                                      <float>-0.013693988</float>
+                                      <float>-0.011808991</float>
+                                      <float>-0.014023006</float>
+                                      <float>-0.0114629865</float>
+                                      <float>-0.013677001</float>
+                                      <float>-0.010702014</float>
+                                      <float>-0.0116019845</float>
+                                      <float>-0.012085974</float>
+                                      <float>-0.013936996</float>
+                                      <float>-0.010806024</float>
+                                      <float>-0.009059012</float>
+                                      <float>-0.009094</float>
+                                      <float>-0.010753989</float>
+                                      <float>-0.0053579807</float>
+                                      <float>-0.008506</float>
+                                      <float>-0.0055649877</float>
+                                      <float>-0.00810802</float>
+                                      <float>-0.008246005</float>
+                                      <float>-0.004181981</float>
+                                      <float>-0.00770998</float>
+                                      <float>-0.008176982</float>
+                                      <float>-0.004527986</float>
+                                      <float>-0.010788977</float>
+                                      <float>-0.011099994</float>
+                                      <float>-0.004476011</float>
+                                      <float>-0.0053060055</float>
+                                      <float>-0.0023139715</float>
+                                      <float>-0.00898999</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67de6c2-e5fb-11e0-b845-e0cb4ebd2b6d/input">
+                                  <OTText text="We measured that we stood about 1 meter from the probe." />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTDataCollector id="f67de6c2-e5fb-11e0-b847-e0cb4ebd2b6d" name="Motion" title="Finding Negative One" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" logGraphOnReset="true" logGraphOnPlaybackReset="true" displayButtons="0,4,">
                           <source>
@@ -587,7 +1167,7 @@
                                 </OTTimeLimitDataProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67de6c2-e5fb-11e0-b847-e0cb4ebd2b6d/source/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
@@ -614,7 +1194,7 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f67e0dd2-e5fb-11e0-b847-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f67e0dd2-e5fb-11e0-b848-e0cb4ebd2b6d" name="NegativeOneIntrasession" embedWrappedObject="false">
@@ -626,6 +1206,242 @@
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription id="f6e86003-529e-11e1-9e02-7335e7d8dd60" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="f6e86004-529e-11e1-9e02-7335e7d8dd60" unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="f6ef8bf5-529e-11e1-9e02-7335e7d8dd60" type="START" timestamp="1328737849903" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f67de6c2-e5fb-11e0-b847-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="0.5" unset="autoTick">
+                                    <log>
+                                      <object refid="f6ef8bf5-529e-11e1-9e02-7335e7d8dd60" />
+                                    </log>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="f67de6c2-e5fb-11e0-b847-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore dt="0.1">
+                                    <channelDescriptions>
+                                      <object refid="f6e86003-529e-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="f6e86004-529e-11e1-9e02-7335e7d8dd60" />
+                                    </channelDescriptions>
+                                    <values>
+                                      <float>-0.866858</float>
+                                      <float>-0.867014</float>
+                                      <float>-0.866962</float>
+                                      <float>-0.867031</float>
+                                      <float>-0.86445403</float>
+                                      <float>-0.858054</float>
+                                      <float>-0.867394</float>
+                                      <float>-0.867567</float>
+                                      <float>-0.867481</float>
+                                      <float>-0.867446</float>
+                                      <float>-0.867463</float>
+                                      <float>-0.86751497</float>
+                                      <float>-0.86755</float>
+                                      <float>-0.867463</float>
+                                      <float>-0.867411</float>
+                                      <float>-0.86755</float>
+                                      <float>-0.867602</float>
+                                      <float>-0.867671</float>
+                                      <float>-0.867619</float>
+                                      <float>-0.86763597</float>
+                                      <float>-0.867723</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.868172</float>
+                                      <float>-0.867844</float>
+                                      <float>-0.867948</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868276</float>
+                                      <float>-0.86798203</float>
+                                      <float>-0.86819</float>
+                                      <float>-0.86819</float>
+                                      <float>-0.867844</float>
+                                      <float>-0.867827</float>
+                                      <float>-0.867827</float>
+                                      <float>-0.86786103</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.86793</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.867913</float>
+                                      <float>-0.867913</float>
+                                      <float>-0.86798203</float>
+                                      <float>-0.867948</float>
+                                      <float>-0.868103</float>
+                                      <float>-0.868017</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868103</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868086</float>
+                                      <float>-0.86774004</float>
+                                      <float>-0.867705</float>
+                                      <float>-0.867619</float>
+                                      <float>-0.86793</float>
+                                      <float>-0.867792</float>
+                                      <float>-0.867809</float>
+                                      <float>-0.867827</float>
+                                      <float>-0.867844</float>
+                                      <float>-0.867913</float>
+                                      <float>-0.867896</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.867896</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.867948</float>
+                                      <float>-0.867948</float>
+                                      <float>-0.867896</float>
+                                      <float>-0.86793</float>
+                                      <float>-0.868121</float>
+                                      <float>-0.86786103</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.867913</float>
+                                      <float>-0.867948</float>
+                                      <float>-0.86793</float>
+                                      <float>-0.86786103</float>
+                                      <float>-0.868121</float>
+                                      <float>-0.867896</float>
+                                      <float>-0.86786103</float>
+                                      <float>-0.868207</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.868121</float>
+                                      <float>-0.868103</float>
+                                      <float>-0.868086</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868017</float>
+                                      <float>-0.868017</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868086</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868103</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.868155</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.86800003</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868103</float>
+                                      <float>-0.868086</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.86800003</float>
+                                      <float>-0.86800003</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.868086</float>
+                                      <float>-0.868017</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868363</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868259</float>
+                                      <float>-0.868345</float>
+                                      <float>-0.868363</float>
+                                      <float>-0.868224</float>
+                                      <float>-0.868207</float>
+                                      <float>-0.868207</float>
+                                      <float>-0.868207</float>
+                                      <float>-0.868207</float>
+                                      <float>-0.868207</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.868121</float>
+                                      <float>-0.868172</float>
+                                      <float>-0.868242</float>
+                                      <float>-0.868242</float>
+                                      <float>-0.868103</float>
+                                      <float>-0.86798203</float>
+                                      <float>-0.86798203</float>
+                                      <float>-0.868017</float>
+                                      <float>-0.868069</float>
+                                      <float>-0.868051</float>
+                                      <float>-0.868345</float>
+                                      <float>-0.867878</float>
+                                      <float>-0.868224</float>
+                                      <float>-0.868259</float>
+                                      <float>-0.868276</float>
+                                      <float>-0.86819</float>
+                                      <float>-0.868224</float>
+                                      <float>-0.868138</float>
+                                      <float>-0.868017</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868121</float>
+                                      <float>-0.865907</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868034</float>
+                                      <float>-0.868017</float>
+                                      <float>-0.868276</float>
+                                      <float>-0.867913</float>
+                                      <float>-0.86786103</float>
+                                      <float>-0.867844</float>
+                                      <float>-0.86800003</float>
+                                      <float>-0.867913</float>
+                                      <float>-0.867896</float>
+                                      <float>-0.865803</float>
+                                      <float>-0.865889</float>
+                                      <float>-0.866149</float>
+                                      <float>-0.865716</float>
+                                      <float>-0.865786</float>
+                                      <float>-0.866132</float>
+                                      <float>-0.866062</float>
+                                      <float>-0.866097</float>
+                                      <float>-0.86608</float>
+                                      <float>-0.865768</float>
+                                      <float>-0.866183</float>
+                                      <float>-0.866062</float>
+                                      <float>-0.866028</float>
+                                      <float>-0.866062</float>
+                                      <float>-0.866062</float>
+                                      <float>-0.866011</float>
+                                      <float>-0.866028</float>
+                                      <float>-0.866045</float>
+                                      <float>-0.865803</float>
+                                      <float>-0.865855</float>
+                                      <float>-0.865993</float>
+                                      <float>-0.865976</float>
+                                      <float>-0.865907</float>
+                                      <float>-0.865838</float>
+                                      <float>-0.865889</float>
+                                      <float>-0.865872</float>
+                                      <float>-0.865924</float>
+                                      <float>-0.865889</float>
+                                      <float>-0.865941</float>
+                                      <float>-0.865924</float>
+                                      <float>-0.865924</float>
+                                      <float>-0.868121</float>
+                                      <float>-0.868121</float>
+                                      <float>-0.868536</float>
+                                      <float>-0.868536</float>
+                                      <float>-0.868536</float>
+                                      <float>-0.868588</float>
+                                      <float>-0.868605</float>
+                                      <float>-0.868674</float>
+                                      <float>-0.868639</float>
+                                      <float>-0.86856997</float>
+                                      <float>-0.868484</float>
+                                      <float>-0.868363</float>
+                                      <float>-0.868449</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67e0dd2-e5fb-11e0-b847-e0cb4ebd2b6d/input">
+                                  <OTText text="We stood right next to the probe, as close as we could get." />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTDataCollector id="f67e0dd2-e5fb-11e0-b849-e0cb4ebd2b6d" name="Motion" title="Finding One" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoScaleEnabled="true" autoFitMode="0" logGraphOnReset="true" logGraphOnPlaybackReset="true" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4,">
                           <source>
@@ -650,7 +1466,7 @@
                                 </OTTimeLimitDataProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67e0dd2-e5fb-11e0-b849-e0cb4ebd2b6d/source/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
@@ -677,7 +1493,7 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f67e0dd2-e5fb-11e0-b84a-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f67e0dd2-e5fb-11e0-b84b-e0cb4ebd2b6d" name="PositiveOneIntrasession" embedWrappedObject="false">
@@ -689,6 +1505,242 @@
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription id="222c45bf-529f-11e1-9e02-7335e7d8dd60" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="222c45c0-529f-11e1-9e02-7335e7d8dd60" unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="2235bba1-529f-11e1-9e02-7335e7d8dd60" type="START" timestamp="1328737922505" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f67e0dd2-e5fb-11e0-b849-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="0.5" unset="autoTick">
+                                    <log>
+                                      <object refid="2235bba1-529f-11e1-9e02-7335e7d8dd60" />
+                                    </log>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="f67e0dd2-e5fb-11e0-b849-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore dt="0.1">
+                                    <channelDescriptions>
+                                      <object refid="222c45bf-529f-11e1-9e02-7335e7d8dd60" />
+                                      <object refid="222c45c0-529f-11e1-9e02-7335e7d8dd60" />
+                                    </channelDescriptions>
+                                    <values>
+                                      <float>0.49805403</float>
+                                      <float>0.49933398</float>
+                                      <float>0.502812</float>
+                                      <float>0.506739</float>
+                                      <float>0.509403</float>
+                                      <float>0.50663495</float>
+                                      <float>0.50339997</float>
+                                      <float>0.50374603</float>
+                                      <float>0.510095</float>
+                                      <float>0.51144505</float>
+                                      <float>0.513988</float>
+                                      <float>0.51397</float>
+                                      <float>0.51122</float>
+                                      <float>0.510718</float>
+                                      <float>0.51213706</float>
+                                      <float>0.51630604</float>
+                                      <float>0.51859</float>
+                                      <float>0.51962805</float>
+                                      <float>0.52026796</float>
+                                      <float>0.52104604</float>
+                                      <float>0.51936805</float>
+                                      <float>0.52211905</float>
+                                      <float>0.540077</float>
+                                      <float>0.546288</float>
+                                      <float>0.557672</float>
+                                      <float>0.56128705</float>
+                                      <float>0.598968</float>
+                                      <float>0.63080096</float>
+                                      <float>0.662946</float>
+                                      <float>0.67076504</float>
+                                      <float>0.689363</float>
+                                      <float>0.711439</float>
+                                      <float>0.73880804</float>
+                                      <float>0.786679</float>
+                                      <float>0.840605</float>
+                                      <float>0.828823</float>
+                                      <float>0.86067295</float>
+                                      <float>0.869012</float>
+                                      <float>0.88697004</float>
+                                      <float>0.87960005</float>
+                                      <float>0.87332</float>
+                                      <float>0.875448</float>
+                                      <float>0.86530995</float>
+                                      <float>0.85081196</float>
+                                      <float>0.851158</float>
+                                      <float>0.84115803</float>
+                                      <float>0.83083</float>
+                                      <float>0.87358</float>
+                                      <float>0.84128</float>
+                                      <float>0.86018896</float>
+                                      <float>0.860639</float>
+                                      <float>0.867507</float>
+                                      <float>0.868147</float>
+                                      <float>0.87072504</float>
+                                      <float>0.86710894</float>
+                                      <float>0.86273205</float>
+                                      <float>0.86806095</float>
+                                      <float>0.867767</float>
+                                      <float>0.87657297</float>
+                                      <float>0.884271</float>
+                                      <float>0.89143395</float>
+                                      <float>0.88856196</float>
+                                      <float>0.88217795</float>
+                                      <float>0.89280105</float>
+                                      <float>0.917402</float>
+                                      <float>0.91203904</float>
+                                      <float>0.90453005</float>
+                                      <float>0.93715894</float>
+                                      <float>0.92191696</float>
+                                      <float>0.939201</float>
+                                      <float>0.973681</float>
+                                      <float>1.0040951</float>
+                                      <float>0.98326504</float>
+                                      <float>0.996241</float>
+                                      <float>1.0193369</float>
+                                      <float>1.0285931</float>
+                                      <float>1.0474501</float>
+                                      <float>1.059664</float>
+                                      <float>1.054889</float>
+                                      <float>1.064872</float>
+                                      <float>1.066602</float>
+                                      <float>1.0657539</float>
+                                      <float>1.0718789</float>
+                                      <float>1.058419</float>
+                                      <float>1.061533</float>
+                                      <float>1.0672419</float>
+                                      <float>1.0688679</float>
+                                      <float>1.093677</float>
+                                      <float>1.0766361</float>
+                                      <float>1.0702</float>
+                                      <float>1.0668099</float>
+                                      <float>1.066896</float>
+                                      <float>1.070512</float>
+                                      <float>1.067277</float>
+                                      <float>1.067605</float>
+                                      <float>1.0710831</float>
+                                      <float>1.0713251</float>
+                                      <float>1.071481</float>
+                                      <float>1.0719819</float>
+                                      <float>1.071775</float>
+                                      <float>1.0689199</float>
+                                      <float>1.0690761</float>
+                                      <float>1.071533</float>
+                                      <float>1.0711</float>
+                                      <float>1.071584</float>
+                                      <float>1.0750101</float>
+                                      <float>1.0842309</float>
+                                      <float>1.084127</float>
+                                      <float>1.0785911</float>
+                                      <float>1.0743179</float>
+                                      <float>1.0723629</float>
+                                      <float>1.0720339</float>
+                                      <float>1.071135</float>
+                                      <float>1.069422</float>
+                                      <float>1.0675361</float>
+                                      <float>1.0676401</float>
+                                      <float>1.064405</float>
+                                      <float>1.056602</float>
+                                      <float>1.049768</float>
+                                      <float>1.0520871</float>
+                                      <float>1.047641</float>
+                                      <float>1.0254271</float>
+                                      <float>1.0240431</float>
+                                      <float>0.990428</float>
+                                      <float>0.980428</float>
+                                      <float>0.971189</float>
+                                      <float>0.96414804</float>
+                                      <float>0.96196795</float>
+                                      <float>0.968248</float>
+                                      <float>0.947453</float>
+                                      <float>0.94108605</float>
+                                      <float>0.93854296</float>
+                                      <float>0.937436</float>
+                                      <float>0.936952</float>
+                                      <float>0.93634605</float>
+                                      <float>0.93593097</float>
+                                      <float>0.935343</float>
+                                      <float>0.934824</float>
+                                      <float>0.934374</float>
+                                      <float>0.93371606</float>
+                                      <float>0.933215</float>
+                                      <float>0.933059</float>
+                                      <float>0.933578</float>
+                                      <float>0.933578</float>
+                                      <float>0.936</float>
+                                      <float>0.93527305</float>
+                                      <float>0.944391</float>
+                                      <float>0.937523</float>
+                                      <float>0.93271303</float>
+                                      <float>0.942955</float>
+                                      <float>0.95928705</float>
+                                      <float>0.95570505</float>
+                                      <float>1.030565</float>
+                                      <float>0.97388804</float>
+                                      <float>0.98032403</float>
+                                      <float>0.98245203</float>
+                                      <float>0.98933804</float>
+                                      <float>0.99840295</float>
+                                      <float>1.031672</float>
+                                      <float>0.997417</float>
+                                      <float>1.003732</float>
+                                      <float>1.0026591</float>
+                                      <float>1.013766</float>
+                                      <float>1.0235579</float>
+                                      <float>1.002711</float>
+                                      <float>0.99795306</float>
+                                      <float>0.99639595</float>
+                                      <float>0.99288404</float>
+                                      <float>0.99515104</float>
+                                      <float>0.99521995</float>
+                                      <float>0.99528897</float>
+                                      <float>0.99438906</float>
+                                      <float>0.99368</float>
+                                      <float>0.994303</float>
+                                      <float>0.99423397</float>
+                                      <float>0.994009</float>
+                                      <float>0.99333405</float>
+                                      <float>0.99297094</float>
+                                      <float>0.99539304</float>
+                                      <float>0.99632704</float>
+                                      <float>0.99842</float>
+                                      <float>0.99527204</float>
+                                      <float>0.99426794</float>
+                                      <float>0.99129295</float>
+                                      <float>0.990929</float>
+                                      <float>0.99291897</float>
+                                      <float>0.99316096</float>
+                                      <float>0.993559</float>
+                                      <float>0.993351</float>
+                                      <float>0.99195004</float>
+                                      <float>0.995116</float>
+                                      <float>0.995185</float>
+                                      <float>0.99214005</float>
+                                      <float>0.99087703</float>
+                                      <float>0.98771095</float>
+                                      <float>0.987002</float>
+                                      <float>0.98622406</float>
+                                      <float>0.98620605</float>
+                                      <float>0.98632705</float>
+                                      <float>0.98646605</float>
+                                      <float>0.985445</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67e0dd2-e5fb-11e0-b84a-e0cb4ebd2b6d/input">
+                                  <OTText text="We stood about 2 meters from the probe." />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
