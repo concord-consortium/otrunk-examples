@@ -303,13 +303,22 @@ Submit your graph and story.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f7374e64-e5fb-11e0-b2a7-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f7374e64-e5fb-11e0-b2a8-e0cb4ebd2b6d" name="Intrasession Saving" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="f7374e64-e5fb-11e0-b2a7-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f7374e64-e5fb-11e0-b2a7-e0cb4ebd2b6d/input">
+                                  <OTText text="Position of the locations and where the mover is, and the time that they moved, OR the starting postion of the mover and the speed and duration of the movement." />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
@@ -679,10 +688,10 @@ Submit your graph and story.</bodyText>
                                       <float>-0.0</float>
                                       <float>5.0</float>
                                       <float>-3.0</float>
-                                      <float>8.00</float>
+                                      <float>8.0</float>
                                       <float>-0.0</float>
                                       <float>12.0</float>
-                                      <float>0.00</float>
+                                      <float>0.0</float>
                                       <float>16.0</float>
                                       <float>5.0</float>
                                     </values>
@@ -935,10 +944,10 @@ Submit your graph and story.</bodyText>
                         <OTOverlayWrapper id="f737eaae-e5fb-11e0-b2c9-e0cb4ebd2b6d" name="ChicoAngieHomeIntrasession" embedWrappedObject="false">
                           <wrappedObject>
                             <OTObjectSet>
-                                <objects>
-                                    <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
-                                    <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
-                                </objects>
+                              <objects>
+                                <object refid="753ab2e5-51bf-11e1-b37e-a3aa6ad09d68" />
+                                <object refid="f737eaae-e5fb-11e0-b2c8-e0cb4ebd2b6d" />
+                              </objects>
                             </OTObjectSet>
                           </wrappedObject>
                           <exampleSubmissionOverlay>

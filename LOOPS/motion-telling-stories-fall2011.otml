@@ -1862,7 +1862,7 @@
                             <object refid="f79463e2-e5fb-11e0-b82a-e0cb4ebd2b6d" />
                           </wrappedObject>
                         </OTOverlayWrapper>
-                        <OTDataCollector id="f7948af2-e5fb-11e0-b82f-e0cb4ebd2b6d" name="Data graph" title="Position Graph" graphableListEditable="false" multipleGraphableEnabled="true" showControlBar="false" useDefaultToolBar="false" displayButtons="0," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
+                        <OTDataCollector id="f7948af2-e5fb-11e0-b82f-e0cb4ebd2b6d" name="Data graph" title="Position Graph" graphableListEditable="false" multipleGraphableEnabled="true" showControlBar="false" useDefaultToolBar="false" displayButtons="0," tickMode="AUTO" xTickInterval="2.0" yTickInterval="0.5">
                           <xDataAxis>
                             <OTDataAxis max="24.91274" units="minutes" min="-0.08726004" label="Time" labelFormat="Engineering" locked="true">
                               <customGridLabels />
@@ -1988,13 +1988,22 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText name="Open response" />
+                            <OTText id="f7948af2-e5fb-11e0-b836-e0cb4ebd2b6d/input" name="Open response" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f794b202-e5fb-11e0-b836-e0cb4ebd2b6d" name="SpeedIntrasession" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="f7948af2-e5fb-11e0-b836-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f7948af2-e5fb-11e0-b836-e0cb4ebd2b6d/input">
+                                  <OTText text="Isabel ran 2 miles in 20 minutes or 2 mi / 20 min = 0.1 miles / minute." />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f794b202-e5fb-11e0-b837-e0cb4ebd2b6d" name="TortoiseQ">
                           <prompt>
@@ -2003,13 +2012,22 @@
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f794b202-e5fb-11e0-b837-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f794b202-e5fb-11e0-b838-e0cb4ebd2b6d" name="TortoiseIntrasession" embedWrappedObject="false">
                           <wrappedObject>
                             <object refid="f794b202-e5fb-11e0-b837-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f794b202-e5fb-11e0-b837-e0cb4ebd2b6d/input">
+                                  <OTText text="The Tortoise and the Hare" />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <object refid="f7948af2-e5fb-11e0-b82f-e0cb4ebd2b6d" />
                       </documentRefs>
@@ -2060,11 +2078,11 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f794b202-e5fb-11e0-b83a-e0cb4ebd2b6d" name="PonyExpressGraph" title="Pony Express Trip" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="4," autoFitMode="0" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" logGraphOnReset="true" logGraphOnPlaybackStart="true" useAspectRatio="false" aspectRatio="1.5">
+                        <OTDataCollector id="f794b202-e5fb-11e0-b83a-e0cb4ebd2b6d" name="PonyExpressGraph" title="Pony Express Trip" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="4," autoFitMode="0" tickMode="AUTO" xTickInterval="0.5" yTickInterval="10.0" logGraphOnReset="true" logGraphOnPlaybackStart="true" useAspectRatio="false" aspectRatio="1.5">
                           <source>
                             <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="3.3">
                               <dataStore>
-                                <OTDataStore numberChannels="2">
+                                <OTDataStore id="f794b202-e5fb-11e0-b83a-e0cb4ebd2b6d/source/dataStore" numberChannels="2">
                                   <channelDescriptions>
                                     <OTDataChannelDescription name="Time" unit="hr" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="Position" unit="mi" precision="2" numericData="true" />
@@ -2104,7 +2122,7 @@
                                     <OTGraphSegmentCriterion property="ENDING_Y" operation="EQUAL_TO" expectedValue="50.0" tolerance="2.5" points="2.0" />
                                   </criteria>
                                 </OTGraphSegment>
-                                <OTGraphSegment optional="false">
+                                <OTGraphSegment optional="true">
                                   <criteria>
                                     <OTGraphSegmentCriterion property="DELTA_Y" operation="EQUAL_TO" tolerance="2.5" points="1.0" />
                                     <OTGraphSegmentCriterion property="DELTA_X" operation="GREATER_THAN" tolerance="0.25" />
@@ -2128,6 +2146,36 @@
                           <wrappedObject>
                             <object refid="f794b202-e5fb-11e0-b83a-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTDataPointLabel x="Infinity" y="Infinity" color="-66" fontSize="10" text="Data Point" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f794b202-e5fb-11e0-b83a-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="0.5" yTickInterval="5.0" unset="autoTick" />
+                                </entry>
+                                <entry key="f794b202-e5fb-11e0-b83a-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.019782394</float>
+                                      <float>0.33898306</float>
+                                      <float>1.9980217</float>
+                                      <float>20.0</float>
+                                      <float>2.9970326</float>
+                                      <float>19.83051</float>
+                                      <float>3.9960434</float>
+                                      <float>29.83051</float>
+                                      <float>5.9841743</float>
+                                      <float>20.0</float>
+                                      <float>7.992087</float>
+                                      <float>50.0</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f794b202-e5fb-11e0-b83c-e0cb4ebd2b6d" name="PonyExpressQ">
                           <prompt>
@@ -2315,6 +2363,47 @@
                           <wrappedObject>
                             <object refid="f794d912-e5fb-11e0-b844-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f794d912-e5fb-11e0-b844-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="1.0" yTickInterval="1.0" unset="autoTick" />
+                                </entry>
+                                <entry key="${ds2}">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.041944444</float>
+                                      <float>5.0086656</float>
+                                      <float>5.012361</float>
+                                      <float>-9.861352</float>
+                                      <float>6.9837503</float>
+                                      <float>-9.861352</float>
+                                      <float>8.997084</float>
+                                      <float>0.017331023</float>
+                                      <float>9.982778</float>
+                                      <float>-6.94974</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="${ds1}">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.041944444</float>
+                                      <float>10.0</float>
+                                      <float>3.9847224</float>
+                                      <float>9.965338</float>
+                                      <float>7.9694448</float>
+                                      <float>0.05199307</float>
+                                      <float>9.080973</float>
+                                      <float>0.05199307</float>
+                                      <float>9.961805</float>
+                                      <float>-6.94974</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
