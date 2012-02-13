@@ -348,7 +348,7 @@
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d" name="JumpingGraph" title="Jumping Graph" graphableListEditable="false" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="0.5" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
+                        <OTDataCollector id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d" name="JumpingGraph" title="Jumping Graph" graphableListEditable="false" autoScaleEnabled="true" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true" logGraphOnReset="true" logGraphOnPlaybackReset="true" useAspectRatio="false" aspectRatio="1.5">
                           <source>
                             <OTDataGraphable id="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -488,12 +488,12 @@
                                     <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/source" />
                                   </dataGraphable>
                                 </OTDataPointLabel>
-                                <OTDataPointLabel id="fd6149c3-529d-11e1-9e02-7335e7d8dd60" x="1.6920981" y="-1.1499935" color="-66" fontSize="10" text="start of partner2 first jump" xData="3.0" yData="-0.809568">
+                                <OTDataPointLabel id="fd6149c3-529d-11e1-9e02-7335e7d8dd60" x="1.6920981" y="-1.0253807" color="-66" fontSize="10" text="start of partner2 first jump" xData="3.0" yData="-0.809568">
                                   <dataGraphable>
                                     <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/graphables[0]" />
                                   </dataGraphable>
                                 </OTDataPointLabel>
-                                <OTDataPointLabel id="25cb5b84-529e-11e1-9e02-7335e7d8dd60" x="9.17357" y="-1.1665313" color="-66" fontSize="10" text="end of partner2 second jump" xData="10.1" yData="-0.868659">
+                                <OTDataPointLabel id="25cb5b84-529e-11e1-9e02-7335e7d8dd60" x="9.17357" y="-1.0253807" color="-66" fontSize="10" text="end of partner2 second jump" xData="10.1" yData="-0.868659">
                                   <dataGraphable>
                                     <object refid="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d/graphables[0]" />
                                   </dataGraphable>
@@ -502,7 +502,7 @@
                               </nonDeltaObjects>
                               <deltaObjectMap>
                                 <entry key="f67dbfb2-e5fb-11e0-b841-e0cb4ebd2b6d">
-                                  <OTDataCollector yTickInterval="0.5" xTickInterval="1.0" unset="autoTick">
+                                  <OTDataCollector yTickInterval="1.0" xTickInterval="2.0" unset="autoTick">
                                     <log>
                                       <object refid="9d3a6b76-529d-11e1-9e02-7335e7d8dd60" />
                                       <object refid="a388ccb7-529d-11e1-9e02-7335e7d8dd60" />
@@ -1834,7 +1834,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                           <source>
                             <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="2.2">
                               <dataStore>
-                                <OTDataStore numberChannels="2" />
+                                <OTDataStore id="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d/source/dataStore" numberChannels="2" />
                               </dataStore>
                               <rubric>
                                 <OTGraphSegment>
@@ -1896,6 +1896,37 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                           <wrappedObject>
                             <object refid="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="0.5" unset="autoTick" />
+                                </entry>
+                                <entry key="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.0</float>
+                                      <float>2.0</float>
+                                      <float>4.0</float>
+                                      <float>2.0</float>
+                                      <float>5.0</float>
+                                      <float>1.0</float>
+                                      <float>9.0</float>
+                                      <float>1.0</float>
+                                      <float>10.0</float>
+                                      <float>-1.0</float>
+                                      <float>14.0</float>
+                                      <float>-1.0</float>
+                                      <float>15.0</float>
+                                      <float>-2.0</float>
+                                      <float>19.0</float>
+                                      <float>-2.0</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f67e34e2-e5fb-11e0-b84e-e0cb4ebd2b6d" name="TwoToOneQ">
                           <prompt>
@@ -1926,6 +1957,11 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                           <wrappedObject>
                             <object refid="f67e34e2-e5fb-11e0-b84e-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap />
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f67e34e2-e5fb-11e0-b854-e0cb4ebd2b6d" name="OneToNOneQ">
                           <prompt>
@@ -2070,7 +2106,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" controllable="true">
                               <dataStore>
-                                <OTDataStore numberChannels="2" />
+                                <OTDataStore id="f67e8302-e5fb-11e0-b85e-e0cb4ebd2b6d/source/dataStore" numberChannels="2" />
                               </dataStore>
                               <rubric>
                                 <OTGraphSegment>
@@ -2135,6 +2171,37 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                           <wrappedObject>
                             <object refid="f67e8302-e5fb-11e0-b85e-e0cb4ebd2b6d" />
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <deltaObjectMap>
+                                <entry key="f67e8302-e5fb-11e0-b85e-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="0.5" unset="autoTick" />
+                                </entry>
+                                <entry key="f67e8302-e5fb-11e0-b85e-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore>
+                                    <values>
+                                      <float>0.02047083</float>
+                                      <float>1.2567849</float>
+                                      <float>4.0122824</float>
+                                      <float>1.2400835</float>
+                                      <float>4.9744115</float>
+                                      <float>0.5052192</float>
+                                      <float>8.986694</float>
+                                      <float>0.49686846</float>
+                                      <float>10.010236</float>
+                                      <float>-0.49686846</float>
+                                      <float>13.981576</float>
+                                      <float>-0.49686846</float>
+                                      <float>14.984647</float>
+                                      <float>-0.23799582</float>
+                                      <float>18.976458</float>
+                                      <float>-0.2546973</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                         <OTQuestion id="f67e8302-e5fb-11e0-b860-e0cb4ebd2b6d" name="PosToDist3">
                           <prompt>
@@ -2246,7 +2313,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                       <documentRefs>
                         <OTDataCollector id="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d" name="GiantStepGraph" title="Giant Step Graph" autoScaleEnabled="true" graphableListEditable="false" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" multipleGraphableEnabled="true">
                           <source>
-                            <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable id="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/source" name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
@@ -2267,9 +2334,9 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/source/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -2298,9 +2365,9 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/graphables[0]/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -2328,7 +2395,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f67ed122-e5fb-11e0-b872-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f67ed122-e5fb-11e0-b873-e0cb4ebd2b6d" name="GiantStepIntersession" embedWrappedObject="false">
@@ -2340,6 +2407,321 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="6da53db1-5655-11e1-8719-194668a8d3e4" type="START" timestamp="1329146070958" />
+                                <OTModelEvent id="74598cb2-5655-11e1-8719-194668a8d3e4" type="STOP" timestamp="1329146082206" />
+                                <OTDataGraphable id="75b32943-5655-11e1-8719-194668a8d3e4" drawMarks="false" connectPoints="true" visible="true" color="255" showAllChannels="false" name="Partner1" lineWidth="2.0" xColumn="0" yColumn="1">
+                                  <dataStore>
+                                    <object refid="75b59a44-5655-11e1-8719-194668a8d3e4" />
+                                  </dataStore>
+                                  <dataProducer>
+                                    <object refid="75b59a45-5655-11e1-8719-194668a8d3e4" />
+                                  </dataProducer>
+                                </OTDataGraphable>
+                                <OTDataStore id="75b59a44-5655-11e1-8719-194668a8d3e4" dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <object refid="75b59a46-5655-11e1-8719-194668a8d3e4" />
+                                    <object refid="75b59a47-5655-11e1-8719-194668a8d3e4" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                                <OTLinearProducerFilter id="75b59a45-5655-11e1-8719-194668a8d3e4" name="FrameOfRef" k0="-1.0" sourceChannel="1" k1="1.0">
+                                  <source>
+                                    <object refid="75b59a48-5655-11e1-8719-194668a8d3e4" />
+                                  </source>
+                                </OTLinearProducerFilter>
+                                <OTDataChannelDescription id="75b59a46-5655-11e1-8719-194668a8d3e4" numericData="true" precision="2" name="time" />
+                                <OTDataChannelDescription id="75b59a47-5655-11e1-8719-194668a8d3e4" numericData="true" unit="m" precision="-2" />
+                                <OTTimeLimitDataProducerFilter id="75b59a48-5655-11e1-8719-194668a8d3e4" timeLimit="20000" name="TimerLimiter" sourceChannel="1">
+                                  <source>
+                                    <object refid="75b59a49-5655-11e1-8719-194668a8d3e4" />
+                                  </source>
+                                </OTTimeLimitDataProducerFilter>
+                                <OTSensorDataProxy id="75b59a49-5655-11e1-8719-194668a8d3e4" name="dataproducer">
+                                  <request>
+                                    <object refid="75b59a4a-5655-11e1-8719-194668a8d3e4" />
+                                  </request>
+                                </OTSensorDataProxy>
+                                <OTExperimentRequest id="75b59a4a-5655-11e1-8719-194668a8d3e4" period="0.1">
+                                  <sensorRequests>
+                                    <object refid="75b59a4b-5655-11e1-8719-194668a8d3e4" />
+                                  </sensorRequests>
+                                </OTExperimentRequest>
+                                <OTSensorRequest id="75b59a4b-5655-11e1-8719-194668a8d3e4" port="0" unit="m" stepSize="0.1" requiredMax="4.0" type="13" displayPrecision="-2" requiredMin="-4.0" />
+                                <OTModelEvent id="75b59a4c-5655-11e1-8719-194668a8d3e4" type="RESET" timestamp="1329146084487">
+                                  <info>
+                                    <entry key="graph">
+                                      <object refid="75b32943-5655-11e1-8719-194668a8d3e4" />
+                                    </entry>
+                                  </info>
+                                </OTModelEvent>
+                                <OTDataChannelDescription id="7a2b6afd-5655-11e1-8719-194668a8d3e4" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="7a2b6afe-5655-11e1-8719-194668a8d3e4" unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="7a3507ef-5655-11e1-8719-194668a8d3e4" type="START" timestamp="1329146092033" />
+                                <OTDataPointLabel id="8fb55580-5655-11e1-8719-194668a8d3e4" x="2.7887304" y="-1.0852258" color="-66" fontSize="10" text="start of Partner1 step" xData="2.5" yData="-0.59726">
+                                  <dataGraphable>
+                                    <object refid="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="9e3e7eb1-5655-11e1-8719-194668a8d3e4" x="6.7927747" y="-0.18409841" color="-66" fontSize="10" text="end of partner1 step" xData="4.7000003" yData="0.35561204">
+                                  <dataGraphable>
+                                    <object refid="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="a8cb7402-5655-11e1-8719-194668a8d3e4" x="Infinity" y="Infinity" color="-66" fontSize="10" text="Data Point" />
+                                <OTDataChannelDescription id="4446eacf-5656-11e1-8719-194668a8d3e4" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="4446ead0-5656-11e1-8719-194668a8d3e4" name="" unit="m" precision="-2" numericData="true" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="0.5" unset="autoTick">
+                                    <log>
+                                      <object refid="6da53db1-5655-11e1-8719-194668a8d3e4" />
+                                      <object refid="74598cb2-5655-11e1-8719-194668a8d3e4" />
+                                      <object refid="75b59a4c-5655-11e1-8719-194668a8d3e4" />
+                                      <object refid="7a3507ef-5655-11e1-8719-194668a8d3e4" />
+                                    </log>
+                                    <labels>
+                                      <object refid="8fb55580-5655-11e1-8719-194668a8d3e4" />
+                                      <object refid="9e3e7eb1-5655-11e1-8719-194668a8d3e4" />
+                                      <object refid="a8cb7402-5655-11e1-8719-194668a8d3e4" />
+                                    </labels>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/graphables[0]/dataStore">
+                                  <OTDataStore>
+                                    <channelDescriptions>
+                                      <object refid="4446eacf-5656-11e1-8719-194668a8d3e4" />
+                                      <object refid="4446ead0-5656-11e1-8719-194668a8d3e4" />
+                                    </channelDescriptions>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore dt="0.1">
+                                    <channelDescriptions>
+                                      <object refid="7a2b6afd-5655-11e1-8719-194668a8d3e4" />
+                                      <object refid="7a2b6afe-5655-11e1-8719-194668a8d3e4" />
+                                    </channelDescriptions>
+                                    <values>
+                                      <float>-0.657754</float>
+                                      <float>-0.663589</float>
+                                      <float>-0.651146</float>
+                                      <float>-0.649338</float>
+                                      <float>-0.636465</float>
+                                      <float>-0.636155</float>
+                                      <float>-0.637618</float>
+                                      <float>-0.638134</float>
+                                      <float>-0.631715</float>
+                                      <float>-0.632042</float>
+                                      <float>-0.626793</float>
+                                      <float>-0.630527</float>
+                                      <float>-0.633505</float>
+                                      <float>-0.63331604</float>
+                                      <float>-0.629529</float>
+                                      <float>-0.614883</float>
+                                      <float>-0.61774004</float>
+                                      <float>-0.624969</float>
+                                      <float>-0.630889</float>
+                                      <float>-0.62660396</float>
+                                      <float>-0.616639</float>
+                                      <float>-0.616553</float>
+                                      <float>-0.614487</float>
+                                      <float>-0.61056304</float>
+                                      <float>-0.607741</float>
+                                      <float>-0.59726</float>
+                                      <float>-0.573079</float>
+                                      <float>-0.55567896</float>
+                                      <float>-0.510175</float>
+                                      <float>-0.49355</float>
+                                      <float>-0.446824</float>
+                                      <float>-0.36278498</float>
+                                      <float>-0.30912298</float>
+                                      <float>-0.12247598</float>
+                                      <float>-0.08213502</float>
+                                      <float>-0.04010701</float>
+                                      <float>0.008993983</float>
+                                      <float>0.082569</float>
+                                      <float>0.22643006</float>
+                                      <float>0.19182003</float>
+                                      <float>0.24204004</float>
+                                      <float>0.28353405</float>
+                                      <float>0.27133203</float>
+                                      <float>0.30893695</float>
+                                      <float>0.34163702</float>
+                                      <float>0.37122095</float>
+                                      <float>0.38862097</float>
+                                      <float>0.35561204</float>
+                                      <float>0.36462998</float>
+                                      <float>0.36172104</float>
+                                      <float>0.35693705</float>
+                                      <float>0.37018895</float>
+                                      <float>0.35585296</float>
+                                      <float>0.34681702</float>
+                                      <float>0.340914</float>
+                                      <float>0.33945096</float>
+                                      <float>0.342566</float>
+                                      <float>0.356197</float>
+                                      <float>0.354097</float>
+                                      <float>0.34733295</float>
+                                      <float>0.34624898</float>
+                                      <float>0.349743</float>
+                                      <float>0.34557796</float>
+                                      <float>0.34490705</float>
+                                      <float>0.34082794</float>
+                                      <float>0.33752298</float>
+                                      <float>0.336663</float>
+                                      <float>0.33612895</float>
+                                      <float>0.33650804</float>
+                                      <float>0.33673203</float>
+                                      <float>0.339072</float>
+                                      <float>0.33962297</float>
+                                      <float>0.339468</float>
+                                      <float>0.34148204</float>
+                                      <float>0.33840096</float>
+                                      <float>0.33762705</float>
+                                      <float>0.33716202</float>
+                                      <float>0.33680105</float>
+                                      <float>0.33981204</float>
+                                      <float>0.34265196</float>
+                                      <float>0.34573305</float>
+                                      <float>0.34296203</float>
+                                      <float>0.33766103</float>
+                                      <float>0.33076</float>
+                                      <float>0.33022594</float>
+                                      <float>0.33055305</float>
+                                      <float>0.341344</float>
+                                      <float>0.34204996</float>
+                                      <float>0.34530306</float>
+                                      <float>0.342721</float>
+                                      <float>0.33513105</float>
+                                      <float>0.33244598</float>
+                                      <float>0.32893598</float>
+                                      <float>0.333858</float>
+                                      <float>0.33755803</float>
+                                      <float>0.33835006</float>
+                                      <float>0.33855605</float>
+                                      <float>0.33817697</float>
+                                      <float>0.337592</float>
+                                      <float>0.33008897</float>
+                                      <float>0.32957196</float>
+                                      <float>0.33519995</float>
+                                      <float>0.33530295</float>
+                                      <float>0.33447695</float>
+                                      <float>0.33421898</float>
+                                      <float>0.33384</float>
+                                      <float>0.33020902</float>
+                                      <float>0.32649195</float>
+                                      <float>0.32666397</float>
+                                      <float>0.330261</float>
+                                      <float>0.33279097</float>
+                                      <float>0.33309996</float>
+                                      <float>0.332963</float>
+                                      <float>0.33337605</float>
+                                      <float>0.34217</float>
+                                      <float>0.33909</float>
+                                      <float>0.335235</float>
+                                      <float>0.331087</float>
+                                      <float>0.32979596</float>
+                                      <float>0.32575202</float>
+                                      <float>0.31934905</float>
+                                      <float>0.315804</float>
+                                      <float>0.31483996</float>
+                                      <float>0.31459904</float>
+                                      <float>0.31907403</float>
+                                      <float>0.33205104</float>
+                                      <float>0.33850396</float>
+                                      <float>0.33199894</float>
+                                      <float>0.32067502</float>
+                                      <float>0.322981</float>
+                                      <float>0.32320404</float>
+                                      <float>0.325683</float>
+                                      <float>0.32573402</float>
+                                      <float>0.32561398</float>
+                                      <float>0.32494295</float>
+                                      <float>0.32499397</float>
+                                      <float>0.324736</float>
+                                      <float>0.324013</float>
+                                      <float>0.32305002</float>
+                                      <float>0.322464</float>
+                                      <float>0.322464</float>
+                                      <float>0.32292902</float>
+                                      <float>0.32511497</float>
+                                      <float>0.32229197</float>
+                                      <float>0.32106996</float>
+                                      <float>0.32017505</float>
+                                      <float>0.317078</float>
+                                      <float>0.318833</float>
+                                      <float>0.31953895</float>
+                                      <float>0.31921196</float>
+                                      <float>0.31969404</float>
+                                      <float>0.32255006</float>
+                                      <float>0.32284296</float>
+                                      <float>0.32272303</float>
+                                      <float>0.32162094</float>
+                                      <float>0.31785202</float>
+                                      <float>0.31687105</float>
+                                      <float>0.31391096</float>
+                                      <float>0.316234</float>
+                                      <float>0.31361794</float>
+                                      <float>0.313532</float>
+                                      <float>0.31571805</float>
+                                      <float>0.31631994</float>
+                                      <float>0.31907403</float>
+                                      <float>0.31990004</float>
+                                      <float>0.32327294</float>
+                                      <float>0.32385802</float>
+                                      <float>0.326182</float>
+                                      <float>0.326406</float>
+                                      <float>0.32662904</float>
+                                      <float>0.326836</float>
+                                      <float>0.32604396</float>
+                                      <float>0.32301497</float>
+                                      <float>0.322533</float>
+                                      <float>0.31915998</float>
+                                      <float>0.31874704</float>
+                                      <float>0.31829906</float>
+                                      <float>0.31907403</float>
+                                      <float>0.32106996</float>
+                                      <float>0.318282</float>
+                                      <float>0.31795502</float>
+                                      <float>0.31669903</float>
+                                      <float>0.31389403</float>
+                                      <float>0.31351495</float>
+                                      <float>0.31389403</float>
+                                      <float>0.31742203</float>
+                                      <float>0.32057095</float>
+                                      <float>0.32045102</float>
+                                      <float>0.31704295</float>
+                                      <float>0.31693995</float>
+                                      <float>0.31644106</float>
+                                      <float>0.31339502</float>
+                                      <float>0.312603</float>
+                                      <float>0.31262004</float>
+                                      <float>0.31356704</float>
+                                      <float>0.313756</float>
+                                      <float>0.313825</float>
+                                      <float>0.314358</float>
+                                      <float>0.31494296</float>
+                                      <float>0.31783497</float>
+                                      <float>0.31833398</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67ed122-e5fb-11e0-b872-e0cb4ebd2b6d/input">
+                                  <OTText text="The length of Partner1's step is 0.96m.  I got this by subtracting 0.36m - -0.6m = 0.96m" />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                       <bodyText>
@@ -2431,9 +2813,9 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d" name="MeasuringSpeed" title="Measuring Speed" graphableListEditable="false" autoScaleEnabled="true" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," multipleGraphableEnabled="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
+                        <OTDataCollector id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d" name="MeasuringSpeed" title="Measuring Speed" graphableListEditable="false" autoScaleEnabled="true" showLabelCoordinates="true" labelDecimalPlaces="2" showControlBar="true" useDefaultToolBar="false" displayButtons="0,4," multipleGraphableEnabled="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" useAspectRatio="false" aspectRatio="1.5">
                           <source>
-                            <OTDataGraphable name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
+                            <OTDataGraphable id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/source" name="Partner1" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
                                 <OTLinearProducerFilter name="FrameOfRef" k0="-1.0" k1="1.0" sourceChannel="1">
                                   <source>
@@ -2454,9 +2836,9 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/source/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -2464,12 +2846,12 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             </OTDataGraphable>
                           </source>
                           <xDataAxis>
-                            <OTDataAxis max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
+                            <OTDataAxis id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/xDataAxis" max="20.0" units="s" min="0.0" label="Time" labelFormat="Engineering" locked="true">
                               <customGridLabels />
                             </OTDataAxis>
                           </xDataAxis>
                           <yDataAxis>
-                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                            <OTDataAxis id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/yDataAxis" max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
                               <customGridLabels />
                             </OTDataAxis>
                           </yDataAxis>
@@ -2495,9 +2877,9 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                                 </OTLinearProducerFilter>
                               </dataProducer>
                               <dataStore>
-                                <OTDataStore dt="0.1" numberChannels="1">
+                                <OTDataStore id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/graphables[0]/dataStore" dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -2515,7 +2897,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             </OTCompoundDoc>
                           </prompt>
                           <input>
-                            <OTText />
+                            <OTText id="f67ef832-e5fb-11e0-b875-e0cb4ebd2b6d/input" />
                           </input>
                         </OTQuestion>
                         <OTOverlayWrapper id="f67ef832-e5fb-11e0-b876-e0cb4ebd2b6d" name="SpeedIntersession" embedWrappedObject="false">
@@ -2527,6 +2909,386 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                               </objects>
                             </OTObjectSet>
                           </wrappedObject>
+                          <exampleSubmissionOverlay>
+                            <OTOverlay>
+                              <nonDeltaObjects>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="d315e12e-5659-11e1-8719-194668a8d3e4" type="START" timestamp="1329147959133" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataGraphable id="fb20bbf6-5659-11e1-8719-194668a8d3e4" drawMarks="false" connectPoints="true" visible="true" color="255" showAllChannels="false" name="Partner1" lineWidth="2.0" xColumn="0" yColumn="1">
+                                  <dataStore>
+                                    <object refid="fb20bbf7-5659-11e1-8719-194668a8d3e4" />
+                                  </dataStore>
+                                  <dataProducer>
+                                    <object refid="fb20bbf8-5659-11e1-8719-194668a8d3e4" />
+                                  </dataProducer>
+                                </OTDataGraphable>
+                                <OTDataStore id="fb20bbf7-5659-11e1-8719-194668a8d3e4" dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <object refid="fb20bbf9-5659-11e1-8719-194668a8d3e4" />
+                                    <object refid="fb20bbfa-5659-11e1-8719-194668a8d3e4" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                                <OTLinearProducerFilter id="fb20bbf8-5659-11e1-8719-194668a8d3e4" name="FrameOfRef" k0="-1.0" sourceChannel="1" k1="1.0">
+                                  <source>
+                                    <object refid="fb20bbfb-5659-11e1-8719-194668a8d3e4" />
+                                  </source>
+                                </OTLinearProducerFilter>
+                                <OTDataChannelDescription id="fb20bbf9-5659-11e1-8719-194668a8d3e4" numericData="true" precision="2" name="time" />
+                                <OTDataChannelDescription id="fb20bbfa-5659-11e1-8719-194668a8d3e4" numericData="true" unit="m" precision="-2" name="" />
+                                <OTTimeLimitDataProducerFilter id="fb20bbfb-5659-11e1-8719-194668a8d3e4" timeLimit="20000" name="TimeLimiter" sourceChannel="1">
+                                  <source>
+                                    <object refid="fb20bbfc-5659-11e1-8719-194668a8d3e4" />
+                                  </source>
+                                </OTTimeLimitDataProducerFilter>
+                                <OTSensorDataProxy id="fb20bbfc-5659-11e1-8719-194668a8d3e4" name="dataproducer">
+                                  <request>
+                                    <object refid="fb20bbfd-5659-11e1-8719-194668a8d3e4" />
+                                  </request>
+                                </OTSensorDataProxy>
+                                <OTExperimentRequest id="fb20bbfd-5659-11e1-8719-194668a8d3e4" period="0.1">
+                                  <sensorRequests>
+                                    <object refid="fb20bbfe-5659-11e1-8719-194668a8d3e4" />
+                                  </sensorRequests>
+                                </OTExperimentRequest>
+                                <OTSensorRequest id="fb20bbfe-5659-11e1-8719-194668a8d3e4" port="0" unit="m" stepSize="0.1" requiredMax="4.0" type="13" displayPrecision="-2" requiredMin="-4.0" />
+                                <OTModelEvent id="fb20bbff-5659-11e1-8719-194668a8d3e4" type="RESET" timestamp="1329148026313">
+                                  <info>
+                                    <entry key="graph">
+                                      <object refid="fb20bbf6-5659-11e1-8719-194668a8d3e4" />
+                                    </entry>
+                                  </info>
+                                </OTModelEvent>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="03fea1c4-565a-11e1-8719-194668a8d3e4" type="START" timestamp="1329148041189" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataGraphable id="53ac1fcb-565a-11e1-8719-194668a8d3e4" connectPoints="true" drawMarks="false" visible="true" showAllChannels="false" lineWidth="2.0" color="255" name="Partner1" yColumn="1" xColumn="0">
+                                  <dataProducer>
+                                    <object refid="53ac1fcc-565a-11e1-8719-194668a8d3e4" />
+                                  </dataProducer>
+                                  <dataStore>
+                                    <object refid="53ac1fcd-565a-11e1-8719-194668a8d3e4" />
+                                  </dataStore>
+                                </OTDataGraphable>
+                                <OTLinearProducerFilter id="53ac1fcc-565a-11e1-8719-194668a8d3e4" name="FrameOfRef" k0="-1.0" sourceChannel="1" k1="1.0">
+                                  <source>
+                                    <object refid="53ac1fce-565a-11e1-8719-194668a8d3e4" />
+                                  </source>
+                                </OTLinearProducerFilter>
+                                <OTDataStore id="53ac1fcd-565a-11e1-8719-194668a8d3e4" dt="0.1" numberChannels="1">
+                                  <channelDescriptions>
+                                    <object refid="53ac1fcf-565a-11e1-8719-194668a8d3e4" />
+                                    <object refid="53ac1fd0-565a-11e1-8719-194668a8d3e4" />
+                                  </channelDescriptions>
+                                </OTDataStore>
+                                <OTTimeLimitDataProducerFilter id="53ac1fce-565a-11e1-8719-194668a8d3e4" timeLimit="20000" name="TimeLimiter" sourceChannel="1">
+                                  <source>
+                                    <object refid="53ac1fd1-565a-11e1-8719-194668a8d3e4" />
+                                  </source>
+                                </OTTimeLimitDataProducerFilter>
+                                <OTDataChannelDescription id="53ac1fcf-565a-11e1-8719-194668a8d3e4" numericData="true" precision="2" name="time" />
+                                <OTDataChannelDescription id="53ac1fd0-565a-11e1-8719-194668a8d3e4" numericData="true" unit="m" precision="-2" name="" />
+                                <OTSensorDataProxy id="53ac1fd1-565a-11e1-8719-194668a8d3e4" name="dataproducer">
+                                  <request>
+                                    <object refid="53ac1fd2-565a-11e1-8719-194668a8d3e4" />
+                                  </request>
+                                </OTSensorDataProxy>
+                                <OTExperimentRequest id="53ac1fd2-565a-11e1-8719-194668a8d3e4" period="0.1">
+                                  <sensorRequests>
+                                    <object refid="53ac1fd3-565a-11e1-8719-194668a8d3e4" />
+                                  </sensorRequests>
+                                </OTExperimentRequest>
+                                <OTSensorRequest id="53ac1fd3-565a-11e1-8719-194668a8d3e4" port="0" unit="m" stepSize="0.1" requiredMax="4.0" type="13" displayPrecision="-2" requiredMin="-4.0" />
+                                <OTModelEvent id="53ac1fd4-565a-11e1-8719-194668a8d3e4" type="RESET" timestamp="1329148174866">
+                                  <info>
+                                    <entry key="graph">
+                                      <object refid="53ac1fcb-565a-11e1-8719-194668a8d3e4" />
+                                    </entry>
+                                  </info>
+                                </OTModelEvent>
+                                <OTDataChannelDescription name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription name="" numericData="true" />
+                                <OTDataChannelDescription id="5b06c0f7-565a-11e1-8719-194668a8d3e4" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="5b06c0f8-565a-11e1-8719-194668a8d3e4" unit="m" precision="-2" numericData="true" />
+                                <OTModelEvent id="5b0dc5d9-565a-11e1-8719-194668a8d3e4" type="START" timestamp="1329148187250" />
+                                <OTDataPointLabel id="7414a21a-565a-11e1-8719-194668a8d3e4" x="3.0201561" y="-0.015213693" color="-66" fontSize="10" text="Start of walk" xData="2.5" yData="-0.603449">
+                                  <dataGraphable>
+                                    <object refid="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="7dd2d5bb-565a-11e1-8719-194668a8d3e4" x="8.320156" y="1.6775392" color="-66" fontSize="10" text="end of walk" xData="7.8" yData="1.089304">
+                                  <dataGraphable>
+                                    <object refid="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/source" />
+                                  </dataGraphable>
+                                </OTDataPointLabel>
+                                <OTDataPointLabel id="848e028c-565a-11e1-8719-194668a8d3e4" x="Infinity" y="Infinity" color="-66" fontSize="10" text="Data Point" />
+                                <OTDataChannelDescription id="44a82b8f-565b-11e1-8719-194668a8d3e4" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="44a82b90-565b-11e1-8719-194668a8d3e4" name="" unit="m" precision="-2" numericData="true" />
+                              </nonDeltaObjects>
+                              <deltaObjectMap>
+                                <entry key="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d">
+                                  <OTDataCollector xTickInterval="2.0" yTickInterval="0.5" unset="autoTick">
+                                    <log>
+                                      <object refid="d315e12e-5659-11e1-8719-194668a8d3e4" />
+                                      <object refid="fb20bbff-5659-11e1-8719-194668a8d3e4" />
+                                      <object refid="03fea1c4-565a-11e1-8719-194668a8d3e4" />
+                                      <object refid="53ac1fd4-565a-11e1-8719-194668a8d3e4" />
+                                      <object refid="5b0dc5d9-565a-11e1-8719-194668a8d3e4" />
+                                    </log>
+                                    <labels>
+                                      <object refid="7414a21a-565a-11e1-8719-194668a8d3e4" />
+                                      <object refid="7dd2d5bb-565a-11e1-8719-194668a8d3e4" />
+                                      <object refid="848e028c-565a-11e1-8719-194668a8d3e4" />
+                                    </labels>
+                                  </OTDataCollector>
+                                </entry>
+                                <entry key="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/graphables[0]/dataStore">
+                                  <OTDataStore>
+                                    <channelDescriptions>
+                                      <object refid="44a82b8f-565b-11e1-8719-194668a8d3e4" />
+                                      <object refid="44a82b90-565b-11e1-8719-194668a8d3e4" />
+                                    </channelDescriptions>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/source/dataStore">
+                                  <OTDataStore dt="0.1">
+                                    <channelDescriptions>
+                                      <object refid="5b06c0f7-565a-11e1-8719-194668a8d3e4" />
+                                      <object refid="5b06c0f8-565a-11e1-8719-194668a8d3e4" />
+                                    </channelDescriptions>
+                                    <values>
+                                      <float>-0.73111403</float>
+                                      <float>-0.749142</float>
+                                      <float>-0.767999</float>
+                                      <float>-0.736519</float>
+                                      <float>-0.742753</float>
+                                      <float>-0.738194</float>
+                                      <float>-0.720909</float>
+                                      <float>-0.710824</float>
+                                      <float>-0.71034</float>
+                                      <float>-0.71369004</float>
+                                      <float>-0.71517503</float>
+                                      <float>-0.712982</float>
+                                      <float>-0.71101403</float>
+                                      <float>-0.712119</float>
+                                      <float>-0.70863104</float>
+                                      <float>-0.70787096</float>
+                                      <float>-0.707543</float>
+                                      <float>-0.70220697</float>
+                                      <float>-0.693227</float>
+                                      <float>-0.682348</float>
+                                      <float>-0.682245</float>
+                                      <float>-0.669621</float>
+                                      <float>-0.664683</float>
+                                      <float>-0.66767</float>
+                                      <float>-0.645566</float>
+                                      <float>-0.603449</float>
+                                      <float>-0.592363</float>
+                                      <float>-0.548743</float>
+                                      <float>-0.52251196</float>
+                                      <float>-0.47887498</float>
+                                      <float>-0.451953</float>
+                                      <float>-0.41408402</float>
+                                      <float>-0.410751</float>
+                                      <float>-0.36478198</float>
+                                      <float>-0.29526</float>
+                                      <float>-0.25965202</float>
+                                      <float>-0.22064298</float>
+                                      <float>-0.16529799</float>
+                                      <float>-0.13540602</float>
+                                      <float>-0.10282099</float>
+                                      <float>-0.072273016</float>
+                                      <float>-0.043953</float>
+                                      <float>-0.019742012</float>
+                                      <float>0.030820012</float>
+                                      <float>0.079862</float>
+                                      <float>0.11930299</float>
+                                      <float>0.17065895</float>
+                                      <float>0.19611299</float>
+                                      <float>0.22034001</float>
+                                      <float>0.23558795</float>
+                                      <float>0.25479102</float>
+                                      <float>0.29055405</float>
+                                      <float>0.31146598</float>
+                                      <float>0.32887197</float>
+                                      <float>0.37851906</float>
+                                      <float>0.42814803</float>
+                                      <float>0.45707297</float>
+                                      <float>0.50609803</float>
+                                      <float>0.57218397</float>
+                                      <float>0.597517</float>
+                                      <float>0.62253904</float>
+                                      <float>0.63795996</float>
+                                      <float>0.67028606</float>
+                                      <float>0.685102</float>
+                                      <float>0.711782</float>
+                                      <float>0.751292</float>
+                                      <float>0.79245996</float>
+                                      <float>0.83792806</float>
+                                      <float>0.88733304</float>
+                                      <float>0.90052605</float>
+                                      <float>0.904117</float>
+                                      <float>0.90577495</float>
+                                      <float>0.944595</float>
+                                      <float>0.97600603</float>
+                                      <float>0.994069</float>
+                                      <float>1.0152569</float>
+                                      <float>1.0334921</float>
+                                      <float>1.059948</float>
+                                      <float>1.089304</float>
+                                      <float>1.113842</float>
+                                      <float>1.133321</float>
+                                      <float>1.157479</float>
+                                      <float>1.1481719</float>
+                                      <float>1.160346</float>
+                                      <float>1.1811719</float>
+                                      <float>1.174351</float>
+                                      <float>1.17606</float>
+                                      <float>1.175801</float>
+                                      <float>1.1602769</float>
+                                      <float>1.1628151</float>
+                                      <float>1.1606741</float>
+                                      <float>1.163126</float>
+                                      <float>1.1599319</float>
+                                      <float>1.1594651</float>
+                                      <float>1.159275</float>
+                                      <float>1.155442</float>
+                                      <float>1.1581359</float>
+                                      <float>1.1578591</float>
+                                      <float>1.1592579</float>
+                                      <float>1.1686871</float>
+                                      <float>1.160346</float>
+                                      <float>1.1537671</float>
+                                      <float>1.1831579</float>
+                                      <float>1.162004</float>
+                                      <float>1.1547339</float>
+                                      <float>1.151833</float>
+                                      <float>1.1516249</float>
+                                      <float>1.1521261</float>
+                                      <float>1.1554761</float>
+                                      <float>1.165026</float>
+                                      <float>1.1555281</float>
+                                      <float>1.1580839</float>
+                                      <float>1.1541979</float>
+                                      <float>1.154958</float>
+                                      <float>1.15501</float>
+                                      <float>1.168428</float>
+                                      <float>1.172935</float>
+                                      <float>1.1692221</float>
+                                      <float>1.1688421</float>
+                                      <float>1.1614511</float>
+                                      <float>1.1578591</float>
+                                      <float>1.1578939</float>
+                                      <float>1.1551139</float>
+                                      <float>1.165647</float>
+                                      <float>1.169239</float>
+                                      <float>1.168704</float>
+                                      <float>1.172986</float>
+                                      <float>1.15482</float>
+                                      <float>1.154561</float>
+                                      <float>1.1512799</float>
+                                      <float>1.151988</float>
+                                      <float>1.150589</float>
+                                      <float>1.1482749</float>
+                                      <float>1.1477921</float>
+                                      <float>1.147619</float>
+                                      <float>1.1472051</float>
+                                      <float>1.1468589</float>
+                                      <float>1.146842</float>
+                                      <float>1.1457369</float>
+                                      <float>1.1459441</float>
+                                      <float>1.1454611</float>
+                                      <float>1.148845</float>
+                                      <float>1.1491041</float>
+                                      <float>1.1494839</float>
+                                      <float>1.152575</float>
+                                      <float>1.1531799</float>
+                                      <float>1.1568921</float>
+                                      <float>1.162677</float>
+                                      <float>1.159189</float>
+                                      <float>1.152575</float>
+                                      <float>1.1487069</float>
+                                      <float>1.148344</float>
+                                      <float>1.145858</float>
+                                      <float>1.145823</float>
+                                      <float>1.1461339</float>
+                                      <float>1.1460309</float>
+                                      <float>1.1463759</float>
+                                      <float>1.146652</float>
+                                      <float>1.146704</float>
+                                      <float>1.149657</float>
+                                      <float>1.149657</float>
+                                      <float>1.149657</float>
+                                      <float>1.1470151</float>
+                                      <float>1.14622</float>
+                                      <float>1.1460819</float>
+                                      <float>1.146065</float>
+                                      <float>1.1461339</float>
+                                      <float>1.148776</float>
+                                      <float>1.1486039</float>
+                                      <float>1.1486549</float>
+                                      <float>1.148293</float>
+                                      <float>1.148586</float>
+                                      <float>1.152489</float>
+                                      <float>1.1593101</float>
+                                      <float>1.159724</float>
+                                      <float>1.1596899</float>
+                                      <float>1.1567371</float>
+                                      <float>1.1563399</float>
+                                      <float>1.159673</float>
+                                      <float>1.163213</float>
+                                      <float>1.1601729</float>
+                                      <float>1.1528859</float>
+                                      <float>1.155977</float>
+                                      <float>1.153111</float>
+                                      <float>1.155925</float>
+                                      <float>1.149571</float>
+                                      <float>1.1600349</float>
+                                      <float>1.155787</float>
+                                      <float>1.1563921</float>
+                                      <float>1.1570129</float>
+                                      <float>1.152472</float>
+                                      <float>1.1518841</float>
+                                      <float>1.1495011</float>
+                                      <float>1.1498301</float>
+                                      <float>1.1529031</float>
+                                      <float>1.153059</float>
+                                      <float>1.1527481</float>
+                                      <float>1.1501229</float>
+                                      <float>1.149812</float>
+                                      <float>1.149467</float>
+                                      <float>1.1496911</float>
+                                    </values>
+                                  </OTDataStore>
+                                </entry>
+                                <entry key="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/xDataAxis">
+                                  <OTDataAxis min="0.0" max="20.0" />
+                                </entry>
+                                <entry key="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/yDataAxis">
+                                  <OTDataAxis min="-2.033195" max="1.966805" />
+                                </entry>
+                                <entry key="f67ef832-e5fb-11e0-b875-e0cb4ebd2b6d/input">
+                                  <OTText text="Partner1's speed is about 0.32m/s.  I got this by dividing the distance (1.09m- -0.6m = 1.69m) by the time it took (7.8s - 2.3s).  So, 1.69m / 5.3s = 0.32m/s." />
+                                </entry>
+                              </deltaObjectMap>
+                            </OTOverlay>
+                          </exampleSubmissionOverlay>
                         </OTOverlayWrapper>
                       </documentRefs>
                     </OTCompoundDoc>
