@@ -78,7 +78,7 @@
         <object refid="b5d8b4a0-db35-11dc-95ff-0800200c9a66" />
       </overlays>
       <root>
-        <OTRITESContainer name="LOOPS" leftPanelWidth="225">
+        <OTRITESContainer name="LOOPS" leftPanelWidth="280">
           <title>
             <OTCompoundDoc local_id="title" showEditBar="false">
               <bodyText>

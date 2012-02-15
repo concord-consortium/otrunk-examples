@@ -272,7 +272,7 @@
                               <dataStore>
                                 <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -293,7 +293,7 @@
                         <OTQuestion id="f6dafc40-e5fb-11e0-aa9e-e0cb4ebd2b6d" name="DescribeQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>Describe what you did to make this graph.</bodyText>
+                              <bodyText>Describe in detail what you did to make this graph. For each part of the line, include such information as where you stood, what direction you moved, and at what speed you moved.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -387,7 +387,7 @@
                               <dataStore>
                                 <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -408,7 +408,7 @@
                         <OTQuestion id="f6db2350-e5fb-11e0-aaa1-e0cb4ebd2b6d" name="LandscapeQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>Describe how you made this graph.</bodyText>
+                              <bodyText>Describe how you made this graph. Remember to include as much detail as you can.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -481,7 +481,7 @@
                               <dataStore>
                                 <OTDataStore dt="0.1" numberChannels="1">
                                   <channelDescriptions>
-                                    <OTDataChannelDescription name="dt" precision="2" numericData="true" />
+                                    <OTDataChannelDescription name="time" precision="2" numericData="true" />
                                     <OTDataChannelDescription name="" unit="m" precision="-2" numericData="true" />
                                   </channelDescriptions>
                                 </OTDataStore>
@@ -502,7 +502,7 @@
                         <OTQuestion id="f6db4a60-e5fb-11e0-aaa3-e0cb4ebd2b6d" name="StaircaseQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>Describe how you made your staircase graph.</bodyText>
+                              <bodyText>Describe in detail how you made your staircase graph.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>

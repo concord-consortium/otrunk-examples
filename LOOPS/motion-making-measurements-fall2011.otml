@@ -1938,20 +1938,27 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             <OTChoice name="Multiple choice" horizontal="false" alignContent="0">
                               <choices>
                                 <OTCompoundDoc id="f67e34e2-e5fb-11e0-b84f-e0cb4ebd2b6d" name="1">
-                                  <bodyText>1</bodyText>
+                                  <bodyText>-1</bodyText>
                                 </OTCompoundDoc>
                                 <OTCompoundDoc id="f67e34e2-e5fb-11e0-b850-e0cb4ebd2b6d" name="2">
-                                  <bodyText>2</bodyText>
+                                  <bodyText>1</bodyText>
                                 </OTCompoundDoc>
                                 <OTCompoundDoc id="f67e34e2-e5fb-11e0-b851-e0cb4ebd2b6d" name="3">
-                                  <bodyText>3</bodyText>
+                                  <bodyText>2</bodyText>
                                 </OTCompoundDoc>
                                 <OTCompoundDoc id="f67e34e2-e5fb-11e0-b852-e0cb4ebd2b6d" name="4">
-                                  <bodyText>4</bodyText>
+                                  <bodyText>3</bodyText>
                                 </OTCompoundDoc>
                               </choices>
                             </OTChoice>
                           </input>
+                          <correctAnswer>
+                            <OTObjectSet>
+                              <objects>
+                                <object refid="f67e34e2-e5fb-11e0-b850-e0cb4ebd2b6d" />
+                              </objects>
+                            </OTObjectSet>
+                          </correctAnswer>
                         </OTQuestion>
                         <OTOverlayWrapper id="f67e34e2-e5fb-11e0-b853-e0cb4ebd2b6d" name="Pos2to1Intrasession" embedWrappedObject="false">
                           <wrappedObject>
@@ -2480,6 +2487,8 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                                 <OTDataPointLabel id="a8cb7402-5655-11e1-8719-194668a8d3e4" x="Infinity" y="Infinity" color="-66" fontSize="10" text="Data Point" />
                                 <OTDataChannelDescription id="4446eacf-5656-11e1-8719-194668a8d3e4" name="time" precision="2" numericData="true" />
                                 <OTDataChannelDescription id="4446ead0-5656-11e1-8719-194668a8d3e4" name="" unit="m" precision="-2" numericData="true" />
+                                <OTDataChannelDescription id="483d57eb-5669-11e1-b0a8-8d275a5456aa" name="time" precision="2" numericData="true" />
+                                <OTDataChannelDescription id="483d57ec-5669-11e1-b0a8-8d275a5456aa" name="" unit="m" precision="-2" numericData="true" />
                               </nonDeltaObjects>
                               <deltaObjectMap>
                                 <entry key="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d">
@@ -2500,8 +2509,8 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                                 <entry key="f67ed122-e5fb-11e0-b871-e0cb4ebd2b6d/graphables[0]/dataStore">
                                   <OTDataStore>
                                     <channelDescriptions>
-                                      <object refid="4446eacf-5656-11e1-8719-194668a8d3e4" />
-                                      <object refid="4446ead0-5656-11e1-8719-194668a8d3e4" />
+                                      <object refid="483d57eb-5669-11e1-b0a8-8d275a5456aa" />
+                                      <object refid="483d57ec-5669-11e1-b0a8-8d275a5456aa" />
                                     </channelDescriptions>
                                   </OTDataStore>
                                 </entry>
