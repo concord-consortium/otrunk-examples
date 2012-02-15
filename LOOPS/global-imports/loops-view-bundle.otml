@@ -129,6 +129,9 @@
                    <entry key="${labbook-entry-chooser-view}">
               		 <OTViewEntry objectClass="org.concord.otrunk.labbook.OTLabbookEntryChooser" viewClass="org.concord.otrunk.labbook.ui.OTLabbookEntryChooserTeacherView" />
               	   </entry>
+                   <entry key="${rites_container_view}">
+                     <OTViewEntry objectClass="org.concord.otrunk.ui.OTRITESContainer" viewClass="org.concord.otrunk.ui.OTRITESContainerTeacherView" />
+                   </entry>
             	</map>
             </OTViewMode>
             <OTViewMode name="authoring">
