@@ -31,7 +31,6 @@
     <import class="org.concord.otrunk.ui.snapshot.OTSnapshotAlbum" />
     <import class="org.concord.otrunk.ui.snapshot.OTSnapshotButton" />
     <import class="org.concord.otrunk.ui.snapshot.OTSnapshotChooser" />
-    <import class="org.concord.otrunk.browser.mozswing.OTMozSwing" />
     <import class="org.concord.otrunk.ui.OTSoundPlayer" />
     <import class="org.concord.otrunkmw.OTModelerPage" />
     <import class="org.concord.otrunk.ui.OTCardContainer" />
@@ -159,9 +158,6 @@
                 <entry key="${smart-graph-question-view}">
 					<OTViewEntry objectClass="org.concord.smartgraph.OTSmartGraphQuestion" viewClass="org.concord.smartgraph.OTSmartGraphQuestionEditView" />
 				</entry>
-                <entry key="${moz-swing-view}">
-                  <OTViewEntry objectClass="org.concord.otrunk.browser.mozswing.OTMozSwing" viewClass="org.concord.otrunk.browser.mozswing.OTMozSwingEditView" />
-                </entry>
                 <entry key="${snapshot_button_view}">
                   <OTViewEntry objectClass="org.concord.otrunk.ui.snapshot.OTSnapshotButton" viewClass="org.concord.otrunk.ui.snapshot.OTSnapshotButtonEditView" />
                 </entry>
@@ -353,7 +349,6 @@
                       <OTLabbook name="Snapshot album" />
                       <OTLabbookButton name="Snapshot button" />
                       <OTLabbookEntryChooser name="Snapshot chooser" />
-                      <OTMozSwing name="Web browser" />
                       <!--<OTAuthorNote name="Author's note">
                         <note>
                           <OTText />
@@ -407,9 +402,7 @@
                 <!--<entry key="${questions-on-off-view}">
                   <OTQuestionViewConfig objectClass="org.concord.otrunk.ui.question.OTLeveledQuestions" viewClass="org.concord.otrunk.ui.question.OTLeveledQuestionsEditView" />
                 </entry>
-                --><entry key="${cck-view}">
-                  <OTViewEntry objectClass="org.concord.otrunkcck.OTCCKModel" viewClass="org.concord.otrunkcck.OTCCKModelEditView" />
-                </entry>
+                -->
                 <entry key="${data-collector-view}">
                   <OTDataCollectorViewConfig viewClass="org.concord.otrunk.graph.OTDataCollectorEditView" objectClass="org.concord.datagraph.state.OTDataCollector">
                     <predefinedGraphs>
@@ -502,7 +495,6 @@
             <!--<OTViewEntry objectClass="org.concord.otrunk.udl.OTUDLVersionContainer" viewClass="org.concord.otrunk.udl.OTUDLVersionContainerView" />-->
             <!--<OTViewEntry local_id="teacher-note-view" objectClass="org.concord.otrunk.udl.OTTeacherNote" viewClass="org.concord.otrunk.ui.swing.OTNullView" />-->
             <!--<OTViewEntry local_id="author-note-view" objectClass="org.concord.otrunk.udl.OTAuthorNote" viewClass="org.concord.otrunk.ui.swing.OTNullView" />-->
-            <OTViewEntry local_id="moz-swing-view" objectClass="org.concord.otrunk.browser.mozswing.OTMozSwing" viewClass="org.concord.otrunk.browser.mozswing.OTMozSwingView" />
             <OTViewEntry local_id="mode-switcher-view" objectClass="org.concord.otrunk.ui.OTModeSwitcher" viewClass="org.concord.otrunk.ui.swing.OTModeSwitcherBypassView" />
             <OTViewEntry objectClass="org.concord.otrunk.ui.OTImage" viewClass="org.concord.otrunk.ui.swing.OTImageView" />
             <!--<OTQuestionViewConfig local_id="questions-on-off-view" isLevelFrozen="false" defaultScaffoldLevel="1" objectClass="org.concord.otrunk.ui.question.OTLeveledQuestions" viewClass="org.concord.otrunk.ui.question.OTLeveledQuestionsOnOffView" />-->
@@ -539,10 +531,8 @@
             <OTViewEntry viewClass="org.concord.data.state.OTDataFieldView" objectClass="org.concord.data.state.OTDataField" />
             <OTViewEntry local_id="drawing-view" viewClass="org.concord.datagraph.state.OTDataDrawingToolView" objectClass="org.concord.graph.util.state.OTDrawingTool" />
             <OTViewEntry viewClass="org.concord.datagraph.state.OTMultiDataGraphView" objectClass="org.concord.datagraph.state.OTMultiDataGraph" />
-            <OTViewEntry local_id="cck-view" objectClass="org.concord.otrunkcck.OTCCKModel" viewClass="org.concord.otrunkcck.OTCCKModelView" />
             <OTViewEntry local_id="data-table-view" objectClass="org.concord.data.state.OTDataTable" viewClass="org.concord.data.state.OTDataTableView" />
             <OTViewEntry local_id="netlogo-view" viewClass="org.concord.otrunknl41.OTNLogoModelView" objectClass="org.concord.otrunknl41.OTNLogoModel" />
-            <OTViewEntry objectClass="org.concord.otrunkphet.balloons.OTPhetBalloonsModel" viewClass="org.concord.otrunkphet.balloons.OTPhetBalloonsModelView" />
             <OTViewEntry local_id="sound-player-view" objectClass="org.concord.otrunk.ui.OTSoundPlayer" viewClass="org.concord.otrunk.ui.swing.OTSoundPlayerView"/>
             <OTViewEntry local_id="overlay-wrapper-view" objectClass="org.concord.otrunk.overlay.OTOverlayWrapper" viewClass="org.concord.otrunk.overlay.OTOverlayWrapperView" />
             <OTViewEntry id="b7541497-d286-4a23-900b-35c5e0edfde9" objectClass="org.concord.otrunk.intrasession.OTMultiUserPickN" viewClass="org.concord.otrunk.intrasession.ui.OTMultiUserConcatStudentView" />
