@@ -186,7 +186,8 @@ class XmlReport
   end
 
   def _doChoiceAnswerElem(answerElem, question)
-    currentChoices = _getCurrentChoices(question.input)
+    # currentChoices = _getCurrentChoices(question.input)  # this gets current answer, but we always want first answer
+    currentChoices = question.incorrectAnswers.size > 0 ? question.incorrectAnswers.get(0) : question.input
     if currentChoices.size == 0
       STDERR.puts("    no answer")
       answerElem.text = 'NO_ANSWER'
