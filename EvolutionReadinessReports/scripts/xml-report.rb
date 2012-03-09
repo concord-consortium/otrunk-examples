@@ -197,7 +197,9 @@ class XmlReport
       elsif input.is_a? org.concord.otrunk.ui.OTChoice
         answer = currentChoiceText input
       end
-      answerElem.text = answer
+      choicesElem = answerElem.add_element('choices')
+      choiceElem = choicesElem.add_element('choice')
+      choiceElem.add_attributes('num' => '9', 'text' => answer)
     else
       currentChoices = _getCurrentChoices(question.input)
       if currentChoices.size == 0
@@ -205,14 +207,13 @@ class XmlReport
         answerElem.text = 'NO_ANSWER'
         return
       end
-      answerElem.text = 'CORRECT'
-    #  choicesElem = answerElem.add_element('choices')
-    #  currentChoices.each do |num, text|
-    #    STDERR.puts("      answer! "+num.to_s+" " +(text == nil ? 'nil' : text))
-    #    choiceElem = choicesElem.add_element('choice')
-    #    choiceElem.add_attributes('num' => num.to_s, 'text' => text)
-    #    choiceElem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
-    #  end
+      choicesElem = answerElem.add_element('choices')
+      currentChoices.each do |num, text|
+        STDERR.puts("      answer! "+num.to_s+" " +(text == nil ? 'nil' : text))
+        choiceElem = choicesElem.add_element('choice')
+        choiceElem.add_attributes('num' => num.to_s, 'text' => 'CORRECT')
+        choiceElem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
+      end
     end
   end
 
