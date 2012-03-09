@@ -205,13 +205,14 @@ class XmlReport
         answerElem.text = 'NO_ANSWER'
         return
       end
-      choicesElem = answerElem.add_element('choices')
-      currentChoices.each do |num, text|
-        STDERR.puts("      answer! "+num.to_s+" " +(text == nil ? 'nil' : text))
-        choiceElem = choicesElem.add_element('choice')
-        choiceElem.add_attributes('num' => num.to_s, 'text' => text)
-        choiceElem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
-      end
+      answerElem.text = 'CORRECT'
+    #  choicesElem = answerElem.add_element('choices')
+    #  currentChoices.each do |num, text|
+    #    STDERR.puts("      answer! "+num.to_s+" " +(text == nil ? 'nil' : text))
+    #    choiceElem = choicesElem.add_element('choice')
+    #    choiceElem.add_attributes('num' => num.to_s, 'text' => text)
+    #    choiceElem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
+    #  end
     end
   end
 
