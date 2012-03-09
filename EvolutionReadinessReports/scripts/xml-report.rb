@@ -187,19 +187,31 @@ class XmlReport
 
   def _doChoiceAnswerElem(answerElem, question)
     ## currentChoices = _getCurrentChoices(question.input)  # this gets current answer, but we always want first answer
-    firstInput = question.incorrectAnswers.size > 0 ? question.incorrectAnswers.get(0) : question.input;
-    currentChoices = _getCurrentChoices(firstInput)
-    if currentChoices.size == 0
-      STDERR.puts("    no answer")
-      answerElem.text = 'NO_ANSWER'
-      return
-    end
-    choicesElem = answerElem.add_element('choices')
-    currentChoices.each do |num, text|
-      STDERR.puts("      answer! "+num.to_s+" " +(text == nil ? 'nil' : text))
-      choiceElem = choicesElem.add_element('choice')
-      choiceElem.add_attributes('num' => num.to_s, 'text' => text)
-      choiceElem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
+    if question.incorrectAnswers.size > 0
+      input = question.incorrectAnswers.get(0)
+      answer = ""
+      if input.is_a? org.concord.otrunk.ui.OTText
+        answer = input.text.gsub(/\s/," ") if input.text
+      elsif input.is_a? org.concord.otrunk.view.document.OTCompoundDoc
+        answer = input.bodyText.gsub(/\s/," ") if input.bodyText
+      elsif input.is_a? org.concord.otrunk.ui.OTChoice
+        answer = currentChoiceText input
+      end
+      answerElem.text = answer
+    else
+      currentChoices = _getCurrentChoices(question.input)
+      if currentChoices.size == 0
+        STDERR.puts("    no answer")
+        answerElem.text = 'NO_ANSWER'
+        return
+      end
+      choicesElem = answerElem.add_element('choices')
+      currentChoices.each do |num, text|
+        STDERR.puts("      answer! "+num.to_s+" " +(text == nil ? 'nil' : text))
+        choiceElem = choicesElem.add_element('choice')
+        choiceElem.add_attributes('num' => num.to_s, 'text' => text)
+        choiceElem.text = ' ' # HACK REXML doesn't seem to put the slash on the end of the empty element  eg <foo> instead of <foo />
+      end
     end
   end
 
