@@ -64,7 +64,7 @@ class Act5Model2Reporter < ActModelReporter
       @total_correct_seeds += run[:correct_seeds]
       @total_incorrect_seeds += run[:incorrect_seeds]
     end
-    @avg_seeds_per_run = (((total_seeds*10)/modelActivityMatrix.size).to_i)/10.0
+    @avg_seeds_per_run = modelActivityMatrix.size > 0 ? (((total_seeds*10)/modelActivityMatrix.size).to_i)/10.0 : 0
   end
   
   def calcModelActivityMatrix(modelActivityData)
