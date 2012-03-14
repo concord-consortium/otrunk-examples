@@ -220,7 +220,28 @@ class XmlReport
     text = question.input.text
     STDERR.puts("   text = "+(text == nil ? 'nil' : text))
     text = text == nil ? '' : text.strip
+    text = split_str text
     answerElem.text = text == '' ? 'NO_ANSWER' : text
+  end
+  
+  def split_str(str=nil, len=20, char=" ")
+    len = 10 if len < 1
+    work_str = str.to_s.split(//) if str
+    return_str = ""
+    i = 0
+    if work_str
+      work_str.each do |s|
+        if (s == char || i == len)
+          return_str += char
+          return_str += s if s != char
+          i = 0
+        else
+          return_str += s
+          i += 1
+        end
+      end
+    end
+    return_str
   end
 
   def _doImageAnswerElem(answerElem, question)
