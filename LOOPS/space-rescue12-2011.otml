@@ -589,9 +589,6 @@
                               <object refid="da6fbb41-5b45-11de-914d-6b8ca6afb695" />
                               <br />
                               <br />
-                              <object refid="45189481-2cbf-11e1-8fa0-e974fc7d3419" />
-                              <br />
-                              <br />
                               <object refid="ddf66c23-2cc1-11e1-8fa0-e974fc7d3419" />
                               <br />
                               <br />
@@ -630,11 +627,6 @@
                       </bodyText>
                       <documentRefs>
                         <OTNLogoModel id="da6fbb41-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/LOOPS/models/SpaceRescue.v2-1.nlogo" />
-                        <OTOverlayWrapper id="45189481-2cbf-11e1-8fa0-e974fc7d3419" name="Intrasession Saving" embedWrappedObject="false">
-                          <wrappedObject>
-                            <object refid="da6fbb41-5b45-11de-914d-6b8ca6afb695" />
-                          </wrappedObject>
-                        </OTOverlayWrapper>
                         <OTQuestion id="ddf66c23-2cc1-11e1-8fa0-e974fc7d3419" name="RechargeQ">
                           <prompt>
                             <OTCompoundDoc>
@@ -920,9 +912,6 @@
                               <object refid="da6fbb42-5b45-11de-914d-6b8ca6afb695" />
                               <br />
                               <br />
-                              <object refid="4003f2a7-2cc7-11e1-a667-11dbdbe13ceb" />
-                              <br />
-                              <br />
                               <object refid="0f5622e5-2cc8-11e1-a667-11dbdbe13ceb" />
                               <br />
                               <br />
@@ -959,11 +948,6 @@
                       </bodyText>
                       <documentRefs>
                         <OTNLogoModel id="da6fbb42-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/LOOPS/models/SpaceRescue.Basic.Game1.nlogo" />
-                        <OTOverlayWrapper id="4003f2a7-2cc7-11e1-a667-11dbdbe13ceb" name="Intrasession Saving" embedWrappedObject="false">
-                          <wrappedObject>
-                            <object refid="da6fbb42-5b45-11de-914d-6b8ca6afb695" />
-                          </wrappedObject>
-                        </OTOverlayWrapper>
                         <OTQuestion id="0f5622e5-2cc8-11e1-a667-11dbdbe13ceb" name="DotQ">
                           <prompt>
                             <OTCompoundDoc>
@@ -1378,9 +1362,6 @@
                               <object refid="da6fbb43-5b45-11de-914d-6b8ca6afb695" />
                               <br />
                               <br />
-                              <object refid="0eeb4d05-30b9-11e1-bc14-fbff49ab140f" />
-                              <br />
-                              <br />
                               <object refid="1d304146-30b9-11e1-bc14-fbff49ab140f" />
                               <br />
                               <br />
@@ -1418,11 +1399,6 @@
                       </bodyText>
                       <documentRefs>
                         <OTNLogoModel id="da6fbb43-5b45-11de-914d-6b8ca6afb695" name="NetLogo model" authoredDataURL="http://otrunk.concord.org/examples/LOOPS/models/SpaceRescue.2D.game1.nlogo" />
-                        <OTOverlayWrapper id="0eeb4d05-30b9-11e1-bc14-fbff49ab140f" name="Intrasession Saving" embedWrappedObject="false">
-                          <wrappedObject>
-                            <object refid="da6fbb43-5b45-11de-914d-6b8ca6afb695" />
-                          </wrappedObject>
-                        </OTOverlayWrapper>
                         <OTQuestion id="1d304146-30b9-11e1-bc14-fbff49ab140f" name="SuccessQ">
                           <prompt>
                             <OTCompoundDoc>
