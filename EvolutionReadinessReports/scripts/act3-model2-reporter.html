@@ -7,14 +7,14 @@ class Act3Model2Reporter < ActModelReporter
   def self.fields
     {
       :times_run             => {:default_value => 0, :value => lambda { @times_run },             :header => 'Times run'},
-      :total_time            => {:default_value => 0, :value => lambda { _toTimeStr(@times_run) }, :header => 'Total time'},
-      :longest_run           => {:default_value => 0, :value => lambda { _toTimeStr(@times_run) }, :header => 'Longest run'},
-      :found_solution        => {:default_value => 0, :value => lambda { @times_run },             :header => 'Student found solution'},
-      :first_correct_run     => {:default_value => 0, :value => lambda { @times_run },             :header => 'Run first correctly planted'},
-      :avg_seeds_per_run     => {:default_value => 0, :value => lambda { @times_run },             :header => 'Average seeds planted'},
-      :total_correct_seeds   => {:default_value => 0, :value => lambda { @times_run },             :header => 'Total correct seeds'},
-      :total_incorrect_seeds => {:default_value => 0, :value => lambda { @times_run },             :header => 'Total incorrect seeds'},
-      :magnifier_uses        => {:default_value => 0, :value => lambda { @times_run },             :header => '# of magnifying glass uses'}
+      :total_time            => {:default_value => 0, :value => lambda { _toTimeStr(@total_time) }, :header => 'Total time'},
+      :longest_run           => {:default_value => 0, :value => lambda { _toTimeStr(@longest_run) }, :header => 'Longest run'},
+      :found_solution        => {:default_value => 0, :value => lambda { @found_solution },             :header => 'Student found solution'},
+      :first_correct_run     => {:default_value => 0, :value => lambda { @first_correct_run },             :header => 'Run first correctly planted'},
+      :avg_seeds_per_run     => {:default_value => 0, :value => lambda { @avg_seeds_per_run },             :header => 'Average seeds planted'},
+      :total_correct_seeds   => {:default_value => 0, :value => lambda { @total_correct_seeds },             :header => 'Total correct seeds'},
+      :total_incorrect_seeds => {:default_value => 0, :value => lambda { @total_incorrect_seeds },             :header => 'Total incorrect seeds'},
+      :magnifier_uses        => {:default_value => 0, :value => lambda { @magnifier_uses },             :header => '# of magnifying glass uses'}
     }
   end
   
