@@ -12,6 +12,7 @@ class Act9Model2Reporter < ActModelReporter
   end
   
   def parseModelActivityData(modelActivityData)
+    @log = ''
     @times_run = modelActivityData.modelRuns.size
     
     message_ci = modelActivityData.computationalInputs.detect{|c| c.name == "Message shown" }
