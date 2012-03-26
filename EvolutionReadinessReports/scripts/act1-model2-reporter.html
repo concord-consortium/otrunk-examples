@@ -16,11 +16,13 @@ class Act1Model2Reporter < ActModelReporter
       :boxes_planted =>             {:default_value => 0, :value => lambda { @boxes_planted },             :header => '# of boxes seeds were planted in (out of 5)' },
       :types_planted_per_box =>     {:default_value => [0,0,0,0,0], :value => lambda { @types_planted_per_box.inspect }, :header => 'Types planted per box' },
       :planted_all_possibilities => {:default_value => 0, :value => lambda { @planted_all_possibilities }, :header => 'Planted all possibilities?' },
-      :distance_from_perfect =>     {:default_value => 0, :value => lambda { @distance_from_perfect },     :header => 'Distance from perfect strategy' }
+      :distance_from_perfect =>     {:default_value => 0, :value => lambda { @distance_from_perfect },     :header => 'Distance from perfect strategy' },
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
   
   def parseModelActivityData(modelActivityData)
+    @log = ''
     @correct_boxes = [0,0,0,0,0]
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
     
@@ -46,6 +48,7 @@ class Act1Model2Reporter < ActModelReporter
           @types_planted_per_box[box_ix] = box.select{ |e| e != nil }.length
         end
       end
+      addLogData(run)
     end
     if @total_incorrect + @total_correct != 0
       @percent_correct = ('%.0f%' % [@total_correct.to_f / (@total_incorrect + @total_correct) * 100])

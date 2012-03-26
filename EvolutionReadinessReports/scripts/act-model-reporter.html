@@ -36,6 +36,7 @@ class ActModelReporter
   end
   
   def initialize(model)
+  
     self.class.fields.each do |field, attrs|
       self.class.class_eval do
         attr_accessor field
@@ -50,6 +51,7 @@ class ActModelReporter
     else
       Util.log("ActModelReporter: Model #{self.class.location} doesn't have model activity data")
     end
+    
   end
   
   def row_values
@@ -60,10 +62,47 @@ class ActModelReporter
     row_values.map{|v| "<td>" + v.to_s + "</td>" }.join('')
   end
   
+  def addLogData(modelRun)
+    started = false
+    startTimeProp = modelRun.otClass().getProperty("startTime")
+    endTimeProp = modelRun.otClass().getProperty("endTime")
+      
+    modelRun.computationalInputValues.each do |civ|
+      if !@started && modelRun.otIsSet(startTimeProp)
+        if (civ.time > modelRun.startTime)
+          @log += _toActualTimeStr(modelRun.startTime) + "~PLAY PUSHED$"
+          started = true
+        end
+      end
+    
+      @log += _toActualTimeStr(civ.time) + "~" + civ.reference.name + "~"
+      if (civ.values)
+        civ.values.getKeys.each do |key|
+          @log += key + ":" + civ.values.get(key).to_s + "^"
+        end
+      end
+      @log += "$"
+    end
+    
+    if !@started && modelRun.otIsSet(startTimeProp)
+      @log += _toActualTimeStr(modelRun.startTime) + "~PLAY PUSHED$"
+    end
+    
+    if modelRun.otIsSet(endTimeProp)
+      @log += _toActualTimeStr(modelRun.endTime) + "~MODEL RESET$"
+    end
+     
+  end
+  
   
   def _toTimeStr(timeVal)
     # works as long as it doesn't go over 24 hours. We should be safe.
     Time.at(timeVal).gmtime.strftime('%H:%M:%S')
+  end
+  
+  def _toActualTimeStr(timeVal)
+    # works as long as it doesn't go over 24 hours. We should be safe.
+    Time.at(timeVal/1000).gmtime.strftime('%H:%M:%S')
   end
   
   def _debugCIVMap(values)

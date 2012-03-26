@@ -31,6 +31,7 @@ def initReport
   otImport($question_helper_script)
   otImport($activity_helper_script)
   otImport($act1_model2_reporter_script)
+  otImport($three_sunlight_movable_variation_reporter_script)
 
   @otrunkHelper = OTrunkHelper.new($otObjectService, $viewContext)
   @erbHelper = ErbHelper.new(@otrunkHelper)

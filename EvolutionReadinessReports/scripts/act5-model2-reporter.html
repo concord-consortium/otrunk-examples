@@ -18,7 +18,8 @@ class Act5Model2Reporter < ActModelReporter
       :seeds_last_run             => {:header => 'Model 5:2: Seeds planted in last run',   :value => lambda { @seeds_last_run },             :default_value => 0},
       :planted_one_seed           => {:header => 'Model 5:2: Planted one seed',            :value => lambda { @planted_one_seed },           :default_value => 0},
       :planted_one_seed_correctly => {:header => 'Model 5:2: Planted one seed correctly',  :value => lambda { @planted_one_seed_correctly }, :default_value => 0},
-      :magnifier_uses             => {:header => 'Model 5:2: # of magnifying glass uses',  :value => lambda { @magnifier_uses },             :default_value => 0}
+      :magnifier_uses             => {:header => 'Model 5:2: # of magnifying glass uses',  :value => lambda { @magnifier_uses },             :default_value => 0},
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
   
@@ -41,6 +42,7 @@ class Act5Model2Reporter < ActModelReporter
   end
 
   def parseModelActivityData(modelActivityData)
+    @log = ''
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
     
     @times_run = modelActivityMatrix.length
@@ -65,6 +67,7 @@ class Act5Model2Reporter < ActModelReporter
       @total_incorrect_seeds += run[:incorrect_seeds]
     end
     @avg_seeds_per_run = modelActivityMatrix.size > 0 ? (((total_seeds*10)/modelActivityMatrix.size).to_i)/10.0 : 0
+    addLogData(run)
   end
   
   def calcModelActivityMatrix(modelActivityData)

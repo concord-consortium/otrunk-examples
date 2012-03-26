@@ -6,17 +6,20 @@ class Act8Model1Reporter < ActModelReporter
   def self.fields
     {
       :times_run        => {:header => "Times run",                  :value => lambda { @times_run }     , :default_value => 0 },
-      :magnifier_uses   => {:header => "# of magnifying glass uses", :value => lambda { @magnifier_uses }, :default_value => 0 }
+      :magnifier_uses   => {:header => "# of magnifying glass uses", :value => lambda { @magnifier_uses }, :default_value => 0 },
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
   
   def parseModelActivityData(modelActivityData)
+    @log = ''
     @times_run = modelActivityData.modelRuns.size
     
     magnifier_ci = modelActivityData.computationalInputs.detect{|c| c.name == "Info tool used" }
 
     modelActivityData.modelRuns.each do |modelRun|
       @magnifier_uses += modelRun.computationalInputValues.select{|civ| civ.reference == magnifier_ci}.size
+      addLogData(modelRun)
     end
   end
 end

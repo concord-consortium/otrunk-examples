@@ -6,12 +6,18 @@ class Act9Model1Reporter < ActModelReporter
   
   def self.fields
     {
-      :times_run => {:header => "Times run", :value => lambda { @times_run }, :default_value => 0 }
+      :times_run => {:header => "Times run", :value => lambda { @times_run }, :default_value => 0 },
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
 
   def parseModelActivityData(modelActivityData)
+    @log = ''
     @times_run = modelActivityData.modelRuns.length
+    
+    modelActivityData.modelRuns.each do |modelRun|
+      addLogData(modelRun)   
+    end
   end
   
 end

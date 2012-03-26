@@ -6,7 +6,8 @@ class Act9Model2Reporter < ActModelReporter
   def self.fields
     {
       :times_run        => {:header => "Times run",               :value => lambda { @times_run }     , :default_value => 0 },
-      :runs_completed   => {:header => "Times run to completion", :value => lambda { @runs_completed }, :default_value => 0 }
+      :runs_completed   => {:header => "Times run to completion", :value => lambda { @runs_completed }, :default_value => 0 },
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
   
@@ -17,6 +18,7 @@ class Act9Model2Reporter < ActModelReporter
 
     modelActivityData.modelRuns.each do |modelRun|
       @runs_completed += (modelRun.computationalInputValues.detect{|civ| _isCompletionMessage(civ, message_ci) }.nil? ? 0 : 1)
+      addLogData(modelRun)   
     end
   end
   

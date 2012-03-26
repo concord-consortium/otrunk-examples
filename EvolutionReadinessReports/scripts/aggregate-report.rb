@@ -118,6 +118,7 @@ def getXmlReport
     studentElem = report.addStudent(user)
   end
   
+  puts "=============================="
   @xmlText = report.getText
   @xmlPrettyText = report.getPrettyText
   # puts @xmlText

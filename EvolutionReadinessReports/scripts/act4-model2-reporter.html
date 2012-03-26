@@ -13,11 +13,13 @@ class Act4Model2Reporter < ActModelReporter
       :total_successes => {:default_value => 0, :value => lambda { @total_successes }, :header => 'Total successes' },
       :total_failures  => {:default_value => 0, :value => lambda { @total_failures },  :header => 'Total failures' },
       :mountain_steps  => {:default_value => 0, :value => lambda { @mountain_steps },  :header => 'Max mountain height step per run' },
-      :info_tool_use   => {:default_value => 0, :value => lambda { @info_tool_use },   :header => 'Times magnifying glass used' }
+      :info_tool_use   => {:default_value => 0, :value => lambda { @info_tool_use },   :header => 'Times magnifying glass used' },
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
   
   def parseModelActivityData(modelActivityData)
+    @log = ''
     modelData = calcModelData(modelActivityData)
     successArray = modelData[0]
     mountainStepsArray = modelData[1]
@@ -48,6 +50,7 @@ class Act4Model2Reporter < ActModelReporter
       successArray << modelData[0]
       mountainArray << modelData[1]
       infoToolArray << modelData[2]
+      addLogData(modelRun)
     end
     [successArray, mountainArray, infoToolArray]
   end

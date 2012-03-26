@@ -14,11 +14,13 @@ class Act3Model2Reporter < ActModelReporter
       :avg_seeds_per_run     => {:default_value => 0, :value => lambda { @avg_seeds_per_run },             :header => 'Average seeds planted'},
       :total_correct_seeds   => {:default_value => 0, :value => lambda { @total_correct_seeds },             :header => 'Total correct seeds'},
       :total_incorrect_seeds => {:default_value => 0, :value => lambda { @total_incorrect_seeds },             :header => 'Total incorrect seeds'},
-      :magnifier_uses        => {:default_value => 0, :value => lambda { @magnifier_uses },             :header => '# of magnifying glass uses'}
+      :magnifier_uses        => {:default_value => 0, :value => lambda { @magnifier_uses },             :header => '# of magnifying glass uses'},
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
   
   def parseModelActivityData(modelActivityData)
+    @log = ''
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
     
     @times_run = modelActivityMatrix.length
@@ -51,6 +53,7 @@ class Act3Model2Reporter < ActModelReporter
         @total_time += runTime
         @longest_run = runTime if runTime > @longest_run
       end
+      addLogData(modelRun)
     end
     modelActivityMatrix
   end
@@ -62,7 +65,7 @@ class Act3Model2Reporter < ActModelReporter
       :correct_seeds => 0,
       :incorrect_seeds => 0
     }
-      
+     
     modelRun.computationalInputValues.each do |civ|
       if civ.reference == ci
         isCorrect = _isPlantedCorrectly(civ)

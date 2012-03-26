@@ -18,11 +18,13 @@ class Act5Model1Reporter < ActModelReporter
       :planted_all_possibilities => {:default_value => 0, :value => lambda { @planted_all_possibilities }, :header => 'Planted all possibilities?' },
       :distance_from_perfect =>     {:default_value => 0, :value => lambda { @distance_from_perfect },     :header => 'Distance from perfect strategy' },
       :total_moves =>               {:default_value => 0, :value => lambda { @total_moves },               :header => 'Total plants moved' },
-      :first_correct_moving_run =>  {:default_value => 0, :value => lambda { @first_correct_moving_run },  :header => 'First run where all plants were correct (after moving some)' }
+      :first_correct_moving_run =>  {:default_value => 0, :value => lambda { @first_correct_moving_run },  :header => 'First run where all plants were correct (after moving some)' },
+      :log                   => {:default_value => 0, :value => lambda {@log },                      :header => 'Log'}
     }
   end
   
   def parseModelActivityData(modelActivityData)
+    @log = ''
     @correct_boxes = [0,0,0,0,0]
     modelActivityMatrix = calcModelActivityMatrix(modelActivityData)
     
@@ -47,6 +49,7 @@ class Act5Model1Reporter < ActModelReporter
           end
           @types_planted_per_box[box_ix] = box.select{ |e| e != nil }.length
         end
+        addLogData(run)
       end
       if incorrect_plantings > 0 && run[:moved][:correct] == incorrect_plantings
         # the user appears to have moved their originally incorrect plants into correct placement
