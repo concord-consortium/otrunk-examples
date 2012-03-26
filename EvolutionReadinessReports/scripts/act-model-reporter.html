@@ -68,7 +68,7 @@ class ActModelReporter
     endTimeProp = modelRun.otClass().getProperty("endTime")
       
     modelRun.computationalInputValues.each do |civ|
-      if !@started && modelRun.otIsSet(startTimeProp)
+      if !started && modelRun.otIsSet(startTimeProp)
         if (civ.time > modelRun.startTime)
           @log += _toActualTimeStr(modelRun.startTime) + "~PLAY PUSHED$"
           started = true
@@ -84,7 +84,7 @@ class ActModelReporter
       @log += "$"
     end
     
-    if !@started && modelRun.otIsSet(startTimeProp)
+    if !started && modelRun.otIsSet(startTimeProp)
       @log += _toActualTimeStr(modelRun.startTime) + "~PLAY PUSHED$"
     end
     
