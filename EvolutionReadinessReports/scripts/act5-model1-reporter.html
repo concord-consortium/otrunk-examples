@@ -49,7 +49,6 @@ class Act5Model1Reporter < ActModelReporter
           end
           @types_planted_per_box[box_ix] = box.select{ |e| e != nil }.length
         end
-        addLogData(run)
       end
       if incorrect_plantings > 0 && run[:moved][:correct] == incorrect_plantings
         # the user appears to have moved their originally incorrect plants into correct placement
@@ -97,6 +96,7 @@ class Act5Model1Reporter < ActModelReporter
       end
       result[:moved] = {:moves => moves, :correct => correctMoves}
       modelActivityMatrix << result
+      addLogData(modelRun)
     end
     modelActivityMatrix
   end

@@ -67,7 +67,6 @@ class Act5Model2Reporter < ActModelReporter
       @total_incorrect_seeds += run[:incorrect_seeds]
     end
     @avg_seeds_per_run = modelActivityMatrix.size > 0 ? (((total_seeds*10)/modelActivityMatrix.size).to_i)/10.0 : 0
-    addLogData(run)
   end
   
   def calcModelActivityMatrix(modelActivityData)
@@ -85,6 +84,7 @@ class Act5Model2Reporter < ActModelReporter
         @total_time += runTime
         @longest_run = runTime if runTime > @longest_run
       end
+      addLogData(modelRun)
     end
     modelActivityMatrix
   end

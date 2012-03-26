@@ -48,7 +48,6 @@ class Act1Model2Reporter < ActModelReporter
           @types_planted_per_box[box_ix] = box.select{ |e| e != nil }.length
         end
       end
-      addLogData(run)
     end
     if @total_incorrect + @total_correct != 0
       @percent_correct = ('%.0f%' % [@total_correct.to_f / (@total_incorrect + @total_correct) * 100])
@@ -67,6 +66,7 @@ class Act1Model2Reporter < ActModelReporter
     modelActivityMatrix = []
     modelActivityData.modelRuns.each do |modelRun|
       modelActivityMatrix << calcModelRunMatrix(modelRun)
+      addLogData(modelRun)
     end
     modelActivityMatrix
   end
