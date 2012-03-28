@@ -407,6 +407,16 @@ GRAPHICS-WINDOW
 0
 ticks
 
+TEXTBOX
+9
+10
+624
+32
+                                                                     Chico's Town
+13
+0.0
+0
+
 @#$#@#$#@
 WHAT IS IT?
 -----------

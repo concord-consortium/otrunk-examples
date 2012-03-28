@@ -439,6 +439,16 @@ NIL
 NIL
 NIL
 
+TEXTBOX
+10
+10
+622
+32
+                                                                      Chico's Town
+13
+0.0
+0
+
 @#$#@#$#@
 WHAT IS IT?
 -----------
