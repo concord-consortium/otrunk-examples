@@ -278,7 +278,7 @@
                             <string>rocket-x-vel</string>
                           </variables>
                         </OTNLogoModel>
-                        <OTDataCollector local_id="datagraph" name="Velocity" title="Velocity Graph" autoScaleEnabled="true" showControlBar="false" showLabelCoordinates="true" labelDecimalPlaces="2" useDefaultToolBar="true" tickMode="AUTO" xTickInterval="2.0" yTickInterval="10.0">
+                        <OTDataCollector local_id="datagraph" name="Velocity" title="Velocity Graph" autoScaleEnabled="true" showControlBar="false" showLabelCoordinates="true" labelDecimalPlaces="2" useDefaultToolBar="true" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0">
                           <source>
                             <OTDataGraphable name="Sensor" connectPoints="true" yColumn="1" drawMarks="false" color="255" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true">
                               <dataProducer>
@@ -578,12 +578,8 @@
                               <br />
                               <br />
                               When you 
-          have successfully rescued the shuttle,
-                              <i>
-                                <b>Submit</b>
-                              </i>
-                              your 
-          graph and answer the questions that follow.
+          have successfully rescued the shuttle, answer the questions that 
+          follow.
                               <br />
                               <br />
                               <object refid="da6fbb41-5b45-11de-914d-6b8ca6afb695" />
@@ -902,12 +898,9 @@
           remaining!
                               <br />
                               <br />
-                              When you have successfully rescued the shuttle,
-                              <i>
-                                <b>Submit</b>
-                              </i>
-                              your graph. You may submit as many times as you like to try to 
-          get a better score.
+                              When you have successfully rescued the shuttle, 
+          answer the questions below.
+                              <br />
                               <br />
                               <object refid="da6fbb42-5b45-11de-914d-6b8ca6afb695" />
                               <br />
@@ -1350,13 +1343,6 @@
                               </i>
                               buttons. Remember 
           to watch the time remaining!
-                              <br />
-                              <br />
-                              Remember to
-                              <i>
-                                <b>Submit</b>
-                              </i>
-                              !
                               <br />
                               <br />
                               <object refid="da6fbb43-5b45-11de-914d-6b8ca6afb695" />

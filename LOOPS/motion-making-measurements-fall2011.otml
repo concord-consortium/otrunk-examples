@@ -880,7 +880,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             </OTDataAxis>
                           </xDataAxis>
                           <yDataAxis>
-                            <OTDataAxis max="2.0242424" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                            <OTDataAxis max="2.0242424" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
                               <customGridLabels />
                             </OTDataAxis>
                           </yDataAxis>
@@ -891,7 +891,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                         <OTQuestion id="f67de6c2-e5fb-11e0-b845-e0cb4ebd2b6d" name="ZeroQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>How far were you from the probe in meters?</bodyText>
+                              <bodyText>How far were you from the probe in meters when you measured position zero?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -1190,7 +1190,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                         <OTQuestion id="f67e0dd2-e5fb-11e0-b847-e0cb4ebd2b6d" name="NegativeOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>How far were you from the probe in meters?</bodyText>
+                              <bodyText>How far were you from the probe in meters when you measured position negative one?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -1489,7 +1489,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                         <OTQuestion id="f67e0dd2-e5fb-11e0-b84a-e0cb4ebd2b6d" name="PositiveOneQ">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>How far were you from the probe in meters?</bodyText>
+                              <bodyText>How far were you from the probe in meters when you measured position one?</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -1830,7 +1830,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                         </div>
                       </bodyText>
                       <documentRefs>
-                        <OTDataCollector id="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d" name="Data graph" title="Using Your Frame of Reference" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="false" useDefaultToolBar="false" displayButtons="0,">
+                        <OTDataCollector id="f67e34e2-e5fb-11e0-b84c-e0cb4ebd2b6d" name="Data graph" title="Using Your Frame of Reference" tickMode="AUTO" xTickInterval="1.0" yTickInterval="1.0" autoFitMode="0" showLabelCoordinates="true" labelDecimalPlaces="2" useAspectRatio="false" aspectRatio="1.5" showControlBar="true" useDefaultToolBar="false" displayButtons="0,">
                           <source>
                             <OTDataGraphable name="Data Graph" connectPoints="true" controllable="true" yColumn="1" drawMarks="false" color="16711680" xColumn="0" lineWidth="2.0" showAllChannels="false" visible="true" segmentingTolerance="2.2">
                               <dataStore>
@@ -2166,7 +2166,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             </OTDataAxis>
                           </xDataAxis>
                           <yDataAxis>
-                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
                               <customGridLabels />
                             </OTDataAxis>
                           </yDataAxis>
@@ -2387,7 +2387,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             </OTDataAxis>
                           </xDataAxis>
                           <yDataAxis>
-                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                            <OTDataAxis max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
                               <customGridLabels />
                             </OTDataAxis>
                           </yDataAxis>
@@ -2398,7 +2398,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                         <OTQuestion id="f67ed122-e5fb-11e0-b872-e0cb4ebd2b6d" name="GiantStepOR">
                           <prompt>
                             <OTCompoundDoc>
-                              <bodyText>How long were each of your team members’ giant steps?  Describe how you measured these distances.</bodyText>
+                              <bodyText>What distance were each of your team members’ giant steps?  Describe how you measured these distances.</bodyText>
                             </OTCompoundDoc>
                           </prompt>
                           <input>
@@ -2860,7 +2860,7 @@ The duration between partner2's jumps was 7.1 seconds.  He started jumping at 3 
                             </OTDataAxis>
                           </xDataAxis>
                           <yDataAxis>
-                            <OTDataAxis id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/yDataAxis" max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="false">
+                            <OTDataAxis id="f67ed122-e5fb-11e0-b875-e0cb4ebd2b6d/yDataAxis" max="2.0" units="m" min="-2.0" label="Position" labelFormat="Engineering" locked="true">
                               <customGridLabels />
                             </OTDataAxis>
                           </yDataAxis>
